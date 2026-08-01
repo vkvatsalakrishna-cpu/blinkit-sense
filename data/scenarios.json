@@ -1,0 +1,39 @@
+{
+  "scenarios": [
+    {
+      "id": "festival_gifting",
+      "chip_label": "Festival gifting",
+      "prompt_context": "The customer is preparing gifts and festive supplies for a celebration such as Diwali."
+    },
+    {
+      "id": "hosting",
+      "chip_label": "Guests coming",
+      "prompt_context": "The customer is preparing to host guests at home."
+    },
+    {
+      "id": "moving_in",
+      "chip_label": "Moving in",
+      "prompt_context": "The customer has just moved into a new, empty home."
+    },
+    {
+      "id": "new_pet",
+      "chip_label": "New cat home",
+      "prompt_context": "The customer has recently brought a cat home and needs pet essentials."
+    },
+    {
+      "id": "health",
+      "chip_label": "Eating better",
+      "prompt_context": "The customer is trying to eat healthier snacks and staples."
+    },
+    {
+      "id": "stocking",
+      "chip_label": "Just stocking up",
+      "prompt_context": "The customer is doing a routine grocery restock with no special situation."
+    },
+    {
+      "id": "cooking_project",
+      "chip_label": "Cooking something",
+      "prompt_context": "The customer is setting up to cook a special meal and needs cookware and ingredients."
+    }
+  ]
+}

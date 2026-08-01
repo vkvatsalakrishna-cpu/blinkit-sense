@@ -1,0 +1,3919 @@
+[
+  {
+    "id": "sku_001",
+    "name": "Whiskas Wet Kitten Food -Chicken in Gravy (2-12 Months)",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 50,
+    "mrp": 50,
+    "unit": "80 g",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "363461"
+  },
+  {
+    "id": "sku_002",
+    "name": "Whiskas Wet Kitten Food -Tuna in Jelly Junior (2-12 Months)",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 649,
+    "mrp": 700,
+    "unit": "14 x 80 g",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "409639"
+  },
+  {
+    "id": "sku_003",
+    "name": "Temptations Crunchy Cat Treat - Tasty Chicken Flavour",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 143,
+    "mrp": 150,
+    "unit": "85 g",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "462462"
+  },
+  {
+    "id": "sku_004",
+    "name": "Whiskas Tasty Mix Wet Cat Food, Chicken With Tuna & Carrot in Gravy",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 50,
+    "mrp": 50,
+    "unit": "70 g",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "480317"
+  },
+  {
+    "id": "sku_005",
+    "name": "PurePet Dry Cat Food (Ocean Fish, Adult)",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 449,
+    "mrp": 499,
+    "unit": "2.8 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "491942"
+  },
+  {
+    "id": "sku_006",
+    "name": "Petcrux Smart Clump Cat Litter (Lavender and Lemon)",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 410,
+    "mrp": 550,
+    "unit": "5 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "522147"
+  },
+  {
+    "id": "sku_007",
+    "name": "BearHugs Lavender Bentonite Cat Litter",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 279,
+    "mrp": 499,
+    "unit": "5 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "525659"
+  },
+  {
+    "id": "sku_008",
+    "name": "BearHugs Unscented Bentonite Cat Litter (5 kg)",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 249,
+    "mrp": 399,
+    "unit": "5 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "525660"
+  },
+  {
+    "id": "sku_009",
+    "name": "PurePet Odor Control Lavender Cat Litter",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 284,
+    "mrp": 320,
+    "unit": "5 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "555643"
+  },
+  {
+    "id": "sku_010",
+    "name": "PurePet Mackerel Adult Dry Cat Food",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 162,
+    "mrp": 199,
+    "unit": "1 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "555807"
+  },
+  {
+    "id": "sku_011",
+    "name": "Hipkoo Pets Natural Cat Litter",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 439,
+    "mrp": 900,
+    "unit": "2 x 5 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "615112"
+  },
+  {
+    "id": "sku_012",
+    "name": "Purple Tails Activated Carbon Cat Litter",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 279,
+    "mrp": 499,
+    "unit": "5 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "677772"
+  },
+  {
+    "id": "sku_013",
+    "name": "Purple Tails Odour Control Cat Litter (Lavender)",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 299,
+    "mrp": 499,
+    "unit": "5 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "678542"
+  },
+  {
+    "id": "sku_014",
+    "name": "Super Pet Cat Litter Tray With Scoop (Grey)",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 331,
+    "mrp": 440,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "734815"
+  },
+  {
+    "id": "sku_015",
+    "name": "Super Pet Cat Litter scooper",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 59,
+    "mrp": 100,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "743075"
+  },
+  {
+    "id": "sku_016",
+    "name": "Grain Zero Mother & Kitten Dry Cat Food",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 1980,
+    "mrp": 2200,
+    "unit": "7 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "767422"
+  },
+  {
+    "id": "sku_017",
+    "name": "Hipkoo Pets Cat Litter",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 249,
+    "mrp": 450,
+    "unit": "5 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "781990"
+  },
+  {
+    "id": "sku_018",
+    "name": "Drools Dry Cat Food (Tuna Salmon)",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 850,
+    "mrp": 999,
+    "unit": "3.8 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "785004"
+  },
+  {
+    "id": "sku_019",
+    "name": "Drools Mackerel Adult Dry Cat Food",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 850,
+    "mrp": 999,
+    "unit": "3.8 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "785006"
+  },
+  {
+    "id": "sku_020",
+    "name": "Drools Real Chicken Adult Dry Cat Food",
+    "brand": "Unknown",
+    "category": "Pet Store",
+    "price": 850,
+    "mrp": 999,
+    "unit": "3.8 kg",
+    "available_in": [
+      "Sarjapur"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "apify",
+    "blinkit_product_id": "785007"
+  },
+  {
+    "id": "sku_021",
+    "name": "Happilo Premium Dry Fruits Mix",
+    "brand": "Happilo",
+    "category": "Dry Fruits & Cereals",
+    "price": 449,
+    "mrp": 499,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_022",
+    "name": "Amul Taaza Homogenised Toned Milk",
+    "brand": "Amul",
+    "category": "Dairy, Bread & Eggs",
+    "price": 54,
+    "mrp": 54,
+    "unit": "1 L",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_023",
+    "name": "Aashirvaad Superior MP Whole Wheat Atta",
+    "brand": "Aashirvaad",
+    "category": "Atta, Rice & Dal",
+    "price": 265,
+    "mrp": 280,
+    "unit": "5 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_024",
+    "name": "Onion (Pyaz)",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 32,
+    "mrp": 40,
+    "unit": "1 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_025",
+    "name": "Britannia Brown Bread",
+    "brand": "Britannia",
+    "category": "Dairy, Bread & Eggs",
+    "price": 45,
+    "mrp": 50,
+    "unit": "400 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_026",
+    "name": "Table White Eggs",
+    "brand": "Fresho",
+    "category": "Dairy, Bread & Eggs",
+    "price": 72,
+    "mrp": 78,
+    "unit": "6 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_027",
+    "name": "Cadbury Celebrations Premium Assorted Gift Pack",
+    "brand": "Cadbury",
+    "category": "E-Gifts Store",
+    "price": 399,
+    "mrp": 449,
+    "unit": "1 pack",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_028",
+    "name": "Gift wrapping paper roll metallic gold",
+    "brand": "Archies",
+    "category": "E-Gifts Store",
+    "price": 149,
+    "mrp": 199,
+    "unit": "1 roll",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_029",
+    "name": "Roli chawal combo pack",
+    "brand": "Patanjali",
+    "category": "Spiritual Needs",
+    "price": 49,
+    "mrp": 59,
+    "unit": "1 pack",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_030",
+    "name": "Clay diyas pack of 12",
+    "brand": "Local",
+    "category": "Spiritual Needs",
+    "price": 89,
+    "mrp": 99,
+    "unit": "12 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_031",
+    "name": "Cotton double bedsheet floral",
+    "brand": "Bombay Dyeing",
+    "category": "Home & Lifestyle",
+    "price": 599,
+    "mrp": 799,
+    "unit": "1 pc",
+    "available_in": [
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_032",
+    "name": "Soft fiber pillow",
+    "brand": "Wakefit",
+    "category": "Home & Lifestyle",
+    "price": 349,
+    "mrp": 449,
+    "unit": "1 pc",
+    "available_in": [
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_033",
+    "name": "Cotton bath towel large",
+    "brand": "Trident",
+    "category": "Bath & Body",
+    "price": 299,
+    "mrp": 399,
+    "unit": "1 pc",
+    "available_in": [
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_034",
+    "name": "Plastic bucket 15 L blue",
+    "brand": "Milton",
+    "category": "Kitchenware & Appliances",
+    "price": 189,
+    "mrp": 229,
+    "unit": "1 pc",
+    "available_in": [
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_035",
+    "name": "Plastic mug 1 L",
+    "brand": "Cello",
+    "category": "Kitchenware & Appliances",
+    "price": 79,
+    "mrp": 99,
+    "unit": "1 pc",
+    "available_in": [
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_036",
+    "name": "Floor mop with stick",
+    "brand": "Gala",
+    "category": "Cleaners & Repellents",
+    "price": 249,
+    "mrp": 299,
+    "unit": "1 pc",
+    "available_in": [
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_037",
+    "name": "Pedal dustbin 10 L",
+    "brand": "Nilkamal",
+    "category": "Home & Lifestyle",
+    "price": 449,
+    "mrp": 549,
+    "unit": "1 pc",
+    "available_in": [
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_038",
+    "name": "Stainless steel pet bowl",
+    "brand": "Super Pet",
+    "category": "Pet Store",
+    "price": 199,
+    "mrp": 249,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_039",
+    "name": "Cat litter scoop",
+    "brand": "Super Pet",
+    "category": "Pet Store",
+    "price": 59,
+    "mrp": 79,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_040",
+    "name": "Kashmir Apple",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 120,
+    "mrp": 140,
+    "unit": "4 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_041",
+    "name": "Prestige induction compatible cookware set",
+    "brand": "Prestige",
+    "category": "Kitchenware & Appliances",
+    "price": 1299,
+    "mrp": 1599,
+    "unit": "3 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_042",
+    "name": "Anchor 6 A 3-pin plug top",
+    "brand": "Anchor",
+    "category": "Electronics",
+    "price": 99,
+    "mrp": 120,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_043",
+    "name": "Fortune refined sunflower oil",
+    "brand": "Fortune",
+    "category": "Oil, Ghee & Masala",
+    "price": 145,
+    "mrp": 160,
+    "unit": "1 L",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_044",
+    "name": "Tata Sampann unpolished moong dal",
+    "brand": "Tata Sampann",
+    "category": "Atta, Rice & Dal",
+    "price": 89,
+    "mrp": 99,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_045",
+    "name": "Amul Salted Butter",
+    "brand": "Amul",
+    "category": "Dairy, Bread & Eggs",
+    "price": 58,
+    "mrp": 62,
+    "unit": "100 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_046",
+    "name": "Banana Robusta",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 48,
+    "mrp": 55,
+    "unit": "6 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_047",
+    "name": "Tomato Hybrid",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 28,
+    "mrp": 35,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_048",
+    "name": "Potato (Aloo)",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 35,
+    "mrp": 42,
+    "unit": "1 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_049",
+    "name": "Cauliflower",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 39,
+    "mrp": 49,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_050",
+    "name": "India Gate Basmati Rice Classic",
+    "brand": "India Gate",
+    "category": "Atta, Rice & Dal",
+    "price": 399,
+    "mrp": 450,
+    "unit": "5 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_051",
+    "name": "Daawat Pulav Basmati Rice",
+    "brand": "Daawat",
+    "category": "Atta, Rice & Dal",
+    "price": 110,
+    "mrp": 125,
+    "unit": "1 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_052",
+    "name": "Rajdhani Toor Dal",
+    "brand": "Rajdhani",
+    "category": "Atta, Rice & Dal",
+    "price": 149,
+    "mrp": 165,
+    "unit": "1 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_053",
+    "name": "Ghee Amul Pure",
+    "brand": "Amul",
+    "category": "Oil, Ghee & Masala",
+    "price": 320,
+    "mrp": 340,
+    "unit": "500 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_054",
+    "name": "MDH Garam Masala",
+    "brand": "MDH",
+    "category": "Oil, Ghee & Masala",
+    "price": 85,
+    "mrp": 95,
+    "unit": "100 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_055",
+    "name": "Maggi 2-Minute Noodles Masala",
+    "brand": "Maggi",
+    "category": "Instant Food",
+    "price": 56,
+    "mrp": 60,
+    "unit": "4 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_056",
+    "name": "Amul Masti Curd",
+    "brand": "Amul",
+    "category": "Dairy, Bread & Eggs",
+    "price": 35,
+    "mrp": 38,
+    "unit": "400 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_057",
+    "name": "Mother Dairy Classic Curd",
+    "brand": "Mother Dairy",
+    "category": "Dairy, Bread & Eggs",
+    "price": 34,
+    "mrp": 36,
+    "unit": "400 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_058",
+    "name": "Parle-G Gold Glucose Biscuits",
+    "brand": "Parle",
+    "category": "Bakery & Biscuits",
+    "price": 30,
+    "mrp": 35,
+    "unit": "600 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_059",
+    "name": "Sunfeast Dark Fantasy Choco Fills",
+    "brand": "Sunfeast",
+    "category": "Bakery & Biscuits",
+    "price": 110,
+    "mrp": 125,
+    "unit": "300 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_060",
+    "name": "Kaju Katli premium",
+    "brand": "Haldiram's",
+    "category": "Sweets & Chocolates",
+    "price": 349,
+    "mrp": 399,
+    "unit": "250 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_061",
+    "name": "Happilo Roasted Mixed Nuts",
+    "brand": "Happilo",
+    "category": "Dry Fruits & Cereals",
+    "price": 299,
+    "mrp": 349,
+    "unit": "200 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_062",
+    "name": "Real Activ orange juice",
+    "brand": "Real",
+    "category": "Drinks & Juices",
+    "price": 95,
+    "mrp": 110,
+    "unit": "1 L",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_063",
+    "name": "Tropicana guava delight",
+    "brand": "Tropicana",
+    "category": "Drinks & Juices",
+    "price": 99,
+    "mrp": 115,
+    "unit": "1 L",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_064",
+    "name": "Lipton Yellow Label tea",
+    "brand": "Lipton",
+    "category": "Tea, Coffee & Milk Drinks",
+    "price": 145,
+    "mrp": 160,
+    "unit": "250 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_065",
+    "name": "Nescafe Classic instant coffee",
+    "brand": "Nescafe",
+    "category": "Tea, Coffee & Milk Drinks",
+    "price": 320,
+    "mrp": 350,
+    "unit": "100 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_066",
+    "name": "Lay's India's Magic Masala",
+    "brand": "Lay's",
+    "category": "Chips & Namkeen",
+    "price": 20,
+    "mrp": 20,
+    "unit": "52 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_067",
+    "name": "Haldiram's Bhujia Sev",
+    "brand": "Haldiram's",
+    "category": "Chips & Namkeen",
+    "price": 55,
+    "mrp": 60,
+    "unit": "400 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_068",
+    "name": "Kissan tomato ketchup",
+    "brand": "Kissan",
+    "category": "Sauces & Spreads",
+    "price": 85,
+    "mrp": 95,
+    "unit": "950 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_069",
+    "name": "Nutella hazelnut spread",
+    "brand": "Nutella",
+    "category": "Sauces & Spreads",
+    "price": 349,
+    "mrp": 399,
+    "unit": "350 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_070",
+    "name": "Amul Ice Cream Cup Vanilla",
+    "brand": "Amul",
+    "category": "Ice Creams & More",
+    "price": 40,
+    "mrp": 45,
+    "unit": "100 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_071",
+    "name": "Kwality Walls Cornetto butterscotch",
+    "brand": "Kwality Walls",
+    "category": "Ice Creams & More",
+    "price": 45,
+    "mrp": 50,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_072",
+    "name": "Fresh chicken curry cut",
+    "brand": "Licious",
+    "category": "Chicken, Meat & Fish",
+    "price": 189,
+    "mrp": 210,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_073",
+    "name": "Rohu fish steak",
+    "brand": "Fresh",
+    "category": "Chicken, Meat & Fish",
+    "price": 249,
+    "mrp": 279,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_074",
+    "name": "Prestige non-stick tawa",
+    "brand": "Prestige",
+    "category": "Kitchenware & Appliances",
+    "price": 599,
+    "mrp": 699,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_075",
+    "name": "Milton casseroles set",
+    "brand": "Milton",
+    "category": "Kitchenware & Appliances",
+    "price": 799,
+    "mrp": 899,
+    "unit": "3 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_076",
+    "name": "Dove cream beauty bathing bar",
+    "brand": "Dove",
+    "category": "Bath & Body",
+    "price": 89,
+    "mrp": 99,
+    "unit": "3 x 125 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_077",
+    "name": "Lux soft touch soap",
+    "brand": "Lux",
+    "category": "Bath & Body",
+    "price": 65,
+    "mrp": 72,
+    "unit": "4 x 100 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_078",
+    "name": "Head & Shoulders anti-dandruff shampoo",
+    "brand": "Head & Shoulders",
+    "category": "Hair",
+    "price": 299,
+    "mrp": 349,
+    "unit": "340 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_079",
+    "name": "Pantene hair fall control conditioner",
+    "brand": "Pantene",
+    "category": "Hair",
+    "price": 249,
+    "mrp": 279,
+    "unit": "180 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_080",
+    "name": "Pond's light moisturiser",
+    "brand": "Pond's",
+    "category": "Skin & Face",
+    "price": 149,
+    "mrp": 169,
+    "unit": "150 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_081",
+    "name": "Lakme 9to5 nail color",
+    "brand": "Lakme",
+    "category": "Beauty & Cosmetics",
+    "price": 199,
+    "mrp": 225,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_082",
+    "name": "Whisper Ultra sanitary pads",
+    "brand": "Whisper",
+    "category": "Feminine Hygiene",
+    "price": 165,
+    "mrp": 185,
+    "unit": "14 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_083",
+    "name": "Pampers baby dry pants",
+    "brand": "Pampers",
+    "category": "Baby Care",
+    "price": 599,
+    "mrp": 649,
+    "unit": "24 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_084",
+    "name": "Dabur Honitus cough syrup",
+    "brand": "Dabur",
+    "category": "Health & Pharma",
+    "price": 125,
+    "mrp": 140,
+    "unit": "100 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_085",
+    "name": "Durex extra thin condoms",
+    "brand": "Durex",
+    "category": "Sexual Wellness",
+    "price": 199,
+    "mrp": 220,
+    "unit": "10 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_086",
+    "name": "Room freshener lavender spray",
+    "brand": "Odonil",
+    "category": "Cleaners & Repellents",
+    "price": 149,
+    "mrp": 175,
+    "unit": "220 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_087",
+    "name": "Lizol citrus floor cleaner",
+    "brand": "Lizol",
+    "category": "Cleaners & Repellents",
+    "price": 189,
+    "mrp": 210,
+    "unit": "975 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_088",
+    "name": "Pet-safe floor cleaner",
+    "brand": "BearHugs",
+    "category": "Cleaners & Repellents",
+    "price": 249,
+    "mrp": 299,
+    "unit": "1 L",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_089",
+    "name": "Goodknight mosquito repellent refill",
+    "brand": "Goodknight",
+    "category": "Cleaners & Repellents",
+    "price": 75,
+    "mrp": 85,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_090",
+    "name": "Scotch-Brite lint roller",
+    "brand": "Scotch-Brite",
+    "category": "Home & Lifestyle",
+    "price": 199,
+    "mrp": 249,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_091",
+    "name": "Philips 9W LED bulb",
+    "brand": "Philips",
+    "category": "Electronics",
+    "price": 99,
+    "mrp": 120,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_092",
+    "name": "Classmate notebook single line",
+    "brand": "Classmate",
+    "category": "Stationery & Games",
+    "price": 45,
+    "mrp": 50,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_093",
+    "name": "Monopoly board game",
+    "brand": "Hasbro",
+    "category": "Stationery & Games",
+    "price": 499,
+    "mrp": 599,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_094",
+    "name": "Agarbatti masala incense sticks",
+    "brand": "Cycle",
+    "category": "Spiritual Needs",
+    "price": 55,
+    "mrp": 65,
+    "unit": "1 pack",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_095",
+    "name": "Brass pooja thali small",
+    "brand": "Local",
+    "category": "Spiritual Needs",
+    "price": 299,
+    "mrp": 349,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_096",
+    "name": "Peppa Pig soft toy",
+    "brand": "Peppa Pig",
+    "category": "Toy Store",
+    "price": 399,
+    "mrp": 499,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_097",
+    "name": "Diary of a Wimpy Kid book",
+    "brand": "Puffin",
+    "category": "Book Store",
+    "price": 299,
+    "mrp": 350,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_098",
+    "name": "Silver finish earrings pair",
+    "brand": "Zaveri",
+    "category": "Jewellery Store",
+    "price": 199,
+    "mrp": 249,
+    "unit": "1 pair",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_099",
+    "name": "Allen Solly crew neck T-shirt",
+    "brand": "Allen Solly",
+    "category": "Fashion Basics",
+    "price": 599,
+    "mrp": 799,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_100",
+    "name": "Yonex badminton shuttlecock nylon",
+    "brand": "Yonex",
+    "category": "Sports Store",
+    "price": 349,
+    "mrp": 399,
+    "unit": "6 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_101",
+    "name": "Camel sketch pen set",
+    "brand": "Camel",
+    "category": "Hobby Store",
+    "price": 120,
+    "mrp": 140,
+    "unit": "1 set",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_102",
+    "name": "Skybags cabin trolley 55 cm",
+    "brand": "Skybags",
+    "category": "Travel Store",
+    "price": 2499,
+    "mrp": 2999,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_103",
+    "name": "Crocin advance tablet strip",
+    "brand": "Crocin",
+    "category": "Pharma Store",
+    "price": 35,
+    "mrp": 40,
+    "unit": "15 tabs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_104",
+    "name": "Amul ice cream family pack butterscotch",
+    "brand": "Amul",
+    "category": "Ice Cream Store",
+    "price": 199,
+    "mrp": 225,
+    "unit": "700 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_105",
+    "name": "Organic quinoa",
+    "brand": "True Elements",
+    "category": "Dry Fruits & Cereals",
+    "price": 349,
+    "mrp": 399,
+    "unit": "500 g",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_106",
+    "name": "Imported avocado",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 189,
+    "mrp": 220,
+    "unit": "2 pcs",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_107",
+    "name": "Le Creuset style cast iron pan",
+    "brand": "Wonderchef",
+    "category": "Kitchenware & Appliances",
+    "price": 1899,
+    "mrp": 2199,
+    "unit": "1 pc",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_108",
+    "name": "Diptyque style room diffuser",
+    "brand": "Bella Vita",
+    "category": "Home & Lifestyle",
+    "price": 599,
+    "mrp": 699,
+    "unit": "1 pc",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_109",
+    "name": "Artisan sourdough loaf",
+    "brand": "The Baker's Dozen",
+    "category": "Bakery & Biscuits",
+    "price": 149,
+    "mrp": 175,
+    "unit": "400 g",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_110",
+    "name": "Cold brew coffee bottle",
+    "brand": "Blue Tokai",
+    "category": "Drinks & Juices",
+    "price": 180,
+    "mrp": 200,
+    "unit": "250 ml",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_111",
+    "name": "Mezze hummus tub",
+    "brand": "Tabouleh",
+    "category": "Instant Food",
+    "price": 199,
+    "mrp": 229,
+    "unit": "200 g",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_112",
+    "name": "Kombucha ginger lemon",
+    "brand": "Atmosphere",
+    "category": "Drinks & Juices",
+    "price": 149,
+    "mrp": 169,
+    "unit": "250 ml",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_113",
+    "name": "Designer diya set ceramic",
+    "brand": "Local",
+    "category": "Spiritual Needs",
+    "price": 249,
+    "mrp": 299,
+    "unit": "6 pcs",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_114",
+    "name": "Premium gift hamper dry fruits",
+    "brand": "Nutraj",
+    "category": "E-Gifts Store",
+    "price": 899,
+    "mrp": 999,
+    "unit": "1 pack",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_115",
+    "name": "Memory foam bath mat",
+    "brand": "Spaces",
+    "category": "Bath & Body",
+    "price": 399,
+    "mrp": 499,
+    "unit": "1 pc",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_116",
+    "name": "Smart LED strip 5m",
+    "brand": "Wipro",
+    "category": "Electronics",
+    "price": 799,
+    "mrp": 999,
+    "unit": "1 pc",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_117",
+    "name": "Yoga mat 6mm",
+    "brand": "Strauss",
+    "category": "Sports Store",
+    "price": 449,
+    "mrp": 549,
+    "unit": "1 pc",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_118",
+    "name": "Cat wet food variety pack",
+    "brand": "Sheba",
+    "category": "Pet Store",
+    "price": 399,
+    "mrp": 449,
+    "unit": "12 x 85 g",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_119",
+    "name": "Paan masala mouth freshener",
+    "brand": "Rajnigandha",
+    "category": "Paan Corner",
+    "price": 45,
+    "mrp": 50,
+    "unit": "1 pack",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_120",
+    "name": "Veeba mayo eggless",
+    "brand": "Veeba",
+    "category": "Sauces & Spreads",
+    "price": 89,
+    "mrp": 99,
+    "unit": "250 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_121",
+    "name": "Bambino vermicelli roasted",
+    "brand": "Bambino",
+    "category": "Instant Food",
+    "price": 42,
+    "mrp": 48,
+    "unit": "400 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_122",
+    "name": "Saffola oats masala",
+    "brand": "Saffola",
+    "category": "Dry Fruits & Cereals",
+    "price": 199,
+    "mrp": 220,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_123",
+    "name": "Bru instant coffee sachets",
+    "brand": "Bru",
+    "category": "Tea, Coffee & Milk Drinks",
+    "price": 165,
+    "mrp": 180,
+    "unit": "20 sachets",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_124",
+    "name": "Cadbury Dairy Milk silk",
+    "brand": "Cadbury",
+    "category": "Sweets & Chocolates",
+    "price": 85,
+    "mrp": 90,
+    "unit": "60 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_125",
+    "name": "Paperboat aamras",
+    "brand": "Paper Boat",
+    "category": "Drinks & Juices",
+    "price": 45,
+    "mrp": 50,
+    "unit": "250 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_126",
+    "name": "Tata Tea Premium",
+    "brand": "Tata Tea",
+    "category": "Tea, Coffee & Milk Drinks",
+    "price": 210,
+    "mrp": 230,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_127",
+    "name": "Bingo mad angles",
+    "brand": "Bingo",
+    "category": "Chips & Namkeen",
+    "price": 20,
+    "mrp": 20,
+    "unit": "66 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_128",
+    "name": "Pringles original",
+    "brand": "Pringles",
+    "category": "Chips & Namkeen",
+    "price": 99,
+    "mrp": 110,
+    "unit": "107 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_129",
+    "name": "Kellogg's chocos",
+    "brand": "Kellogg's",
+    "category": "Dry Fruits & Cereals",
+    "price": 185,
+    "mrp": 199,
+    "unit": "375 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_130",
+    "name": "Dettol antiseptic liquid",
+    "brand": "Dettol",
+    "category": "Cleaners & Repellents",
+    "price": 120,
+    "mrp": 135,
+    "unit": "550 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_131",
+    "name": "Harpic power plus toilet cleaner",
+    "brand": "Harpic",
+    "category": "Cleaners & Repellents",
+    "price": 99,
+    "mrp": 110,
+    "unit": "500 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_132",
+    "name": "Vim dishwash gel lemon",
+    "brand": "Vim",
+    "category": "Cleaners & Repellents",
+    "price": 85,
+    "mrp": 95,
+    "unit": "500 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_133",
+    "name": "Surf Excel easy wash",
+    "brand": "Surf Excel",
+    "category": "Cleaners & Repellents",
+    "price": 189,
+    "mrp": 210,
+    "unit": "1 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_134",
+    "name": "Comfort fabric conditioner",
+    "brand": "Comfort",
+    "category": "Cleaners & Repellents",
+    "price": 145,
+    "mrp": 160,
+    "unit": "860 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_135",
+    "name": "Godrej aer pocket bathroom",
+    "brand": "Godrej",
+    "category": "Cleaners & Repellents",
+    "price": 55,
+    "mrp": 65,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_136",
+    "name": "Origami tissue box",
+    "brand": "Origami",
+    "category": "Home & Lifestyle",
+    "price": 89,
+    "mrp": 99,
+    "unit": "200 pulls",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_137",
+    "name": "Cello Opalware dinner set",
+    "brand": "Cello",
+    "category": "Kitchenware & Appliances",
+    "price": 999,
+    "mrp": 1199,
+    "unit": "19 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_138",
+    "name": "Butterfly stainless steel lunch box",
+    "brand": "Butterfly",
+    "category": "Kitchenware & Appliances",
+    "price": 449,
+    "mrp": 499,
+    "unit": "3 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_139",
+    "name": "Pigeon electric kettle 1.5 L",
+    "brand": "Pigeon",
+    "category": "Kitchenware & Appliances",
+    "price": 699,
+    "mrp": 799,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_140",
+    "name": "Wipro 3-burner gas stove",
+    "brand": "Wipro",
+    "category": "Kitchenware & Appliances",
+    "price": 2499,
+    "mrp": 2799,
+    "unit": "1 pc",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_141",
+    "name": "OnePlus Bullets wireless Z2",
+    "brand": "OnePlus",
+    "category": "Electronics",
+    "price": 1999,
+    "mrp": 2299,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_142",
+    "name": "Duracell AA batteries 4 pack",
+    "brand": "Duracell",
+    "category": "Electronics",
+    "price": 149,
+    "mrp": 165,
+    "unit": "4 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_143",
+    "name": "Faber-Castell color pencil set",
+    "brand": "Faber-Castell",
+    "category": "Stationery & Games",
+    "price": 199,
+    "mrp": 225,
+    "unit": "24 shades",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_144",
+    "name": "UNO playing cards",
+    "brand": "Mattel",
+    "category": "Stationery & Games",
+    "price": 149,
+    "mrp": 175,
+    "unit": "1 pack",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_145",
+    "name": "Hot wheels basic car",
+    "brand": "Hot Wheels",
+    "category": "Toy Store",
+    "price": 99,
+    "mrp": 125,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_146",
+    "name": "Sudha Murty short stories",
+    "brand": "Puffin",
+    "category": "Book Store",
+    "price": 199,
+    "mrp": 250,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_147",
+    "name": "Gold plated bangle set",
+    "brand": "Zaveri",
+    "category": "Jewellery Store",
+    "price": 499,
+    "mrp": 599,
+    "unit": "1 set",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_148",
+    "name": "Peter England formal shirt",
+    "brand": "Peter England",
+    "category": "Fashion Basics",
+    "price": 899,
+    "mrp": 1099,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_149",
+    "name": "Nivia football size 5",
+    "brand": "Nivia",
+    "category": "Sports Store",
+    "price": 499,
+    "mrp": 599,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_150",
+    "name": "Camel acrylic paint set",
+    "brand": "Camel",
+    "category": "Hobby Store",
+    "price": 249,
+    "mrp": 299,
+    "unit": "12 tubes",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_151",
+    "name": "Wildcraft travel pouch",
+    "brand": "Wildcraft",
+    "category": "Travel Store",
+    "price": 399,
+    "mrp": 449,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_152",
+    "name": "Volini pain relief spray",
+    "brand": "Volini",
+    "category": "Pharma Store",
+    "price": 175,
+    "mrp": 195,
+    "unit": "60 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_153",
+    "name": "Cornetto disc black forest",
+    "brand": "Kwality Walls",
+    "category": "Ice Cream Store",
+    "price": 50,
+    "mrp": 55,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_154",
+    "name": "Amul cheese slices",
+    "brand": "Amul",
+    "category": "Dairy, Bread & Eggs",
+    "price": 115,
+    "mrp": 125,
+    "unit": "200 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_155",
+    "name": "Britannia cheese spread",
+    "brand": "Britannia",
+    "category": "Dairy, Bread & Eggs",
+    "price": 95,
+    "mrp": 105,
+    "unit": "200 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_156",
+    "name": "Epigamia greek yogurt natural",
+    "brand": "Epigamia",
+    "category": "Dairy, Bread & Eggs",
+    "price": 65,
+    "mrp": 70,
+    "unit": "130 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_157",
+    "name": "English cucumber",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 45,
+    "mrp": 55,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_158",
+    "name": "Broccoli",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 69,
+    "mrp": 79,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_159",
+    "name": "Red bell pepper",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 89,
+    "mrp": 99,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_160",
+    "name": "Baby corn packet",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 55,
+    "mrp": 65,
+    "unit": "200 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_161",
+    "name": "Basil leaves bunch",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 39,
+    "mrp": 45,
+    "unit": "1 bunch",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_162",
+    "name": "Organic brown rice",
+    "brand": "24 Mantra",
+    "category": "Atta, Rice & Dal",
+    "price": 189,
+    "mrp": 210,
+    "unit": "1 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_163",
+    "name": "Organic chana dal",
+    "brand": "24 Mantra",
+    "category": "Atta, Rice & Dal",
+    "price": 95,
+    "mrp": 105,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_164",
+    "name": "Saffola gold oil blend",
+    "brand": "Saffola",
+    "category": "Oil, Ghee & Masala",
+    "price": 175,
+    "mrp": 190,
+    "unit": "1 L",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_165",
+    "name": "Catch black pepper powder",
+    "brand": "Catch",
+    "category": "Oil, Ghee & Masala",
+    "price": 89,
+    "mrp": 99,
+    "unit": "100 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_166",
+    "name": "Everest tikhalal chilli powder",
+    "brand": "Everest",
+    "category": "Oil, Ghee & Masala",
+    "price": 75,
+    "mrp": 85,
+    "unit": "100 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_167",
+    "name": "McCain french fries",
+    "brand": "McCain",
+    "category": "Instant Food",
+    "price": 99,
+    "mrp": 110,
+    "unit": "420 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_168",
+    "name": "Knorr soup tomato",
+    "brand": "Knorr",
+    "category": "Instant Food",
+    "price": 55,
+    "mrp": 60,
+    "unit": "50 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_169",
+    "name": "Yippee noodles magic masala",
+    "brand": "Sunfeast",
+    "category": "Instant Food",
+    "price": 48,
+    "mrp": 52,
+    "unit": "4 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_170",
+    "name": "MTR rava idli mix",
+    "brand": "MTR",
+    "category": "Instant Food",
+    "price": 65,
+    "mrp": 72,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_171",
+    "name": "Bikaji aloo bhujia",
+    "brand": "Bikaji",
+    "category": "Chips & Namkeen",
+    "price": 45,
+    "mrp": 50,
+    "unit": "400 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_172",
+    "name": "Too Yumm karare",
+    "brand": "Too Yumm",
+    "category": "Chips & Namkeen",
+    "price": 20,
+    "mrp": 20,
+    "unit": "55 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_173",
+    "name": "Ferrero Rocher 16 pieces",
+    "brand": "Ferrero",
+    "category": "Sweets & Chocolates",
+    "price": 449,
+    "mrp": 499,
+    "unit": "200 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_174",
+    "name": "Nestle KitKat 4 finger",
+    "brand": "Nestle",
+    "category": "Sweets & Chocolates",
+    "price": 25,
+    "mrp": 25,
+    "unit": "38 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_175",
+    "name": "Raw pressery cold pressed juice",
+    "brand": "Raw",
+    "category": "Drinks & Juices",
+    "price": 99,
+    "mrp": 110,
+    "unit": "250 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_176",
+    "name": "Bisleri packaged water 1 L",
+    "brand": "Bisleri",
+    "category": "Drinks & Juices",
+    "price": 20,
+    "mrp": 20,
+    "unit": "1 L",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_177",
+    "name": "Red Bull energy drink",
+    "brand": "Red Bull",
+    "category": "Drinks & Juices",
+    "price": 125,
+    "mrp": 125,
+    "unit": "250 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_178",
+    "name": "Tata Gold tea leaves",
+    "brand": "Tata Tea",
+    "category": "Tea, Coffee & Milk Drinks",
+    "price": 420,
+    "mrp": 450,
+    "unit": "1 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_179",
+    "name": "Starbucks by Nespresso capsules",
+    "brand": "Starbucks",
+    "category": "Tea, Coffee & Milk Drinks",
+    "price": 499,
+    "mrp": 549,
+    "unit": "10 pcs",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_180",
+    "name": "Colgate maxfresh toothpaste",
+    "brand": "Colgate",
+    "category": "Bath & Body",
+    "price": 99,
+    "mrp": 110,
+    "unit": "150 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_181",
+    "name": "Fiama gel bar peach",
+    "brand": "Fiama",
+    "category": "Bath & Body",
+    "price": 89,
+    "mrp": 99,
+    "unit": "3 x 125 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_182",
+    "name": "Clinic Plus strong & long shampoo",
+    "brand": "Clinic Plus",
+    "category": "Hair",
+    "price": 99,
+    "mrp": 110,
+    "unit": "340 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_183",
+    "name": "Indulekha bringha oil",
+    "brand": "Indulekha",
+    "category": "Hair",
+    "price": 432,
+    "mrp": 450,
+    "unit": "100 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_184",
+    "name": "Garnier micellar water",
+    "brand": "Garnier",
+    "category": "Skin & Face",
+    "price": 175,
+    "mrp": 195,
+    "unit": "125 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_185",
+    "name": "Maybelline colossal kajal",
+    "brand": "Maybelline",
+    "category": "Beauty & Cosmetics",
+    "price": 199,
+    "mrp": 220,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_186",
+    "name": "Stayfree secure cottony soft",
+    "brand": "Stayfree",
+    "category": "Feminine Hygiene",
+    "price": 85,
+    "mrp": 95,
+    "unit": "18 pads",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_187",
+    "name": "Himalaya baby powder",
+    "brand": "Himalaya",
+    "category": "Baby Care",
+    "price": 125,
+    "mrp": 140,
+    "unit": "200 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_188",
+    "name": "Vicks vaporub",
+    "brand": "Vicks",
+    "category": "Health & Pharma",
+    "price": 89,
+    "mrp": 99,
+    "unit": "25 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_189",
+    "name": "i-Pill emergency contraceptive",
+    "brand": "Cipla",
+    "category": "Sexual Wellness",
+    "price": 110,
+    "mrp": 125,
+    "unit": "1 tab",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_190",
+    "name": "Ariel matic top load",
+    "brand": "Ariel",
+    "category": "Cleaners & Repellents",
+    "price": 299,
+    "mrp": 329,
+    "unit": "2 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_191",
+    "name": "All out ultra refill",
+    "brand": "All Out",
+    "category": "Cleaners & Repellents",
+    "price": 85,
+    "mrp": 95,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_192",
+    "name": "Scotch-Brite scrub pad",
+    "brand": "Scotch-Brite",
+    "category": "Cleaners & Repellents",
+    "price": 45,
+    "mrp": 50,
+    "unit": "3 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_193",
+    "name": "Ambipur car freshener",
+    "brand": "Ambipur",
+    "category": "Cleaners & Repellents",
+    "price": 299,
+    "mrp": 349,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_194",
+    "name": "Syska 12W LED panel light",
+    "brand": "Syska",
+    "category": "Electronics",
+    "price": 349,
+    "mrp": 399,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_195",
+    "name": "boAt Rockerz 450 headphones",
+    "brand": "boAt",
+    "category": "Electronics",
+    "price": 1499,
+    "mrp": 1990,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_196",
+    "name": "Pilot V5 pen blue",
+    "brand": "Pilot",
+    "category": "Stationery & Games",
+    "price": 65,
+    "mrp": 70,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_197",
+    "name": "Jenga classic game",
+    "brand": "Hasbro",
+    "category": "Stationery & Games",
+    "price": 899,
+    "mrp": 999,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_198",
+    "name": "Lego classic bricks medium",
+    "brand": "Lego",
+    "category": "Toy Store",
+    "price": 2499,
+    "mrp": 2799,
+    "unit": "1 box",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_199",
+    "name": "Ruskin Bond collection",
+    "brand": "Puffin",
+    "category": "Book Store",
+    "price": 350,
+    "mrp": 399,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_200",
+    "name": "Kundan necklace set",
+    "brand": "Zaveri",
+    "category": "Jewellery Store",
+    "price": 799,
+    "mrp": 899,
+    "unit": "1 set",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_201",
+    "name": "Van Heusen innerwear vest",
+    "brand": "Van Heusen",
+    "category": "Fashion Basics",
+    "price": 349,
+    "mrp": 399,
+    "unit": "2 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_202",
+    "name": "Cosco tennis ball 3 pack",
+    "brand": "Cosco",
+    "category": "Sports Store",
+    "price": 249,
+    "mrp": 279,
+    "unit": "3 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_203",
+    "name": "Domestic sewing kit",
+    "brand": "Fab N Sew",
+    "category": "Hobby Store",
+    "price": 99,
+    "mrp": 120,
+    "unit": "1 kit",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_204",
+    "name": "American Tourister duffel bag",
+    "brand": "American Tourister",
+    "category": "Travel Store",
+    "price": 1299,
+    "mrp": 1499,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_205",
+    "name": "Himalaya Liv.52 tablets",
+    "brand": "Himalaya",
+    "category": "Pharma Store",
+    "price": 165,
+    "mrp": 180,
+    "unit": "100 tabs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_206",
+    "name": "Magnum almond ice cream",
+    "brand": "Kwality Walls",
+    "category": "Ice Cream Store",
+    "price": 90,
+    "mrp": 95,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_207",
+    "name": "Wicks for diyas cotton",
+    "brand": "Local",
+    "category": "Spiritual Needs",
+    "price": 25,
+    "mrp": 30,
+    "unit": "1 pack",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_208",
+    "name": "Pooja oil mustard small",
+    "brand": "Local",
+    "category": "Spiritual Needs",
+    "price": 45,
+    "mrp": 55,
+    "unit": "200 ml",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_209",
+    "name": "Gift box empty medium",
+    "brand": "Archies",
+    "category": "E-Gifts Store",
+    "price": 199,
+    "mrp": 249,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_210",
+    "name": "Pet bowl double diner",
+    "brand": "Savic",
+    "category": "Pet Store",
+    "price": 349,
+    "mrp": 399,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_211",
+    "name": "Dog treat chicken strips",
+    "brand": "Pedigree",
+    "category": "Pet Store",
+    "price": 199,
+    "mrp": 229,
+    "unit": "200 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_212",
+    "name": "Paan flavoured mouth spray",
+    "brand": "Spraymintt",
+    "category": "Paan Corner",
+    "price": 75,
+    "mrp": 85,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_213",
+    "name": "Amul Lactose Free milk",
+    "brand": "Amul",
+    "category": "Dairy, Bread & Eggs",
+    "price": 62,
+    "mrp": 65,
+    "unit": "1 L",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_214",
+    "name": "Lactose free curd cup",
+    "brand": "Epigamia",
+    "category": "Dairy, Bread & Eggs",
+    "price": 55,
+    "mrp": 60,
+    "unit": "150 g",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_215",
+    "name": "Sourdough burger buns",
+    "brand": "The Baker's Dozen",
+    "category": "Bakery & Biscuits",
+    "price": 99,
+    "mrp": 110,
+    "unit": "4 pcs",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_216",
+    "name": "Granola honey almond",
+    "brand": "True Elements",
+    "category": "Dry Fruits & Cereals",
+    "price": 299,
+    "mrp": 349,
+    "unit": "400 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_217",
+    "name": "Protein bar peanut butter",
+    "brand": "RiteBite",
+    "category": "Dry Fruits & Cereals",
+    "price": 89,
+    "mrp": 99,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_218",
+    "name": "Tata Sampann rock salt",
+    "brand": "Tata Sampann",
+    "category": "Oil, Ghee & Masala",
+    "price": 45,
+    "mrp": 50,
+    "unit": "1 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_219",
+    "name": "Organic honey raw",
+    "brand": "Dabur",
+    "category": "Dry Fruits & Cereals",
+    "price": 249,
+    "mrp": 275,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_220",
+    "name": "Fresh coriander bunch",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 15,
+    "mrp": 20,
+    "unit": "1 bunch",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_221",
+    "name": "Ginger adrak",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 35,
+    "mrp": 40,
+    "unit": "250 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_222",
+    "name": "Green chilli",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 12,
+    "mrp": 15,
+    "unit": "100 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_223",
+    "name": "Lady finger bhindi",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 38,
+    "mrp": 45,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_224",
+    "name": "Brinjal baingan",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 32,
+    "mrp": 38,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_225",
+    "name": "Cabbage patta gobhi",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 28,
+    "mrp": 35,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_226",
+    "name": "Spinach palak bunch",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 22,
+    "mrp": 28,
+    "unit": "1 bunch",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_227",
+    "name": "Mushroom button",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 59,
+    "mrp": 69,
+    "unit": "200 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_228",
+    "name": "Pomegranate anar",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 89,
+    "mrp": 99,
+    "unit": "2 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_229",
+    "name": "Papaya raw",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 45,
+    "mrp": 55,
+    "unit": "1 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_230",
+    "name": "Watermelon kiran",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 69,
+    "mrp": 79,
+    "unit": "1 kg",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_231",
+    "name": "Muskmelon",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 55,
+    "mrp": 65,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_232",
+    "name": "Sweet corn cob",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 35,
+    "mrp": 42,
+    "unit": "2 pcs",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_233",
+    "name": "Beetroot chukandar",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 38,
+    "mrp": 45,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_234",
+    "name": "Radish mooli",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 25,
+    "mrp": 30,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_235",
+    "name": "Carrot orange",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 48,
+    "mrp": 55,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_236",
+    "name": "Capsicum green",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 42,
+    "mrp": 50,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_237",
+    "name": "French beans",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 45,
+    "mrp": 52,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_238",
+    "name": "Cluster beans guar",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 35,
+    "mrp": 42,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_239",
+    "name": "Drumstick moringa",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 39,
+    "mrp": 45,
+    "unit": "250 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_240",
+    "name": "Lemon nimbu",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 28,
+    "mrp": 35,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_241",
+    "name": "Raw mango kairi",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 65,
+    "mrp": 75,
+    "unit": "500 g",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_242",
+    "name": "Coconut fresh",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 55,
+    "mrp": 65,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_243",
+    "name": "Pineapple",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 79,
+    "mrp": 89,
+    "unit": "1 pc",
+    "available_in": [
+      "Sarjapur",
+      "Whitefield",
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_244",
+    "name": "Dragon fruit",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 149,
+    "mrp": 169,
+    "unit": "1 pc",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_245",
+    "name": "Blueberry imported",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 199,
+    "mrp": 229,
+    "unit": "125 g",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_246",
+    "name": "Cherry imported",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 349,
+    "mrp": 399,
+    "unit": "200 g",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_247",
+    "name": "Zucchini green",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 89,
+    "mrp": 99,
+    "unit": "500 g",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_248",
+    "name": "Asparagus bunch",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 199,
+    "mrp": 229,
+    "unit": "250 g",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_249",
+    "name": "Leeks bunch",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 129,
+    "mrp": 149,
+    "unit": "1 bunch",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  },
+  {
+    "id": "sku_250",
+    "name": "Romaine lettuce",
+    "brand": "Fresh",
+    "category": "Vegetables & Fruits",
+    "price": 99,
+    "mrp": 110,
+    "unit": "1 pc",
+    "available_in": [
+      "Delhi NCR"
+    ],
+    "fetched_at": "2026-07-31T16:26:17Z",
+    "source": "generated"
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "run_id": "20260731T154544",
+  "started_at": "2026-07-31T15:45:44Z",
+  "completed_at": "2026-07-31T15:45:44Z",
+  "direct_scrape": {
+    "status": "blocked",
+    "reason": "Storefront behind Cloudflare; search endpoint returns HTTP 403 without browser session",
+    "investigated_endpoints": [
+      "blinkit.com/v6/search/deeplink",
+      "blinkit.com/v1/layout/search"
+    ]
+  },
+  "sources": {
+    "apify": {
+      "file": "data/blinkit_products.csv",
+      "count": 20
+    },
+    "generated": {
+      "module": "phases/phase_1_scraper/generated_products.py",
+      "count": 230
+    }
+  },
+  "total_products": 250,
+  "target_size": 250,
+  "tiles_covered": [
+    "Atta, Rice & Dal",
+    "Baby Care",
+    "Bakery & Biscuits",
+    "Bath & Body",
+    "Beauty & Cosmetics",
+    "Book Store",
+    "Chicken, Meat & Fish",
+    "Chips & Namkeen",
+    "Cleaners & Repellents",
+    "Dairy, Bread & Eggs",
+    "Drinks & Juices",
+    "Dry Fruits & Cereals",
+    "E-Gifts Store",
+    "Electronics",
+    "Fashion Basics",
+    "Feminine Hygiene",
+    "Hair",
+    "Health & Pharma",
+    "Hobby Store",
+    "Home & Lifestyle",
+    "Ice Cream Store",
+    "Ice Creams & More",
+    "Instant Food",
+    "Jewellery Store",
+    "Kitchenware & Appliances",
+    "Oil, Ghee & Masala",
+    "Paan Corner",
+    "Pet Store",
+    "Pharma Store",
+    "Sauces & Spreads",
+    "Sexual Wellness",
+    "Skin & Face",
+    "Spiritual Needs",
+    "Sports Store",
+    "Stationery & Games",
+    "Sweets & Chocolates",
+    "Tea, Coffee & Milk Drinks",
+    "Toy Store",
+    "Travel Store",
+    "Vegetables & Fruits"
+  ],
+  "user_agent": "BlinkitSenseCatalogueBot/1.0"
+}

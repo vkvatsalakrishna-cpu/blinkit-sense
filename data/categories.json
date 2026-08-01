@@ -1,0 +1,66 @@
+{
+  "groups": [
+    {
+      "name": "Grocery & Kitchen",
+      "tiles": [
+        "Vegetables & Fruits",
+        "Atta, Rice & Dal",
+        "Oil, Ghee & Masala",
+        "Dairy, Bread & Eggs",
+        "Bakery & Biscuits",
+        "Dry Fruits & Cereals",
+        "Chicken, Meat & Fish",
+        "Kitchenware & Appliances"
+      ]
+    },
+    {
+      "name": "Snacks & Drinks",
+      "tiles": [
+        "Chips & Namkeen",
+        "Sweets & Chocolates",
+        "Drinks & Juices",
+        "Tea, Coffee & Milk Drinks",
+        "Instant Food",
+        "Sauces & Spreads",
+        "Paan Corner",
+        "Ice Creams & More"
+      ]
+    },
+    {
+      "name": "Beauty & Personal Care",
+      "tiles": [
+        "Bath & Body",
+        "Hair",
+        "Skin & Face",
+        "Beauty & Cosmetics",
+        "Feminine Hygiene",
+        "Baby Care",
+        "Health & Pharma",
+        "Sexual Wellness"
+      ]
+    },
+    {
+      "name": "Household Essentials",
+      "tiles": [
+        "Home & Lifestyle",
+        "Cleaners & Repellents",
+        "Electronics",
+        "Stationery & Games"
+      ]
+    }
+  ],
+  "stores": [
+    "Pet Store",
+    "Spiritual Needs",
+    "Toy Store",
+    "Book Store",
+    "Jewellery Store",
+    "E-Gifts Store",
+    "Fashion Basics",
+    "Sports Store",
+    "Hobby Store",
+    "Travel Store",
+    "Pharma Store",
+    "Ice Cream Store"
+  ]
+}

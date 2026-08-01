@@ -1,0 +1,25 @@
+{
+  "locations": [
+    {
+      "id": "sarjapur",
+      "name": "Sarjapur",
+      "display_address": "Sarjapur, Bangalore",
+      "lat": 12.8575579,
+      "lon": 77.7864057
+    },
+    {
+      "id": "whitefield",
+      "name": "Whitefield",
+      "display_address": "Whitefield, Bangalore",
+      "lat": 12.9698,
+      "lon": 77.7499
+    },
+    {
+      "id": "delhi_ncr",
+      "name": "Delhi NCR",
+      "display_address": "Delhi NCR",
+      "lat": 28.6139,
+      "lon": 77.209
+    }
+  ]
+}

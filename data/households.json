@@ -1,0 +1,66 @@
+{
+  "households": [
+    {
+      "id": "h1",
+      "name": "Sarjapur household",
+      "known_addresses": ["Sarjapur, Bangalore"],
+      "current_address": "Sarjapur, Bangalore",
+      "orders_per_month": 12,
+      "order_history": [
+        { "sku": "sku_022", "orders_per_month": 8 },
+        { "sku": "sku_025", "orders_per_month": 6 },
+        { "sku": "sku_023", "orders_per_month": 4 },
+        { "sku": "sku_024", "orders_per_month": 3 }
+      ],
+      "current_cart": ["sku_021", "sku_022", "sku_023"]
+    },
+    {
+      "id": "h2",
+      "name": "Whitefield mover",
+      "known_addresses": ["Sarjapur, Bangalore"],
+      "current_address": "Whitefield, Bangalore",
+      "orders_per_month": 8,
+      "order_history": [
+        { "sku": "sku_022", "orders_per_month": 8 },
+        { "sku": "sku_025", "orders_per_month": 5 },
+        { "sku": "sku_023", "orders_per_month": 3 }
+      ],
+      "current_cart": ["sku_022", "sku_025"]
+    },
+    {
+      "id": "h3",
+      "name": "New cat parent",
+      "known_addresses": ["Sarjapur, Bangalore"],
+      "current_address": "Sarjapur, Bangalore",
+      "orders_per_month": 2,
+      "order_history": [{ "sku": "sku_022", "orders_per_month": 1 }],
+      "current_cart": ["sku_020"]
+    },
+    {
+      "id": "h4",
+      "name": "Staples-only household",
+      "known_addresses": ["Sarjapur, Bangalore"],
+      "current_address": "Sarjapur, Bangalore",
+      "orders_per_month": 12,
+      "order_history": [
+        { "sku": "sku_022", "orders_per_month": 10 },
+        { "sku": "sku_025", "orders_per_month": 9 },
+        { "sku": "sku_026", "orders_per_month": 8 },
+        { "sku": "sku_024", "orders_per_month": 4 }
+      ],
+      "current_cart": ["sku_022", "sku_025", "sku_026"]
+    },
+    {
+      "id": "h5",
+      "name": "Delhi NCR explorer",
+      "known_addresses": ["Sarjapur, Bangalore"],
+      "current_address": "Delhi NCR",
+      "orders_per_month": 6,
+      "order_history": [
+        { "sku": "sku_022", "orders_per_month": 6 },
+        { "sku": "sku_023", "orders_per_month": 4 }
+      ],
+      "current_cart": ["sku_022"]
+    }
+  ]
+}
