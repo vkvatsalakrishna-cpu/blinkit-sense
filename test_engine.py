@@ -152,10 +152,11 @@ def print_need_diagnostics(
         print(f"           expected_tiles: {_format_tiles(expected)}")
         rejected = top_rejected_candidates(need, location, catalog)
         if rejected:
-            categories = [item["category"] for item in rejected]
-            print(f"           top rejected categories: {', '.join(categories)}")
+            print("           top rejected candidates:")
+            for item in rejected:
+                print(f"             [{item['category']}] {item['name']}")
         else:
-            print("           top rejected categories: (none with word overlap)")
+            print("           top rejected candidates: (none with word overlap)")
 
 
 def print_result(

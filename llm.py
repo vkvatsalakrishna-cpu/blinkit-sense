@@ -71,7 +71,7 @@ Return JSON only matching this schema:
   "needs": [
     {{
       "role": "<grouping label, e.g. Sleep, Bathroom, Cleaning>",
-      "need": "<one product only — generic noun, singular>",
+      "need": "<one product only — label wording as on Indian packs, singular>",
       "why": "<one sentence of situational reasoning>",
       "quantity_reasoning": "<why this quantity makes sense — logic only, no sizes>",
       "expected_tiles": ["<1-3 tile names from the valid list below>"]
@@ -86,11 +86,12 @@ Valid tile names (expected_tiles must use only these, exact spelling):
 Rules:
 - Return 8 to 10 needs only — what genuinely matters for the situation.
 - Each need names exactly ONE product. Never combine items: not "mop and bucket", "plates and bowls", "pots and pans", "glasses and mugs". Split into separate needs.
-- Each need is singular and catalogue-searchable: "bedsheet" not "bed sheets", "towel" not "shower towels", "pillow" not "pillows". Be specific where ambiguous: "cooking oil" not "oil", "mixing bowl" not "bowl", "pet bowl" not "bowl" for a cat.
-- Write needs as a shopper would search on an Indian quick-commerce app — simple, common product words, one or two words when possible.
+- Each need is singular and catalogue-searchable: "bedsheet" not "bed sheets", "towel" not "shower towels", "pillow" not "pillows". Be specific where ambiguous: "refined oil" not "oil", "pet bowl" not "bowl" for a cat.
+- Use the words Indian quick-commerce retailers print on product labels — not generic, Western, or textbook category names. Prefer the term on a Blinkit/Zepto/BigBasket pack over the polite English word. Examples: "dishwash gel" or "dish wash bar" not "dishwashing liquid"; "chopping board" not "cutting board"; "refined oil" or "sunflower oil" not "cooking oil"; "dustbin" not "trash bin"; "detergent powder" or "detergent liquid" not "laundry detergent".
+- Write needs as a shopper would search on an Indian quick-commerce app — simple, common label words, one to three words when needed.
 - expected_tiles: required on every need, 1 to 3 tiles from the valid list above where the product lives.
 - quantity_reasoning: express only the logic for why one (or a few) is needed — never state a specific size, volume, weight, count, or pack detail. Pack size is unknown at this stage. Good: "One bucket covers most household cleaning tasks", "Enough towels to rotate while one dries". Bad: "One 5-liter bucket", "Two to three medium towels", "One set (fitted sheet + pillowcase)".
-- Use world knowledge: moving in → bedsheet, pillow, towel, bucket, mug, mop, detergent, dustbin; new cat → cat food, cat litter, litter tray, pet bowl, scoop; Diwali → diyas, wicks, oil.
+- Use world knowledge: moving in → bedsheet, pillow, towel, bucket, mug, mop, detergent powder, dustbin, dishwash gel; new cat → cat food, cat litter, litter tray, pet bowl, scoop; Diwali → diyas, wicks, refined oil.
 - Needs must be generic nouns — never brand names or specific SKUs.
 - Do not suggest Health & Pharma or Baby Care products for auto-composition — note them in unavailable or omit.
 - Return raw JSON only. Do not wrap the response in markdown code fences. Do not use ```json or ``` blocks. No prose before or after the JSON."""
