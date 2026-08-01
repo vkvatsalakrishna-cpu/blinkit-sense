@@ -60,6 +60,17 @@ export async function fetchHouseholds(): Promise<Household[]> {
   return data.households;
 }
 
+export async function fetchCatalogByCategory(
+  category: string,
+  location: string,
+  limit = 24,
+): Promise<Product[]> {
+  const items = await apiFetch<Product[]>(
+    `/catalog?category=${encodeURIComponent(category)}&location=${encodeURIComponent(location)}`,
+  );
+  return items.slice(0, limit);
+}
+
 export async function fetchCatalogProduct(
   skuId: string,
   location: string,

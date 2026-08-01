@@ -1,15 +1,19 @@
 "use client";
 
+import { useState } from "react";
+import { CategoryBrowseModal } from "./CategoryBrowseModal";
 import { ProductImage } from "./ProductImage";
-import type { SelectedSuggestion } from "@/lib/types";
+import type { Product, SelectedSuggestion } from "@/lib/types";
 
 interface SuggestionsPanelProps {
   situationLabel: string;
   suggestions: SelectedSuggestion[];
+  catalogLocation: string;
   onToggle: (skuId: string) => void;
   onQtyChange: (skuId: string, qty: number) => void;
   onDismiss: (skuId: string) => void;
   onAddAll: () => void;
+  onAddProductToCart: (product: Product) => void;
   sensitiveGuidance: string[];
   newCategoryTiles: string[];
 }
@@ -17,13 +21,16 @@ interface SuggestionsPanelProps {
 export function SuggestionsPanel({
   situationLabel,
   suggestions,
+  catalogLocation,
   onToggle,
   onQtyChange,
   onDismiss,
   onAddAll,
+  onAddProductToCart,
   sensitiveGuidance,
   newCategoryTiles,
 }: SuggestionsPanelProps) {
+  const [browseCategory, setBrowseCategory] = useState<string | null>(null);
   const visible = suggestions.filter((s) => !s.dismissed);
   const selected = visible.filter((s) => s.checked);
   const addTotal = selected.reduce(
@@ -61,6 +68,8 @@ export function SuggestionsPanel({
             available_in: [],
           };
 
+          const isNewCategory = s.item.flag === "new_category";
+
           return (
             <li
               key={s.item.resolved_sku}
@@ -75,6 +84,16 @@ export function SuggestionsPanel({
               />
               <ProductImage product={product} size={56} />
               <div className="min-w-0 flex-1">
+                <div className="mb-0.5 flex flex-wrap items-center gap-1.5">
+                  <p className="text-xs text-gray-500">
+                    {s.item.category} · {s.item.role}
+                  </p>
+                  {isNewCategory && (
+                    <span className="rounded-full bg-blinkit-green/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-blinkit-green">
+                      New for you
+                    </span>
+                  )}
+                </div>
                 <p className="line-clamp-2 text-sm font-medium text-gray-900">
                   {s.item.resolved_name}
                 </p>
@@ -82,7 +101,13 @@ export function SuggestionsPanel({
                   {product.brand}
                   {product.unit ? ` · ${product.unit}` : ""}
                 </p>
-                <p className="text-xs text-gray-400">{s.item.role}</p>
+                <button
+                  type="button"
+                  onClick={() => setBrowseCategory(s.item.category)}
+                  className="mt-1 text-xs font-medium text-blinkit-green hover:underline"
+                >
+                  More from this category
+                </button>
                 <div className="mt-2 flex items-center justify-between">
                   <div className="flex items-center rounded-lg border border-gray-200">
                     <button
@@ -139,6 +164,15 @@ export function SuggestionsPanel({
           {line}
         </p>
       ))}
+
+      {browseCategory && (
+        <CategoryBrowseModal
+          category={browseCategory}
+          catalogLocation={catalogLocation}
+          onClose={() => setBrowseCategory(null)}
+          onAdd={onAddProductToCart}
+        />
+      )}
     </section>
   );
 }

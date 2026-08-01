@@ -1,281 +1,93 @@
 {
-  "deed6f88662dc9f678c1cef5f8b54fe08f6287f30082378ae25b0183974efd1e": {
-    "confidence": 0.85,
+  "3da466099a1d2cada4da9fc86adf2a0cacd159b556781bcbf57d739a25685cb1": {
+    "confidence": 0.68,
     "candidates": [
       {
-        "id": "moving_in",
-        "label": "Moving into new home",
-        "reasoning": "Unfamiliar address indicates recent relocation",
-        "score": 0.85
-      },
-      {
         "id": "stocking",
-        "label": "Stocking staples",
-        "reasoning": "Milk and bread are basic daily items",
-        "score": 0.65
+        "label": "Office supplies restock",
+        "reasoning": "Notebooks and pens suggest replenishing work materials.",
+        "score": 0.68
       },
       {
         "id": "health",
-        "label": "Health focus",
-        "reasoning": "Milk often bought for nutrition",
-        "score": 0.35
+        "label": "Healthy snack purchase",
+        "reasoning": "Pomegranate pack indicates focus on nutritious snacking.",
+        "score": 0.62
       },
       {
         "id": "hosting",
-        "label": "Hosting guests",
-        "reasoning": "Bread and milk useful for quick meals",
-        "score": 0.3
-      }
-    ]
-  },
-  "9e2ff634364c0e8ad75bb465c8238aa00f047ee189323adab4f4f55448601405": {
-    "situation_label": "Moving into New Home",
-    "needs": [
-      {
-        "role": "Sleep",
-        "need": "bedsheet",
-        "why": "A fresh bedsheet is essential to make the new bed comfortable.",
-        "quantity_reasoning": "One sheet covers the mattress for immediate use.",
-        "expected_tiles": [
-          "Home & Lifestyle"
-        ]
-      },
-      {
-        "role": "Sleep",
-        "need": "pillow",
-        "why": "A pillow provides proper head support for a good night’s sleep.",
-        "quantity_reasoning": "One pillow is enough for a single sleeper.",
-        "expected_tiles": [
-          "Home & Lifestyle"
-        ]
-      },
-      {
-        "role": "Bathroom",
-        "need": "towel",
-        "why": "Towels are needed to dry off after bathing.",
-        "quantity_reasoning": "Enough towels to rotate while one dries.",
-        "expected_tiles": [
-          "Bath & Body"
-        ]
-      },
-      {
-        "role": "Cleaning",
-        "need": "dustbin",
-        "why": "A dustbin collects household waste and keeps the home tidy.",
-        "quantity_reasoning": "One bin covers most waste generation.",
-        "expected_tiles": [
-          "Home & Lifestyle"
-        ]
-      },
-      {
-        "role": "Cleaning",
-        "need": "mop",
-        "why": "A mop is required to clean floor surfaces regularly.",
-        "quantity_reasoning": "One mop suffices for routine floor cleaning.",
-        "expected_tiles": [
-          "Home & Lifestyle"
-        ]
-      },
-      {
-        "role": "Cleaning",
-        "need": "bucket",
-        "why": "A bucket is needed to hold water for mopping and other cleaning tasks.",
-        "quantity_reasoning": "One bucket serves most cleaning activities.",
-        "expected_tiles": [
-          "Home & Lifestyle"
-        ]
-      },
-      {
-        "role": "Laundry",
-        "need": "detergent powder",
-        "why": "Detergent powder is necessary to wash clothes and keep them fresh.",
-        "quantity_reasoning": "One pack handles weekly laundry cycles.",
-        "expected_tiles": [
-          "Cleaners & Repellents"
-        ]
-      },
-      {
-        "role": "Kitchen",
-        "need": "dish wash gel",
-        "why": "Dish wash gel cleans dishes and utensils after meals.",
-        "quantity_reasoning": "One bottle lasts through daily dishwashing.",
-        "expected_tiles": [
-          "Cleaners & Repellents"
-        ]
-      },
-      {
-        "role": "Cooking",
-        "need": "refined oil",
-        "why": "Refined oil is a basic cooking medium for preparing meals.",
-        "quantity_reasoning": "One bottle meets initial cooking requirements.",
-        "expected_tiles": [
-          "Oil, Ghee & Masala"
-        ]
-      },
-      {
-        "role": "Cooking",
-        "need": "rice",
-        "why": "Rice is a staple food for everyday meals.",
-        "quantity_reasoning": "One bag provides enough for several meals.",
-        "expected_tiles": [
-          "Atta, Rice & Dal"
-        ]
-      }
-    ],
-    "unavailable": []
-  },
-  "f344ca4d0f9da5c71c35c2524773447519de6ba9d6472898bdfc6d5750b23e80": {
-    "confidence": 0.78,
-    "candidates": [
-      {
-        "id": "health",
-        "label": "Health-focused pantry",
-        "reasoning": "dry fruits and milk suggest health-conscious choices",
-        "score": 0.78
-      },
-      {
-        "id": "stocking",
-        "label": "Restocking essentials",
-        "reasoning": "atta and milk are staple items for regular use",
-        "score": 0.65
-      },
-      {
-        "id": "cooking_project",
-        "label": "Cooking special dish",
-        "reasoning": "dry fruits mix often used in festive or celebratory recipes",
+        "label": "Coffee for guests",
+        "reasoning": "Travel mug hints at serving coffee during visits.",
         "score": 0.55
       },
       {
         "id": "festival_gifting",
-        "label": "Festival gifting prep",
-        "reasoning": "dry fruits are popular gifts during upcoming festivals",
-        "score": 0.45
+        "label": "Gift prep",
+        "reasoning": "Stationery could be for gifting during upcoming festivals.",
+        "score": 0.35
       }
     ]
   },
-  "4ca6685031730f38244750c4bc37381b992c4e43a8c4618c5861d41f7d3bbc9e": {
-    "situation_label": "Diwali Festival Gifting",
+  "464b9bc1d26058cfd0c5e055ac4896eb6bbb8986832e4a66a6099fecf05227a0": {
+    "situation_label": "Routine Grocery Restock",
     "needs": [
       {
-        "role": "Decoration",
-        "need": "diya",
-        "why": "Diya lights are essential for illuminating homes during Diwali.",
-        "quantity_reasoning": "One set provides enough to place around the house and entrance.",
+        "role": "Cooking",
+        "need": "atta",
+        "quantity_reasoning": "One pack lasts a week for daily rotis",
         "expected_tiles": [
-          "Spiritual Needs"
+          "Atta, Rice & Dal"
         ]
       },
       {
-        "role": "Decoration",
-        "need": "incense sticks",
-        "why": "Incense sticks create a festive aroma during prayers.",
-        "quantity_reasoning": "A few sticks last through the main celebration hours.",
+        "role": "Cooking",
+        "need": "basmati rice",
+        "quantity_reasoning": "Enough for multiple meals through the week",
         "expected_tiles": [
-          "Spiritual Needs"
+          "Atta, Rice & Dal"
         ]
       },
       {
-        "role": "Gifting",
-        "need": "dry fruits",
-        "why": "Dry fruits are a popular premium gift for relatives.",
-        "quantity_reasoning": "A modest amount fits into typical gift boxes.",
-        "expected_tiles": [
-          "Dry Fruits & Cereals"
-        ]
-      },
-      {
-        "role": "Gifting",
-        "need": "sweets",
-        "why": "Traditional sweets are exchanged as festive treats.",
-        "quantity_reasoning": "A small batch satisfies gifting to multiple families.",
-        "expected_tiles": [
-          "Sweets & Chocolates"
-        ]
-      },
-      {
-        "role": "Gifting",
-        "need": "gift wrap",
-        "why": "Gift wrap presents the items attractively.",
-        "quantity_reasoning": "One roll covers several small gifts.",
-        "expected_tiles": [
-          "Home & Lifestyle"
-        ]
-      },
-      {
-        "role": "Gifting",
-        "need": "gift box",
-        "why": "Gift boxes hold sweets and dry fruits neatly.",
-        "quantity_reasoning": "A few boxes accommodate different gift sizes.",
-        "expected_tiles": [
-          "Home & Lifestyle"
-        ]
-      },
-      {
-        "role": "Hospitality",
+        "role": "Cooking",
         "need": "refined oil",
-        "why": "Refined oil is needed for cooking festive meals.",
-        "quantity_reasoning": "One bottle suffices for the day's cooking.",
+        "quantity_reasoning": "Covers daily cooking needs",
         "expected_tiles": [
           "Oil, Ghee & Masala"
         ]
       },
       {
-        "role": "Hospitality",
-        "need": "paan",
-        "why": "Paan is a traditional after‑meal treat during celebrations.",
-        "quantity_reasoning": "A small pack serves guests after the feast.",
+        "role": "Breakfast",
+        "need": "milk",
+        "quantity_reasoning": "Daily consumption for tea, coffee, cereal",
         "expected_tiles": [
-          "Paan Corner"
+          "Dairy, Bread & Eggs"
         ]
       },
       {
-        "role": "Personal Care",
-        "need": "perfume",
-        "why": "Perfume makes a nice personal gift for close friends.",
-        "quantity_reasoning": "One bottle is enough for gifting.",
+        "role": "Breakfast",
+        "need": "eggs",
+        "quantity_reasoning": "Provides protein for daily meals",
         "expected_tiles": [
-          "Beauty & Cosmetics"
+          "Dairy, Bread & Eggs"
         ]
       },
       {
-        "role": "Beverage",
-        "need": "soft drinks",
-        "why": "Soft drinks are served to guests alongside snacks.",
-        "quantity_reasoning": "A few bottles keep guests refreshed.",
+        "role": "Beverages",
+        "need": "tea",
+        "quantity_reasoning": "Regular morning and evening beverage",
         "expected_tiles": [
-          "Drinks & Juices"
+          "Tea, Coffee & Milk Drinks"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "detergent powder",
+        "quantity_reasoning": "One pack handles weekly laundry loads",
+        "expected_tiles": [
+          "Cleaners & Repellents"
         ]
       }
     ],
     "unavailable": []
-  },
-  "638a42737dbbb6907bdfa16580ae088162d181c72e00158d72ae9067943e4d47": {
-    "confidence": 0.68,
-    "candidates": [
-      {
-        "id": "cooking_project",
-        "label": "Cooking a meal",
-        "reasoning": "Bought chicken and veg for a recipe",
-        "score": 0.68
-      },
-      {
-        "id": "hosting",
-        "label": "Hosting guests soon",
-        "reasoning": "Protein and veggies suggest a dinner",
-        "score": 0.55
-      },
-      {
-        "id": "health",
-        "label": "High protein diet",
-        "reasoning": "Chicken indicates protein focus",
-        "score": 0.38
-      },
-      {
-        "id": "stocking",
-        "label": "Restocking basics",
-        "reasoning": "Only core ingredients purchased",
-        "score": 0.3
-      }
-    ]
   }
 }

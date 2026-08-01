@@ -15,7 +15,7 @@ from engine import (
     apply_household_filter,
     resolve_needs,
 )
-from llm import NEED_PLANNER_SYSTEM, _chat, _extract_json, _parse_needs_response
+from llm import _allowed_tiles, _chat, _extract_json, _need_planner_system, _parse_needs_response
 from phases.phase_2_data.loader import (
     address_to_catalog_location,
     all_tiles,
@@ -87,15 +87,17 @@ def plan_needs_with_validation(
     tile_categories: list[str],
     valid_tiles: set[str],
 ) -> tuple[dict | None, list[str]]:
+    allowed = _allowed_tiles(scenario["id"], tile_categories)
     payload = {
         "situation_id": scenario["id"],
         "situation_label": scenario["chip_label"],
         "prompt_context": scenario["prompt_context"],
-        "tile_categories": tile_categories,
+        "tile_categories": allowed,
     }
-    raw = _chat(NEED_PLANNER_SYSTEM, payload)
+    system = _need_planner_system(allowed)
+    raw = _chat(system, payload)
     invalid = invalid_expected_tiles(raw, valid_tiles)
-    parsed = _parse_needs_response(raw) if raw else None
+    parsed = _parse_needs_response(raw, frozenset(allowed)) if raw else None
     return parsed, invalid
 
 

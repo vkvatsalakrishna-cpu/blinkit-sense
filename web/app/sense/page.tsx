@@ -313,6 +313,17 @@ export default function SensePage() {
     setPhase("cart");
   };
 
+  const handleAddProductToCart = useCallback((product: Product) => {
+    setCart((prev) =>
+      mergeLinesIntoCart(prev, [{ sku_id: product.id, qty: 1, product }]),
+    );
+  }, []);
+
+  const catalogLocation = useMemo(
+    () => catalogLocationFromAddress(location),
+    [location],
+  );
+
   const handleCheckout = () => {
     if (cart.length === 0) return;
     setPlacedOrder(cart.map((line) => ({ ...line })));
@@ -424,6 +435,7 @@ export default function SensePage() {
                 <SuggestionsPanel
                   situationLabel={situationLabel}
                   suggestions={suggestions}
+                  catalogLocation={catalogLocation}
                   onToggle={(skuId) =>
                     setSuggestions((prev) =>
                       prev.map((s) =>
@@ -450,6 +462,7 @@ export default function SensePage() {
                     )
                   }
                   onAddAll={handleAddAllSuggestions}
+                  onAddProductToCart={handleAddProductToCart}
                   sensitiveGuidance={sensitiveGuidance}
                   newCategoryTiles={newCategoryTiles}
                 />

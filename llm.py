@@ -14,6 +14,7 @@ from typing import Any
 from dotenv import load_dotenv
 from openai import OpenAI, RateLimitError
 
+from engine import IMPLAUSIBLE_TILES
 from phases.phase_2_data.loader import all_tiles
 
 load_dotenv()
@@ -27,7 +28,6 @@ _CACHE_PATH = _CACHE_DIR / "llm_cache.json"
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
 VALID_PLANNER_TILES = all_tiles()
 _VALID_TILES_SET = frozenset(VALID_PLANNER_TILES)
-_TILE_LIST_FOR_PROMPT = "\n".join(f"- {tile}" for tile in VALID_PLANNER_TILES)
 
 SITUATION_READER_SYSTEM = """You are a checkout-time situation inference engine for an Indian quick-commerce grocery app.
 
@@ -44,7 +44,7 @@ Infer up to four plausible life situations that could explain this cart. Return 
     {
       "id": "<scenario id, align with known ids where possible: festival_gifting, hosting, moving_in, new_pet, health, stocking, cooking_project>",
       "label": "<customer-facing chip text, max 4 words>",
-      "reasoning": "<one short clause>",
+      "reasoning": "<roughly 10 words or fewer>",
       "score": <float 0.0-1.0>
     }
   ]
@@ -54,16 +54,20 @@ Rules:
 - Exactly 4 candidates, ordered by descending score.
 - Each candidate must include a score between 0.0 and 1.0; confidence equals the top candidate's score.
 - Candidate labels must be 4 words or fewer.
+- reasoning: one short clause, roughly 10 words maximum — the UI truncates longer text.
 - Calibrate scores: high confidence for strong situational items (cat food, bedsheet, dry fruits near festivals); low confidence (below 0.4) for staple-only carts (milk, bread, eggs).
 - Unfamiliar delivery location and festival proximity raise confidence.
 - Never reference or infer purchase history — it is not provided.
 - Return raw JSON only. Do not wrap the response in markdown code fences. Do not use ```json or ``` blocks. No prose before or after the JSON."""
 
-NEED_PLANNER_SYSTEM = f"""You are a need planner for an Indian quick-commerce app. Given a confirmed life situation, decompose it into abstract household needs grouped by role.
+
+def _need_planner_system(valid_tiles: list[str]) -> str:
+    tile_list = "\n".join(f"- {tile}" for tile in valid_tiles)
+    return f"""You are a need planner for an Indian quick-commerce app. Given a confirmed life situation, decompose it into abstract household needs grouped by role.
 
 You receive a JSON payload with:
 - situation_id, situation_label, prompt_context: the confirmed situation
-- tile_categories: full list of Blinkit tile categories (for domain awareness, not product retrieval)
+- tile_categories: Blinkit tile categories relevant to this situation (for domain awareness, not product retrieval)
 
 Return JSON only matching this schema:
 {{
@@ -72,7 +76,6 @@ Return JSON only matching this schema:
     {{
       "role": "<grouping label, e.g. Sleep, Bathroom, Cleaning>",
       "need": "<one product only — label wording as on Indian packs, singular>",
-      "why": "<one sentence of situational reasoning>",
       "quantity_reasoning": "<why this quantity makes sense — logic only, no sizes>",
       "expected_tiles": ["<1-3 tile names from the valid list below>"]
     }}
@@ -81,10 +84,10 @@ Return JSON only matching this schema:
 }}
 
 Valid tile names (expected_tiles must use only these, exact spelling):
-{_TILE_LIST_FOR_PROMPT}
+{tile_list}
 
 Rules:
-- Return 8 to 10 needs only — what genuinely matters for the situation.
+- Return at most 7 needs — only what genuinely matters for the situation.
 - Each need names exactly ONE product. Never combine items: not "mop and bucket", "plates and bowls", "pots and pans", "glasses and mugs". Split into separate needs.
 - Each need is singular and catalogue-searchable: "bedsheet" not "bed sheets", "towel" not "shower towels", "pillow" not "pillows". Be specific where ambiguous: "refined oil" not "oil", "pet bowl" not "bowl" for a cat.
 - Use the words Indian quick-commerce retailers print on product labels — not generic, Western, or textbook category names. Prefer the term on a Blinkit/Zepto/BigBasket pack over the polite English word. Examples: "dishwash gel" or "dish wash bar" not "dishwashing liquid"; "chopping board" not "cutting board"; "refined oil" or "sunflower oil" not "cooking oil"; "dustbin" not "trash bin"; "detergent powder" or "detergent liquid" not "laundry detergent".
@@ -95,6 +98,11 @@ Rules:
 - Needs must be generic nouns — never brand names or specific SKUs.
 - Do not suggest Health & Pharma or Baby Care products for auto-composition — note them in unavailable or omit.
 - Return raw JSON only. Do not wrap the response in markdown code fences. Do not use ```json or ``` blocks. No prose before or after the JSON."""
+
+
+def _allowed_tiles(situation_id: str, tile_categories: list[str]) -> list[str]:
+    vetoed = IMPLAUSIBLE_TILES.get(situation_id, frozenset())
+    return [tile for tile in tile_categories if tile not in vetoed]
 
 
 def _ensure_cache_dir() -> None:
@@ -263,7 +271,8 @@ def _parse_situation_response(raw: str) -> dict | None:
     return {"confidence": confidence, "candidates": parsed_candidates}
 
 
-def _parse_expected_tiles(raw: Any) -> list[str]:
+def _parse_expected_tiles(raw: Any, valid_tiles: frozenset[str] | None = None) -> list[str]:
+    allowed = valid_tiles or _VALID_TILES_SET
     if raw is None:
         return []
     if not isinstance(raw, list):
@@ -273,14 +282,16 @@ def _parse_expected_tiles(raw: Any) -> list[str]:
         if not isinstance(entry, str):
             continue
         tile = entry.strip()
-        if tile in _VALID_TILES_SET and tile not in tiles:
+        if tile in allowed and tile not in tiles:
             tiles.append(tile)
         if len(tiles) == 3:
             break
     return tiles
 
 
-def _parse_needs_response(raw: str) -> dict | None:
+def _parse_needs_response(
+    raw: str, valid_tiles: frozenset[str] | None = None
+) -> dict | None:
     extracted = _extract_json(raw)
     if extracted is None:
         logger.warning("Need planner: failed to extract JSON")
@@ -310,12 +321,10 @@ def _parse_needs_response(raw: str) -> dict | None:
             return None
         role = need.get("role")
         need_text = need.get("need")
-        why = need.get("why")
         quantity_reasoning = need.get("quantity_reasoning")
         if (
             not isinstance(role, str)
             or not isinstance(need_text, str)
-            or not isinstance(why, str)
             or not isinstance(quantity_reasoning, str)
         ):
             return None
@@ -323,9 +332,10 @@ def _parse_needs_response(raw: str) -> dict | None:
             {
                 "role": role.strip(),
                 "need": need_text.strip(),
-                "why": why.strip(),
                 "quantity_reasoning": quantity_reasoning.strip(),
-                "expected_tiles": _parse_expected_tiles(need.get("expected_tiles")),
+                "expected_tiles": _parse_expected_tiles(
+                    need.get("expected_tiles"), valid_tiles
+                ),
             }
         )
 
@@ -460,16 +470,18 @@ def plan_needs(
             return cached
         print(f"cache miss: {key}")
 
+    allowed = _allowed_tiles(situation_id, tile_categories)
     payload = {
         "situation_id": situation_id,
         "situation_label": situation_label,
         "prompt_context": prompt_context,
-        "tile_categories": tile_categories,
+        "tile_categories": allowed,
     }
-    raw = _chat(NEED_PLANNER_SYSTEM, payload)
+    system = _need_planner_system(allowed)
+    raw = _chat(system, payload)
     if raw is None:
         return None
-    result = _parse_needs_response(raw)
+    result = _parse_needs_response(raw, frozenset(allowed))
     if CACHE_ENABLED and result is not None:
         _cache_put(key, result)
     return result

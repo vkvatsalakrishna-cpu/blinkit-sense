@@ -23,7 +23,6 @@ def print_needs(result: dict) -> None:
         print(f"  [{role}]")
         for need in needs:
             print(f"    • {need['need']}")
-            print(f"      why: {need['why']}")
             print(f"      qty: {need['quantity_reasoning']}")
 
     if result.get("unavailable"):
