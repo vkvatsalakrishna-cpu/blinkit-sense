@@ -30,37 +30,55 @@ export function feeBreakdown(subtotal: number) {
   };
 }
 
-/** Preset demo carts — SKU ids resolved via GET /catalog?sku_id= */
+/** Preset demo carts — mixed-category inference carts; all SKUs have image_url in Sarjapur */
 export const SCENARIO_PRESETS: ScenarioPreset[] = [
   {
-    id: "festival_gifting",
-    label: "Festival Gifting",
-    householdId: "h1",
-    skuIds: ["sku_021", "sku_022", "sku_023"],
-  },
-  {
-    id: "moving_in",
-    label: "Moving In",
-    householdId: "h2",
-    skuIds: ["sku_022", "sku_025"],
-  },
-  {
-    id: "stocking",
-    label: "Stocking Up",
+    id: "scenario_1",
+    label: "Scenario 1",
     householdId: "h4",
-    skuIds: ["sku_022", "sku_025", "sku_026"],
+    skuIds: ["sku_6155", "sku_4850", "sku_1652", "sku_476"],
   },
   {
-    id: "cooking_project",
-    label: "Cooking",
-    householdId: "h1",
-    skuIds: ["sku_041", "sku_042"],
-  },
-  {
-    id: "new_pet",
-    label: "New Pet",
+    id: "scenario_2",
+    label: "Scenario 2",
     householdId: "h3",
-    skuIds: ["sku_020"],
+    skuIds: ["sku_2826", "sku_1876", "sku_1222"],
+  },
+  {
+    id: "scenario_3",
+    label: "Scenario 3",
+    householdId: "h1",
+    skuIds: ["sku_253", "sku_263", "sku_1024", "sku_2210"],
+  },
+  {
+    id: "scenario_4",
+    label: "Scenario 4",
+    householdId: "h4",
+    skuIds: ["sku_275", "sku_590", "sku_1324"],
+  },
+  {
+    id: "scenario_5",
+    label: "Scenario 5",
+    householdId: "h2",
+    skuIds: ["sku_2213", "sku_1236", "sku_353", "sku_2007"],
+  },
+  {
+    id: "scenario_6",
+    label: "Scenario 6",
+    householdId: "h1",
+    skuIds: ["sku_582", "sku_607", "sku_4682", "sku_3917"],
+  },
+  {
+    id: "scenario_7",
+    label: "Scenario 7",
+    householdId: "h3",
+    skuIds: ["sku_2662", "sku_3173", "sku_4723"],
+  },
+  {
+    id: "scenario_8",
+    label: "Scenario 8",
+    householdId: "h1",
+    skuIds: ["sku_263", "sku_738", "sku_3708", "sku_4503"],
   },
 ];
 

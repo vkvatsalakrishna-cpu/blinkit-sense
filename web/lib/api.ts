@@ -74,7 +74,7 @@ export async function fetchProductsBySkuIds(
   skuIds: string[],
   location: string,
 ): Promise<Map<string, Product>> {
-  const unique = [...new Set(skuIds)];
+  const unique = Array.from(new Set(skuIds));
   const results = await Promise.all(
     unique.map((id) => fetchCatalogProduct(id, location)),
   );

@@ -80,7 +80,8 @@ export type FlowPhase =
   | "situations"
   | "needs_loading"
   | "suggestions"
-  | "dismissed";
+  | "dismissed"
+  | "order_confirmed";
 
 export interface ScenarioPreset {
   id: string;

@@ -9,6 +9,7 @@ interface SuggestionsPanelProps {
   onToggle: (skuId: string) => void;
   onQtyChange: (skuId: string, qty: number) => void;
   onDismiss: (skuId: string) => void;
+  onAddAll: () => void;
   sensitiveGuidance: string[];
   newCategoryTiles: string[];
 }
@@ -19,6 +20,7 @@ export function SuggestionsPanel({
   onToggle,
   onQtyChange,
   onDismiss,
+  onAddAll,
   sensitiveGuidance,
   newCategoryTiles,
 }: SuggestionsPanelProps) {
@@ -120,7 +122,8 @@ export function SuggestionsPanel({
       <button
         type="button"
         disabled={selected.length === 0}
-        className="mt-4 w-full rounded-lg bg-blinkit-green py-3 text-sm font-semibold text-white hover:bg-blinkit-green-dark disabled:opacity-50"
+        onClick={onAddAll}
+        className="mt-4 w-full rounded-lg border border-blinkit-green bg-white py-2.5 text-sm font-semibold text-blinkit-green hover:bg-blinkit-green/5 disabled:opacity-50"
       >
         Add all {selected.length} · ₹{addTotal}
       </button>

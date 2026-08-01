@@ -123,5 +123,159 @@
       }
     ],
     "unavailable": []
+  },
+  "f344ca4d0f9da5c71c35c2524773447519de6ba9d6472898bdfc6d5750b23e80": {
+    "confidence": 0.78,
+    "candidates": [
+      {
+        "id": "health",
+        "label": "Health-focused pantry",
+        "reasoning": "dry fruits and milk suggest health-conscious choices",
+        "score": 0.78
+      },
+      {
+        "id": "stocking",
+        "label": "Restocking essentials",
+        "reasoning": "atta and milk are staple items for regular use",
+        "score": 0.65
+      },
+      {
+        "id": "cooking_project",
+        "label": "Cooking special dish",
+        "reasoning": "dry fruits mix often used in festive or celebratory recipes",
+        "score": 0.55
+      },
+      {
+        "id": "festival_gifting",
+        "label": "Festival gifting prep",
+        "reasoning": "dry fruits are popular gifts during upcoming festivals",
+        "score": 0.45
+      }
+    ]
+  },
+  "4ca6685031730f38244750c4bc37381b992c4e43a8c4618c5861d41f7d3bbc9e": {
+    "situation_label": "Diwali Festival Gifting",
+    "needs": [
+      {
+        "role": "Decoration",
+        "need": "diya",
+        "why": "Diya lights are essential for illuminating homes during Diwali.",
+        "quantity_reasoning": "One set provides enough to place around the house and entrance.",
+        "expected_tiles": [
+          "Spiritual Needs"
+        ]
+      },
+      {
+        "role": "Decoration",
+        "need": "incense sticks",
+        "why": "Incense sticks create a festive aroma during prayers.",
+        "quantity_reasoning": "A few sticks last through the main celebration hours.",
+        "expected_tiles": [
+          "Spiritual Needs"
+        ]
+      },
+      {
+        "role": "Gifting",
+        "need": "dry fruits",
+        "why": "Dry fruits are a popular premium gift for relatives.",
+        "quantity_reasoning": "A modest amount fits into typical gift boxes.",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Gifting",
+        "need": "sweets",
+        "why": "Traditional sweets are exchanged as festive treats.",
+        "quantity_reasoning": "A small batch satisfies gifting to multiple families.",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Gifting",
+        "need": "gift wrap",
+        "why": "Gift wrap presents the items attractively.",
+        "quantity_reasoning": "One roll covers several small gifts.",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Gifting",
+        "need": "gift box",
+        "why": "Gift boxes hold sweets and dry fruits neatly.",
+        "quantity_reasoning": "A few boxes accommodate different gift sizes.",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Hospitality",
+        "need": "refined oil",
+        "why": "Refined oil is needed for cooking festive meals.",
+        "quantity_reasoning": "One bottle suffices for the day's cooking.",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      },
+      {
+        "role": "Hospitality",
+        "need": "paan",
+        "why": "Paan is a traditional after‑meal treat during celebrations.",
+        "quantity_reasoning": "A small pack serves guests after the feast.",
+        "expected_tiles": [
+          "Paan Corner"
+        ]
+      },
+      {
+        "role": "Personal Care",
+        "need": "perfume",
+        "why": "Perfume makes a nice personal gift for close friends.",
+        "quantity_reasoning": "One bottle is enough for gifting.",
+        "expected_tiles": [
+          "Beauty & Cosmetics"
+        ]
+      },
+      {
+        "role": "Beverage",
+        "need": "soft drinks",
+        "why": "Soft drinks are served to guests alongside snacks.",
+        "quantity_reasoning": "A few bottles keep guests refreshed.",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "638a42737dbbb6907bdfa16580ae088162d181c72e00158d72ae9067943e4d47": {
+    "confidence": 0.68,
+    "candidates": [
+      {
+        "id": "cooking_project",
+        "label": "Cooking a meal",
+        "reasoning": "Bought chicken and veg for a recipe",
+        "score": 0.68
+      },
+      {
+        "id": "hosting",
+        "label": "Hosting guests soon",
+        "reasoning": "Protein and veggies suggest a dinner",
+        "score": 0.55
+      },
+      {
+        "id": "health",
+        "label": "High protein diet",
+        "reasoning": "Chicken indicates protein focus",
+        "score": 0.38
+      },
+      {
+        "id": "stocking",
+        "label": "Restocking basics",
+        "reasoning": "Only core ingredients purchased",
+        "score": 0.3
+      }
+    ]
   }
 }

@@ -3,8 +3,12 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { CartPanel } from "@/components/CartPanel";
 import { Header } from "@/components/Header";
+import { OrderConfirmation } from "@/components/OrderConfirmation";
 import { ScenarioSelector } from "@/components/ScenarioSelector";
-import { SituationPanel } from "@/components/SituationPanel";
+import {
+  SituationPanel,
+  type SituationSelection,
+} from "@/components/SituationPanel";
 import { SuggestionsPanel } from "@/components/SuggestionsPanel";
 import {
   fetchHouseholds,
@@ -14,18 +18,20 @@ import {
   postNeeds,
   postSituations,
 } from "@/lib/api";
+import { mergeLinesIntoCart } from "@/lib/cart";
 import {
   catalogLocationFromAddress,
   confidenceThreshold,
+  feeBreakdown,
   SCENARIO_PRESETS,
 } from "@/lib/constants";
 import type {
   CartLine,
   FlowPhase,
   Household,
+  Product,
   ScenarioPreset,
   SelectedSuggestion,
-  SituationCandidate,
   SituationsResponse,
 } from "@/lib/types";
 
@@ -37,13 +43,27 @@ function isLocationUnfamiliar(household: Household, location: string): boolean {
   return !household.known_addresses.includes(location);
 }
 
+function suggestionToProduct(s: SelectedSuggestion): Product {
+  if (s.product) return s.product;
+  return {
+    id: s.item.resolved_sku,
+    name: s.item.resolved_name,
+    brand: "",
+    category: s.item.category,
+    price: s.item.price,
+    mrp: s.item.price,
+    unit: "",
+    available_in: [],
+  };
+}
+
 export default function SensePage() {
   const [households, setHouseholds] = useState<Household[]>([]);
   const [householdId, setHouseholdId] = useState("h1");
   const [location, setLocation] = useState("Sarjapur, Bangalore");
   const [cart, setCart] = useState<CartLine[]>([]);
+  const [placedOrder, setPlacedOrder] = useState<CartLine[]>([]);
   const [activePresetId, setActivePresetId] = useState<string | null>(null);
-  const [shuffleIndex, setShuffleIndex] = useState(0);
   const [presetLoading, setPresetLoading] = useState(false);
   const [initError, setInitError] = useState<string | null>(null);
 
@@ -64,25 +84,46 @@ export default function SensePage() {
     [cart],
   );
 
+  const showCheckout = phase === "cart" || phase === "dismissed";
+
+  const cartSubtotal = useMemo(
+    () => cart.reduce((sum, line) => sum + line.product.price * line.qty, 0),
+    [cart],
+  );
+
+  const checkoutTotal = useMemo(() => {
+    const fees = feeBreakdown(cartSubtotal);
+    return cartSubtotal + fees.totalFees;
+  }, [cartSubtotal]);
+
   useEffect(() => {
     fetchHouseholds()
       .then((list) => {
         setHouseholds(list);
         const h1 = list.find((h) => h.id === "h1");
-        if (h1) {
-          setLocation(h1.current_address);
-        }
+        if (h1) setLocation(h1.current_address);
       })
       .catch((err) => setInitError(friendlyError(err)));
   }, []);
+
+  const clearSensePanels = useCallback(() => {
+    setSuggestions([]);
+    setSituationLabel("");
+    setSensitiveGuidance([]);
+  }, []);
+
+  const resetSenseFlow = useCallback(() => {
+    setPhase("cart");
+    setFlowError(null);
+    setSituations(null);
+    clearSensePanels();
+  }, [clearSensePanels]);
 
   const loadPresetCart = useCallback(
     async (preset: ScenarioPreset) => {
       setPresetLoading(true);
       setFlowError(null);
-      setPhase("cart");
-      setSituations(null);
-      setSuggestions([]);
+      resetSenseFlow();
       setActivePresetId(preset.id);
       setHouseholdId(preset.householdId);
 
@@ -90,7 +131,10 @@ export default function SensePage() {
       const loc = hh?.current_address ?? location;
 
       try {
-        const products = await fetchProductsBySkuIds(preset.skuIds, catalogLocationFromAddress(loc));
+        const products = await fetchProductsBySkuIds(
+          preset.skuIds,
+          catalogLocationFromAddress(loc),
+        );
         const lines: CartLine[] = preset.skuIds
           .map((skuId) => {
             const product = products.get(skuId);
@@ -112,7 +156,7 @@ export default function SensePage() {
         setPresetLoading(false);
       }
     },
-    [households, location],
+    [households, location, resetSenseFlow],
   );
 
   useEffect(() => {
@@ -125,20 +169,17 @@ export default function SensePage() {
     setHouseholdId(id);
     const hh = households.find((h) => h.id === id);
     if (hh) setLocation(hh.current_address);
-    resetFlow();
-  };
-
-  const resetFlow = () => {
-    setPhase("cart");
-    setFlowError(null);
-    setSituations(null);
-    setSuggestions([]);
+    resetSenseFlow();
   };
 
   const handleShuffle = () => {
-    const next = (shuffleIndex + 1) % SCENARIO_PRESETS.length;
-    setShuffleIndex(next);
-    loadPresetCart(SCENARIO_PRESETS[next]);
+    if (SCENARIO_PRESETS.length === 0) return;
+    const currentIdx = SCENARIO_PRESETS.findIndex((p) => p.id === activePresetId);
+    let nextIdx = Math.floor(Math.random() * SCENARIO_PRESETS.length);
+    while (nextIdx === currentIdx && SCENARIO_PRESETS.length > 1) {
+      nextIdx = Math.floor(Math.random() * SCENARIO_PRESETS.length);
+    }
+    loadPresetCart(SCENARIO_PRESETS[nextIdx]);
   };
 
   const handleQtyChange = (skuId: string, qty: number) => {
@@ -147,15 +188,14 @@ export default function SensePage() {
         line.sku_id === skuId ? { ...line, qty: Math.min(5, Math.max(1, qty)) } : line,
       ),
     );
-    resetFlow();
   };
 
   const handleRemove = (skuId: string) => {
     setCart((prev) => prev.filter((line) => line.sku_id !== skuId));
-    resetFlow();
+    resetSenseFlow();
   };
 
-  const handleCheckout = async () => {
+  const handleGetSuggestions = async () => {
     if (cart.length === 0 || !household) return;
     setFlowError(null);
     setPhase("situations_loading");
@@ -178,6 +218,7 @@ export default function SensePage() {
       }
 
       setSituations(result);
+      clearSensePanels();
       setPhase("situations");
     } catch (err) {
       setFlowError(friendlyError(err));
@@ -229,28 +270,53 @@ export default function SensePage() {
     }
   };
 
-  const handleConfirmCandidate = (candidate: SituationCandidate) => {
-    runNeeds(candidate.id, candidate.label);
-  };
-
-  const handleCustomSubmit = (text: string) => {
-    runNeeds(
-      "custom",
-      text,
-      `The customer described their situation as: ${text}`,
-    );
+  const handleSituationSubmit = (selection: SituationSelection) => {
+    if (selection.kind === "custom") {
+      runNeeds(
+        "custom",
+        selection.text,
+        `The customer described their situation as: ${selection.text}`,
+      );
+      return;
+    }
+    runNeeds(selection.candidate.id, selection.candidate.label);
   };
 
   const handleStockingUp = () => {
-    setPhase("dismissed");
     setSituations(null);
+    clearSensePanels();
     setFlowError(null);
+    setPhase("dismissed");
   };
 
-  const handleDismiss = () => {
-    setPhase("dismissed");
+  const handleDismissSense = () => {
     setSituations(null);
+    clearSensePanels();
     setFlowError(null);
+    setPhase("dismissed");
+  };
+
+  const handleAddAllSuggestions = () => {
+    const selected = suggestions.filter((s) => s.checked && !s.dismissed);
+    if (selected.length === 0) return;
+
+    const additions: CartLine[] = selected.map((s) => ({
+      sku_id: s.item.resolved_sku,
+      qty: s.qty,
+      product: suggestionToProduct(s),
+    }));
+
+    setCart((prev) => mergeLinesIntoCart(prev, additions));
+    setSituations(null);
+    clearSensePanels();
+    setFlowError(null);
+    setPhase("cart");
+  };
+
+  const handleCheckout = () => {
+    if (cart.length === 0) return;
+    setPlacedOrder(cart.map((line) => ({ ...line })));
+    setPhase("order_confirmed");
   };
 
   const newCategoryTiles = useMemo(() => {
@@ -258,7 +324,7 @@ export default function SensePage() {
     suggestions.forEach((s) => {
       if (s.item.flag === "new_category") tiles.add(s.item.category);
     });
-    return [...tiles].sort();
+    return Array.from(tiles).sort();
   }, [suggestions]);
 
   if (initError) {
@@ -275,7 +341,7 @@ export default function SensePage() {
     <div className="min-h-screen pb-8">
       <Header
         location={location}
-        cartCount={cartCount}
+        cartCount={phase === "order_confirmed" ? placedOrder.reduce((s, l) => s + l.qty, 0) : cartCount}
         households={households}
         selectedHouseholdId={householdId}
         onHouseholdChange={handleHouseholdChange}
@@ -283,89 +349,130 @@ export default function SensePage() {
       />
 
       <main className="mx-auto max-w-2xl space-y-4 px-4 pt-4">
-        <CartPanel cart={cart} onQtyChange={handleQtyChange} onRemove={handleRemove} />
+        {phase === "order_confirmed" ? (
+          <OrderConfirmation cart={placedOrder} location={location} />
+        ) : (
+          <>
+            <CartPanel
+              cart={cart}
+              onQtyChange={handleQtyChange}
+              onRemove={handleRemove}
+            />
 
-        <ScenarioSelector
-          presets={SCENARIO_PRESETS}
-          activePresetId={activePresetId}
-          loading={presetLoading}
-          onLoadPreset={loadPresetCart}
-          onShuffle={handleShuffle}
-        />
+            <ScenarioSelector
+              presets={SCENARIO_PRESETS}
+              activePresetId={activePresetId}
+              loading={presetLoading}
+              onLoadPreset={loadPresetCart}
+              onShuffle={handleShuffle}
+            />
 
-        {phase === "cart" && (
-          <button
-            type="button"
-            disabled={cart.length === 0}
-            onClick={handleCheckout}
-            className="w-full rounded-lg bg-blinkit-green py-3.5 text-base font-semibold text-white shadow-sm hover:bg-blinkit-green-dark disabled:opacity-50"
-          >
-            Checkout
-          </button>
-        )}
+            <section className="rounded-xl border border-amber-200 bg-blinkit-cream p-4 shadow-sm">
+              <div className="mb-3">
+                <p className="text-xs font-semibold uppercase tracking-wide text-amber-800">
+                  Blinkit Sense
+                </p>
+                <p className="mt-1 text-sm text-gray-600">
+                  Optional — tell us your situation and we&apos;ll suggest items you
+                  might need.
+                </p>
+              </div>
 
-        {phase === "situations_loading" && (
-          <div className="rounded-xl border border-amber-200 bg-blinkit-cream p-6 text-center">
-            <div className="mx-auto mb-3 h-8 w-8 animate-spin rounded-full border-2 border-blinkit-green border-t-transparent" />
-            <p className="text-sm text-gray-700">Reading your cart…</p>
-          </div>
-        )}
+              {(phase === "cart" || phase === "dismissed") && (
+                <div className="space-y-2">
+                  <button
+                    type="button"
+                    disabled={cart.length === 0}
+                    onClick={handleGetSuggestions}
+                    className="w-full rounded-lg border border-amber-300 bg-white py-2.5 text-sm font-semibold text-amber-900 hover:bg-amber-50 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    Get suggestions
+                  </button>
+                  {cart.length === 0 && (
+                    <p className="text-center text-sm text-gray-500">
+                      Add something to your cart to get started.
+                    </p>
+                  )}
+                </div>
+              )}
 
-        {phase === "situations" && situations && situations.candidates.length > 0 && (
-          <SituationPanel
-            top={situations.candidates[0]}
-            others={situations.candidates.slice(1)}
-            loading={false}
-            onConfirm={handleConfirmCandidate}
-            onCustomSubmit={handleCustomSubmit}
-            onStockingUp={handleStockingUp}
-            onDismiss={handleDismiss}
-          />
-        )}
+              {phase === "situations_loading" && (
+                <div className="py-4 text-center">
+                  <div className="mx-auto mb-3 h-8 w-8 animate-spin rounded-full border-2 border-blinkit-green border-t-transparent" />
+                  <p className="text-sm text-gray-700">Reading your cart…</p>
+                </div>
+              )}
 
-        {phase === "needs_loading" && (
-          <div className="rounded-xl border border-amber-200 bg-blinkit-cream p-6 text-center">
-            <div className="mx-auto mb-3 h-8 w-8 animate-spin rounded-full border-2 border-blinkit-green border-t-transparent" />
-            <p className="text-sm text-gray-700">Planning what you might need…</p>
-          </div>
-        )}
+              {phase === "situations" && situations && situations.candidates.length > 0 && (
+                <SituationPanel
+                  candidates={situations.candidates}
+                  loading={false}
+                  onSubmit={handleSituationSubmit}
+                  onStockingUp={handleStockingUp}
+                  onDismiss={handleDismissSense}
+                />
+              )}
 
-        {phase === "suggestions" && (
-          <SuggestionsPanel
-            situationLabel={situationLabel}
-            suggestions={suggestions}
-            onToggle={(skuId) =>
-              setSuggestions((prev) =>
-                prev.map((s) =>
-                  s.item.resolved_sku === skuId ? { ...s, checked: !s.checked } : s,
-                ),
-              )
-            }
-            onQtyChange={(skuId, qty) =>
-              setSuggestions((prev) =>
-                prev.map((s) =>
-                  s.item.resolved_sku === skuId
-                    ? { ...s, qty: Math.min(5, Math.max(1, qty)) }
-                    : s,
-                ),
-              )
-            }
-            onDismiss={(skuId) =>
-              setSuggestions((prev) =>
-                prev.map((s) =>
-                  s.item.resolved_sku === skuId ? { ...s, dismissed: true } : s,
-                ),
-              )
-            }
-            sensitiveGuidance={sensitiveGuidance}
-            newCategoryTiles={newCategoryTiles}
-          />
-        )}
+              {phase === "needs_loading" && (
+                <div className="py-4 text-center">
+                  <div className="mx-auto mb-3 h-8 w-8 animate-spin rounded-full border-2 border-blinkit-green border-t-transparent" />
+                  <p className="text-sm text-gray-700">Working out what you&apos;ll need…</p>
+                </div>
+              )}
 
-        {phase === "dismissed" && (
-          <p className="rounded-xl border border-gray-200 bg-white p-4 text-center text-sm text-gray-500">
-            No suggestions this time. Adjust your cart or try another scenario.
-          </p>
+              {phase === "suggestions" && (
+                <SuggestionsPanel
+                  situationLabel={situationLabel}
+                  suggestions={suggestions}
+                  onToggle={(skuId) =>
+                    setSuggestions((prev) =>
+                      prev.map((s) =>
+                        s.item.resolved_sku === skuId
+                          ? { ...s, checked: !s.checked }
+                          : s,
+                      ),
+                    )
+                  }
+                  onQtyChange={(skuId, qty) =>
+                    setSuggestions((prev) =>
+                      prev.map((s) =>
+                        s.item.resolved_sku === skuId
+                          ? { ...s, qty: Math.min(5, Math.max(1, qty)) }
+                          : s,
+                      ),
+                    )
+                  }
+                  onDismiss={(skuId) =>
+                    setSuggestions((prev) =>
+                      prev.map((s) =>
+                        s.item.resolved_sku === skuId ? { ...s, dismissed: true } : s,
+                      ),
+                    )
+                  }
+                  onAddAll={handleAddAllSuggestions}
+                  sensitiveGuidance={sensitiveGuidance}
+                  newCategoryTiles={newCategoryTiles}
+                />
+              )}
+
+              {phase === "dismissed" && (
+                <p className="text-center text-sm text-gray-600">
+                  No suggestions this time. You can try again or checkout below.
+                </p>
+              )}
+            </section>
+
+            {showCheckout && (
+              <button
+                type="button"
+                disabled={cart.length === 0}
+                onClick={handleCheckout}
+                className="w-full rounded-lg bg-blinkit-green py-4 text-base font-bold text-white shadow-md hover:bg-blinkit-green-dark disabled:opacity-50"
+              >
+                Checkout · ₹{checkoutTotal}
+              </button>
+            )}
+          </>
         )}
 
         {flowError && (
