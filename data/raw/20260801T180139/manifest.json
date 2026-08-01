@@ -1,0 +1,535 @@
+{
+  "scraped_at": "2026-08-01T18:01:39.846040+00:00",
+  "location": {
+    "name": "Sarjapur",
+    "lat": 12.912118,
+    "lon": 77.644554,
+    "pincode": "560102"
+  },
+  "source": "/Users/vatsalakrishna/Desktop/Blinkit_Project/blinkit-sense/data/category_urls.json",
+  "skipped_categories": [
+    "Atta, Rice & Dal",
+    "Baby Care",
+    "Bakery & Biscuits",
+    "Beauty & Cosmetics",
+    "Chicken, Meat & Fish",
+    "Chips & Namkeen",
+    "Cleaners & Repellents",
+    "Drinks & Juices",
+    "Dry Fruits & Cereals",
+    "E-Gifts Store",
+    "Electronics",
+    "Feminine Hygiene",
+    "Hair",
+    "Health & Pharma",
+    "Ice Creams & More",
+    "Instant Food",
+    "Kitchenware & Appliances",
+    "Pet Store",
+    "Sauces & Spreads",
+    "Skin & Face",
+    "Sports Store",
+    "Stationery & Games",
+    "Tea, Coffee & Milk Drinks",
+    "Toy Store",
+    "Vegetables & Fruits"
+  ],
+  "skipped_subcategories": [],
+  "collections": [
+    {
+      "category": "Bath & Body",
+      "subcategory": "Bathing Soaps",
+      "url": "https://blinkit.com/dc/bath-body/bathing-soaps/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDY%3D&collection_group_id=679509",
+      "product_count": 179,
+      "pages_fetched": 15,
+      "file": "00_bathing-soaps.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bath & Body",
+      "subcategory": "Shower Gels & Scrubs",
+      "url": "https://blinkit.com/dc/bath-body/shower-gels-scrubs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDY%3D&collection_group_id=723321&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Shower+Gels+%26+Scrubs&collection_name=Bath+%26+Body",
+      "product_count": 189,
+      "pages_fetched": 16,
+      "file": "01_shower-gels-scrubs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bath & Body",
+      "subcategory": "Oral Care",
+      "url": "https://blinkit.com/dc/bath-body/oral-care/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDY%3D&collection_group_id=11650&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Oral+Care&collection_name=Bath+%26+Body",
+      "product_count": 191,
+      "pages_fetched": 16,
+      "file": "02_oral-care.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bath & Body",
+      "subcategory": "Handwash",
+      "url": "https://blinkit.com/dc/bath-body/handwash/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDY%3D&collection_group_id=11658&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Handwash&collection_name=Bath+%26+Body",
+      "product_count": 72,
+      "pages_fetched": 8,
+      "file": "03_handwash.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bath & Body",
+      "subcategory": "Fragrance & Talc",
+      "url": "https://blinkit.com/dc/bath-body/fragrance-talc/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDY%3D&collection_group_id=174026&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Fragrance+%26+Talc&collection_name=Bath+%26+Body",
+      "product_count": 190,
+      "pages_fetched": 16,
+      "file": "04_fragrance-talc.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bath & Body",
+      "subcategory": "Bath Accessories",
+      "url": "https://blinkit.com/dc/bath-body/bath-accessories/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDY%3D&collection_group_id=12739&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Bath+Accessories&collection_name=Bath+%26+Body",
+      "product_count": 21,
+      "pages_fetched": 5,
+      "file": "05_bath-accessories.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bath & Body",
+      "subcategory": "Shampoo",
+      "url": "https://blinkit.com/dc/bath-body/shampoo/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDY%3D&collection_group_id=12011&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Shampoo&collection_name=Bath+%26+Body",
+      "product_count": 203,
+      "pages_fetched": 16,
+      "file": "06_shampoo.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bath & Body",
+      "subcategory": "Conditioner",
+      "url": "https://blinkit.com/dc/bath-body/conditioner/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDY%3D&collection_group_id=12012&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Conditioner&collection_name=Bath+%26+Body",
+      "product_count": 110,
+      "pages_fetched": 10,
+      "file": "07_conditioner.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bath & Body",
+      "subcategory": "Face Cleaning",
+      "url": "https://blinkit.com/dc/bath-body/face-cleaning/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDY%3D&collection_group_id=209068&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Face+Cleaning&collection_name=Bath+%26+Body",
+      "product_count": 196,
+      "pages_fetched": 16,
+      "file": "08_face-cleaning.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bath & Body",
+      "subcategory": "Body Lotions & Oils",
+      "url": "https://blinkit.com/dc/bath-body/body-lotions-oils/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDY%3D&collection_group_id=209073&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Body+Lotions+%26+Oils&collection_name=Bath+%26+Body",
+      "product_count": 188,
+      "pages_fetched": 16,
+      "file": "09_body-lotions-oils.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bath & Body",
+      "subcategory": "Body Treatment & Roll On",
+      "url": "https://blinkit.com/dc/bath-body/body-treatment-roll-on/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDY%3D&collection_group_id=887335&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Body+Treatment+%26+Roll+On&collection_name=Bath+%26+Body",
+      "product_count": 112,
+      "pages_fetched": 10,
+      "file": "10_body-treatment-roll-on.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bath & Body",
+      "subcategory": "Bath & Beauty Gifts",
+      "url": "https://blinkit.com/dc/bath-body/bath-beauty-gifts/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDY%3D&collection_group_id=18689&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Bath+%26+Beauty+Gifts&collection_name=Bath+%26+Body",
+      "product_count": 191,
+      "pages_fetched": 16,
+      "file": "11_bath-beauty-gifts.json",
+      "status": "ok"
+    },
+    {
+      "category": "Oil, Ghee & Masala",
+      "subcategory": "Oil",
+      "url": "https://blinkit.com/dc/oil-ghee-masala/oil/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTY%3D&collection_group_id=18687",
+      "product_count": 204,
+      "pages_fetched": 16,
+      "file": "12_oil.json",
+      "status": "ok"
+    },
+    {
+      "category": "Oil, Ghee & Masala",
+      "subcategory": "Desi Ghee",
+      "url": "https://blinkit.com/dc/oil-ghee-masala/desi-ghee/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTY%3D&collection_group_id=11585&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Desi+Ghee&collection_name=Oil%2C+Ghee+%26+Masala",
+      "product_count": 64,
+      "pages_fetched": 7,
+      "file": "13_desi-ghee.json",
+      "status": "ok"
+    },
+    {
+      "category": "Oil, Ghee & Masala",
+      "subcategory": "Cow Ghee",
+      "url": "https://blinkit.com/dc/oil-ghee-masala/cow-ghee/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTY%3D&collection_group_id=92942&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Cow+Ghee&collection_name=Oil%2C+Ghee+%26+Masala",
+      "product_count": 175,
+      "pages_fetched": 14,
+      "file": "14_cow-ghee.json",
+      "status": "ok"
+    },
+    {
+      "category": "Oil, Ghee & Masala",
+      "subcategory": "Powdered Spices",
+      "url": "https://blinkit.com/dc/oil-ghee-masala/powdered-spices/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTY%3D&collection_group_id=16433&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Powdered+Spices&collection_name=Oil%2C+Ghee+%26+Masala",
+      "product_count": 202,
+      "pages_fetched": 16,
+      "file": "15_powdered-spices.json",
+      "status": "ok"
+    },
+    {
+      "category": "Oil, Ghee & Masala",
+      "subcategory": "Non Veg Spices",
+      "url": "https://blinkit.com/dc/oil-ghee-masala/non-veg-spices/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTY%3D&collection_group_id=880385&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Non+Veg+Spices&collection_name=Oil%2C+Ghee+%26+Masala",
+      "product_count": 84,
+      "pages_fetched": 8,
+      "file": "16_non-veg-spices.json",
+      "status": "ok"
+    },
+    {
+      "category": "Oil, Ghee & Masala",
+      "subcategory": "Salt, Sugar & Jaggery",
+      "url": "https://blinkit.com/dc/oil-ghee-masala/salt-sugar-jaggery/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTY%3D&collection_group_id=11582&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Salt%2C+Sugar+%26+Jaggery&collection_name=Oil%2C+Ghee+%26+Masala",
+      "product_count": 201,
+      "pages_fetched": 16,
+      "file": "17_salt,-sugar-jaggery.json",
+      "status": "ok"
+    },
+    {
+      "category": "Oil, Ghee & Masala",
+      "subcategory": "Whole Spices",
+      "url": "https://blinkit.com/dc/oil-ghee-masala/whole-spices/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTY%3D&collection_group_id=17743&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Whole+Spices&collection_name=Oil%2C+Ghee+%26+Masala",
+      "product_count": 193,
+      "pages_fetched": 16,
+      "file": "18_whole-spices.json",
+      "status": "ok"
+    },
+    {
+      "category": "Oil, Ghee & Masala",
+      "subcategory": "Gravy Mixes & Pastes",
+      "url": "https://blinkit.com/dc/oil-ghee-masala/gravy-mixes-pastes/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTY%3D&collection_group_id=895753&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Gravy+Mixes+%26+Pastes&collection_name=Oil%2C+Ghee+%26+Masala",
+      "product_count": 44,
+      "pages_fetched": 6,
+      "file": "19_gravy-mixes-pastes.json",
+      "status": "ok"
+    },
+    {
+      "category": "Oil, Ghee & Masala",
+      "subcategory": "Herbs & Seasoning",
+      "url": "https://blinkit.com/dc/oil-ghee-masala/herbs-seasoning/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTY%3D&collection_group_id=16419&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Herbs+%26+Seasoning&collection_name=Oil%2C+Ghee+%26+Masala",
+      "product_count": 104,
+      "pages_fetched": 10,
+      "file": "20_herbs-seasoning.json",
+      "status": "ok"
+    },
+    {
+      "category": "Oil, Ghee & Masala",
+      "subcategory": "Organic",
+      "url": "https://blinkit.com/dc/oil-ghee-masala/organic/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTY%3D&collection_group_id=11590&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Organic&collection_name=Oil%2C+Ghee+%26+Masala",
+      "product_count": 194,
+      "pages_fetched": 16,
+      "file": "21_organic.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dairy, Bread & Eggs",
+      "subcategory": "Milk",
+      "url": "https://blinkit.com/dc/dairy-bread-eggs/milk/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTU%3D&collection_group_id=11591",
+      "product_count": 73,
+      "pages_fetched": 7,
+      "file": "22_milk.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dairy, Bread & Eggs",
+      "subcategory": "Bread & Pav",
+      "url": "https://blinkit.com/dc/dairy-bread-eggs/bread-pav/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTU%3D&collection_group_id=11592&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Bread+%26+Pav&collection_name=Dairy%2C+Bread+%26+Eggs",
+      "product_count": 216,
+      "pages_fetched": 16,
+      "file": "23_bread-pav.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dairy, Bread & Eggs",
+      "subcategory": "Eggs",
+      "url": "https://blinkit.com/dc/dairy-bread-eggs/eggs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTU%3D&collection_group_id=11595&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Eggs&collection_name=Dairy%2C+Bread+%26+Eggs",
+      "product_count": 71,
+      "pages_fetched": 7,
+      "file": "24_eggs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dairy, Bread & Eggs",
+      "subcategory": "Curd & Yogurt",
+      "url": "https://blinkit.com/dc/dairy-bread-eggs/curd-yogurt/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTU%3D&collection_group_id=11593&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Curd+%26+Yogurt&collection_name=Dairy%2C+Bread+%26+Eggs",
+      "product_count": 124,
+      "pages_fetched": 10,
+      "file": "25_curd-yogurt.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dairy, Bread & Eggs",
+      "subcategory": "Cheese & Butter",
+      "url": "https://blinkit.com/dc/dairy-bread-eggs/cheese-butter/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTU%3D&collection_group_id=17124&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Cheese+%26+Butter&collection_name=Dairy%2C+Bread+%26+Eggs",
+      "product_count": 118,
+      "pages_fetched": 10,
+      "file": "26_cheese-butter.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dairy, Bread & Eggs",
+      "subcategory": "Batter",
+      "url": "https://blinkit.com/dc/dairy-bread-eggs/batter/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTU%3D&collection_group_id=109735&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Batter&collection_name=Dairy%2C+Bread+%26+Eggs",
+      "product_count": 55,
+      "pages_fetched": 6,
+      "file": "27_batter.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dairy, Bread & Eggs",
+      "subcategory": "Paneer & Tofu",
+      "url": "https://blinkit.com/dc/dairy-bread-eggs/paneer-tofu/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTU%3D&collection_group_id=11596&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Paneer+%26+Tofu&collection_name=Dairy%2C+Bread+%26+Eggs",
+      "product_count": 67,
+      "pages_fetched": 7,
+      "file": "28_paneer-tofu.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dairy, Bread & Eggs",
+      "subcategory": "Soy Milk & More",
+      "url": "https://blinkit.com/dc/dairy-bread-eggs/soy-milk-more/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTU%3D&collection_group_id=183969&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Soy+Milk+%26+More&collection_name=Dairy%2C+Bread+%26+Eggs",
+      "product_count": 66,
+      "pages_fetched": 7,
+      "file": "29_soy-milk-more.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dairy, Bread & Eggs",
+      "subcategory": "Lassi & Milkshakes",
+      "url": "https://blinkit.com/dc/dairy-bread-eggs/lassi-milkshakes/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTU%3D&collection_group_id=11594&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Lassi+%26+Milkshakes&collection_name=Dairy%2C+Bread+%26+Eggs",
+      "product_count": 162,
+      "pages_fetched": 13,
+      "file": "30_lassi-milkshakes.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dairy, Bread & Eggs",
+      "subcategory": "Cream & Whitener",
+      "url": "https://blinkit.com/dc/dairy-bread-eggs/cream-whitener/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTU%3D&collection_group_id=11598&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Cream+%26+Whitener&collection_name=Dairy%2C+Bread+%26+Eggs",
+      "product_count": 28,
+      "pages_fetched": 5,
+      "file": "31_cream-whitener.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sweets & Chocolates",
+      "subcategory": "Chocolates",
+      "url": "https://blinkit.com/dc/sweets-chocolates/chocolates/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjc%3D&collection_group_id=11414",
+      "product_count": 197,
+      "pages_fetched": 16,
+      "file": "32_chocolates.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sweets & Chocolates",
+      "subcategory": "Chocolate Packs",
+      "url": "https://blinkit.com/dc/sweets-chocolates/chocolate-packs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjc%3D&collection_group_id=11415&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Chocolate+Packs&collection_name=Sweets+%26+Chocolates",
+      "product_count": 183,
+      "pages_fetched": 15,
+      "file": "33_chocolate-packs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sweets & Chocolates",
+      "subcategory": "Chocolate Gift Pack",
+      "url": "https://blinkit.com/dc/sweets-chocolates/chocolate-gift-pack/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjc%3D&collection_group_id=18681&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Chocolate+Gift+Pack&collection_name=Sweets+%26+Chocolates",
+      "product_count": 172,
+      "pages_fetched": 14,
+      "file": "34_chocolate-gift-pack.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sweets & Chocolates",
+      "subcategory": "Indian Sweets",
+      "url": "https://blinkit.com/dc/sweets-chocolates/indian-sweets/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjc%3D&collection_group_id=11418&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Indian+Sweets&collection_name=Sweets+%26+Chocolates",
+      "product_count": 205,
+      "pages_fetched": 16,
+      "file": "35_indian-sweets.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sweets & Chocolates",
+      "subcategory": "Candies & Gum",
+      "url": "https://blinkit.com/dc/sweets-chocolates/candies-gum/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjc%3D&collection_group_id=11417&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Candies+%26+Gum&collection_name=Sweets+%26+Chocolates",
+      "product_count": 192,
+      "pages_fetched": 16,
+      "file": "36_candies-gum.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sweets & Chocolates",
+      "subcategory": "Premium",
+      "url": "https://blinkit.com/dc/sweets-chocolates/premium/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjc%3D&collection_group_id=13640&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Premium&collection_name=Sweets+%26+Chocolates",
+      "product_count": 31,
+      "pages_fetched": 5,
+      "file": "37_premium.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sweets & Chocolates",
+      "subcategory": "Energy Bars",
+      "url": "https://blinkit.com/dc/sweets-chocolates/energy-bars/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjc%3D&collection_group_id=18685&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Energy+Bars&collection_name=Sweets+%26+Chocolates",
+      "product_count": 187,
+      "pages_fetched": 16,
+      "file": "38_energy-bars.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sweets & Chocolates",
+      "subcategory": "Syrups",
+      "url": "https://blinkit.com/dc/sweets-chocolates/syrups/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjc%3D&collection_group_id=11419&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Syrups&collection_name=Sweets+%26+Chocolates",
+      "product_count": 16,
+      "pages_fetched": 2,
+      "file": "39_syrups.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Home Decor",
+      "url": "https://blinkit.com/dc/home-lifestyle/home-decor/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=274585",
+      "product_count": 201,
+      "pages_fetched": 16,
+      "file": "40_home-decor.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Plants & Bouquets",
+      "url": "https://blinkit.com/dc/home-lifestyle/plants-bouquets/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=11740&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Plants+%26+Bouquets&collection_name=Home+%26+Lifestyle",
+      "product_count": 57,
+      "pages_fetched": 7,
+      "file": "41_plants-bouquets.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Bedsheets & Towels",
+      "url": "https://blinkit.com/dc/home-lifestyle/bedsheets-towels/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=11705&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Bedsheets+%26+Towels&collection_name=Home+%26+Lifestyle",
+      "product_count": 206,
+      "pages_fetched": 16,
+      "file": "42_bedsheets-towels.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Gardening",
+      "url": "https://blinkit.com/dc/home-lifestyle/gardening/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=416530&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Gardening&collection_name=Home+%26+Lifestyle",
+      "product_count": 167,
+      "pages_fetched": 14,
+      "file": "43_gardening.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Decorative Lights",
+      "url": "https://blinkit.com/dc/home-lifestyle/decorative-lights/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=11710&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Decorative+Lights&collection_name=Home+%26+Lifestyle",
+      "product_count": 200,
+      "pages_fetched": 16,
+      "file": "44_decorative-lights.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Home Needs",
+      "url": "https://blinkit.com/dc/home-lifestyle/home-needs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=11702&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Home+Needs&collection_name=Home+%26+Lifestyle",
+      "product_count": 191,
+      "pages_fetched": 16,
+      "file": "45_home-needs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Tissues & Disposables",
+      "url": "https://blinkit.com/dc/home-lifestyle/tissues-disposables/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=628253&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Tissues+%26+Disposables&collection_name=Home+%26+Lifestyle",
+      "product_count": 197,
+      "pages_fetched": 16,
+      "file": "46_tissues-disposables.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Jewellery",
+      "url": "https://blinkit.com/dc/home-lifestyle/jewellery/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=131574&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Jewellery&collection_name=Home+%26+Lifestyle",
+      "product_count": 208,
+      "pages_fetched": 16,
+      "file": "47_jewellery.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Innerwear",
+      "url": "https://blinkit.com/dc/home-lifestyle/innerwear/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=11703&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Innerwear&collection_name=Home+%26+Lifestyle",
+      "product_count": 203,
+      "pages_fetched": 16,
+      "file": "48_innerwear.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Lifestyle Accessories",
+      "url": "https://blinkit.com/dc/home-lifestyle/lifestyle-accessories/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=11707&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Lifestyle+Accessories&collection_name=Home+%26+Lifestyle",
+      "product_count": 199,
+      "pages_fetched": 16,
+      "file": "49_lifestyle-accessories.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Party & Festive Needs",
+      "url": "https://blinkit.com/dc/home-lifestyle/party-festive-needs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=659636&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Party+%26+Festive+Needs&collection_name=Home+%26+Lifestyle",
+      "product_count": 196,
+      "pages_fetched": 16,
+      "file": "50_party-festive-needs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Socks & Handkerchiefs",
+      "url": "https://blinkit.com/dc/home-lifestyle/socks-handkerchiefs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=627704&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Socks+%26+Handkerchiefs&collection_name=Home+%26+Lifestyle",
+      "product_count": 190,
+      "pages_fetched": 16,
+      "file": "51_socks-handkerchiefs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Fresheners",
+      "url": "https://blinkit.com/dc/home-lifestyle/fresheners/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=11709&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Fresheners&collection_name=Home+%26+Lifestyle",
+      "product_count": 191,
+      "pages_fetched": 16,
+      "file": "52_fresheners.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Pooja Needs",
+      "url": "https://blinkit.com/dc/home-lifestyle/pooja-needs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=21983&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Pooja+Needs&collection_name=Home+%26+Lifestyle",
+      "product_count": 199,
+      "pages_fetched": 16,
+      "file": "53_pooja-needs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Home & Lifestyle",
+      "subcategory": "Bathroom Essentials",
+      "url": "https://blinkit.com/dc/home-lifestyle/bathroom-essentials/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjk%3D&collection_group_id=22864&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Bathroom+Essentials&collection_name=Home+%26+Lifestyle",
+      "product_count": 197,
+      "pages_fetched": 16,
+      "file": "54_bathroom-essentials.json",
+      "status": "ok"
+    }
+  ]
+}
