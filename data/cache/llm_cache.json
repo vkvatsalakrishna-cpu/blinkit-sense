@@ -1,0 +1,127 @@
+{
+  "deed6f88662dc9f678c1cef5f8b54fe08f6287f30082378ae25b0183974efd1e": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "moving_in",
+        "label": "Moving into new home",
+        "reasoning": "Unfamiliar address indicates recent relocation",
+        "score": 0.85
+      },
+      {
+        "id": "stocking",
+        "label": "Stocking staples",
+        "reasoning": "Milk and bread are basic daily items",
+        "score": 0.65
+      },
+      {
+        "id": "health",
+        "label": "Health focus",
+        "reasoning": "Milk often bought for nutrition",
+        "score": 0.35
+      },
+      {
+        "id": "hosting",
+        "label": "Hosting guests",
+        "reasoning": "Bread and milk useful for quick meals",
+        "score": 0.3
+      }
+    ]
+  },
+  "9e2ff634364c0e8ad75bb465c8238aa00f047ee189323adab4f4f55448601405": {
+    "situation_label": "Moving into New Home",
+    "needs": [
+      {
+        "role": "Sleep",
+        "need": "bedsheet",
+        "why": "A fresh bedsheet is essential to make the new bed comfortable.",
+        "quantity_reasoning": "One sheet covers the mattress for immediate use.",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Sleep",
+        "need": "pillow",
+        "why": "A pillow provides proper head support for a good night’s sleep.",
+        "quantity_reasoning": "One pillow is enough for a single sleeper.",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Bathroom",
+        "need": "towel",
+        "why": "Towels are needed to dry off after bathing.",
+        "quantity_reasoning": "Enough towels to rotate while one dries.",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "dustbin",
+        "why": "A dustbin collects household waste and keeps the home tidy.",
+        "quantity_reasoning": "One bin covers most waste generation.",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "mop",
+        "why": "A mop is required to clean floor surfaces regularly.",
+        "quantity_reasoning": "One mop suffices for routine floor cleaning.",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "bucket",
+        "why": "A bucket is needed to hold water for mopping and other cleaning tasks.",
+        "quantity_reasoning": "One bucket serves most cleaning activities.",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Laundry",
+        "need": "detergent powder",
+        "why": "Detergent powder is necessary to wash clothes and keep them fresh.",
+        "quantity_reasoning": "One pack handles weekly laundry cycles.",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      },
+      {
+        "role": "Kitchen",
+        "need": "dish wash gel",
+        "why": "Dish wash gel cleans dishes and utensils after meals.",
+        "quantity_reasoning": "One bottle lasts through daily dishwashing.",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      },
+      {
+        "role": "Cooking",
+        "need": "refined oil",
+        "why": "Refined oil is a basic cooking medium for preparing meals.",
+        "quantity_reasoning": "One bottle meets initial cooking requirements.",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      },
+      {
+        "role": "Cooking",
+        "need": "rice",
+        "why": "Rice is a staple food for everyday meals.",
+        "quantity_reasoning": "One bag provides enough for several meals.",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      }
+    ],
+    "unavailable": []
+  }
+}
