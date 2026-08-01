@@ -1,12 +1,13 @@
-"""Extract category, subcategory, products, and inventory from Blinkit /dc/ URLs.
+"""Extract category, subcategory, products, and inventory from Blinkit collection URLs.
 
+Supports /dc/...?collection_uuid=... URLs and /cn/.../cid/... category URLs.
 Blinkit blocks plain HTTP clients (Cloudflare). This script uses Playwright with a
 real browser session and follows the listing_widgets pagination API.
 
 Usage:
     python -m phases.phase_1_scraper.extract_collection URL -o data/extracted.json
     python -m phases.phase_1_scraper.extract_collection --batch
-    python -m phases.phase_1_scraper.extract_collection --dump-raw URL
+    python -m phases.phase_1_scraper.extract_collection --resolve-group-ids
 
 Requires: playwright (pip install playwright && playwright install chromium)
 """
@@ -21,7 +22,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
 SAMPLE_PRODUCT_PATH = ROOT / "data" / "raw" / "sample_product.json"
@@ -30,6 +31,9 @@ RAW_DIR = ROOT / "data" / "raw"
 
 DEFAULT_LAT = 12.912118
 DEFAULT_LON = 77.644554
+# Sarjapur dark-store service area (lat/lon above). Catalog rows tag this as "Sarjapur".
+DEFAULT_PINCODE = "560102"
+DEFAULT_LOCATION_NAME = "Sarjapur"
 MAX_PRODUCTS_PER_SUBCATEGORY = 500
 BATCH_DELAY_MIN_S = 1.0
 BATCH_DELAY_MAX_S = 2.0
@@ -97,6 +101,36 @@ def parse_dc_url(url: str) -> dict[str, Any]:
         "collection_uuid": (query.get("collection_uuid") or [None])[0],
         "collection_group_id": (query.get("collection_group_id") or [None])[0],
     }
+
+
+def parse_cn_url(url: str) -> dict[str, Any]:
+    parsed = urlparse(url)
+    parts = [part for part in parsed.path.strip("/").split("/") if part]
+    labels = lookup_category_meta(url)
+    meta: dict[str, Any] = {
+        "url": url,
+        "category": labels["category"],
+        "subcategory": labels["subcategory"],
+        "collection_uuid": None,
+        "collection_group_id": None,
+    }
+    if "cid" in parts:
+        cid_index = parts.index("cid")
+        if cid_index + 2 < len(parts):
+            meta["cn_cid_l0"] = parts[cid_index + 1]
+            meta["cn_cid_l1"] = parts[cid_index + 2]
+        if cid_index >= 2 and parts[0] == "cn":
+            slug = parts[1]
+            if slug not in {"cid", "null"} and slug:
+                meta["cn_slug"] = slug
+    return meta
+
+
+def parse_collection_url(url: str) -> dict[str, Any]:
+    path = urlparse(url).path
+    if "/cn/" in path:
+        return parse_cn_url(url)
+    return parse_dc_url(url)
 
 
 def _walk(obj: Any):
@@ -233,6 +267,493 @@ def _merge_post_body(template: dict[str, str], next_url: str) -> dict[str, str]:
     return body
 
 
+def _subcategory_slug(url: str) -> str | None:
+    parts = [part for part in urlparse(url).path.strip("/").split("/") if part]
+    if len(parts) >= 3 and parts[0] == "dc":
+        return parts[2]
+    return None
+
+
+def _tile_slug(url: str) -> str | None:
+    parts = [part for part in urlparse(url).path.strip("/").split("/") if part]
+    if len(parts) >= 2 and parts[0] == "dc":
+        return parts[1]
+    return None
+
+
+def _collection_uuid_from_url(url: str) -> str | None:
+    query = parse_qs(urlparse(url).query)
+    values = query.get("collection_uuid") or []
+    return values[0] if values else None
+
+
+def _url_tab_key(url: str) -> str | None:
+    slug = _subcategory_slug(url)
+    if slug:
+        return slug
+    parts = [part for part in urlparse(url).path.strip("/").split("/") if part]
+    if parts == ["dc"]:
+        return "all"
+    return None
+
+
+def _normalize_uuid(uuid: str) -> str:
+    return unquote(uuid)
+
+
+# Parent tile pages used to discover subcategory tab links (slug -> href with group id).
+TILE_SEED_URLS: dict[tuple[str, str], str] = {
+    (
+        "kitchenware-appliances",
+        _normalize_uuid("OTg3NjU0MzIxMjM0NTI5ODI%3D"),
+    ): (
+        "https://blinkit.com/dc/kitchenware-appliances/cookware-sets/"
+        "?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D&collection_group_id=620091"
+    ),
+    (
+        "stationery-games",
+        _normalize_uuid("OTg3NjU0MzIxMjM0NTMzMjU%3D"),
+    ): "https://blinkit.com/dc/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+}
+
+
+def _seed_url_for_tile(tile_key: str, uuid: str) -> str | None:
+    normalized = _normalize_uuid(uuid)
+    return TILE_SEED_URLS.get((tile_key, normalized))
+
+
+_COLLECT_TABS_JS = """({ tileSlug, uuid }) => {
+    const out = {};
+    const encoded = encodeURIComponent(decodeURIComponent(uuid));
+    for (const link of document.querySelectorAll('a[href]')) {
+        const href = link.href;
+        if (!href.includes('collection_group_id=')) continue;
+        if (!href.includes(uuid) && !href.includes(encoded)) continue;
+        const parts = new URL(href).pathname.split('/').filter(Boolean);
+        if (parts[0] !== 'dc') continue;
+        let slug;
+        if (parts.length >= 3) {
+            if (tileSlug && parts[1] !== tileSlug) continue;
+            slug = parts[2];
+        } else if (parts.length === 1) {
+            slug = 'all';
+        } else {
+            continue;
+        }
+        const label = (link.textContent || '').trim().replace(/\\s+/g, ' ');
+        out[slug] = { href, label };
+    }
+    return out;
+}"""
+
+
+_SCROLL_TAB_CONTAINERS_JS = """(delta) => {
+    for (const el of document.querySelectorAll('*')) {
+        if (el.scrollWidth > el.clientWidth + 8) {
+            el.scrollLeft += delta;
+        }
+    }
+}"""
+
+
+def _scroll_tab_bar(page: Any, *, delta: int = 320) -> None:
+    page.evaluate(_SCROLL_TAB_CONTAINERS_JS, delta)
+    page.mouse.wheel(delta, 0)
+    page.wait_for_timeout(200)
+
+
+def _reset_tab_bar_scroll(page: Any) -> None:
+    page.evaluate(
+        """() => {
+            for (const el of document.querySelectorAll('*')) {
+                if (el.scrollWidth > el.clientWidth + 8) {
+                    el.scrollLeft = 0;
+                }
+            }
+        }"""
+    )
+    page.wait_for_timeout(200)
+
+
+def _dismiss_overlays(page: Any) -> None:
+    try:
+        page.keyboard.press("Escape")
+        page.wait_for_timeout(300)
+    except Exception:
+        return
+
+
+def _ensure_delivery_location(page: Any, pincode: str = DEFAULT_PINCODE) -> None:
+    """Set delivery location via browser geolocation, falling back to pincode if needed."""
+    try:
+        detect = page.locator('button:has-text("Detect my location")').first
+        if detect.count() and detect.is_visible(timeout=2000):
+            detect.click(timeout=5000)
+            page.wait_for_timeout(2500)
+    except Exception:
+        pass
+
+    try:
+        input_box = page.locator('input[type="text"]').first
+        if input_box.count() and input_box.is_visible(timeout=1500):
+            input_box.fill(pincode)
+            page.keyboard.press("Enter")
+            page.wait_for_timeout(2000)
+    except Exception:
+        pass
+
+    page.evaluate(
+        """() => {
+            for (const el of document.querySelectorAll('[class*="LocationOverlay"]')) {
+                el.remove();
+            }
+        }"""
+    )
+    page.wait_for_timeout(300)
+
+
+def _click_subcategory_tab(page: Any, label: str) -> bool:
+    try:
+        tab = page.locator('div[data-pf="reset"].tw-text-100', has_text=label).first
+        if tab.count() == 0:
+            tab = page.get_by_text(label, exact=True).first
+        tab.click(timeout=5000)
+        page.wait_for_timeout(1800)
+        return True
+    except Exception:
+        return False
+
+
+def _resolve_entry_group_id(
+    page: Any,
+    *,
+    seed_url: str,
+    subcategory_label: str,
+    original_url: str,
+) -> str | None:
+    page.goto(seed_url, wait_until="domcontentloaded", timeout=60000)
+    page.wait_for_timeout(1500)
+    _ensure_delivery_location(page)
+    if _url_tab_key(original_url) == "all":
+        page.wait_for_timeout(2000)
+        group_id = page.evaluate(
+            """() => {
+                const meta = window.grofers?.PRELOADED_STATE?.ui?.plp?.pageMeta?.custom_data;
+                return meta?.collection_group_id || meta?.subcategory_id || null;
+            }"""
+        )
+        if group_id:
+            resolved = f"{original_url.split('?', 1)[0]}?collection_uuid={_collection_uuid_from_url(original_url)}&collection_group_id={group_id}"
+            return _normalize_resolved_url(original_url, resolved)
+        if not _click_subcategory_tab(page, subcategory_label):
+            _click_subcategory_tab(page, "Stationery & Games")
+    elif not _click_subcategory_tab(page, subcategory_label):
+        return None
+    resolved = page.url
+    if not _group_id_from_url(resolved):
+        return None
+    return _normalize_resolved_url(original_url, resolved)
+
+
+def _clean_dc_url(url: str) -> str:
+    if "/dc" not in url:
+        return url
+    parsed = urlparse(url)
+    query = parse_qs(parsed.query)
+    group_id = (query.get("collection_group_id") or [""])[0]
+    if not group_id:
+        return url
+    uuid_token = parsed.query.split("collection_uuid=", 1)[-1].split("&", 1)[0] if "collection_uuid=" in parsed.query else (query.get("collection_uuid") or [""])[0]
+    if uuid_token.endswith("=") and "%3D" not in uuid_token:
+        uuid_token = uuid_token[:-1] + "%3D"
+    if not uuid_token:
+        return url
+    return parsed._replace(query=f"collection_uuid={uuid_token}&collection_group_id={group_id}").geturl()
+
+
+def _slug_from_resolved_url(url: str, *, tile_slug: str | None) -> str | None:
+    parts = [part for part in urlparse(url).path.strip("/").split("/") if part]
+    if len(parts) >= 3 and parts[0] == "dc":
+        return parts[2]
+    if parts == ["dc"]:
+        return "all"
+    return None
+
+
+def _collect_tab_labels(page: Any) -> list[str]:
+    """Scroll the tab bar and return visible subcategory labels without navigating away."""
+    _reset_tab_bar_scroll(page)
+    labels: list[str] = []
+    seen: set[str] = set()
+    stagnant = 0
+    for _ in range(35):
+        tab_locator = page.locator('div[data-pf="reset"].tw-text-100')
+        found = 0
+        for index in range(tab_locator.count()):
+            element = tab_locator.nth(index)
+            try:
+                box = element.bounding_box()
+                if not box or box["y"] < 140 or box["y"] > 240 or box["height"] < 18 or box["height"] > 50:
+                    continue
+                label = element.inner_text(timeout=1000).strip()
+                if not label or label in seen:
+                    continue
+                seen.add(label)
+                labels.append(label)
+                found += 1
+            except Exception:
+                continue
+        if found == 0:
+            stagnant += 1
+        else:
+            stagnant = 0
+        if stagnant >= 6:
+            break
+        _scroll_tab_bar(page)
+    return labels
+
+
+def _collect_subcategory_tabs(
+    page: Any,
+    *,
+    seed_url: str,
+    tile_slug: str | None,
+    collection_uuid: str,
+) -> dict[str, dict[str, str]]:
+    """Click each subcategory tab on the parent tile page; return slug -> {href, label}."""
+    _dismiss_overlays(page)
+    _ensure_delivery_location(page)
+    labels = _collect_tab_labels(page)
+    tabs: dict[str, dict[str, str]] = {}
+
+    for label in labels:
+        page.goto(seed_url, wait_until="domcontentloaded", timeout=60000)
+        page.wait_for_timeout(1500)
+        _ensure_delivery_location(page)
+        try:
+            tab = page.locator('div[data-pf="reset"].tw-text-100', has_text=label).first
+            tab.click(timeout=5000)
+            page.wait_for_timeout(1800)
+            resolved = page.url
+            if not _group_id_from_url(resolved):
+                continue
+            if _normalize_uuid(_collection_uuid_from_url(resolved) or "") != _normalize_uuid(collection_uuid):
+                continue
+            slug = _slug_from_resolved_url(resolved, tile_slug=tile_slug)
+            if not slug:
+                continue
+            if tile_slug and slug != "all":
+                parts = [part for part in urlparse(resolved).path.strip("/").split("/") if part]
+                if len(parts) >= 2 and parts[1] != tile_slug:
+                    continue
+            tabs[slug] = {"href": resolved, "label": label}
+        except Exception:
+            continue
+
+    return tabs
+
+
+def _normalize_resolved_url(original_url: str, tab_href: str) -> str:
+    """Keep the original path; attach collection_uuid and collection_group_id from the tab navigation."""
+    original = urlparse(original_url)
+    tab = urlparse(tab_href)
+    tab_query = parse_qs(tab.query)
+    original_query = parse_qs(original.query)
+    uuid = (original_query.get("collection_uuid") or tab_query.get("collection_uuid") or [""])[0]
+    group_id = (tab_query.get("collection_group_id") or [""])[0]
+    if not uuid or not group_id:
+        return original._replace(query=tab.query).geturl()
+    # Preserve encoded uuid from the original URL when present.
+    uuid_token = original.query.split("collection_uuid=", 1)[-1].split("&", 1)[0] if "collection_uuid=" in original.query else uuid
+    if uuid_token.endswith("=") and "%3D" not in uuid_token:
+        uuid_token = uuid_token[:-1] + "%3D"
+    query = f"collection_uuid={uuid_token}&collection_group_id={group_id}"
+    return original._replace(query=query).geturl()
+
+
+def _new_browser_page(*, lat: float, lon: float) -> tuple[Any, Any, Any]:
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError as exc:
+        raise RuntimeError(
+            "Playwright is required. Run: pip install playwright && playwright install chromium"
+        ) from exc
+
+    playwright = sync_playwright().start()
+    browser = playwright.chromium.launch(headless=True)
+    context = browser.new_context(
+        geolocation={"latitude": lat, "longitude": lon},
+        permissions=["geolocation"],
+        locale="en-IN",
+        user_agent=(
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        ),
+    )
+    return playwright, browser, context.new_page()
+
+
+def resolve_missing_group_ids(
+    path: Path = CATEGORY_URLS_PATH,
+    *,
+    lat: float = DEFAULT_LAT,
+    lon: float = DEFAULT_LON,
+) -> list[dict[str, Any]]:
+    """Fill collection_group_id on /dc/ URLs by reading subcategory tabs from the parent tile page."""
+    entries = load_category_urls(path)
+    missing: list[tuple[int, dict[str, Any]]] = []
+    for index, entry in enumerate(entries):
+        url = entry["url"]
+        if "/dc" not in url or _group_id_from_url(url):
+            continue
+        missing.append((index, entry))
+
+    if not missing:
+        print("No /dc/ URLs missing collection_group_id.", file=sys.stderr)
+        return []
+
+    reports: list[dict[str, Any]] = []
+    groups: dict[tuple[str, str], list[tuple[int, dict[str, Any]]]] = {}
+    for index, entry in missing:
+        url = entry["url"]
+        uuid = _collection_uuid_from_url(url)
+        if not uuid:
+            reports.append(
+                {
+                    "category": entry["category"],
+                    "subcategory": entry["subcategory"],
+                    "before": url,
+                    "after": None,
+                    "status": "unresolved",
+                    "reason": "missing collection_uuid",
+                }
+            )
+            continue
+        tile_key = _tile_slug(url)
+        if not tile_key and _normalize_uuid(uuid) == _normalize_uuid("OTg3NjU0MzIxMjM0NTMzMjU%3D"):
+            tile_key = "stationery-games"
+        if not tile_key:
+            reports.append(
+                {
+                    "category": entry["category"],
+                    "subcategory": entry["subcategory"],
+                    "before": url,
+                    "after": None,
+                    "status": "unresolved",
+                    "reason": "cannot infer tile slug from URL path",
+                }
+            )
+            continue
+        groups.setdefault((tile_key, uuid), []).append((index, entry))
+
+    playwright, browser, page = _new_browser_page(lat=lat, lon=lon)
+
+    try:
+        for (tile_key, uuid), group_entries in groups.items():
+            seed_url = _seed_url_for_tile(tile_key, uuid)
+            if not seed_url:
+                for _, entry in group_entries:
+                    reports.append(
+                        {
+                            "category": entry["category"],
+                            "subcategory": entry["subcategory"],
+                            "before": entry["url"],
+                            "after": None,
+                            "status": "unresolved",
+                            "reason": f"no seed URL for tile {tile_key!r}",
+                        }
+                    )
+                continue
+
+            print(f"Using tile seed: {seed_url}", file=sys.stderr)
+
+            for index, entry in group_entries:
+                url = entry["url"]
+                before = url
+                after = _resolve_entry_group_id(
+                    page,
+                    seed_url=seed_url,
+                    subcategory_label=entry["subcategory"],
+                    original_url=url,
+                )
+                if after and _group_id_from_url(after):
+                    entries[index]["url"] = after
+                    status = "resolved"
+                    reason = None
+                else:
+                    status = "unresolved"
+                    reason = f"could not click tab {entry['subcategory']!r} on tile page"
+
+                print(f"[{status.upper()}] {entry['category']} / {entry['subcategory']}")
+                print(f"  before: {before}")
+                print(f"  after:  {after or '(unchanged)'}")
+                if reason:
+                    print(f"  !! {reason}")
+                reports.append(
+                    {
+                        "category": entry["category"],
+                        "subcategory": entry["subcategory"],
+                        "before": before,
+                        "after": after,
+                        "status": status,
+                        "reason": reason,
+                    }
+                )
+    finally:
+        _close_browser(playwright, browser)
+
+    for index, entry in enumerate(entries):
+        if isinstance(entry.get("url"), str) and "/dc" in entry["url"]:
+            entries[index]["url"] = _clean_dc_url(entry["url"])
+
+    path.write_text(json.dumps(entries, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"Wrote updated URLs to {path}", file=sys.stderr)
+    unresolved = [row for row in reports if row["status"] != "resolved"]
+    if unresolved:
+        print(f"\n{len(unresolved)} URL(s) could not be resolved:", file=sys.stderr)
+        for row in unresolved:
+            print(f"  - {row['category']} / {row['subcategory']}: {row['reason']}", file=sys.stderr)
+    return reports
+
+
+def _activate_subcategory_tab(page: Any, url: str) -> None:
+    """Blinkit /dc/ pages without collection_group_id default to the first tab."""
+    query = parse_qs(urlparse(url).query)
+    if query.get("collection_group_id"):
+        return
+
+    slug = _url_tab_key(url)
+    if not slug or slug == "all":
+        return
+
+    _reset_tab_bar_scroll(page)
+    for _ in range(30):
+        tab_href = page.evaluate(
+            """(slug) => {
+                for (const link of document.querySelectorAll('a[href]')) {
+                    const href = link.href;
+                    if (href.includes(slug) && href.includes('collection_group_id=')) {
+                        return href;
+                    }
+                }
+                return null;
+            }""",
+            slug,
+        )
+        if isinstance(tab_href, str) and tab_href:
+            if tab_href.rstrip("/") != page.url.rstrip("/"):
+                page.goto(tab_href, wait_until="domcontentloaded", timeout=60000)
+                page.wait_for_timeout(2000)
+            return
+        _scroll_tab_bar(page)
+
+
+def _group_id_from_url(url: str) -> str | None:
+    query = parse_qs(urlparse(url).query)
+    values = query.get("collection_group_id") or []
+    return values[0] if values else None
+
+
 class _ListingCapture:
     payloads: list[Any]
     paginated_post_template: dict[str, str] | None
@@ -242,6 +763,7 @@ class _ListingCapture:
         self.payloads = []
         self.paginated_post_template = None
         self.paginated_headers = {}
+        self.resolved_url: str | None = None
 
     def on_response(self, response: Any) -> None:
         if response.status != 200:
@@ -386,6 +908,7 @@ def _capture_listing_payloads(
     *,
     lat: float = DEFAULT_LAT,
     lon: float = DEFAULT_LON,
+    pincode: str = DEFAULT_PINCODE,
     wait_ms: int = 8000,
 ) -> tuple[Any, Any, Any, _ListingCapture]:
     try:
@@ -413,10 +936,14 @@ def _capture_listing_payloads(
     page.on("response", capture.on_response)
     page.on("request", capture.on_request)
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
-    page.wait_for_timeout(wait_ms)
+    page.wait_for_timeout(2000)
+    _ensure_delivery_location(page, pincode)
+    _activate_subcategory_tab(page, url)
+    page.wait_for_timeout(max(0, wait_ms - 2000))
     page.mouse.wheel(0, 4500)
     page.wait_for_timeout(1500)
     page.remove_listener("request", capture.on_request)
+    capture.resolved_url = page.url
 
     return playwright, browser, page, capture
 
@@ -451,21 +978,30 @@ def fetch_collection(
     *,
     lat: float = DEFAULT_LAT,
     lon: float = DEFAULT_LON,
+    pincode: str = DEFAULT_PINCODE,
     wait_ms: int = 8000,
     meta: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    collection_meta = dict(meta or parse_dc_url(url))
+    collection_meta = dict(meta or parse_collection_url(url))
     playwright, browser, page, capture = _capture_listing_payloads(
-        url, lat=lat, lon=lon, wait_ms=wait_ms
+        url, lat=lat, lon=lon, pincode=pincode, wait_ms=wait_ms
     )
     try:
+        resolved_group_id = _group_id_from_url(capture.resolved_url or page.url)
+        if resolved_group_id and not collection_meta.get("collection_group_id"):
+            collection_meta["collection_group_id"] = resolved_group_id
         products, pages_fetched = _paginate_collection(page, capture, collection_meta)
     finally:
         _close_browser(playwright, browser)
 
     collection_meta["product_count"] = len(products)
     collection_meta["scraped_at"] = datetime.now(timezone.utc).isoformat()
-    collection_meta["location"] = {"lat": lat, "lon": lon}
+    collection_meta["location"] = {
+        "name": DEFAULT_LOCATION_NAME,
+        "lat": lat,
+        "lon": lon,
+        "pincode": pincode,
+    }
     return {
         **collection_meta,
         "products": products,
@@ -473,19 +1009,38 @@ def fetch_collection(
     }
 
 
+def _parse_skip_subcategory(value: str) -> tuple[str, str]:
+    if "|" not in value:
+        raise ValueError(f"Invalid --skip-subcategory {value!r}; use CATEGORY|Subcategory")
+    category, subcategory = value.split("|", 1)
+    category = category.strip()
+    subcategory = subcategory.strip()
+    if not category or not subcategory:
+        raise ValueError(f"Invalid --skip-subcategory {value!r}; use CATEGORY|Subcategory")
+    return category, subcategory
+
+
 def run_batch(
     *,
     lat: float = DEFAULT_LAT,
     lon: float = DEFAULT_LON,
+    pincode: str = DEFAULT_PINCODE,
     wait_ms: int = 8000,
     category_urls_path: Path = CATEGORY_URLS_PATH,
     output_root: Path = RAW_DIR,
     skip_categories: list[str] | None = None,
+    skip_subcategories: list[str] | None = None,
 ) -> Path:
     entries = load_category_urls(category_urls_path)
     skip = set(skip_categories or [])
-    if skip:
-        entries = [entry for entry in entries if entry["category"] not in skip]
+    skip_subs = {_parse_skip_subcategory(value) for value in (skip_subcategories or [])}
+    if skip or skip_subs:
+        entries = [
+            entry
+            for entry in entries
+            if entry["category"] not in skip
+            and (entry["category"], entry["subcategory"]) not in skip_subs
+        ]
 
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S")
     run_dir = output_root / stamp
@@ -493,9 +1048,18 @@ def run_batch(
 
     manifest: dict[str, Any] = {
         "scraped_at": datetime.now(timezone.utc).isoformat(),
-        "location": {"lat": lat, "lon": lon},
+        "location": {
+            "name": DEFAULT_LOCATION_NAME,
+            "lat": lat,
+            "lon": lon,
+            "pincode": pincode,
+        },
         "source": str(category_urls_path),
         "skipped_categories": sorted(skip),
+        "skipped_subcategories": [
+            {"category": category, "subcategory": subcategory}
+            for category, subcategory in sorted(skip_subs)
+        ],
         "collections": [],
     }
 
@@ -509,9 +1073,10 @@ def run_batch(
                 url,
                 lat=lat,
                 lon=lon,
+                pincode=pincode,
                 wait_ms=wait_ms,
                 meta={
-                    **parse_dc_url(url),
+                    **parse_collection_url(url),
                     "category": entry["category"],
                     "subcategory": entry["subcategory"],
                 },
@@ -556,6 +1121,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("-o", "--output", type=Path, help="Write JSON output to this file")
     parser.add_argument("--lat", type=float, default=DEFAULT_LAT)
     parser.add_argument("--lon", type=float, default=DEFAULT_LON)
+    parser.add_argument("--pincode", default=DEFAULT_PINCODE, help="Delivery pincode (default: Sarjapur service area)")
     parser.add_argument("--wait-ms", type=int, default=8000)
     parser.add_argument(
         "--dump-raw",
@@ -574,10 +1140,33 @@ def main(argv: list[str] | None = None) -> int:
         metavar="CATEGORY",
         help="Skip URLs for this category during --batch (repeatable)",
     )
+    parser.add_argument(
+        "--skip-subcategory",
+        action="append",
+        default=[],
+        metavar="CATEGORY|Subcategory",
+        help="Skip one subcategory during --batch (repeatable)",
+    )
+    parser.add_argument(
+        "--resolve-group-ids",
+        action="store_true",
+        help="Discover collection_group_id from tab bars and update data/category_urls.json",
+    )
     args = parser.parse_args(argv)
 
+    if args.resolve_group_ids:
+        resolve_missing_group_ids(lat=args.lat, lon=args.lon)
+        return 0
+
     if args.batch:
-        run_batch(lat=args.lat, lon=args.lon, wait_ms=args.wait_ms, skip_categories=args.skip_category)
+        run_batch(
+            lat=args.lat,
+            lon=args.lon,
+            pincode=args.pincode,
+            wait_ms=args.wait_ms,
+            skip_categories=args.skip_category,
+            skip_subcategories=args.skip_subcategory,
+        )
         return 0
 
     if not args.urls:

@@ -1,0 +1,183 @@
+{
+  "scraped_at": "2026-08-01T12:09:08.324469+00:00",
+  "location": {
+    "name": "Sarjapur",
+    "lat": 12.912118,
+    "lon": 77.644554,
+    "pincode": "560102"
+  },
+  "source": "/Users/vatsalakrishna/Desktop/Blinkit_Project/blinkit-sense/data/category_urls.json",
+  "skipped_categories": [
+    "Cleaners & Repellents",
+    "E-Gifts Store",
+    "Pet Store",
+    "Sports Store",
+    "Toy Store",
+    "Vegetables & Fruits"
+  ],
+  "skipped_subcategories": [
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Bottles & Flasks"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Cookware & Sets"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Kitchen Appliances"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Storage & Containers"
+    }
+  ],
+  "collections": [
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Kitchen Accessories",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/kitchen-accessories/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D&collection_group_id=659661",
+      "product_count": 200,
+      "pages_fetched": 16,
+      "file": "00_kitchen-accessories.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Mugs & Glasses",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/mugs-glasses/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D&collection_group_id=620090",
+      "product_count": 191,
+      "pages_fetched": 16,
+      "file": "01_mugs-glasses.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Barware",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/barware/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D&collection_group_id=620093",
+      "product_count": 100,
+      "pages_fetched": 9,
+      "file": "02_barware.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Lunch Boxes",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/lunch-boxes/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D&collection_group_id=620094",
+      "product_count": 170,
+      "pages_fetched": 14,
+      "file": "03_lunch-boxes.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Cutting & Chopping",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/cutting-chopping/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D&collection_group_id=620095",
+      "product_count": 123,
+      "pages_fetched": 11,
+      "file": "04_cutting-chopping.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Dining & Serveware",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/dining-serveware/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D&collection_group_id=578042",
+      "product_count": 191,
+      "pages_fetched": 15,
+      "file": "05_dining-serveware.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Tissues & Disposables",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/tissues-disposables/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D&collection_group_id=13652",
+      "product_count": 190,
+      "pages_fetched": 16,
+      "file": "06_tissues-disposables.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "All",
+      "url": "https://blinkit.com/dc/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D&collection_group_id=627397",
+      "product_count": 192,
+      "pages_fetched": 16,
+      "file": "07_all.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Pens & Pencils",
+      "url": "https://blinkit.com/dc/stationery-games/pens-pencils/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D&collection_group_id=627401",
+      "product_count": 191,
+      "pages_fetched": 16,
+      "file": "08_pens-pencils.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Glue & Tape",
+      "url": "https://blinkit.com/dc/stationery-games/glue-tape/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D&collection_group_id=11730",
+      "product_count": 131,
+      "pages_fetched": 12,
+      "file": "09_glue-tape.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Books & Magazines",
+      "url": "https://blinkit.com/dc/stationery-games/books-magazines/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D&collection_group_id=12254",
+      "product_count": 200,
+      "pages_fetched": 16,
+      "file": "10_books-magazines.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Bags & School Needs",
+      "url": "https://blinkit.com/dc/stationery-games/bags-school-needs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D&collection_group_id=12255",
+      "product_count": 198,
+      "pages_fetched": 16,
+      "file": "11_bags-school-needs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Children's Books",
+      "url": "https://blinkit.com/dc/stationery-games/childrens-books/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D&collection_group_id=714981",
+      "product_count": 198,
+      "pages_fetched": 16,
+      "file": "12_children's-books.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Arts & Crafts",
+      "url": "https://blinkit.com/dc/stationery-games/arts-crafts/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D&collection_group_id=583269",
+      "product_count": 195,
+      "pages_fetched": 16,
+      "file": "13_arts-crafts.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Files & Office Needs",
+      "url": "https://blinkit.com/dc/stationery-games/files-office-needs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D&collection_group_id=12257",
+      "product_count": 178,
+      "pages_fetched": 15,
+      "file": "14_files-office-needs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Shoe Polish & Brush",
+      "url": "https://blinkit.com/dc/stationery-games/shoe-polish-brush/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D&collection_group_id=11729",
+      "product_count": 80,
+      "pages_fetched": 8,
+      "file": "15_shoe-polish-brush.json",
+      "status": "ok"
+    }
+  ],
+  "note": "Removed Cookware Sets and Storage Containers (already in 20260801T095545); skip names in JSON omit ampersands."
+}

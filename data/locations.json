@@ -8,6 +8,13 @@
       "lon": 77.7864057
     },
     {
+      "id": "sarjapur_new_home",
+      "name": "Sarjapur",
+      "display_address": "New home, Bangalore",
+      "lat": 12.912118,
+      "lon": 77.644554
+    },
+    {
       "id": "whitefield",
       "name": "Whitefield",
       "display_address": "Whitefield, Bangalore",

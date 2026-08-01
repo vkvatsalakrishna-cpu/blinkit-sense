@@ -1,0 +1,37 @@
+[1/18] Kitchenware & Appliances / Cookware Sets
+  → 188 products (15 pages)
+[2/18] Kitchenware & Appliances / Storage Containers
+  → 202 products (16 pages)
+[3/18] Kitchenware & Appliances / Kitchen Accessories
+  → 200 products (16 pages)
+[4/18] Kitchenware & Appliances / Mugs & Glasses
+  → 191 products (16 pages)
+[5/18] Kitchenware & Appliances / Barware
+  → 100 products (9 pages)
+[6/18] Kitchenware & Appliances / Lunch Boxes
+  → 170 products (14 pages)
+[7/18] Kitchenware & Appliances / Cutting & Chopping
+  → 123 products (11 pages)
+[8/18] Kitchenware & Appliances / Dining & Serveware
+  → 191 products (15 pages)
+[9/18] Kitchenware & Appliances / Tissues & Disposables
+  → 190 products (16 pages)
+[10/18] Stationery & Games / All
+  → 192 products (16 pages)
+[11/18] Stationery & Games / Pens & Pencils
+  → 191 products (16 pages)
+[12/18] Stationery & Games / Glue & Tape
+  → 131 products (12 pages)
+[13/18] Stationery & Games / Books & Magazines
+  → 200 products (16 pages)
+[14/18] Stationery & Games / Bags & School Needs
+  → 198 products (16 pages)
+[15/18] Stationery & Games / Children's Books
+  → 198 products (16 pages)
+[16/18] Stationery & Games / Arts & Crafts
+  → 195 products (16 pages)
+[17/18] Stationery & Games / Files & Office Needs
+  → 178 products (15 pages)
+[18/18] Stationery & Games / Shoe Polish & Brush
+  → 80 products (8 pages)
+Wrote batch output to /Users/vatsalakrishna/Desktop/Blinkit_Project/blinkit-sense/data/raw/20260801T120908

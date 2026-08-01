@@ -1,0 +1,257 @@
+{
+  "scraped_at": "2026-08-01T11:17:02.802811+00:00",
+  "location": {
+    "lat": 12.912118,
+    "lon": 77.644554
+  },
+  "source": "/Users/vatsalakrishna/Desktop/Blinkit_Project/blinkit-sense/data/category_urls.json",
+  "skipped_categories": [
+    "Cleaners & Repellents",
+    "Vegetables & Fruits"
+  ],
+  "skipped_subcategories": [
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Bottles & Flasks"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Cookware Sets"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Kitchen Appliances"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Storage Containers"
+    }
+  ],
+  "collections": [
+    {
+      "category": "Pet Store",
+      "subcategory": "Accessories & Other Supplies",
+      "url": "https://blinkit.com/cn/null/cid/5/133",
+      "product_count": 149,
+      "pages_fetched": 12,
+      "file": "00_accessories-other-supplies.json",
+      "status": "ok"
+    },
+    {
+      "category": "Pet Store",
+      "subcategory": "Cat Needs",
+      "url": "https://blinkit.com/cn///cid/5/3715",
+      "product_count": 197,
+      "pages_fetched": 16,
+      "file": "01_cat-needs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Pet Store",
+      "subcategory": "Diverse Pet Food",
+      "url": "https://blinkit.com/cn///cid/5/3721",
+      "product_count": 32,
+      "pages_fetched": 5,
+      "file": "02_diverse-pet-food.json",
+      "status": "ok"
+    },
+    {
+      "category": "Pet Store",
+      "subcategory": "Dog Needs",
+      "url": "https://blinkit.com/cn///cid/5/3726",
+      "product_count": 201,
+      "pages_fetched": 16,
+      "file": "03_dog-needs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Pet Store",
+      "subcategory": "Pet Grooming",
+      "url": "https://blinkit.com/cn///cid/5/3731",
+      "product_count": 143,
+      "pages_fetched": 12,
+      "file": "04_pet-grooming.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Kitchen Accessories",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/kitchen-accessories/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "05_kitchen-accessories.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Mugs & Glasses",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/mugs-glasses/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "06_mugs-glasses.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Barware",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/barware/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "07_barware.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Lunch Boxes",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/lunch-boxes/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "08_lunch-boxes.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Cutting & Chopping",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/cutting-chopping/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "09_cutting-chopping.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Dining & Serveware",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/dining-serveware/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "10_dining-serveware.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Tissues & Disposables",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/tissues-disposables/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "11_tissues-disposables.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "All",
+      "url": "https://blinkit.com/dc/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "12_all.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Pens & Pencils",
+      "url": "https://blinkit.com/dc/stationery-games/pens-pencils/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "13_pens-pencils.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Glue & Tape",
+      "url": "https://blinkit.com/dc/stationery-games/glue-tape/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "14_glue-tape.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Books & Magazines",
+      "url": "https://blinkit.com/dc/stationery-games/books-magazines/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "15_books-magazines.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Bags & School Needs",
+      "url": "https://blinkit.com/dc/stationery-games/bags-school-needs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "16_bags-school-needs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Children's Books",
+      "url": "https://blinkit.com/dc/stationery-games/childrens-books/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "17_children's-books.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Arts & Crafts",
+      "url": "https://blinkit.com/dc/stationery-games/arts-crafts/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "18_arts-crafts.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Files & Office Needs",
+      "url": "https://blinkit.com/dc/stationery-games/files-office-needs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "19_files-office-needs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Stationery & Games",
+      "subcategory": "Shoe Polish & Brush",
+      "url": "https://blinkit.com/dc/stationery-games/shoe-polish-brush/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "20_shoe-polish-brush.json",
+      "status": "ok"
+    },
+    {
+      "category": "Toy Store",
+      "subcategory": "Toys & Games",
+      "url": "https://blinkit.com/dc/stationery-games/toys-games/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "21_toys-games.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sports Store",
+      "subcategory": "Sports & Gym",
+      "url": "https://blinkit.com/dc/stationery-games/sports-gym/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "22_sports-gym.json",
+      "status": "ok"
+    },
+    {
+      "category": "E-Gifts Store",
+      "subcategory": "Gift Wraps & Bags",
+      "url": "https://blinkit.com/dc/stationery-games/gift-wraps-bags/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "23_gift-wraps-bags.json",
+      "status": "ok"
+    },
+    {
+      "category": "E-Gifts Store",
+      "subcategory": "E-Cards",
+      "url": "https://blinkit.com/cn/e-cards/cid/416/4301",
+      "product_count": 200,
+      "pages_fetched": 16,
+      "file": "24_e-cards.json",
+      "status": "ok"
+    }
+  ]
+}
