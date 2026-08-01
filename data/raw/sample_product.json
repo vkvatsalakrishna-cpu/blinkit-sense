@@ -1,0 +1,401 @@
+{
+  "data": {
+    "identity": {
+      "id": "3874"
+    },
+    "section_count": 2,
+    "layout_type": "grid",
+    "bg_color": {
+      "type": "indigo",
+      "tint": "050"
+    },
+    "click_action": {
+      "blinkit_deeplink": {
+        "url": "grofers://pdp?product_id=3874&merchant_id=31719"
+      },
+      "type": "blinkit_deeplink"
+    },
+    "image": {
+      "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781861811153-216.png"
+    },
+    "name": {
+      "text": "Banana",
+      "color": {
+        "type": "black",
+        "tint": "900"
+      },
+      "font": {
+        "size": "300",
+        "weight": "semibold"
+      }
+    },
+    "variant": {
+      "text": "3 pcs",
+      "color": {
+        "type": "grey",
+        "tint": "700"
+      },
+      "font": {
+        "size": "200",
+        "weight": "medium"
+      },
+      "number_of_lines": 1
+    },
+    "show_variant_dropdown": false,
+    "mrp": {
+      "text": "₹56",
+      "color": {
+        "type": "grey",
+        "tint": "600"
+      },
+      "font": {
+        "size": "200",
+        "weight": "regular"
+      },
+      "is_markdown": 1
+    },
+    "normal_price": {
+      "text": "₹44",
+      "color": {
+        "type": "black",
+        "tint": "900"
+      },
+      "font": {
+        "size": "200",
+        "weight": "semibold"
+      }
+    },
+    "offer_tag": {
+      "title": {
+        "text": "21%\nOFF",
+        "color": {
+          "type": "white",
+          "tint": "900"
+        },
+        "font": {
+          "size": "050",
+          "weight": "bold"
+        }
+      }
+    },
+    "inventory": 50,
+    "merchant_type": "express",
+    "eta_identifier": "express",
+    "stepper_data": {
+      "size": "small",
+      "state": {
+        "title": {
+          "text": "enabled"
+        }
+      }
+    },
+    "eta_tag": {
+      "title": {
+        "text": "earliest",
+        "font": {
+          "size": "050",
+          "weight": "bold"
+        }
+      },
+      "image": {
+        "url": "http://cdn.grofers.com/assets/eta-icons/15-mins.png"
+      }
+    },
+    "elevation": 0,
+    "corner_radius": 8,
+    "show_border": true,
+    "show_click_action_animation": true,
+    "cta": {
+      "style": "atc_default",
+      "count_type": "default"
+    },
+    "atc_action": {
+      "add_to_cart": {
+        "cart_item": {
+          "product_id": 3874,
+          "merchant_id": 31719,
+          "product_name": "Banana",
+          "quantity": 1,
+          "unavailable_quantity": 0,
+          "price": 44,
+          "mrp": 56,
+          "unit": "3 pcs",
+          "inventory": 50,
+          "meta": null,
+          "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781861811153-216.png",
+          "group_id": 1912179,
+          "merchant_type": "express",
+          "eta_identifier": "express",
+          "brand": "",
+          "display_name": "Banana"
+        }
+      },
+      "type": "add_to_cart"
+    },
+    "rfc_action": {
+      "remove_from_cart": {
+        "cart_item": {
+          "product_id": 3874,
+          "merchant_id": 31719,
+          "product_name": "Banana",
+          "quantity": 1,
+          "unavailable_quantity": 0,
+          "price": 44,
+          "mrp": 56,
+          "unit": "3 pcs",
+          "inventory": 50,
+          "meta": null,
+          "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781861811153-216.png",
+          "group_id": 1912179,
+          "merchant_type": "express",
+          "eta_identifier": "express",
+          "brand": "",
+          "display_name": "Banana"
+        },
+        "count_type": "default"
+      },
+      "type": "remove_from_cart"
+    },
+    "offer": null,
+    "meta": {
+      "merchant_id": "31719",
+      "product_id": "3874"
+    },
+    "is_sold_out": false,
+    "animation_type": "SCALE_EFFECT",
+    "group_id": 1912179,
+    "product_state": "available",
+    "merchant_id": "31719",
+    "stepper_data_v2": {
+      "size": "small",
+      "max_count": 50,
+      "zero_layout_config": {
+        "style": "outline"
+      },
+      "non_zero_layout_config": {
+        "style": "fill"
+      },
+      "increment_actions": {
+        "default": [
+          {
+            "add_to_cart": {
+              "cart_item": {
+                "product_id": 3874,
+                "merchant_id": 31719,
+                "product_name": "Banana",
+                "quantity": 1,
+                "unavailable_quantity": 0,
+                "price": 44,
+                "mrp": 56,
+                "unit": "3 pcs",
+                "inventory": 50,
+                "meta": null,
+                "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781861811153-216.png",
+                "group_id": 1912179,
+                "merchant_type": "express",
+                "eta_identifier": "express",
+                "brand": "",
+                "display_name": "Banana"
+              }
+            },
+            "type": "add_to_cart"
+          }
+        ]
+      },
+      "decrement_actions": {
+        "default": [
+          {
+            "remove_from_cart": {
+              "cart_item": {
+                "product_id": 3874,
+                "merchant_id": 31719,
+                "product_name": "Banana",
+                "quantity": 1,
+                "unavailable_quantity": 0,
+                "price": 44,
+                "mrp": 56,
+                "unit": "3 pcs",
+                "inventory": 50,
+                "meta": null,
+                "image_url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781861811153-216.png",
+                "group_id": 1912179,
+                "merchant_type": "express",
+                "eta_identifier": "express",
+                "brand": "",
+                "display_name": "Banana"
+              },
+              "count_type": "default"
+            },
+            "type": "remove_from_cart"
+          }
+        ]
+      }
+    },
+    "media_container": {
+      "items": [
+        {
+          "media_type": "image",
+          "image": {
+            "url": "https://cdn.grofers.com/da/cms-assets/cms/product/rc-upload-1781861811153-216.png",
+            "placeholder_color": {
+              "type": "white",
+              "tint": "900"
+            }
+          }
+        },
+        {
+          "media_type": "image",
+          "image": {
+            "url": "https://cdn.grofers.com/da/cms-assets/cms/product/0bfa4ccb-8836-4e7d-b7a3-458b21dc13c4.png",
+            "placeholder_color": {
+              "type": "white",
+              "tint": "900"
+            }
+          }
+        }
+      ]
+    },
+    "display_name": {
+      "text": "Banana",
+      "color": {
+        "type": "black",
+        "tint": "900"
+      },
+      "font": {
+        "size": "300",
+        "weight": "semibold"
+      }
+    },
+    "product_id": "3874",
+    "product_badges": [
+      {
+        "type": "ETA",
+        "label": "ETA",
+        "text_data": {
+          "text": "earliest",
+          "color": {
+            "type": "black",
+            "tint": "900"
+          },
+          "font": {
+            "size": "050",
+            "weight": "bold"
+          }
+        },
+        "bg_color_data": {
+          "type": "grey",
+          "tint": "100"
+        },
+        "image_data": {
+          "url": "http://cdn.grofers.com/assets/eta-icons/15-mins.png"
+        },
+        "padding": "6,0,6,0"
+      }
+    ],
+    "product_badge_type": "non_overlapping"
+  },
+  "tracking": {
+    "widget_meta": {
+      "widget_id": "3874",
+      "widget_name": "Product",
+      "widget_title": "Banana"
+    },
+    "impression_map": {
+      "badge": null,
+      "eta_identifier": "express",
+      "event_name": "Product Shown",
+      "inventory": 50,
+      "merchant_id": 31719,
+      "merchant_type": "express",
+      "mrp": 56,
+      "overlay_badges": null,
+      "price": 44,
+      "ptype": null,
+      "state": "available",
+      "type_id": null
+    },
+    "click_map": {
+      "badge": null,
+      "brand": "",
+      "currency": "INR",
+      "eta_identifier": "express",
+      "event_name": "Product Clicked",
+      "inventory": 50,
+      "l0_category": "#-NA",
+      "l1_category": "#-NA",
+      "l2_category": "#-NA",
+      "merchant_id": 31719,
+      "merchant_type": "express",
+      "mrp": 56,
+      "name": "Banana",
+      "overlay_badges": null,
+      "price": 44,
+      "product_id": "3874",
+      "ptype": null,
+      "quantity": 1,
+      "state": "available",
+      "type_id": null
+    },
+    "entry_source_map": {
+      "entry_source_id": "3874",
+      "entry_source_name": "Product",
+      "entry_source_position": 1,
+      "entry_source_title": "Banana"
+    },
+    "common_attributes": {
+      "badge": "",
+      "brand": "",
+      "cta_type": "",
+      "currency": "INR",
+      "inventory": 50,
+      "inventory_limit": null,
+      "l0_category": "",
+      "l1_category": "",
+      "l2_category": "",
+      "mrp": 56,
+      "name": "Banana",
+      "price": 44,
+      "product_id": "3874",
+      "product_position": "1",
+      "ptype": "Banana",
+      "quantity": 1,
+      "state": "available",
+      "type_id": 8596,
+      "widget_position": 1,
+      "widget_variation_id": "global_product_listing"
+    },
+    "interactions_map": {
+      "ADD_TO_CART": {
+        "event_name": "Product Added"
+      },
+      "BOTTOM_STRIP_BUTTON": {
+        "event_name": "Info Strip Clicked"
+      },
+      "CUSTOM_CTA": {
+        "event_name": "Buy Now Clicked"
+      },
+      "DISABLED_ADD_TO_CART": {
+        "event_name": "Insufficient Inventory Atc Clicked"
+      },
+      "NOTIFY_ME": {
+        "event_name": "Notify Me Clicked"
+      },
+      "PRODUCT_FAVORITE_ICON": {
+        "event_name": "Product Favourite Icon Clicked"
+      },
+      "PROMO_OFFER_TEXT": {
+        "event_name": "PROMO_OFFER_TAG_CLICKED"
+      },
+      "REMOVE_FROM_CART": {
+        "event_name": "Product Removed"
+      },
+      "SAVE_CTA": {
+        "event_name": "PRODUCT_SAVE_CLICKED"
+      }
+    }
+  },
+  "widget_type": "product_card_snippet_type_2",
+  "layout_config": {
+    "spacing": "6,6,6,0"
+  }
+}

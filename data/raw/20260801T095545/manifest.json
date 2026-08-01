@@ -1,0 +1,130 @@
+{
+  "scraped_at": "2026-08-01T09:55:45.645141+00:00",
+  "location": {
+    "lat": 12.912118,
+    "lon": 77.644554
+  },
+  "source": "/Users/vatsalakrishna/Desktop/Blinkit_Project/blinkit-sense/data/category_urls.json",
+  "skipped_categories": [
+    "Vegetables & Fruits"
+  ],
+  "collections": [
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Cookware Sets",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/cookware-sets/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D&collection_group_id=620091",
+      "product_count": 193,
+      "pages_fetched": 13,
+      "file": "00_cookware-sets.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Storage Containers",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/storage-containers/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D&collection_group_id=620092",
+      "product_count": 199,
+      "pages_fetched": 14,
+      "file": "01_storage-containers.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Kitchen Appliances",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/kitchen-appliances/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D&collection_group_id=13653",
+      "product_count": 196,
+      "pages_fetched": 14,
+      "file": "02_kitchen-appliances.json",
+      "status": "ok"
+    },
+    {
+      "category": "Kitchenware & Appliances",
+      "subcategory": "Bottles & Flasks",
+      "url": "https://blinkit.com/dc/kitchenware-appliances/bottles-flasks/?collection_uuid=OTg3NjU0MzIxMjM0NTI5ODI%3D&collection_group_id=620088",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "03_bottles-flasks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Cleaners & Repellents",
+      "subcategory": "Repellents & Disinfectants",
+      "url": "https://blinkit.com/dc/cleaners-repellents/repellents-disinfectants/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjc%3D&collection_group_id=11720",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "04_repellents-disinfectants.json",
+      "status": "ok"
+    },
+    {
+      "category": "Cleaners & Repellents",
+      "subcategory": "Detergent Powder & Bars",
+      "url": "https://blinkit.com/dc/cleaners-repellents/detergent-powder-bars/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjc%3D&collection_group_id=11711",
+      "product_count": 79,
+      "pages_fetched": 6,
+      "file": "05_detergent-powder-bars.json",
+      "status": "ok"
+    },
+    {
+      "category": "Cleaners & Repellents",
+      "subcategory": "Liquid Detergents",
+      "url": "https://blinkit.com/dc/cleaners-repellents/liquid-detergents/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjc%3D&collection_group_id=82715",
+      "product_count": 124,
+      "pages_fetched": 9,
+      "file": "06_liquid-detergents.json",
+      "status": "ok"
+    },
+    {
+      "category": "Cleaners & Repellents",
+      "subcategory": "Dishwashing Gels & Bars",
+      "url": "https://blinkit.com/dc/cleaners-repellents/dishwashing-gels-bars/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjc%3D&collection_group_id=12759",
+      "product_count": 94,
+      "pages_fetched": 7,
+      "file": "07_dishwashing-gels-bars.json",
+      "status": "ok"
+    },
+    {
+      "category": "Cleaners & Repellents",
+      "subcategory": "Laundry Additives",
+      "url": "https://blinkit.com/dc/cleaners-repellents/laundry-additives/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjc%3D&collection_group_id=11715",
+      "product_count": 62,
+      "pages_fetched": 5,
+      "file": "08_laundry-additives.json",
+      "status": "ok"
+    },
+    {
+      "category": "Cleaners & Repellents",
+      "subcategory": "Toilet Cleaners",
+      "url": "https://blinkit.com/dc/cleaners-repellents/toilet-cleaners/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjc%3D&collection_group_id=11713",
+      "product_count": 74,
+      "pages_fetched": 5,
+      "file": "09_toilet-cleaners.json",
+      "status": "ok"
+    },
+    {
+      "category": "Cleaners & Repellents",
+      "subcategory": "Floor Cleaners",
+      "url": "https://blinkit.com/dc/cleaners-repellents/floor-cleaners/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjc%3D&collection_group_id=11714",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "10_floor-cleaners.json",
+      "status": "ok"
+    },
+    {
+      "category": "Cleaners & Repellents",
+      "subcategory": "Glass & Metal Cleaners & Others",
+      "url": "https://blinkit.com/dc/cleaners-repellents/glass-metal-cleaners-others/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjc%3D&collection_group_id=11721",
+      "product_count": 23,
+      "pages_fetched": 3,
+      "file": "11_glass-metal-cleaners-others.json",
+      "status": "ok"
+    },
+    {
+      "category": "Cleaners & Repellents",
+      "subcategory": "Household Appliance Cleaners",
+      "url": "https://blinkit.com/dc/cleaners-repellents/household-appliance-cleaners/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjc%3D&collection_group_id=628094",
+      "product_count": 28,
+      "pages_fetched": 3,
+      "file": "12_household-appliance-cleaners.json",
+      "status": "ok"
+    }
+  ]
+}

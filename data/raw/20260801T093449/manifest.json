@@ -1,0 +1,105 @@
+{
+  "scraped_at": "2026-08-01T09:34:49.045211+00:00",
+  "location": {
+    "lat": 12.912118,
+    "lon": 77.644554
+  },
+  "source": "/Users/vatsalakrishna/Desktop/Blinkit_Project/blinkit-sense/data/category_urls.json",
+  "collections": [
+    {
+      "category": "Vegetables & Fruits",
+      "subcategory": "All",
+      "url": "https://blinkit.com/dc/vegetables-fruits/all/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=90651",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "00_all.json",
+      "status": "ok"
+    },
+    {
+      "category": "Vegetables & Fruits",
+      "subcategory": "Fresh Vegetables",
+      "url": "https://blinkit.com/dc/vegetables-fruits/fresh-vegetables/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=11370",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "01_fresh-vegetables.json",
+      "status": "ok"
+    },
+    {
+      "category": "Vegetables & Fruits",
+      "subcategory": "Fresh Fruits",
+      "url": "https://blinkit.com/dc/vegetables-fruits/fresh-fruits/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=11371",
+      "product_count": 199,
+      "pages_fetched": 14,
+      "file": "02_fresh-fruits.json",
+      "status": "ok"
+    },
+    {
+      "category": "Vegetables & Fruits",
+      "subcategory": "Exotics",
+      "url": "https://blinkit.com/dc/vegetables-fruits/exotics/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=11372",
+      "product_count": 199,
+      "pages_fetched": 14,
+      "file": "03_exotics.json",
+      "status": "ok"
+    },
+    {
+      "category": "Vegetables & Fruits",
+      "subcategory": "Coriander & Others",
+      "url": "https://blinkit.com/dc/vegetables-fruits/coriander-others/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=11373",
+      "product_count": 74,
+      "pages_fetched": 5,
+      "file": "04_coriander-others.json",
+      "status": "ok"
+    },
+    {
+      "category": "Vegetables & Fruits",
+      "subcategory": "Freshly Cut & Sprouts",
+      "url": "https://blinkit.com/dc/vegetables-fruits/freshly-cut-sprouts/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=11374",
+      "product_count": 51,
+      "pages_fetched": 4,
+      "file": "05_freshly-cut-sprouts.json",
+      "status": "ok"
+    },
+    {
+      "category": "Vegetables & Fruits",
+      "subcategory": "Trusted Organics",
+      "url": "https://blinkit.com/dc/vegetables-fruits/trusted-organics/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=11375",
+      "product_count": 111,
+      "pages_fetched": 8,
+      "file": "06_trusted-organics.json",
+      "status": "ok"
+    },
+    {
+      "category": "Vegetables & Fruits",
+      "subcategory": "Flowers & Leaves",
+      "url": "https://blinkit.com/dc/vegetables-fruits/flowers-leaves/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=18664",
+      "product_count": 200,
+      "pages_fetched": 14,
+      "file": "07_flowers-leaves.json",
+      "status": "ok"
+    },
+    {
+      "category": "Vegetables & Fruits",
+      "subcategory": "Seasonal",
+      "url": "https://blinkit.com/dc/vegetables-fruits/seasonal/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=16398",
+      "product_count": 72,
+      "pages_fetched": 5,
+      "file": "08_seasonal.json",
+      "status": "ok"
+    },
+    {
+      "category": "Vegetables & Fruits",
+      "subcategory": "Frozen Veg",
+      "url": "https://blinkit.com/dc/vegetables-fruits/frozen-veg/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=11376",
+      "status": "error",
+      "error": "Page.evaluate: TypeError: Failed to fetch\n    at https://blinkit.com/scripts/sentryvendor.ab49f3f57a2043e31599.js:1:66054\n    at https://blinkit.com/scripts/sentryvendor.ab49f3f57a2043e31599.js:1:66054\n    at eval (eval at evaluate (:311:30), <anonymous>:2:36)\n    at UtilityScript.evaluate (<anonymous>:318:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    },
+    {
+      "category": "Vegetables & Fruits",
+      "subcategory": "Hydroponic",
+      "url": "https://blinkit.com/dc/vegetables-fruits/hydroponic/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=11377",
+      "status": "error",
+      "error": "Page.goto: net::ERR_INTERNET_DISCONNECTED at https://blinkit.com/dc/vegetables-fruits/hydroponic/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=11377\nCall log:\n  - navigating to \"https://blinkit.com/dc/vegetables-fruits/hydroponic/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNzE%3D&collection_group_id=11377\", waiting until \"domcontentloaded\"\n"
+    }
+  ]
+}
