@@ -1,0 +1,17 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Build
+/.next/
+/out/
+
+# Env
+.env*.local
+
+# Debug
+npm-debug.log*
+
+# Types
+next-env.d.ts
