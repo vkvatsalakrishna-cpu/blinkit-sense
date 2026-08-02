@@ -172,7 +172,7 @@ export default function SensePage() {
         setPresetLoading(false);
       }
     },
-    [households, location, resetSenseFlow],
+    [location, resetSenseFlow],
   );
 
   useEffect(() => {

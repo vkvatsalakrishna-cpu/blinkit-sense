@@ -74,17 +74,20 @@ function resolveInitialSelection(
       : { kind: "custom", text: "" };
   }
   if (initialState.selection.kind === "custom") {
-    return initialState.selection;
+    return {
+      kind: "custom",
+      text: initialState.customText || initialState.selection.text,
+    };
   }
-  const match = candidates.find(
-    (c) => c.id === initialState.selection.candidate.id,
-  );
+
+  const savedCandidate = initialState.selection.candidate;
+  const match = candidates.find((c) => c.id === savedCandidate.id);
   if (match) {
     return { kind: "candidate", candidate: match };
   }
   return candidates.length > 0
     ? { kind: "candidate", candidate: candidates[0] }
-    : initialState.selection;
+    : { kind: "candidate", candidate: savedCandidate };
 }
 
 export function SituationPanel({
