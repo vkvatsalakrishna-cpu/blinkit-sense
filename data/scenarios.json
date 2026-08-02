@@ -34,6 +34,96 @@
       "id": "cooking_project",
       "chip_label": "Cooking something",
       "prompt_context": "The customer is setting up to cook a special meal and needs cookware and ingredients."
+    },
+    {
+      "id": "concert_night",
+      "chip_label": "Concert tonight",
+      "prompt_context": "The customer is heading out to a concert or gig and needs snacks, drinks, and on-the-go essentials."
+    },
+    {
+      "id": "road_trip",
+      "chip_label": "Weekend getaway",
+      "prompt_context": "The customer is packing for a road trip or short weekend away and needs travel-friendly food and supplies."
+    },
+    {
+      "id": "house_party",
+      "chip_label": "House party",
+      "prompt_context": "The customer is throwing a house party and needs drinks, snacks, and supplies for a crowd at home."
+    },
+    {
+      "id": "movie_night",
+      "chip_label": "Movie night in",
+      "prompt_context": "The customer is planning a cozy movie night at home and wants snacks, drinks, and comfort food."
+    },
+    {
+      "id": "birthday",
+      "chip_label": "Someone's birthday",
+      "prompt_context": "The customer is celebrating someone's birthday and needs cake, treats, and small party supplies."
+    },
+    {
+      "id": "hangover_recovery",
+      "chip_label": "Hangover recovery",
+      "prompt_context": "The customer is recovering from a heavy night out and wants hydrating drinks, comfort food, and easy meals."
+    },
+    {
+      "id": "wfh_week",
+      "chip_label": "WFH all week",
+      "prompt_context": "The customer is working from home all week and needs coffee, quick meals, and desk-side snacks."
+    },
+    {
+      "id": "fitness_restart",
+      "chip_label": "Back to gym",
+      "prompt_context": "The customer is restarting a gym or fitness routine and wants protein, healthy snacks, and workout recovery food."
+    },
+    {
+      "id": "sick_at_home",
+      "chip_label": "Someone unwell",
+      "prompt_context": "The customer is caring for someone unwell at home and needs soups, fluids, and easy comfort food."
+    },
+    {
+      "id": "new_baby",
+      "chip_label": "Baby arriving",
+      "prompt_context": "The customer is expecting or has just had a baby and needs newborn essentials and easy meals for tired parents."
+    },
+    {
+      "id": "new_flatmate",
+      "chip_label": "New flatmate",
+      "prompt_context": "The customer has a new flatmate moving in and needs shared kitchen staples and household basics."
+    },
+    {
+      "id": "deadline_night",
+      "chip_label": "Deadline all-nighter",
+      "prompt_context": "The customer is pulling an exam or work deadline all-nighter and needs caffeine, quick food, and late-night snacks."
+    },
+    {
+      "id": "monsoon_prep",
+      "chip_label": "Monsoon prep",
+      "prompt_context": "The customer is preparing for monsoon season and needs rain gear, drying supplies, and hot comfort food."
+    },
+    {
+      "id": "picnic_day",
+      "chip_label": "Picnic day out",
+      "prompt_context": "The customer is planning a picnic or day out and needs portable snacks, drinks, and easy-to-carry food."
+    },
+    {
+      "id": "deep_clean",
+      "chip_label": "Deep cleaning day",
+      "prompt_context": "The customer is doing a deep clean of the home and needs cleaning supplies, gloves, and trash bags."
+    },
+    {
+      "id": "weekend_cooking",
+      "chip_label": "Weekend cooking",
+      "prompt_context": "The customer is spending the weekend on an ambitious cooking project and needs fresh ingredients and kitchen staples."
+    },
+    {
+      "id": "breakfast_prep",
+      "chip_label": "Breakfast for week",
+      "prompt_context": "The customer is meal-prepping breakfasts for the week ahead and needs eggs, bread, fruit, and pantry staples."
+    },
+    {
+      "id": "date_night",
+      "chip_label": "Date night in",
+      "prompt_context": "The customer is planning a date night at home and wants wine, dessert, and ingredients for a nice dinner."
     }
   ]
 }

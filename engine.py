@@ -47,6 +47,45 @@ FEE_SMALL_CART = 20
 THRESHOLD = 99
 
 # Tiles that should not resolve needs for a given confirmed situation.
+_SPECIALTY_STORES = frozenset(
+    {
+        "Pet Store",
+        "Toy Store",
+        "Spiritual Needs",
+        "Book Store",
+        "Jewellery Store",
+        "E-Gifts Store",
+        "Fashion Basics",
+        "Sports Store",
+        "Hobby Store",
+        "Travel Store",
+        "Pharma Store",
+        "Ice Cream Store",
+    }
+)
+_PERSONAL_SENSITIVE = frozenset(
+    {
+        "Paan Corner",
+        "Feminine Hygiene",
+        "Sexual Wellness",
+        "Health & Pharma",
+    }
+)
+_RAW_COOKING_STAPLES = frozenset(
+    {
+        "Vegetables & Fruits",
+        "Atta, Rice & Dal",
+        "Oil, Ghee & Masala",
+        "Chicken, Meat & Fish",
+    }
+)
+_JUNK_FOOD = frozenset(
+    {"Sweets & Chocolates", "Ice Creams & More", "Chips & Namkeen"}
+)
+
+# Specialty / personal tiles vetoed for most situations (not in core catalog depth).
+_SCENARIO_BASE_VETO = _SPECIALTY_STORES | _PERSONAL_SENSITIVE | frozenset({"Baby Care"})
+
 IMPLAUSIBLE_TILES: dict[str, frozenset[str]] = {
     "festival_gifting": frozenset(
         {
@@ -63,12 +102,143 @@ IMPLAUSIBLE_TILES: dict[str, frozenset[str]] = {
             "Health & Pharma",
         }
     ),
+    "hosting": _SPECIALTY_STORES | _PERSONAL_SENSITIVE | frozenset({"Baby Care"}),
     "moving_in": frozenset(
         {"Pet Store", "Toy Store", "Spiritual Needs", "Baby Care"}
     ),
     "new_pet": frozenset(
         {"Kitchenware & Appliances", "Home & Lifestyle", "Bath & Body"}
     ),
+    "health": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _JUNK_FOOD
+    | frozenset({"Cleaners & Repellents", "Home & Lifestyle"}),
+    "stocking": _SPECIALTY_STORES,
+    "cooking_project": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | frozenset({"Baby Care", "Cleaners & Repellents", "Home & Lifestyle"}),
+    "concert_night": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | frozenset(
+        {
+            "Baby Care",
+            "Cleaners & Repellents",
+            "Kitchenware & Appliances",
+            "Home & Lifestyle",
+        }
+    ),
+    "road_trip": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | frozenset(
+        {
+            "Baby Care",
+            "Cleaners & Repellents",
+            "Kitchenware & Appliances",
+            "Home & Lifestyle",
+        }
+    ),
+    "house_party": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | frozenset({"Baby Care"}),
+    "movie_night": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | frozenset(
+        {
+            "Baby Care",
+            "Cleaners & Repellents",
+            "Kitchenware & Appliances",
+        }
+    ),
+    "birthday": (_SPECIALTY_STORES - frozenset({"Toy Store"}))
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | frozenset({"Cleaners & Repellents"}),
+    "hangover_recovery": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | frozenset(
+        {
+            "Baby Care",
+            "Cleaners & Repellents",
+            "Home & Lifestyle",
+            "Kitchenware & Appliances",
+            "Electronics",
+            "Stationery & Games",
+        }
+    ),
+    "wfh_week": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | frozenset({"Baby Care", "Home & Lifestyle"}),
+    "fitness_restart": _SPECIALTY_STORES | _PERSONAL_SENSITIVE | _JUNK_FOOD | frozenset({"Baby Care"}),
+    "sick_at_home": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _JUNK_FOOD
+    | frozenset({"Electronics", "Stationery & Games"}),
+    "new_baby": frozenset(
+        {
+            "Pet Store",
+            "Spiritual Needs",
+            "Book Store",
+            "Jewellery Store",
+            "E-Gifts Store",
+            "Fashion Basics",
+            "Sports Store",
+            "Hobby Store",
+            "Travel Store",
+            "Pharma Store",
+            "Ice Cream Store",
+            "Paan Corner",
+            "Feminine Hygiene",
+            "Sexual Wellness",
+            "Health & Pharma",
+            "Cleaners & Repellents",
+        }
+    ),
+    "new_flatmate": _SPECIALTY_STORES | _PERSONAL_SENSITIVE | frozenset({"Baby Care"}),
+    "deadline_night": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | frozenset(
+        {
+            "Baby Care",
+            "Cleaners & Repellents",
+            "Home & Lifestyle",
+            "Kitchenware & Appliances",
+        }
+    ),
+    "monsoon_prep": _SCENARIO_BASE_VETO,
+    "picnic_day": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | frozenset(
+        {
+            "Baby Care",
+            "Cleaners & Repellents",
+            "Kitchenware & Appliances",
+            "Home & Lifestyle",
+        }
+    ),
+    "deep_clean": _SCENARIO_BASE_VETO,
+    "weekend_cooking": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | frozenset({"Baby Care", "Cleaners & Repellents", "Home & Lifestyle"}),
+    "breakfast_prep": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | frozenset(
+        {
+            "Baby Care",
+            "Cleaners & Repellents",
+            "Home & Lifestyle",
+            "Chicken, Meat & Fish",
+        }
+    ),
+    "date_night": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | frozenset({"Baby Care", "Cleaners & Repellents"}),
 }
 
 
