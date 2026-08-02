@@ -1,16 +1,27 @@
 "use client";
 
 import { useState } from "react";
+import {
+  BUDGET_CEILING,
+  BudgetRangeSlider,
+  budgetFilterPayload,
+} from "@/components/BudgetRangeSlider";
 import type { SituationCandidate } from "@/lib/types";
 
 export type SituationSelection =
   | { kind: "candidate"; candidate: SituationCandidate }
   | { kind: "custom"; text: string };
 
+export type SituationSubmitPayload = {
+  selection: SituationSelection;
+  min_price?: number;
+  max_price?: number;
+};
+
 interface SituationPanelProps {
   candidates: SituationCandidate[];
   loading: boolean;
-  onSubmit: (selection: SituationSelection) => void;
+  onSubmit: (payload: SituationSubmitPayload) => void;
   onStockingUp: () => void;
   onDismiss: () => void;
 }
@@ -28,6 +39,8 @@ export function SituationPanel({
       : { kind: "custom", text: "" },
   );
   const [customText, setCustomText] = useState("");
+  const [budgetMin, setBudgetMin] = useState(0);
+  const [budgetMax, setBudgetMax] = useState(BUDGET_CEILING);
 
   const isSelected = (candidate: SituationCandidate) =>
     selection.kind === "candidate" && selection.candidate.id === candidate.id;
@@ -37,10 +50,14 @@ export function SituationPanel({
     (selection.kind === "custom" && customText.trim().length > 0);
 
   const handleSubmit = () => {
+    const budget = budgetFilterPayload(budgetMin, budgetMax);
     if (selection.kind === "custom") {
-      onSubmit({ kind: "custom", text: customText.trim() });
+      onSubmit({
+        selection: { kind: "custom", text: customText.trim() },
+        ...budget,
+      });
     } else {
-      onSubmit(selection);
+      onSubmit({ selection, ...budget });
     }
   };
 
@@ -92,6 +109,15 @@ export function SituationPanel({
           }`}
         />
       </div>
+
+      <BudgetRangeSlider
+        min={budgetMin}
+        max={budgetMax}
+        onChange={(nextMin, nextMax) => {
+          setBudgetMin(nextMin);
+          setBudgetMax(nextMax);
+        }}
+      />
 
       <button
         type="button"

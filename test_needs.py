@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Phase 5 gate test — need planner for Moving in and Festival gifting."""
+"""Phase 5 gate test — need planner for Moving in and Gifting."""
 
 from __future__ import annotations
 
@@ -61,7 +61,7 @@ def main() -> None:
     print(f"Tile categories passed to planner: {len(tiles)}\n")
 
     run_scenario("Moving in", tiles)
-    run_scenario("Festival gifting", tiles)
+    run_scenario("Gifting", tiles)
 
 
 if __name__ == "__main__":

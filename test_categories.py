@@ -16,7 +16,7 @@ from phases.phase_2_data.loader import (
 
 DEMO_FLOWS = [
     {
-        "name": "1. Ambiguous cart — Festival gifting (h1)",
+        "name": "1. Ambiguous cart — Gifting (h1)",
         "household_id": "h1",
         "scenario": "festival_gifting",
         "skus": ["sku_027", "sku_028", "sku_029", "sku_030"],

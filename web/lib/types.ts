@@ -39,6 +39,14 @@ export interface SituationsResponse {
   candidates: SituationCandidate[];
 }
 
+export interface SuggestionOption {
+  resolved_sku: string;
+  resolved_name: string;
+  price: number;
+  category: string;
+  image_url?: string;
+}
+
 export interface SuggestionItem {
   role: string;
   need: string;
@@ -49,6 +57,8 @@ export interface SuggestionItem {
   price: number;
   category: string;
   flag?: "new_category" | "deepening";
+  options?: SuggestionOption[];
+  option_index?: number;
 }
 
 export interface NeedsResponse {
@@ -96,4 +106,5 @@ export interface SelectedSuggestion {
   qty: number;
   checked: boolean;
   dismissed: boolean;
+  optionIndex: number;
 }

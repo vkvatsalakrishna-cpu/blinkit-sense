@@ -2,8 +2,8 @@
   "scenarios": [
     {
       "id": "festival_gifting",
-      "chip_label": "Festival gifting",
-      "prompt_context": "The customer is preparing gifts and festive supplies for a celebration such as Diwali."
+      "chip_label": "Gifting",
+      "prompt_context": "The customer is buying gifts for friends or family and may need wrapping, presentation, and items to complement what is already in the cart."
     },
     {
       "id": "hosting",

@@ -47,12 +47,12 @@ export function Header({
           <select
             value={selectedHouseholdId}
             onChange={(e) => onHouseholdChange(e.target.value)}
-            className="max-w-[7rem] truncate rounded-md border border-gray-200 bg-gray-50 px-2 py-1 text-xs text-gray-700"
-            aria-label="Household"
+            className="max-w-[9.5rem] truncate rounded-md border border-gray-200 bg-gray-50 px-2 py-1 text-xs text-gray-700"
+            aria-label="Delivery address"
           >
             {households.map((h) => (
               <option key={h.id} value={h.id}>
-                {h.name}
+                {h.current_address}
               </option>
             ))}
           </select>

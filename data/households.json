@@ -52,9 +52,9 @@
     },
     {
       "id": "h5",
-      "name": "Delhi NCR explorer",
+      "name": "HSR Layout household",
       "known_addresses": ["Sarjapur, Bangalore"],
-      "current_address": "Delhi NCR",
+      "current_address": "HSR Layout, Bangalore",
       "orders_per_month": 6,
       "order_history": [
         { "sku": "sku_022", "orders_per_month": 6 },

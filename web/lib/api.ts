@@ -125,6 +125,8 @@ export async function postNeeds(body: {
   location: string;
   situation_label?: string;
   prompt_context?: string;
+  min_price?: number;
+  max_price?: number;
 }): Promise<NeedsResponse> {
   return apiFetch<NeedsResponse>("/needs", {
     method: "POST",

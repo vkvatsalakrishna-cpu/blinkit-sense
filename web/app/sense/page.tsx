@@ -7,7 +7,7 @@ import { OrderConfirmation } from "@/components/OrderConfirmation";
 import { ScenarioSelector } from "@/components/ScenarioSelector";
 import {
   SituationPanel,
-  type SituationSelection,
+  type SituationSubmitPayload,
 } from "@/components/SituationPanel";
 import { SuggestionsPanel } from "@/components/SuggestionsPanel";
 import {
@@ -19,6 +19,12 @@ import {
   postSituations,
 } from "@/lib/api";
 import { mergeLinesIntoCart } from "@/lib/cart";
+import {
+  applySuggestionOption,
+  canAdvanceOption,
+  initialOptionIndex,
+  suggestionRowKey,
+} from "@/lib/suggestions";
 import {
   catalogLocationFromAddress,
   confidenceThreshold,
@@ -83,8 +89,6 @@ export default function SensePage() {
     () => cart.reduce((sum, line) => sum + line.qty, 0),
     [cart],
   );
-
-  const showCheckout = phase === "cart" || phase === "dismissed";
 
   const cartSubtotal = useMemo(
     () => cart.reduce((sum, line) => sum + line.product.price * line.qty, 0),
@@ -230,6 +234,7 @@ export default function SensePage() {
     situationId: string,
     label: string,
     promptContext?: string,
+    budget?: { min_price?: number; max_price?: number },
   ) => {
     if (!household) return;
     setFlowError(null);
@@ -243,6 +248,8 @@ export default function SensePage() {
         location,
         situation_label: situationId === "custom" ? label : undefined,
         prompt_context: promptContext,
+        min_price: budget?.min_price,
+        max_price: budget?.max_price,
       });
 
       const productMap = await Promise.all(
@@ -259,6 +266,7 @@ export default function SensePage() {
           qty: 1,
           checked: true,
           dismissed: false,
+          optionIndex: initialOptionIndex(item),
         })),
       );
       setSituationLabel(result.situation_label);
@@ -270,16 +278,18 @@ export default function SensePage() {
     }
   };
 
-  const handleSituationSubmit = (selection: SituationSelection) => {
+  const handleSituationSubmit = ({ selection, min_price, max_price }: SituationSubmitPayload) => {
+    const budget = { min_price, max_price };
     if (selection.kind === "custom") {
       runNeeds(
         "custom",
         selection.text,
         `The customer described their situation as: ${selection.text}`,
+        budget,
       );
       return;
     }
-    runNeeds(selection.candidate.id, selection.candidate.label);
+    runNeeds(selection.candidate.id, selection.candidate.label, undefined, budget);
   };
 
   const handleStockingUp = () => {
@@ -318,6 +328,51 @@ export default function SensePage() {
       mergeLinesIntoCart(prev, [{ sku_id: product.id, qty: 1, product }]),
     );
   }, []);
+
+  const refreshSuggestionProduct = useCallback((rowKey: string, skuId: string) => {
+    void fetchProductDetails(skuId).then((product) => {
+      setSuggestions((prev) =>
+        prev.map((s) =>
+          suggestionRowKey(s.item) === rowKey ? { ...s, product } : s,
+        ),
+      );
+    });
+  }, []);
+
+  const handleAdvanceRow = useCallback(
+    (rowKey: string) => {
+      setSuggestions((prev) =>
+        prev.map((s) => {
+          if (suggestionRowKey(s.item) !== rowKey || !canAdvanceOption(s)) {
+            return s;
+          }
+          const updated = applySuggestionOption(s, s.optionIndex + 1);
+          refreshSuggestionProduct(rowKey, updated.item.resolved_sku);
+          return updated;
+        }),
+      );
+    },
+    [refreshSuggestionProduct],
+  );
+
+  const handleShowOtherOptions = useCallback(() => {
+    setSuggestions((prev) => {
+      const advanced: { rowKey: string; skuId: string }[] = [];
+      const next = prev.map((s) => {
+        if (!canAdvanceOption(s)) return s;
+        const updated = applySuggestionOption(s, s.optionIndex + 1);
+        advanced.push({
+          rowKey: suggestionRowKey(s.item),
+          skuId: updated.item.resolved_sku,
+        });
+        return updated;
+      });
+      for (const { rowKey, skuId } of advanced) {
+        refreshSuggestionProduct(rowKey, skuId);
+      }
+      return next;
+    });
+  }, [refreshSuggestionProduct]);
 
   const catalogLocation = useMemo(
     () => catalogLocationFromAddress(location),
@@ -436,31 +491,26 @@ export default function SensePage() {
                   situationLabel={situationLabel}
                   suggestions={suggestions}
                   catalogLocation={catalogLocation}
-                  onToggle={(skuId) =>
+                  onToggle={(rowKey) =>
                     setSuggestions((prev) =>
                       prev.map((s) =>
-                        s.item.resolved_sku === skuId
+                        suggestionRowKey(s.item) === rowKey
                           ? { ...s, checked: !s.checked }
                           : s,
                       ),
                     )
                   }
-                  onQtyChange={(skuId, qty) =>
+                  onQtyChange={(rowKey, qty) =>
                     setSuggestions((prev) =>
                       prev.map((s) =>
-                        s.item.resolved_sku === skuId
+                        suggestionRowKey(s.item) === rowKey
                           ? { ...s, qty: Math.min(5, Math.max(1, qty)) }
                           : s,
                       ),
                     )
                   }
-                  onDismiss={(skuId) =>
-                    setSuggestions((prev) =>
-                      prev.map((s) =>
-                        s.item.resolved_sku === skuId ? { ...s, dismissed: true } : s,
-                      ),
-                    )
-                  }
+                  onAdvanceRow={handleAdvanceRow}
+                  onShowOtherOptions={handleShowOtherOptions}
                   onAddAll={handleAddAllSuggestions}
                   onAddProductToCart={handleAddProductToCart}
                   sensitiveGuidance={sensitiveGuidance}
@@ -475,16 +525,14 @@ export default function SensePage() {
               )}
             </section>
 
-            {showCheckout && (
-              <button
-                type="button"
-                disabled={cart.length === 0}
-                onClick={handleCheckout}
-                className="w-full rounded-lg bg-blinkit-green py-4 text-base font-bold text-white shadow-md hover:bg-blinkit-green-dark disabled:opacity-50"
-              >
-                Checkout · ₹{checkoutTotal}
-              </button>
-            )}
+            <button
+              type="button"
+              disabled={cart.length === 0}
+              onClick={handleCheckout}
+              className="w-full rounded-lg bg-blinkit-green py-4 text-base font-bold text-white shadow-md hover:bg-blinkit-green-dark disabled:opacity-50"
+            >
+              Checkout · ₹{checkoutTotal}
+            </button>
           </>
         )}
 

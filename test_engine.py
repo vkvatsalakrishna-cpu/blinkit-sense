@@ -25,7 +25,7 @@ from phases.phase_2_data.loader import (
 )
 
 RUNS = [
-    ("h1", "Festival gifting"),
+    ("h1", "Gifting"),
     ("h1", "Eating better"),
     ("h1", "Just stocking up"),
     ("h1", "Cooking something"),
@@ -224,7 +224,10 @@ def run_chain(
         return invalid, "\n".join(lines)
 
     resolved = resolve_needs(
-        needs_result["needs"], location, situation_id=scenario["id"]
+        needs_result["needs"],
+        location,
+        situation_id=scenario["id"],
+        catalog=catalog,
     )
     filtered = apply_household_filter(resolved, household)
 

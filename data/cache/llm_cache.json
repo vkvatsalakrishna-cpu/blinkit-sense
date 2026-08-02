@@ -89,5 +89,593 @@
       }
     ],
     "unavailable": []
+  },
+  "c6d05538ecc0ede8ca95b63cda63dee7da357b1d6056fd55982cbae992c2e77c": {
+    "confidence": 0.78,
+    "candidates": [
+      {
+        "id": "health",
+        "label": "Health Boost",
+        "reasoning": "Buying greens and nuts plus bottle for wellness routine.",
+        "score": 0.78
+      },
+      {
+        "id": "cooking_project",
+        "label": "Cooking Project",
+        "reasoning": "Preparing nutritious meals, need fresh spinach and almonds.",
+        "score": 0.65
+      },
+      {
+        "id": "stocking",
+        "label": "Stock Up",
+        "reasoning": "Replenishing pantry basics, adding nuts and veggies.",
+        "score": 0.35
+      },
+      {
+        "id": "moving_in",
+        "label": "Moving In",
+        "reasoning": "New address, setting up kitchen essentials.",
+        "score": 0.3
+      }
+    ]
+  },
+  "5b521790a6ab53fcf2aa2ea0093801c8e12450b1a6ad320ecb29a23ce3a7b006": {
+    "situation_label": "Healthier Eating Essentials",
+    "needs": [
+      {
+        "role": "Staples",
+        "need": "whole wheat atta",
+        "quantity_reasoning": "One bag supplies daily cooking for a week",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Staples",
+        "need": "brown rice",
+        "quantity_reasoning": "One pack covers multiple meals throughout the week",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Breakfast",
+        "need": "rolled oats",
+        "quantity_reasoning": "One container provides a quick, nutritious breakfast each day",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "almonds",
+        "quantity_reasoning": "A handful each day offers a healthy snack option",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Dairy",
+        "need": "low fat yogurt",
+        "quantity_reasoning": "One tub supplies probiotic snack or breakfast addition daily",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Fruit",
+        "need": "apple",
+        "quantity_reasoning": "A few pieces each day provide fresh fruit intake",
+        "expected_tiles": [
+          "Vegetables & Fruits"
+        ]
+      },
+      {
+        "role": "Cooking",
+        "need": "olive oil",
+        "quantity_reasoning": "One bottle meets daily cooking and salad needs",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "e7bb95db5da776ebeda69ad4db8d9113c3a4c5af4e17346150adaf1e9eac4fc9": {
+    "confidence": 0.78,
+    "candidates": [
+      {
+        "id": "hosting",
+        "label": "Hosting a dinner",
+        "reasoning": "Fresh veggies and ready meal indicate guests; need serving items.",
+        "score": 0.78
+      },
+      {
+        "id": "cooking_project",
+        "label": "Cooking new recipe",
+        "reasoning": "Special pasta salad and basil point to trying new dish.",
+        "score": 0.65
+      },
+      {
+        "id": "stocking",
+        "label": "Restocking kitchenware",
+        "reasoning": "Paper napkins and bowl show kitchenware replenishment.",
+        "score": 0.45
+      },
+      {
+        "id": "health",
+        "label": "Healthy meal prep",
+        "reasoning": "Tomatoes and cheese suggest health‑focused meal.",
+        "score": 0.35
+      }
+    ]
+  },
+  "493b765ff6294b1003c05974a2715b35bc11155c08ec028045a1ed76b8de35a9": {
+    "situation_label": "Snack cravings",
+    "needs": [
+      {
+        "role": "Savory Snacks",
+        "need": "potato chips",
+        "quantity_reasoning": "One pack is enough for a casual snack session",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Savory Snacks",
+        "need": "sev",
+        "quantity_reasoning": "A small packet satisfies cravings for crunchy namkeen",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Sweet Snacks",
+        "need": "biscuits",
+        "quantity_reasoning": "One pack provides enough for sharing or tea time",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      },
+      {
+        "role": "Sweet Snacks",
+        "need": "chocolate bar",
+        "quantity_reasoning": "One bar satisfies a sweet tooth impulse",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Frozen Treats",
+        "need": "ice cream",
+        "quantity_reasoning": "One tub covers a quick cool treat",
+        "expected_tiles": [
+          "Ice Creams & More"
+        ]
+      },
+      {
+        "role": "Beverages",
+        "need": "soft drink",
+        "quantity_reasoning": "One bottle quenches thirst alongside snacks",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Beverages",
+        "need": "tea",
+        "quantity_reasoning": "One pack is sufficient for brewing a few cups",
+        "expected_tiles": [
+          "Tea, Coffee & Milk Drinks"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "ba4e6031b851d71e2f95a577d04403652de538bbf99fefe84d8547f9876288cc": {
+    "confidence": 0.78,
+    "candidates": [
+      {
+        "id": "cooking_project",
+        "label": "New Recipe Cooking",
+        "reasoning": "Bought fresh veg and new pan for cooking experiment.",
+        "score": 0.78
+      },
+      {
+        "id": "hosting",
+        "label": "Entertaining Guests",
+        "reasoning": "Pan and veggies for dinner with friends tonight.",
+        "score": 0.65
+      },
+      {
+        "id": "stocking",
+        "label": "Restocking Essentials",
+        "reasoning": "Replenishing kitchen basics and cleaning supplies.",
+        "score": 0.45
+      },
+      {
+        "id": "health",
+        "label": "Healthy Meal Prep",
+        "reasoning": "Choosing vegetables for nutritious home meals.",
+        "score": 0.3
+      }
+    ]
+  },
+  "6e455ece68cd6ea06994853385faf484463895550e9247d113f6a1d085546bf3": {
+    "situation_label": "Routine Grocery Restock",
+    "needs": [
+      {
+        "role": "Cooking",
+        "need": "atta",
+        "quantity_reasoning": "One bag lasts for daily rotis throughout the week",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Cooking",
+        "need": "rice",
+        "quantity_reasoning": "One pack supplies multiple meals for the household",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Cooking",
+        "need": "dal",
+        "quantity_reasoning": "One pack provides protein for several lunches and dinners",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Cooking",
+        "need": "refined oil",
+        "quantity_reasoning": "One bottle covers frying and tempering for a week",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      },
+      {
+        "role": "Dairy",
+        "need": "milk",
+        "quantity_reasoning": "One container meets daily drinking and cooking needs",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Bakery",
+        "need": "bread",
+        "quantity_reasoning": "One loaf is enough for breakfasts and snacks across several days",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "detergent powder",
+        "quantity_reasoning": "One pack handles regular laundry cycles for the household",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      }
+    ],
+    "unavailable": [
+      "Health & Pharma",
+      "Baby Care",
+      "Sexual Wellness",
+      "Electronics",
+      "Jewellery Store"
+    ]
+  },
+  "826e8adf2e26a5bbffa31d3c1261aac70e04eceb5beb5019bbd469f790796f28": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "moving_in",
+        "label": "Moving In",
+        "reasoning": "Need basics for fresh Bangalore apartment.",
+        "score": 0.85
+      },
+      {
+        "id": "stocking",
+        "label": "Restocking Essentials",
+        "reasoning": "Replenishing cleaning and storage supplies.",
+        "score": 0.62
+      },
+      {
+        "id": "cooking_project",
+        "label": "Cooking Experiment",
+        "reasoning": "Preparing veggie pulao, need fresh mix.",
+        "score": 0.48
+      },
+      {
+        "id": "hosting",
+        "label": "Hosting Guests",
+        "reasoning": "Preparing to host, need containers and cleaning.",
+        "score": 0.38
+      }
+    ]
+  },
+  "f4f0cb2d05558e697d99e44233e6f9b4bb4d43826d60463a99f0598b252e95ba": {
+    "situation_label": "Hosting Guests",
+    "needs": [
+      {
+        "role": "Dining",
+        "need": "plate",
+        "quantity_reasoning": "One plate per guest for the main course",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      },
+      {
+        "role": "Dining",
+        "need": "glass",
+        "quantity_reasoning": "One glass per guest for drinks",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      },
+      {
+        "role": "Dining",
+        "need": "napkin",
+        "quantity_reasoning": "Enough napkins to serve each guest",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Beverages",
+        "need": "tea kettle",
+        "quantity_reasoning": "One kettle suffices to brew tea for all guests",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "dishwash gel",
+        "quantity_reasoning": "One bottle handles post‑meal dish cleaning",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      },
+      {
+        "role": "Guest Comfort",
+        "need": "towel",
+        "quantity_reasoning": "One towel per guest for bathroom use",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "chips",
+        "quantity_reasoning": "A pack provides enough munchies while guests mingle",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "71731214193ff63d2eb4baffd378b473d577c242e926866acd7460229f67968d": {
+    "confidence": 0.78,
+    "candidates": [
+      {
+        "id": "hosting",
+        "label": "Coffee & Snacks",
+        "reasoning": "Travel mug and pomegranate for guest refreshments",
+        "score": 0.78
+      },
+      {
+        "id": "health",
+        "label": "Healthy Snack",
+        "reasoning": "Pomegranate pack suggests health‑focused snacking",
+        "score": 0.65
+      },
+      {
+        "id": "stocking",
+        "label": "Study Supplies",
+        "reasoning": "Notebook and pens indicate replenishing school items",
+        "score": 0.55
+      },
+      {
+        "id": "festival_gifting",
+        "label": "Gift Prep",
+        "reasoning": "Stationery could be for gifting during upcoming festivals",
+        "score": 0.28
+      }
+    ]
+  },
+  "59db4d797bf59e9a5c7b724cf94d31c746e45adae600e1294452b6b78b248d46": {
+    "situation_label": "Gifting Essentials",
+    "needs": [
+      {
+        "role": "Food Gifts",
+        "need": "chocolate",
+        "quantity_reasoning": "One piece is enough for a small personal gift",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Food Gifts",
+        "need": "dry fruits",
+        "quantity_reasoning": "A handful serves as a healthy gifting option",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Home Decor",
+        "need": "candle",
+        "quantity_reasoning": "One candle adds a festive touch to a gift package",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Personal Care",
+        "need": "body lotion",
+        "quantity_reasoning": "One bottle provides enough for occasional use by the recipient",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Corporate Gifting",
+        "need": "gift card",
+        "quantity_reasoning": "One card covers a standard gifting value for colleagues",
+        "expected_tiles": [
+          "E-Gifts Store"
+        ]
+      },
+      {
+        "role": "Kids",
+        "need": "plush toy",
+        "quantity_reasoning": "One plush toy makes a cute present for children",
+        "expected_tiles": [
+          "Toy Store"
+        ]
+      },
+      {
+        "role": "Entertainment",
+        "need": "book",
+        "quantity_reasoning": "One book offers a thoughtful and lasting gift",
+        "expected_tiles": [
+          "Book Store"
+        ]
+      }
+    ],
+    "unavailable": [
+      "Health & Pharma",
+      "Baby Care",
+      "Sexual Wellness"
+    ]
+  },
+  "9f1b7c8ebe523d156745942d75df99228abdb0c1bf59149a814586d5654147bf": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "festival_gifting",
+        "label": "Festival Gifting",
+        "reasoning": "Dates, figs, mugs for Rakhi gift wrapping",
+        "score": 0.85
+      },
+      {
+        "id": "hosting",
+        "label": "Hosting Guests",
+        "reasoning": "Mugs and fruit for small gathering",
+        "score": 0.65
+      },
+      {
+        "id": "cooking_project",
+        "label": "Cooking Project",
+        "reasoning": "Fruit and dates for sweet recipes",
+        "score": 0.55
+      },
+      {
+        "id": "stocking",
+        "label": "Stocking Up",
+        "reasoning": "Basic fruit purchase, no special occasion",
+        "score": 0.35
+      }
+    ]
+  },
+  "93894eee5a89c33ec96c99404f3b4d573341b056c6ece82f93a9b36183513b27": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "new_pet",
+        "label": "New Cat Owner",
+        "reasoning": "Bought cat litter, suggests recent cat adoption",
+        "score": 0.85
+      },
+      {
+        "id": "moving_in",
+        "label": "Moving In",
+        "reasoning": "Cleaning supplies indicate fresh home setup",
+        "score": 0.65
+      },
+      {
+        "id": "stocking",
+        "label": "Stocking Essentials",
+        "reasoning": "Zip lock bags for pantry stocking",
+        "score": 0.45
+      },
+      {
+        "id": "cooking_project",
+        "label": "Meal Prep",
+        "reasoning": "Pouches for meal prep storage",
+        "score": 0.4
+      }
+    ]
+  },
+  "a6e0e94cc3df143d1f5456f271a49af73ca09505fb1ec28f354342cd09a3fd30": {
+    "situation_label": "Gifting",
+    "needs": [
+      {
+        "role": "Sweets & Chocolates",
+        "need": "chocolate gift box",
+        "quantity_reasoning": "One box makes a complete present for a single recipient",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Dry Fruits",
+        "need": "dry fruit hamper",
+        "quantity_reasoning": "One hamper provides a generous assortment for gifting",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Bath & Body",
+        "need": "bath and body hamper",
+        "quantity_reasoning": "One hamper offers a variety of pampering items for a single gift",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Beauty",
+        "need": "beauty cosmetics set",
+        "quantity_reasoning": "One set covers essential makeup and skincare for gifting",
+        "expected_tiles": [
+          "Beauty & Cosmetics"
+        ]
+      },
+      {
+        "role": "Jewellery",
+        "need": "jewellery gift set",
+        "quantity_reasoning": "One set presents a coordinated piece suitable as a special gift",
+        "expected_tiles": [
+          "Jewellery Store"
+        ]
+      },
+      {
+        "role": "Electronics",
+        "need": "electronic gadget",
+        "quantity_reasoning": "One gadget serves as a standout gift for tech‑savvy recipients",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      },
+      {
+        "role": "Toys",
+        "need": "toy gift set",
+        "quantity_reasoning": "One set provides multiple play items, ideal for gifting a child",
+        "expected_tiles": [
+          "Toy Store"
+        ]
+      }
+    ],
+    "unavailable": [
+      "Health & Pharma",
+      "Baby Care"
+    ]
   }
 }

@@ -14,7 +14,22 @@ from phases.phase_2_data.loader import (
 
 STOPWORDS = frozenset({"and", "or", "the", "a", "for", "with"})
 GENERIC_WORDS = frozenset(
-    {"set", "pack", "box", "water", "mix", "plain", "small", "large"}
+    {
+        "set",
+        "pack",
+        "box",
+        "gift",
+        "hamper",
+        "kit",
+        "combo",
+        "assorted",
+        "premium",
+        "water",
+        "mix",
+        "plain",
+        "small",
+        "large",
+    }
 )
 ACCESSORY_HINTS = frozenset({"scooper", "scoop", "tray", "brush", "spray", "refill"})
 GAP_MESSAGE = "We don't stock this — you'll need it elsewhere."
@@ -33,6 +48,21 @@ THRESHOLD = 99
 
 # Tiles that should not resolve needs for a given confirmed situation.
 IMPLAUSIBLE_TILES: dict[str, frozenset[str]] = {
+    "festival_gifting": frozenset(
+        {
+            # Routine staples and household — not gift shopping.
+            "Vegetables & Fruits",
+            "Atta, Rice & Dal",
+            "Oil, Ghee & Masala",
+            "Chicken, Meat & Fish",
+            "Dairy, Bread & Eggs",
+            "Cleaners & Repellents",
+            "Paan Corner",
+            "Feminine Hygiene",
+            "Sexual Wellness",
+            "Health & Pharma",
+        }
+    ),
     "moving_in": frozenset(
         {"Pet Store", "Toy Store", "Spiritual Needs", "Baby Care"}
     ),
@@ -190,17 +220,51 @@ def _match_key(
     return (score, ratio, distinctive, -penalty, price)
 
 
-def _search_candidates(
+def cart_subtotal(household: dict, catalog: list[dict] | None = None) -> int:
+    catalog = catalog or load_catalog()
+    by_id = catalog_by_id(catalog)
+    return sum(
+        by_id[sku]["price"]
+        for sku in household.get("current_cart", [])
+        if sku in by_id
+    )
+
+
+def _has_image(item: dict) -> bool:
+    image_url = item.get("image_url")
+    return isinstance(image_url, str) and bool(image_url.strip())
+
+
+def _match_quality(key: tuple) -> tuple:
+    return key[:4]
+
+
+def _median_priced(
+    rows: list[tuple[dict, list[str], tuple]],
+) -> tuple[dict, list[str], tuple]:
+    sorted_rows = sorted(rows, key=lambda row: row[0]["price"])
+    return sorted_rows[(len(sorted_rows) - 1) // 2]
+
+
+def _catalog_option(item: dict) -> dict[str, Any]:
+    return {
+        "resolved_sku": item["id"],
+        "resolved_name": item["name"],
+        "price": item["price"],
+        "category": item["category"],
+        "image_url": item.get("image_url"),
+    }
+
+
+def _qualified_candidates(
     content_words: list[str],
     available: list[dict],
     implausible: frozenset[str],
     allowed_categories: frozenset[str] | None = None,
     *,
     strict: bool = False,
-) -> tuple[dict | None, list[str], tuple]:
-    best_item: dict | None = None
-    best_matched: list[str] = []
-    best_key: tuple = (0, 0, 0, 0, 0)
+) -> list[tuple[dict, list[str], tuple]]:
+    qualified: list[tuple[dict, list[str], tuple]] = []
 
     for item in available:
         if item["category"] in implausible:
@@ -216,12 +280,64 @@ def _search_candidates(
         if not qualifies:
             continue
         key = _match_key(content_words, matched, item["name"], item["price"])
-        if key > best_key:
-            best_item = item
-            best_matched = matched
-            best_key = key
+        qualified.append((item, matched, key))
 
-    return best_item, best_matched, best_key
+    return qualified
+
+
+def _ranked_options(
+    qualified: list[tuple[dict, list[str], tuple]],
+    budget_min: int | None = None,
+    budget_max: int | None = None,
+) -> list[tuple[dict, list[str], tuple]]:
+    if not qualified:
+        return []
+
+    best_quality = max(_match_quality(key) for _, _, key in qualified)
+    top_tier = [row for row in qualified if _match_quality(row[2]) == best_quality]
+
+    pool = top_tier
+    if budget_min is not None:
+        pool = [row for row in pool if row[0]["price"] >= budget_min]
+    if budget_max is not None:
+        pool = [row for row in pool if row[0]["price"] <= budget_max]
+
+    with_image = [row for row in pool if _has_image(row[0])]
+    return sorted(with_image, key=lambda row: row[0]["price"])
+
+
+def _pick_winning_candidate(
+    qualified: list[tuple[dict, list[str], tuple]],
+    budget_min: int | None = None,
+    budget_max: int | None = None,
+) -> tuple[dict | None, list[str], tuple, list[dict[str, Any]]]:
+    ranked = _ranked_options(qualified, budget_min, budget_max)
+    if not ranked:
+        return None, [], (0, 0, 0, 0, 0), []
+
+    item, matched, key = _median_priced(ranked)
+    options = [_catalog_option(row[0]) for row in ranked]
+    return item, matched, key, options
+
+
+def _search_candidates(
+    content_words: list[str],
+    available: list[dict],
+    implausible: frozenset[str],
+    allowed_categories: frozenset[str] | None = None,
+    *,
+    strict: bool = False,
+    budget_min: int | None = None,
+    budget_max: int | None = None,
+) -> tuple[dict | None, list[str], tuple, list[dict[str, Any]]]:
+    qualified = _qualified_candidates(
+        content_words,
+        available,
+        implausible,
+        allowed_categories,
+        strict=strict,
+    )
+    return _pick_winning_candidate(qualified, budget_min, budget_max)
 
 
 def _best_candidate(
@@ -229,17 +345,31 @@ def _best_candidate(
     available: list[dict],
     situation_id: str | None = None,
     expected_tiles: list[str] | None = None,
-) -> tuple[dict | None, list[str], tuple]:
+    budget_min: int | None = None,
+    budget_max: int | None = None,
+) -> tuple[dict | None, list[str], tuple, list[dict[str, Any]]]:
     implausible = _implausible_tiles(situation_id)
 
     if expected_tiles:
         best = _search_candidates(
-            content_words, available, implausible, frozenset(expected_tiles)
+            content_words,
+            available,
+            implausible,
+            frozenset(expected_tiles),
+            budget_min=budget_min,
+            budget_max=budget_max,
         )
         if best[0] is not None:
             return best
 
-    return _search_candidates(content_words, available, implausible, strict=True)
+    return _search_candidates(
+        content_words,
+        available,
+        implausible,
+        strict=True,
+        budget_min=budget_min,
+        budget_max=budget_max,
+    )
 
 
 def _owned_skus(household: dict) -> dict[str, int]:
@@ -300,6 +430,8 @@ def resolve_needs(
     location_name: str,
     situation_id: str | None = None,
     catalog: list[dict] | None = None,
+    budget_min: int | None = None,
+    budget_max: int | None = None,
 ) -> list[dict]:
     """Map abstract needs to catalog SKUs for the given location."""
     catalog = catalog or load_catalog()
@@ -322,11 +454,13 @@ def resolve_needs(
             )
             continue
 
-        item, matched_words, match_key = _best_candidate(
+        item, matched_words, match_key, options = _best_candidate(
             content_words,
             available,
             situation_id,
             need.get("expected_tiles") or None,
+            budget_min=budget_min,
+            budget_max=budget_max,
         )
         candidates.append(
             {
@@ -335,6 +469,7 @@ def resolve_needs(
                 "item": item,
                 "matched_words": matched_words,
                 "match_key": match_key,
+                "options": options,
             }
         )
 
@@ -365,6 +500,8 @@ def resolve_needs(
         item = assigned["item"]
         content_words = _tokenize_need(need.get("need", ""))
         score = len(assigned["matched_words"])
+        options = assigned.get("options") or []
+        option_index = (len(options) - 1) // 2 if options else 0
         resolved.append(
             {
                 "role": need.get("role", ""),
@@ -380,6 +517,8 @@ def resolve_needs(
                 "match_score": score,
                 "match_ratio": score / len(content_words),
                 "matched_words": assigned["matched_words"],
+                "options": options,
+                "option_index": option_index,
             }
         )
 

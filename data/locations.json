@@ -15,6 +15,13 @@
       "lon": 77.644554
     },
     {
+      "id": "sarjapur_hsr",
+      "name": "Sarjapur",
+      "display_address": "HSR Layout, Bangalore",
+      "lat": 12.912118,
+      "lon": 77.644554
+    },
+    {
       "id": "whitefield",
       "name": "Whitefield",
       "display_address": "Whitefield, Bangalore",

@@ -3,15 +3,20 @@
 import { useState } from "react";
 import { CategoryBrowseModal } from "./CategoryBrowseModal";
 import { ProductImage } from "./ProductImage";
+import {
+  canAdvanceOption,
+  suggestionRowKey,
+} from "@/lib/suggestions";
 import type { Product, SelectedSuggestion } from "@/lib/types";
 
 interface SuggestionsPanelProps {
   situationLabel: string;
   suggestions: SelectedSuggestion[];
   catalogLocation: string;
-  onToggle: (skuId: string) => void;
-  onQtyChange: (skuId: string, qty: number) => void;
-  onDismiss: (skuId: string) => void;
+  onToggle: (rowKey: string) => void;
+  onQtyChange: (rowKey: string, qty: number) => void;
+  onAdvanceRow: (rowKey: string) => void;
+  onShowOtherOptions: () => void;
   onAddAll: () => void;
   onAddProductToCart: (product: Product) => void;
   sensitiveGuidance: string[];
@@ -24,7 +29,8 @@ export function SuggestionsPanel({
   catalogLocation,
   onToggle,
   onQtyChange,
-  onDismiss,
+  onAdvanceRow,
+  onShowOtherOptions,
   onAddAll,
   onAddProductToCart,
   sensitiveGuidance,
@@ -37,6 +43,7 @@ export function SuggestionsPanel({
     (sum, s) => sum + s.item.price * s.qty,
     0,
   );
+  const anyCanAdvance = visible.some(canAdvanceOption);
 
   if (visible.length === 0) {
     return (
@@ -57,6 +64,7 @@ export function SuggestionsPanel({
 
       <ul className="space-y-3">
         {visible.map((s) => {
+          const rowKey = suggestionRowKey(s.item);
           const product = s.product ?? {
             id: s.item.resolved_sku,
             name: s.item.resolved_name,
@@ -72,13 +80,13 @@ export function SuggestionsPanel({
 
           return (
             <li
-              key={s.item.resolved_sku}
+              key={rowKey}
               className="flex gap-3 rounded-lg border border-gray-200 bg-white p-3"
             >
               <input
                 type="checkbox"
                 checked={s.checked}
-                onChange={() => onToggle(s.item.resolved_sku)}
+                onChange={() => onToggle(rowKey)}
                 className="mt-1 h-4 w-4 accent-blinkit-green"
                 aria-label={`Select ${s.item.resolved_name}`}
               />
@@ -113,7 +121,7 @@ export function SuggestionsPanel({
                     <button
                       type="button"
                       disabled={s.qty <= 1}
-                      onClick={() => onQtyChange(s.item.resolved_sku, s.qty - 1)}
+                      onClick={() => onQtyChange(rowKey, s.qty - 1)}
                       className="px-2 py-0.5 text-gray-600 disabled:opacity-30"
                     >
                       −
@@ -122,7 +130,7 @@ export function SuggestionsPanel({
                     <button
                       type="button"
                       disabled={s.qty >= 5}
-                      onClick={() => onQtyChange(s.item.resolved_sku, s.qty + 1)}
+                      onClick={() => onQtyChange(rowKey, s.qty + 1)}
                       className="px-2 py-0.5 text-gray-600 disabled:opacity-30"
                     >
                       +
@@ -133,9 +141,10 @@ export function SuggestionsPanel({
               </div>
               <button
                 type="button"
-                onClick={() => onDismiss(s.item.resolved_sku)}
-                className="self-start text-lg leading-none text-gray-300 hover:text-gray-600"
-                aria-label="Dismiss suggestion"
+                onClick={() => onAdvanceRow(rowKey)}
+                disabled={!canAdvanceOption(s)}
+                className="self-start text-lg leading-none text-gray-300 hover:text-gray-600 disabled:cursor-default disabled:opacity-30"
+                aria-label="Show another option for this item"
               >
                 ×
               </button>
@@ -143,6 +152,20 @@ export function SuggestionsPanel({
           );
         })}
       </ul>
+
+      {anyCanAdvance ? (
+        <button
+          type="button"
+          onClick={onShowOtherOptions}
+          className="mt-4 w-full rounded-lg border border-gray-200 bg-white py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+        >
+          Show other options
+        </button>
+      ) : (
+        <p className="mt-4 text-center text-sm text-gray-500">
+          That&apos;s everything I could think of for this.
+        </p>
+      )}
 
       <button
         type="button"

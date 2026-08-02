@@ -58,6 +58,8 @@ class NeedsRequest(BaseModel):
     location: str
     situation_label: str | None = None
     prompt_context: str | None = None
+    min_price: int | None = Field(default=None, ge=0)
+    max_price: int | None = Field(default=None, ge=0)
 
 
 def _llm_configured() -> bool:
@@ -262,6 +264,8 @@ def needs(body: NeedsRequest) -> dict[str, Any]:
         needs_result["needs"],
         catalog_location,
         situation_id=scenario["id"],
+        budget_min=body.min_price,
+        budget_max=body.max_price,
     )
     filtered = apply_household_filter(resolved, ctx)
     return {
