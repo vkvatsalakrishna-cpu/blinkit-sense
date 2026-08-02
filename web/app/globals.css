@@ -32,37 +32,3 @@ body {
     @apply bg-blinkit-green/[0.06];
   }
 }
-
-.budget-range-input::-webkit-slider-runnable-track {
-  height: 6px;
-  background: transparent;
-}
-
-.budget-range-input::-moz-range-track {
-  height: 6px;
-  background: transparent;
-}
-
-.budget-range-input::-webkit-slider-thumb {
-  pointer-events: auto;
-  appearance: none;
-  height: 16px;
-  width: 16px;
-  margin-top: -5px;
-  border-radius: 9999px;
-  border: 2px solid var(--blinkit-green);
-  background: white;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
-  cursor: pointer;
-}
-
-.budget-range-input::-moz-range-thumb {
-  pointer-events: auto;
-  height: 16px;
-  width: 16px;
-  border-radius: 9999px;
-  border: 2px solid var(--blinkit-green);
-  background: white;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
-  cursor: pointer;
-}

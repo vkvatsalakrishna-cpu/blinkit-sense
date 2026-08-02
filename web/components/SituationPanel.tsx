@@ -1,12 +1,36 @@
 "use client";
 
 import { useState } from "react";
-import {
-  BUDGET_CEILING,
-  BudgetRangeSlider,
-  budgetFilterPayload,
-} from "@/components/BudgetRangeSlider";
 import type { SituationCandidate } from "@/lib/types";
+
+export const BUDGET_CEILING = 5000;
+
+export function budgetFilterPayload(
+  min: number,
+  max: number,
+): { min_price?: number; max_price?: number } {
+  const payload: { min_price?: number; max_price?: number } = {};
+  if (min > 0) payload.min_price = min;
+  if (max < BUDGET_CEILING) payload.max_price = max;
+  return payload;
+}
+
+type BudgetChipId = "any" | "under300" | "mid" | "over1000";
+
+const BUDGET_CHIPS: { id: BudgetChipId; label: string; min: number; max: number }[] = [
+  { id: "any", label: "Any", min: 0, max: BUDGET_CEILING },
+  { id: "under300", label: "Under ₹300", min: 0, max: 300 },
+  { id: "mid", label: "₹300–1,000", min: 300, max: 1000 },
+  { id: "over1000", label: "₹1,000+", min: 1000, max: BUDGET_CEILING },
+];
+
+function budgetChipFromMinMax(min: number, max: number): BudgetChipId {
+  if (min === 0 && max >= BUDGET_CEILING) return "any";
+  if (min === 0 && max === 300) return "under300";
+  if (min === 300 && max === 1000) return "mid";
+  if (min === 1000 && max >= BUDGET_CEILING) return "over1000";
+  return "any";
+}
 
 export type SituationSelection =
   | { kind: "candidate"; candidate: SituationCandidate }
@@ -104,11 +128,11 @@ export function SituationPanel({
   const [customText, setCustomText] = useState(
     () => initialState?.customText ?? "",
   );
-  const [budgetMin, setBudgetMin] = useState(
-    () => initialState?.budgetMin ?? 0,
-  );
-  const [budgetMax, setBudgetMax] = useState(
-    () => initialState?.budgetMax ?? BUDGET_CEILING,
+  const [budgetChip, setBudgetChip] = useState<BudgetChipId>(() =>
+    budgetChipFromMinMax(
+      initialState?.budgetMin ?? 0,
+      initialState?.budgetMax ?? BUDGET_CEILING,
+    ),
   );
 
   const isSelected = (candidate: SituationCandidate) =>
@@ -119,7 +143,8 @@ export function SituationPanel({
     (selection.kind === "custom" && customText.trim().length > 0);
 
   const handleSubmit = () => {
-    const budget = budgetFilterPayload(budgetMin, budgetMax);
+    const chip = BUDGET_CHIPS.find((c) => c.id === budgetChip)!;
+    const budget = budgetFilterPayload(chip.min, chip.max);
     if (selection.kind === "custom") {
       onSubmit({
         selection: { kind: "custom", text: customText.trim() },
@@ -131,7 +156,7 @@ export function SituationPanel({
   };
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-6">
       <SenseIntro />
 
       <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-1 md:mx-0 md:flex-wrap md:overflow-visible md:px-0">
@@ -194,38 +219,54 @@ export function SituationPanel({
         />
       </div>
 
-      <BudgetRangeSlider
-        min={budgetMin}
-        max={budgetMax}
-        onChange={(nextMin, nextMax) => {
-          setBudgetMin(nextMin);
-          setBudgetMax(nextMax);
-        }}
-      />
+      <div className="space-y-2">
+        <p className="text-xs font-medium text-gray-600">Budget</p>
+        <div className="flex flex-wrap gap-2">
+          {BUDGET_CHIPS.map((chip) => {
+            const selected = budgetChip === chip.id;
+            return (
+              <button
+                key={chip.id}
+                type="button"
+                disabled={loading}
+                onClick={() => setBudgetChip(chip.id)}
+                className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors disabled:opacity-50 ${
+                  selected
+                    ? "border-blinkit-green bg-blinkit-green/10 text-blinkit-green"
+                    : "border-blinkit-green/30 bg-white text-gray-600"
+                }`}
+              >
+                {chip.label}
+              </button>
+            );
+          })}
+        </div>
+      </div>
 
       <button
         type="button"
         disabled={loading || !canSubmit}
         onClick={handleSubmit}
-        className="btn-outline"
+        className="w-full rounded-xl bg-[#0C831F] py-3.5 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(12,131,31,0.22)] transition-all hover:-translate-y-px hover:shadow-[0_6px_20px_rgba(12,131,31,0.32)] disabled:cursor-not-allowed disabled:opacity-50"
       >
-        Submit
+        {canSubmit ? "Show me what I need" : "Submit"}
       </button>
 
-      <div className="flex gap-2">
+      <div className="mt-4 flex items-center justify-between">
         <button
           type="button"
           disabled={loading}
           onClick={onStockingUp}
-          className="btn-outline flex-1 !w-auto disabled:opacity-50"
+          className="inline-flex items-center gap-1.5 bg-transparent text-sm font-medium text-blinkit-green transition-colors hover:text-[#0A6E19] disabled:opacity-50"
         >
+          <SparkleIcon className="h-3.5 w-3.5 shrink-0" />
           Just stocking up
         </button>
         <button
           type="button"
           disabled={loading}
           onClick={onDismiss}
-          className="flex-1 text-sm text-gray-500 transition-colors hover:text-gray-700 hover:underline disabled:opacity-50"
+          className="text-sm text-gray-500 transition-colors hover:text-gray-700 hover:underline disabled:opacity-50"
         >
           Dismiss
         </button>

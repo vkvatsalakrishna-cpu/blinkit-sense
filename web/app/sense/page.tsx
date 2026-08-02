@@ -6,15 +6,13 @@ import { Header } from "@/components/Header";
 import { OrderConfirmation } from "@/components/OrderConfirmation";
 import { ScenarioSelector } from "@/components/ScenarioSelector";
 import {
+  BUDGET_CEILING,
   SenseIntro,
   SituationPanel,
   type SituationPanelInitialState,
   type SituationSubmitPayload,
 } from "@/components/SituationPanel";
 import { SuggestionsPanel } from "@/components/SuggestionsPanel";
-import {
-  BUDGET_CEILING,
-} from "@/components/BudgetRangeSlider";
 import {
   fetchHouseholds,
   fetchProductDetails,
@@ -503,48 +501,61 @@ export default function SensePage() {
               onShuffle={handleShuffle}
             />
 
-            <section className="space-y-5">
-              {phase === "cart" && !senseDismissed && (
-                <div className="space-y-4">
-                  <SenseIntro />
-                  <button
-                    type="button"
-                    disabled={cart.length === 0}
-                    onClick={handleGetSuggestions}
-                    className="btn-outline disabled:cursor-not-allowed"
-                  >
-                    Get suggestions
-                  </button>
-                  {cart.length === 0 && (
-                    <p className="text-center text-sm text-gray-500">
-                      Add something to your cart to get started.
-                    </p>
+            <section className="space-y-4">
+              {((phase === "cart" && !senseDismissed) ||
+                phase === "situations_loading" ||
+                (phase === "situations" &&
+                  situations &&
+                  situations.candidates.length > 0) ||
+                phase === "needs_loading") && (
+                <div className="space-y-6 rounded-3xl bg-[#F4FAF5] p-6">
+                  {phase === "cart" && !senseDismissed && (
+                    <div className="space-y-4">
+                      <SenseIntro />
+                      <button
+                        type="button"
+                        disabled={cart.length === 0}
+                        onClick={handleGetSuggestions}
+                        className="btn-outline disabled:cursor-not-allowed"
+                      >
+                        Get suggestions
+                      </button>
+                      {cart.length === 0 && (
+                        <p className="text-center text-sm text-gray-500">
+                          Add something to your cart to get started.
+                        </p>
+                      )}
+                    </div>
                   )}
-                </div>
-              )}
 
-              {phase === "situations_loading" && (
-                <div className="py-4 text-center">
-                  <div className="mx-auto mb-3 h-8 w-8 animate-spin rounded-full border-2 border-blinkit-green border-t-transparent" />
-                  <p className="text-sm text-gray-700">Reading your cart…</p>
-                </div>
-              )}
+                  {phase === "situations_loading" && (
+                    <div className="py-4 text-center">
+                      <div className="mx-auto mb-3 h-8 w-8 animate-spin rounded-full border-2 border-blinkit-green border-t-transparent" />
+                      <p className="text-sm text-gray-700">Reading your cart…</p>
+                    </div>
+                  )}
 
-              {phase === "situations" && situations && situations.candidates.length > 0 && (
-                <SituationPanel
-                  candidates={situations.candidates}
-                  loading={false}
-                  initialState={situationPanelInitialState}
-                  onSubmit={handleSituationSubmit}
-                  onStockingUp={handleStockingUp}
-                  onDismiss={handleDismissSense}
-                />
-              )}
+                  {phase === "situations" &&
+                    situations &&
+                    situations.candidates.length > 0 && (
+                      <SituationPanel
+                        candidates={situations.candidates}
+                        loading={false}
+                        initialState={situationPanelInitialState}
+                        onSubmit={handleSituationSubmit}
+                        onStockingUp={handleStockingUp}
+                        onDismiss={handleDismissSense}
+                      />
+                    )}
 
-              {phase === "needs_loading" && (
-                <div className="py-4 text-center">
-                  <div className="mx-auto mb-3 h-8 w-8 animate-spin rounded-full border-2 border-blinkit-green border-t-transparent" />
-                  <p className="text-sm text-gray-700">Working out what you&apos;ll need…</p>
+                  {phase === "needs_loading" && (
+                    <div className="py-4 text-center">
+                      <div className="mx-auto mb-3 h-8 w-8 animate-spin rounded-full border-2 border-blinkit-green border-t-transparent" />
+                      <p className="text-sm text-gray-700">
+                        Working out what you&apos;ll need…
+                      </p>
+                    </div>
+                  )}
                 </div>
               )}
 
