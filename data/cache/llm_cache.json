@@ -180,5 +180,88 @@
       }
     ],
     "unavailable": []
+  },
+  "f49c1b39c0bf11299bca589295866140759f87fa10b13e51f3e5909fbef2ed97": {
+    "confidence": 0.78,
+    "candidates": [
+      {
+        "id": "deadline_night",
+        "label": "Deadline all-nighter",
+        "reasoning": "Notebook, pen, energy drink for late‑night work session",
+        "score": 0.78
+      },
+      {
+        "id": "concert_night",
+        "label": "Concert tonight",
+        "reasoning": "Energy drink and quick snack for pre‑concert boost",
+        "score": 0.65
+      },
+      {
+        "id": "movie_night",
+        "label": "Movie night in",
+        "reasoning": "Ramen and drinks for cozy home movie marathon",
+        "score": 0.55
+      },
+      {
+        "id": "home_office",
+        "label": "Home office setup",
+        "reasoning": "Stationery and energizer for remote work tasks",
+        "score": 0.45
+      }
+    ]
+  },
+  "2326cf76cd34ddcf0b93063d8f8dd879323f852723a777d55ae4400e1a9e270e": {
+    "situation_label": "All‑night deadline",
+    "needs": [
+      {
+        "role": "Caffeine",
+        "need": "instant coffee",
+        "quantity_reasoning": "One pack provides enough cups to stay alert through the night",
+        "expected_tiles": [
+          "Tea, Coffee & Milk Drinks"
+        ]
+      },
+      {
+        "role": "Quick Meal",
+        "need": "instant noodles",
+        "quantity_reasoning": "One serving satisfies hunger quickly without cooking",
+        "expected_tiles": [
+          "Instant Food"
+        ]
+      },
+      {
+        "role": "Savory Snack",
+        "need": "chips",
+        "quantity_reasoning": "Enough to munch on while working for the whole night",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Sweet Snack",
+        "need": "chocolate",
+        "quantity_reasoning": "Provides quick energy and satisfies sweet cravings",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Hydration",
+        "need": "bottled water",
+        "quantity_reasoning": "Keeps you hydrated without needing to boil water",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Study Supplies",
+        "need": "pen",
+        "quantity_reasoning": "One pen ensures you can write notes without running out",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      }
+    ],
+    "unavailable": []
   }
 }
