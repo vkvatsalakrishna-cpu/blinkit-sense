@@ -149,6 +149,11 @@
       "id": "winter_care",
       "chip_label": "Winter care",
       "prompt_context": "The customer is preparing for cold weather with richer skin and hair care, warming bath products, and hot tea or coffee."
+    },
+    {
+      "id": "stocking",
+      "chip_label": "Just stocking up",
+      "prompt_context": "The customer is doing a routine restock with no special occasion. Suggest a mix of household staples they may be running low on, plus one or two adjacent products that complement what's already in the cart but come from a category they haven't bought from."
     }
   ]
 }

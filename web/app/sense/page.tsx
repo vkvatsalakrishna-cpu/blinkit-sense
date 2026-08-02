@@ -89,6 +89,7 @@ export default function SensePage() {
   const [sensitiveGuidance, setSensitiveGuidance] = useState<string[]>([]);
   const [savedSituationSubmit, setSavedSituationSubmit] =
     useState<SituationSubmitPayload | null>(null);
+  const [senseDismissed, setSenseDismissed] = useState(false);
 
   const household = useMemo(
     () => households.find((h) => h.id === householdId) ?? null,
@@ -133,6 +134,7 @@ export default function SensePage() {
     setFlowError(null);
     setSituations(null);
     setSavedSituationSubmit(null);
+    setSenseDismissed(false);
     clearSensePanels();
   }, [clearSensePanels]);
 
@@ -214,6 +216,7 @@ export default function SensePage() {
 
   const handleGetSuggestions = async () => {
     if (cart.length === 0 || !household) return;
+    setSenseDismissed(false);
     setFlowError(null);
     setPhase("situations_loading");
 
@@ -316,11 +319,9 @@ export default function SensePage() {
   };
 
   const handleStockingUp = () => {
-    setSituations(null);
     setSavedSituationSubmit(null);
-    clearSensePanels();
     setFlowError(null);
-    setPhase("dismissed");
+    runNeeds("stocking", "Just stocking up");
   };
 
   const handleDismissSense = () => {
@@ -328,7 +329,8 @@ export default function SensePage() {
     setSavedSituationSubmit(null);
     clearSensePanels();
     setFlowError(null);
-    setPhase("dismissed");
+    setSenseDismissed(true);
+    setPhase("cart");
   };
 
   const handleAddAllSuggestions = () => {
@@ -509,7 +511,7 @@ export default function SensePage() {
             />
 
             <section className="space-y-5">
-              {(phase === "cart" || phase === "dismissed") && (
+              {phase === "cart" && !senseDismissed && (
                 <div className="space-y-4">
                   <SenseIntro />
                   <button
@@ -587,9 +589,9 @@ export default function SensePage() {
                 />
               )}
 
-              {phase === "dismissed" && (
+              {phase === "cart" && senseDismissed && (
                 <p className="text-center text-sm text-gray-600">
-                  No suggestions this time. You can try again or checkout below.
+                  Skipping suggestions — checkout when you&apos;re ready.
                 </p>
               )}
             </section>

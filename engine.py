@@ -462,6 +462,7 @@ IMPLAUSIBLE_TILES: dict[str, frozenset[str]] = {
             "Oil, Ghee & Masala",
         }
     ),
+    "stocking": _SPECIALTY_STORES | _PERSONAL_SENSITIVE,
 }
 
 

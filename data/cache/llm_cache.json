@@ -215,5 +215,67 @@
         "score": 0.38
       }
     ]
+  },
+  "6e455ece68cd6ea06994853385faf484463895550e9247d113f6a1d085546bf3": {
+    "situation_label": "Routine Restock Essentials",
+    "needs": [
+      {
+        "role": "Pantry",
+        "need": "basmati rice",
+        "quantity_reasoning": "One pack supplies multiple meals over several days",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Pantry",
+        "need": "atta",
+        "quantity_reasoning": "Core ingredient for daily rotis and flatbreads",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Cooking",
+        "need": "sunflower oil",
+        "quantity_reasoning": "Essential for frying, sautéing and general cooking",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      },
+      {
+        "role": "Dairy",
+        "need": "full cream milk",
+        "quantity_reasoning": "Used daily for drinking, tea, coffee and cooking",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Breakfast",
+        "need": "white bread",
+        "quantity_reasoning": "Quick option for sandwiches and toast each morning",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "aloo bhujia",
+        "quantity_reasoning": "Popular snack that pairs well with tea or coffee",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Personal Care",
+        "need": "bath soap",
+        "quantity_reasoning": "One bar lasts through regular daily showers",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      }
+    ],
+    "unavailable": []
   }
 }
