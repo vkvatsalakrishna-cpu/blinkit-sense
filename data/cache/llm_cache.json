@@ -186,5 +186,34 @@
       "protein powder",
       "multivitamin tablets"
     ]
+  },
+  "43bea3f53e188967ea2bace46f1e98653dbba044be4b46864674c9380f6875a8": {
+    "confidence": 0.88,
+    "candidates": [
+      {
+        "id": "deadline_night",
+        "label": "Deadline all-nighter",
+        "reasoning": "Pulling an all‑night study/work session, need snacks and notes.",
+        "score": 0.88
+      },
+      {
+        "id": "home_office",
+        "label": "Home office setup",
+        "reasoning": "Setting up remote workspace, buying stationery and quick meals.",
+        "score": 0.65
+      },
+      {
+        "id": "hangover_recovery",
+        "label": "Hangover recovery",
+        "reasoning": "Recovering from night out, craving energy drink and instant noodles.",
+        "score": 0.48
+      },
+      {
+        "id": "game_night",
+        "label": "Game night in",
+        "reasoning": "Preparing for gaming marathon, need drinks, snacks, and pens.",
+        "score": 0.38
+      }
+    ]
   }
 }
