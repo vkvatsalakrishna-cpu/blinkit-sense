@@ -306,5 +306,96 @@
         "score": 0.55
       }
     ]
+  },
+  "720dfda7092cde718c3e9290d44df621ecc002fd24d4629b8d8ed498a34bfa6e": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "new_pet",
+        "label": "New cat home",
+        "reasoning": "Bought cat litter, likely new cat arrival",
+        "score": 0.85
+      },
+      {
+        "id": "deep_clean",
+        "label": "Deep cleaning day",
+        "reasoning": "Floor cleaner and garbage bags for thorough cleaning",
+        "score": 0.7
+      },
+      {
+        "id": "moving_in",
+        "label": "Moving in",
+        "reasoning": "Cleaning supplies suggest setting up new home",
+        "score": 0.65
+      },
+      {
+        "id": "stocking",
+        "label": "Just stocking up",
+        "reasoning": "Basic household items added to pantry",
+        "score": 0.4
+      }
+    ]
+  },
+  "f4ad9eef53aba19f81f5f246c6f5bc5b857f43c5d89516737d26f5b818acafad": {
+    "situation_label": "New cat home essentials",
+    "needs": [
+      {
+        "role": "Feeding",
+        "need": "cat food",
+        "quantity_reasoning": "One bag supplies multiple meals for the cat over several days",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      },
+      {
+        "role": "Hydration",
+        "need": "pet bowl",
+        "quantity_reasoning": "A single bowl is enough for both food and water stations",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      },
+      {
+        "role": "Litter Management",
+        "need": "cat litter",
+        "quantity_reasoning": "One pack lasts a few weeks of daily use",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      },
+      {
+        "role": "Litter Management",
+        "need": "litter tray",
+        "quantity_reasoning": "One tray provides a dedicated spot for waste disposal",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      },
+      {
+        "role": "Grooming",
+        "need": "cat grooming brush",
+        "quantity_reasoning": "A single brush handles regular fur maintenance",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      },
+      {
+        "role": "Play",
+        "need": "cat toy",
+        "quantity_reasoning": "One toy keeps the cat mentally stimulated and active",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      },
+      {
+        "role": "Transport",
+        "need": "cat carrier",
+        "quantity_reasoning": "One carrier is sufficient for vet visits and travel",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      }
+    ],
+    "unavailable": []
   }
 }

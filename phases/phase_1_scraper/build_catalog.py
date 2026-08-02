@@ -71,6 +71,7 @@ def apify_to_catalog(rows: list[dict], fetched_at: str, tiles: set[str]) -> list
                 "fetched_at": fetched_at,
                 "source": "apify",
                 "blinkit_product_id": row["product_id"],
+                "popularity_rank": None,
             }
         )
     return catalog
@@ -95,6 +96,7 @@ def generated_to_catalog(start_idx: int, fetched_at: str, tiles: set[str]) -> li
                 "available_in": available,
                 "fetched_at": fetched_at,
                 "source": "generated",
+                "popularity_rank": None,
             }
         )
     return catalog

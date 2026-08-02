@@ -42,6 +42,33 @@ def load_raw_files(run_dir: Path) -> list[tuple[Path, dict]]:
     return files
 
 
+def collect_popularity_ranks(run_dirs: list[Path]) -> dict[str, int]:
+    """Best (lowest) array index per blinkit_product_id across all subcategory files."""
+    best: dict[str, int] = {}
+    for run_dir in run_dirs:
+        if not run_dir.is_dir():
+            raise FileNotFoundError(f"Raw run directory not found: {run_dir}")
+        for _path, payload in load_raw_files(run_dir):
+            for rank, product in enumerate(payload.get("products", [])):
+                blinkit_id = str(product["product_id"])
+                if blinkit_id not in best or rank < best[blinkit_id]:
+                    best[blinkit_id] = rank
+    return best
+
+
+def apply_popularity_ranks(catalog: list[dict], ranks: dict[str, int]) -> None:
+    for item in catalog:
+        source = item.get("source")
+        if source in ("apify", "generated"):
+            item["popularity_rank"] = None
+            continue
+        blinkit_id = item.get("blinkit_product_id")
+        if blinkit_id is None:
+            item["popularity_rank"] = None
+        else:
+            item["popularity_rank"] = ranks.get(str(blinkit_id))
+
+
 def raw_product_to_catalog(
     product: dict,
     *,
@@ -49,6 +76,7 @@ def raw_product_to_catalog(
     subcategory: str,
     fetched_at: str,
     sku_id: str,
+    popularity_rank: int | None,
 ) -> dict:
     brand = product.get("brand")
     if not isinstance(brand, str) or not brand.strip():
@@ -70,6 +98,7 @@ def raw_product_to_catalog(
         "blinkit_product_id": str(product["product_id"]),
         "source": "blinkit_api",
         "fetched_at": fetched_at,
+        "popularity_rank": popularity_rank,
     }
 
 
@@ -81,6 +110,8 @@ def merge_raw_runs(
 ) -> list[dict]:
     tiles = load_tiles()
     existing = json.loads(catalog_path.read_text(encoding="utf-8"))
+    ranks = collect_popularity_ranks(run_dirs)
+    apply_popularity_ranks(existing, ranks)
     seen_blinkit_ids = {
         str(item["blinkit_product_id"])
         for item in existing
@@ -119,10 +150,12 @@ def merge_raw_runs(
                         subcategory=subcategory,
                         fetched_at=fetched_at,
                         sku_id=sku_id,
+                        popularity_rank=ranks.get(blinkit_id),
                     )
                 )
 
     merged = existing + appended
+    apply_popularity_ranks(merged, ranks)
     if len(merged) < min_size:
         raise ValueError(
             f"Refusing to write catalog with {len(merged)} products (< {min_size})"
