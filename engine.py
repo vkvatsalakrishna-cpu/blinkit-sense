@@ -109,11 +109,10 @@ IMPLAUSIBLE_TILES: dict[str, frozenset[str]] = {
     "new_pet": frozenset(
         {"Kitchenware & Appliances", "Home & Lifestyle", "Bath & Body"}
     ),
-    "health": _SPECIALTY_STORES
-    | _PERSONAL_SENSITIVE
+    "health": (_SPECIALTY_STORES - frozenset({"Sports Store"}))
+    | (_PERSONAL_SENSITIVE - frozenset({"Health & Pharma"}))
     | _JUNK_FOOD
     | frozenset({"Cleaners & Repellents", "Home & Lifestyle"}),
-    "stocking": _SPECIALTY_STORES,
     "cooking_project": _SPECIALTY_STORES
     | _PERSONAL_SENSITIVE
     | frozenset({"Baby Care", "Cleaners & Repellents", "Home & Lifestyle"}),
@@ -158,20 +157,16 @@ IMPLAUSIBLE_TILES: dict[str, frozenset[str]] = {
     | _RAW_COOKING_STAPLES
     | frozenset({"Cleaners & Repellents"}),
     "hangover_recovery": _SPECIALTY_STORES
-    | _PERSONAL_SENSITIVE
+    | (_PERSONAL_SENSITIVE - frozenset({"Health & Pharma"}))
     | frozenset(
         {
             "Baby Care",
             "Cleaners & Repellents",
-            "Home & Lifestyle",
             "Kitchenware & Appliances",
             "Electronics",
             "Stationery & Games",
         }
     ),
-    "wfh_week": _SPECIALTY_STORES
-    | _PERSONAL_SENSITIVE
-    | frozenset({"Baby Care", "Home & Lifestyle"}),
     "fitness_restart": _SPECIALTY_STORES | _PERSONAL_SENSITIVE | _JUNK_FOOD | frozenset({"Baby Care"}),
     "sick_at_home": _SPECIALTY_STORES
     | _PERSONAL_SENSITIVE
@@ -222,23 +217,250 @@ IMPLAUSIBLE_TILES: dict[str, frozenset[str]] = {
         }
     ),
     "deep_clean": _SCENARIO_BASE_VETO,
-    "weekend_cooking": _SPECIALTY_STORES
-    | _PERSONAL_SENSITIVE
-    | frozenset({"Baby Care", "Cleaners & Repellents", "Home & Lifestyle"}),
-    "breakfast_prep": _SPECIALTY_STORES
-    | _PERSONAL_SENSITIVE
-    | frozenset(
-        {
-            "Baby Care",
-            "Cleaners & Repellents",
-            "Home & Lifestyle",
-            "Chicken, Meat & Fish",
-        }
-    ),
     "date_night": _SPECIALTY_STORES
     | _PERSONAL_SENSITIVE
     | _RAW_COOKING_STAPLES
     | frozenset({"Baby Care", "Cleaners & Repellents"}),
+    "skincare_routine": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | _JUNK_FOOD
+    | frozenset(
+        {
+            "Baby Care",
+            "Cleaners & Repellents",
+            "Electronics",
+            "Home & Lifestyle",
+            "Kitchenware & Appliances",
+            "Stationery & Games",
+            "Dairy, Bread & Eggs",
+            "Drinks & Juices",
+            "Instant Food",
+            "Sauces & Spreads",
+            "Tea, Coffee & Milk Drinks",
+            "Dry Fruits & Cereals",
+            "Chicken, Meat & Fish",
+            "Ice Creams & More",
+        }
+    ),
+    "home_office": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | _JUNK_FOOD
+    | frozenset(
+        {
+            "Baby Care",
+            "Bath & Body",
+            "Beauty & Cosmetics",
+            "Hair",
+            "Skin & Face",
+            "Cleaners & Repellents",
+            "Kitchenware & Appliances",
+            "Dairy, Bread & Eggs",
+            "Bakery & Biscuits",
+            "Dry Fruits & Cereals",
+            "Chicken, Meat & Fish",
+            "Chips & Namkeen",
+            "Drinks & Juices",
+            "Instant Food",
+            "Sauces & Spreads",
+            "Tea, Coffee & Milk Drinks",
+            "Sweets & Chocolates",
+            "Ice Creams & More",
+            "Vegetables & Fruits",
+            "Oil, Ghee & Masala",
+        }
+    ),
+    "self_care_night": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | frozenset(
+        {
+            "Baby Care",
+            "Cleaners & Repellents",
+            "Electronics",
+            "Home & Lifestyle",
+            "Kitchenware & Appliances",
+            "Stationery & Games",
+            "Chicken, Meat & Fish",
+            "Instant Food",
+            "Oil, Ghee & Masala",
+            "Vegetables & Fruits",
+            "Atta, Rice & Dal",
+            "Chips & Namkeen",
+            "Drinks & Juices",
+            "Dairy, Bread & Eggs",
+            "Dry Fruits & Cereals",
+            "Sauces & Spreads",
+        }
+    ),
+    "game_night": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | frozenset(
+        {
+            "Baby Care",
+            "Bath & Body",
+            "Beauty & Cosmetics",
+            "Hair",
+            "Skin & Face",
+            "Cleaners & Repellents",
+            "Home & Lifestyle",
+            "Kitchenware & Appliances",
+            "Electronics",
+            "Dairy, Bread & Eggs",
+            "Bakery & Biscuits",
+            "Dry Fruits & Cereals",
+            "Chicken, Meat & Fish",
+            "Oil, Ghee & Masala",
+            "Sauces & Spreads",
+            "Tea, Coffee & Milk Drinks",
+            "Vegetables & Fruits",
+            "Atta, Rice & Dal",
+            "Sweets & Chocolates",
+            "Ice Creams & More",
+        }
+    ),
+    "baking_day": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | frozenset(
+        {
+            "Baby Care",
+            "Bath & Body",
+            "Beauty & Cosmetics",
+            "Hair",
+            "Skin & Face",
+            "Cleaners & Repellents",
+            "Electronics",
+            "Home & Lifestyle",
+            "Stationery & Games",
+            "Chicken, Meat & Fish",
+            "Chips & Namkeen",
+            "Drinks & Juices",
+            "Instant Food",
+            "Tea, Coffee & Milk Drinks",
+            "Vegetables & Fruits",
+            "Atta, Rice & Dal",
+            "Dry Fruits & Cereals",
+            "Sweets & Chocolates",
+            "Ice Creams & More",
+        }
+    ),
+    "kids_home": (_SPECIALTY_STORES - frozenset({"Toy Store"}))
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | frozenset(
+        {
+            "Cleaners & Repellents",
+            "Electronics",
+            "Home & Lifestyle",
+            "Kitchenware & Appliances",
+            "Beauty & Cosmetics",
+            "Hair",
+            "Skin & Face",
+            "Bath & Body",
+            "Oil, Ghee & Masala",
+            "Chicken, Meat & Fish",
+            "Tea, Coffee & Milk Drinks",
+            "Sauces & Spreads",
+            "Instant Food",
+            "Drinks & Juices",
+            "Dry Fruits & Cereals",
+            "Dairy, Bread & Eggs",
+            "Sweets & Chocolates",
+            "Ice Creams & More",
+            "Vegetables & Fruits",
+            "Atta, Rice & Dal",
+        }
+    ),
+    "hair_care": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | _JUNK_FOOD
+    | frozenset(
+        {
+            "Baby Care",
+            "Beauty & Cosmetics",
+            "Cleaners & Repellents",
+            "Electronics",
+            "Home & Lifestyle",
+            "Kitchenware & Appliances",
+            "Stationery & Games",
+            "Dairy, Bread & Eggs",
+            "Bakery & Biscuits",
+            "Dry Fruits & Cereals",
+            "Chicken, Meat & Fish",
+            "Chips & Namkeen",
+            "Drinks & Juices",
+            "Instant Food",
+            "Sauces & Spreads",
+            "Tea, Coffee & Milk Drinks",
+            "Sweets & Chocolates",
+            "Ice Creams & More",
+            "Vegetables & Fruits",
+            "Oil, Ghee & Masala",
+        }
+    ),
+    "care_package": (_SPECIALTY_STORES - frozenset({"E-Gifts Store"}))
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | frozenset(
+        {
+            "Baby Care",
+            "Beauty & Cosmetics",
+            "Hair",
+            "Skin & Face",
+            "Cleaners & Repellents",
+            "Electronics",
+            "Home & Lifestyle",
+            "Kitchenware & Appliances",
+            "Stationery & Games",
+            "Pet Store",
+            "Toy Store",
+            "Chicken, Meat & Fish",
+            "Chips & Namkeen",
+            "Drinks & Juices",
+            "Instant Food",
+            "Tea, Coffee & Milk Drinks",
+            "Vegetables & Fruits",
+            "Atta, Rice & Dal",
+            "Oil, Ghee & Masala",
+            "Dairy, Bread & Eggs",
+            "Bakery & Biscuits",
+            "Ice Creams & More",
+            "Sauces & Spreads",
+        }
+    ),
+    "winter_care": _SPECIALTY_STORES
+    | _PERSONAL_SENSITIVE
+    | _RAW_COOKING_STAPLES
+    | _JUNK_FOOD
+    | frozenset(
+        {
+            "Baby Care",
+            "Beauty & Cosmetics",
+            "Cleaners & Repellents",
+            "Electronics",
+            "Home & Lifestyle",
+            "Kitchenware & Appliances",
+            "Stationery & Games",
+            "Pet Store",
+            "Toy Store",
+            "Dairy, Bread & Eggs",
+            "Bakery & Biscuits",
+            "Dry Fruits & Cereals",
+            "Chicken, Meat & Fish",
+            "Chips & Namkeen",
+            "Drinks & Juices",
+            "Instant Food",
+            "Sauces & Spreads",
+            "Sweets & Chocolates",
+            "Ice Creams & More",
+            "Vegetables & Fruits",
+            "Atta, Rice & Dal",
+            "Oil, Ghee & Masala",
+        }
+    ),
 }
 
 

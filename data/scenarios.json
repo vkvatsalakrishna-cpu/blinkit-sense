@@ -23,12 +23,7 @@
     {
       "id": "health",
       "chip_label": "Eating better",
-      "prompt_context": "The customer is trying to eat healthier snacks and staples."
-    },
-    {
-      "id": "stocking",
-      "chip_label": "Just stocking up",
-      "prompt_context": "The customer is doing a routine grocery restock with no special situation."
+      "prompt_context": "The customer is trying to eat and live healthier and may need fitness gear, supplements, and health products alongside better food choices."
     },
     {
       "id": "cooking_project",
@@ -63,12 +58,7 @@
     {
       "id": "hangover_recovery",
       "chip_label": "Hangover recovery",
-      "prompt_context": "The customer is recovering from a heavy night out and wants hydrating drinks, comfort food, and easy meals."
-    },
-    {
-      "id": "wfh_week",
-      "chip_label": "WFH all week",
-      "prompt_context": "The customer is working from home all week and needs coffee, quick meals, and desk-side snacks."
+      "prompt_context": "The customer is recovering from a heavy night out and needs rehydration and comfort products — electrolytes, soothing care, and easy food — not just drinks and snacks."
     },
     {
       "id": "fitness_restart",
@@ -111,19 +101,54 @@
       "prompt_context": "The customer is doing a deep clean of the home and needs cleaning supplies, gloves, and trash bags."
     },
     {
-      "id": "weekend_cooking",
-      "chip_label": "Weekend cooking",
-      "prompt_context": "The customer is spending the weekend on an ambitious cooking project and needs fresh ingredients and kitchen staples."
-    },
-    {
-      "id": "breakfast_prep",
-      "chip_label": "Breakfast for week",
-      "prompt_context": "The customer is meal-prepping breakfasts for the week ahead and needs eggs, bread, fruit, and pantry staples."
-    },
-    {
       "id": "date_night",
       "chip_label": "Date night in",
       "prompt_context": "The customer is planning a date night at home and wants wine, dessert, and ingredients for a nice dinner."
+    },
+    {
+      "id": "skincare_routine",
+      "chip_label": "Skincare routine",
+      "prompt_context": "The customer is starting a proper skincare routine and needs cleansers, moisturisers, and face care alongside bath essentials and makeup basics."
+    },
+    {
+      "id": "home_office",
+      "chip_label": "Home office setup",
+      "prompt_context": "The customer is setting up a desk or work-from-home corner and needs electronics, stationery, and home organisation items."
+    },
+    {
+      "id": "self_care_night",
+      "chip_label": "Self-care night",
+      "prompt_context": "The customer is planning a pamper evening alone with bath treats, face masks, indulgent sweets, and a calming hot drink."
+    },
+    {
+      "id": "game_night",
+      "chip_label": "Game night in",
+      "prompt_context": "The customer is hosting a board-game or gaming night and needs games or supplies, shareable snacks, drinks, and quick finger food."
+    },
+    {
+      "id": "baking_day",
+      "chip_label": "Baking day",
+      "prompt_context": "The customer is attempting an ambitious bake and needs baking mixes and ingredients, cooking fats and spices, proper bakeware, and dairy staples."
+    },
+    {
+      "id": "kids_home",
+      "chip_label": "Kids at home",
+      "prompt_context": "The customer has children home for the holidays and needs toys, creative supplies, kid-friendly snacks, and treat bakery items."
+    },
+    {
+      "id": "hair_care",
+      "chip_label": "Hair routine",
+      "prompt_context": "The customer is fixing their hair routine and needs shampoos and treatments along with matching bath and skin care products."
+    },
+    {
+      "id": "care_package",
+      "chip_label": "Care package",
+      "prompt_context": "The customer is putting together a care package for someone far away with a gift item, treats, dry fruits, and comforting bath products."
+    },
+    {
+      "id": "winter_care",
+      "chip_label": "Winter care",
+      "prompt_context": "The customer is preparing for cold weather with richer skin and hair care, warming bath products, and hot tea or coffee."
     }
   ]
 }
