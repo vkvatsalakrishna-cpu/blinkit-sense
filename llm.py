@@ -28,16 +28,30 @@ _CACHE_PATH = _CACHE_DIR / "llm_cache.json"
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
 VALID_PLANNER_TILES = all_tiles()
 _VALID_TILES_SET = frozenset(VALID_PLANNER_TILES)
+# Reachable via "Just stocking up" button only — never as a situation chip.
+_CHIP_EXCLUDED_SCENARIO_IDS = frozenset({"stocking"})
 
 
 def _scenario_by_id() -> dict[str, dict]:
     return {scenario["id"]: scenario for scenario in load_scenarios()}
 
 
+def _chip_scenarios() -> list[dict]:
+    return [
+        scenario
+        for scenario in load_scenarios()
+        if scenario["id"] not in _CHIP_EXCLUDED_SCENARIO_IDS
+    ]
+
+
+def _chip_scenario_by_id() -> dict[str, dict]:
+    return {scenario["id"]: scenario for scenario in _chip_scenarios()}
+
+
 def _situation_reader_system() -> str:
     scenario_lines = "\n".join(
         f"- id: {scenario['id']} | label: {scenario['chip_label']}"
-        for scenario in load_scenarios()
+        for scenario in _chip_scenarios()
     )
     return f"""You are a checkout-time situation inference engine for an Indian quick-commerce grocery app.
 
@@ -65,7 +79,7 @@ Valid scenarios — you MUST pick only from this list (exact id and label, no in
 
 Rules:
 - Exactly 4 candidates, ordered by descending score.
-- Each candidate id and label MUST match one row above exactly. Never invent ids or labels (e.g. no "stocking", "travel packing", "General Stocking", or other names not in the list).
+- Each candidate id and label MUST match one row above exactly. Never invent ids or labels (e.g. no "travel packing", "General Stocking", or other names not in the list). Never return id stocking — it is excluded from chips.
 - All four candidate ids must be distinct.
 - If nothing fits well, choose the four closest real scenarios from the list above rather than making up new ones.
 - Each candidate must include a score between 0.0 and 1.0; confidence equals the top candidate's score.
@@ -227,7 +241,7 @@ def _extract_json(text: str) -> str | None:
 def _parse_situation_response(
     raw: str, scenario_by_id: dict[str, dict] | None = None
 ) -> dict | None:
-    scenario_by_id = scenario_by_id or _scenario_by_id()
+    scenario_by_id = scenario_by_id or _chip_scenario_by_id()
     valid_ids = frozenset(scenario_by_id)
     extracted = _extract_json(raw)
     if extracted is None:

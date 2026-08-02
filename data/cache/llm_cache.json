@@ -1,212 +1,369 @@
 {
-  "c707bb528d7ace6cd3fd4259a91c58c883e62da50789a4c6662679e6dee1d3a6": {
-    "confidence": 0.78,
-    "candidates": [
-      {
-        "id": "date_night",
-        "label": "Date night in",
-        "reasoning": "Date night in with pizza, drinks, and jewelry.",
-        "score": 0.78
-      },
-      {
-        "id": "hosting",
-        "label": "Guests coming",
-        "reasoning": "Preparing snacks and drinks for guests.",
-        "score": 0.65
-      },
-      {
-        "id": "festival_gifting",
-        "label": "Gifting",
-        "reasoning": "Jewelry suggests a gift for someone special.",
-        "score": 0.6
-      },
-      {
-        "id": "concert_night",
-        "label": "Concert tonight",
-        "reasoning": "Snacks and probiotic drink for concert pre‑game.",
-        "score": 0.55
-      }
-    ]
-  },
-  "8772ecad86fc6b7c3e152c3ae204079a0d0cae2d9c45a5d947a406fa9cf6e492": {
-    "situation_label": "Concert Night Essentials",
-    "needs": [
-      {
-        "role": "Snacks",
-        "need": "chips",
-        "quantity_reasoning": "One pack provides enough munchies for the concert duration",
-        "expected_tiles": [
-          "Chips & Namkeen"
-        ]
-      },
-      {
-        "role": "Snacks",
-        "need": "namkeen",
-        "quantity_reasoning": "A small pack satisfies salty cravings",
-        "expected_tiles": [
-          "Chips & Namkeen"
-        ]
-      },
-      {
-        "role": "Snacks",
-        "need": "biscuit",
-        "quantity_reasoning": "One pack offers a crunchy side snack",
-        "expected_tiles": [
-          "Bakery & Biscuits"
-        ]
-      },
-      {
-        "role": "Sweet",
-        "need": "chocolate",
-        "quantity_reasoning": "One bar gives a quick sweet boost",
-        "expected_tiles": [
-          "Sweets & Chocolates"
-        ]
-      },
-      {
-        "role": "Drinks",
-        "need": "bottled water",
-        "quantity_reasoning": "One bottle keeps you hydrated through the event",
-        "expected_tiles": [
-          "Drinks & Juices"
-        ]
-      },
-      {
-        "role": "Drinks",
-        "need": "energy drink",
-        "quantity_reasoning": "Provides a caffeine lift for staying alert",
-        "expected_tiles": [
-          "Drinks & Juices"
-        ]
-      },
-      {
-        "role": "Convenience",
-        "need": "instant noodles",
-        "quantity_reasoning": "Quick hot snack if you need a bite after the show",
-        "expected_tiles": [
-          "Instant Food"
-        ]
-      }
-    ],
-    "unavailable": []
-  },
-  "fcd704e58c97a2647c3e90aa5788388db57f0364e85cae439f9409f0aae37adf": {
-    "confidence": 0.78,
-    "candidates": [
-      {
-        "id": "sick_at_home",
-        "label": "Someone unwell",
-        "reasoning": "ORS and soup suggest recovery from illness",
-        "score": 0.78
-      },
-      {
-        "id": "hangover_recovery",
-        "label": "Hangover recovery",
-        "reasoning": "Electrolyte drink and easy soup for post‑party relief",
-        "score": 0.65
-      },
-      {
-        "id": "self_care_night",
-        "label": "Self-care night",
-        "reasoning": "Tissues, honey, and soothing soup for personal pampering",
-        "score": 0.55
-      },
-      {
-        "id": "health",
-        "label": "Eating better",
-        "reasoning": "Choosing natural honey and light soup for healthier diet",
-        "score": 0.45
-      }
-    ]
-  },
-  "be544c554922d715d73b27de5090bda98a2fb4c841148ad7dbf1c0963d41254e": {
-    "situation_label": "Caring for a sick person",
-    "needs": [
-      {
-        "role": "Hydration",
-        "need": "ORS",
-        "quantity_reasoning": "One pack provides enough rehydration for a day of recovery",
-        "expected_tiles": [
-          "Drinks & Juices"
-        ]
-      },
-      {
-        "role": "Nutrition",
-        "need": "khichdi",
-        "quantity_reasoning": "One serving supplies a gentle, easy‑to‑digest meal",
-        "expected_tiles": [
-          "Instant Food"
-        ]
-      },
-      {
-        "role": "Sweetener",
-        "need": "honey",
-        "quantity_reasoning": "A small amount is enough to soothe throat and add mild sweetness",
-        "expected_tiles": [
-          "Dry Fruits & Cereals"
-        ]
-      },
-      {
-        "role": "Warm Drink",
-        "need": "ginger tea",
-        "quantity_reasoning": "One box covers several warm cups to aid digestion and comfort",
-        "expected_tiles": [
-          "Tea, Coffee & Milk Drinks"
-        ]
-      },
-      {
-        "role": "Hygiene",
-        "need": "tissues",
-        "quantity_reasoning": "Enough sheets to manage frequent wiping without running out",
-        "expected_tiles": [
-          "Home & Lifestyle"
-        ]
-      },
-      {
-        "role": "Health Monitoring",
-        "need": "thermometer",
-        "quantity_reasoning": "One thermometer suffices to check temperature repeatedly",
-        "expected_tiles": [
-          "Kitchenware & Appliances"
-        ]
-      },
-      {
-        "role": "Snack",
-        "need": "marie biscuit",
-        "quantity_reasoning": "A small pack provides gentle, plain biscuits for multiple servings",
-        "expected_tiles": [
-          "Bakery & Biscuits"
-        ]
-      }
-    ],
-    "unavailable": []
-  },
   "f49c1b39c0bf11299bca589295866140759f87fa10b13e51f3e5909fbef2ed97": {
-    "confidence": 0.78,
+    "confidence": 0.85,
     "candidates": [
       {
         "id": "deadline_night",
         "label": "Deadline all-nighter",
-        "reasoning": "Notebook, pen, energy drink for late‑night work session",
-        "score": 0.78
+        "reasoning": "Stationery and energy drink for late-night work session",
+        "score": 0.85
       },
       {
         "id": "concert_night",
         "label": "Concert tonight",
-        "reasoning": "Energy drink and quick snack for pre‑concert boost",
-        "score": 0.65
+        "reasoning": "Energy drink and quick noodles for pre‑concert stamina",
+        "score": 0.62
       },
       {
-        "id": "movie_night",
-        "label": "Movie night in",
-        "reasoning": "Ramen and drinks for cozy home movie marathon",
+        "id": "game_night",
+        "label": "Game night in",
+        "reasoning": "Snacks and drinks for extended gaming marathon",
         "score": 0.55
       },
       {
         "id": "home_office",
         "label": "Home office setup",
-        "reasoning": "Stationery and energizer for remote work tasks",
-        "score": 0.45
+        "reasoning": "Notebook and pen for remote work tasks",
+        "score": 0.44
+      }
+    ]
+  },
+  "1a3426b6da7a7496d74c07cdca7c8be731fa7f15ded22fd10769454d6d691f17": {
+    "situation_label": "Game night in",
+    "needs": [
+      {
+        "role": "Snacks",
+        "need": "potato chips",
+        "quantity_reasoning": "One pack provides enough shareable crunch for a group",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Drinks",
+        "need": "soft drink",
+        "quantity_reasoning": "One bottle satisfies most guests for a quick refresh",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Drinks",
+        "need": "bottled water",
+        "quantity_reasoning": "Enough to keep everyone hydrated throughout the night",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Finger Food",
+        "need": "instant noodles",
+        "quantity_reasoning": "Quick to prepare and easy to eat with hands",
+        "expected_tiles": [
+          "Instant Food"
+        ]
+      },
+      {
+        "role": "Finger Food",
+        "need": "frozen pizza",
+        "quantity_reasoning": "One pizza can be sliced for multiple players as a warm snack",
+        "expected_tiles": [
+          "Instant Food"
+        ]
+      },
+      {
+        "role": "Games",
+        "need": "board game",
+        "quantity_reasoning": "A single game can entertain the whole group",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      },
+      {
+        "role": "Games",
+        "need": "playing cards",
+        "quantity_reasoning": "One deck offers versatile quick games for all participants",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "70f028870035c70e0758557d0d88108316f440ffa33b354c17f8d5065cb40da6": {
+    "situation_label": "Movie night in",
+    "needs": [
+      {
+        "role": "Snacks",
+        "need": "popcorn",
+        "quantity_reasoning": "One pack provides enough for sharing during the movie",
+        "expected_tiles": [
+          "Instant Food"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "chips",
+        "quantity_reasoning": "A single bag satisfies typical snacking portions for a group",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "masala peanuts",
+        "quantity_reasoning": "Enough to complement chips and keep cravings satisfied",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Sweets",
+        "need": "chocolate",
+        "quantity_reasoning": "One bar or pack serves as a sweet treat for everyone",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Beverages",
+        "need": "cola",
+        "quantity_reasoning": "One bottle or can covers the thirst of the group",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Beverages",
+        "need": "coffee",
+        "quantity_reasoning": "Enough to brew a few cups for warm comfort",
+        "expected_tiles": [
+          "Tea, Coffee & Milk Drinks"
+        ]
+      },
+      {
+        "role": "Dessert",
+        "need": "ice cream",
+        "quantity_reasoning": "One tub provides a shared dessert after the movie",
+        "expected_tiles": [
+          "Ice Creams & More"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "676191df648c444f1554249f3126b3bc0f52834248315fa1865540975507e5ed": {
+    "situation_label": "Cozy movie night",
+    "needs": [
+      {
+        "role": "Snacks",
+        "need": "popcorn",
+        "quantity_reasoning": "One pack provides enough for everyone to share while watching",
+        "expected_tiles": [
+          "Instant Food"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "potato chips",
+        "quantity_reasoning": "A single bag satisfies typical cravings during a film",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Drinks",
+        "need": "soda",
+        "quantity_reasoning": "Enough to keep the group refreshed throughout the movie",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Sweets",
+        "need": "chocolate",
+        "quantity_reasoning": "One bar or pack satisfies sweet cravings during intermission",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Dessert",
+        "need": "ice cream",
+        "quantity_reasoning": "A single tub serves as a cool treat after the film",
+        "expected_tiles": [
+          "Ice Creams & More"
+        ]
+      },
+      {
+        "role": "Cooking",
+        "need": "butter",
+        "quantity_reasoning": "Enough to melt over popcorn or spread on snacks",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Drinks",
+        "need": "coffee",
+        "quantity_reasoning": "One pack provides enough for a warm beverage during the night",
+        "expected_tiles": [
+          "Tea, Coffee & Milk Drinks"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "d826003473b3fa8e51c344b545b466e1d704f244532b9ce5037c80fef9c2e006": {
+    "situation_label": "Cozy movie night",
+    "needs": [
+      {
+        "role": "Snacks",
+        "need": "potato chips",
+        "quantity_reasoning": "One pack provides enough crunchy bites for a group",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "masala peanuts",
+        "quantity_reasoning": "Enough to share while watching the film",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "butter biscuit",
+        "quantity_reasoning": "One pack offers a sweet accompaniment to the savory snacks",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      },
+      {
+        "role": "Drinks",
+        "need": "cola",
+        "quantity_reasoning": "One bottle satisfies thirst throughout the movie",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Drinks",
+        "need": "milkshake",
+        "quantity_reasoning": "One bottle adds a creamy drink option for variety",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Dessert",
+        "need": "ice cream",
+        "quantity_reasoning": "One tub serves as a cool treat after the snacks",
+        "expected_tiles": [
+          "Ice Creams & More"
+        ]
+      },
+      {
+        "role": "Ambience",
+        "need": "candle",
+        "quantity_reasoning": "One candle creates a cozy lighting vibe for the night",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "b5c7f205d8fad5ae59eddb9df2b494845e28f7772d9fbf090ef28209846ee09b": {
+    "situation_label": "Movie night in",
+    "needs": [
+      {
+        "role": "Snacks",
+        "need": "potato chips",
+        "quantity_reasoning": "Enough chips to share during the movie",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "cookies",
+        "quantity_reasoning": "One pack provides a sweet bite between scenes",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      },
+      {
+        "role": "Drinks",
+        "need": "cola",
+        "quantity_reasoning": "One bottle satisfies thirst throughout the film",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Comfort Food",
+        "need": "popcorn",
+        "quantity_reasoning": "Popcorn is a classic movie snack that lasts the whole show",
+        "expected_tiles": [
+          "Instant Food"
+        ]
+      },
+      {
+        "role": "Comfort Food",
+        "need": "instant noodles",
+        "quantity_reasoning": "Quick hot meal to keep viewers comfortable",
+        "expected_tiles": [
+          "Instant Food"
+        ]
+      },
+      {
+        "role": "Ambience",
+        "need": "candle",
+        "quantity_reasoning": "Creates a cozy lighting atmosphere",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Sweet Treat",
+        "need": "chocolate bar",
+        "quantity_reasoning": "Provides a sweet indulgence during the movie",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "7b7066c6bb81e7e7ad50da0b7e59e9121451fe69882a83913937e333a203d580": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "moving_in",
+        "label": "Moving in",
+        "reasoning": "New bedsheet and cleaning supplies indicate setting up home",
+        "score": 0.85
+      },
+      {
+        "id": "deep_clean",
+        "label": "Deep cleaning day",
+        "reasoning": "Bucket and detergent suggest thorough house cleaning",
+        "score": 0.78
+      },
+      {
+        "id": "hosting",
+        "label": "Guests coming",
+        "reasoning": "Biryani kit hints at cooking for visitors",
+        "score": 0.65
+      },
+      {
+        "id": "house_party",
+        "label": "House party",
+        "reasoning": "Food kit and fresh linens for a small gathering",
+        "score": 0.55
       }
     ]
   },
@@ -215,8 +372,8 @@
     "needs": [
       {
         "role": "Caffeine",
-        "need": "instant coffee",
-        "quantity_reasoning": "One pack provides enough cups to stay alert through the night",
+        "need": "coffee powder",
+        "quantity_reasoning": "One pack provides enough caffeine for the whole night",
         "expected_tiles": [
           "Tea, Coffee & Milk Drinks"
         ]
@@ -224,15 +381,23 @@
       {
         "role": "Quick Meal",
         "need": "instant noodles",
-        "quantity_reasoning": "One serving satisfies hunger quickly without cooking",
+        "quantity_reasoning": "One serving satisfies a fast, hot meal during study breaks",
         "expected_tiles": [
           "Instant Food"
         ]
       },
       {
+        "role": "Energy Boost",
+        "need": "energy bar",
+        "quantity_reasoning": "One bar gives a quick boost of stamina without interrupting focus",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
         "role": "Savory Snack",
         "need": "chips",
-        "quantity_reasoning": "Enough to munch on while working for the whole night",
+        "quantity_reasoning": "A single pack keeps cravings at bay while working",
         "expected_tiles": [
           "Chips & Namkeen"
         ]
@@ -240,28 +405,1010 @@
       {
         "role": "Sweet Snack",
         "need": "chocolate",
-        "quantity_reasoning": "Provides quick energy and satisfies sweet cravings",
+        "quantity_reasoning": "One piece satisfies sweet cravings and maintains alertness",
         "expected_tiles": [
           "Sweets & Chocolates"
         ]
       },
       {
         "role": "Hydration",
-        "need": "bottled water",
-        "quantity_reasoning": "Keeps you hydrated without needing to boil water",
+        "need": "milk",
+        "quantity_reasoning": "One bottle provides needed fluids and a dose of protein",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Light Snack",
+        "need": "biscuits",
+        "quantity_reasoning": "A pack offers a quick bite between study sessions",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "f46e405af57633d550adfd98ef6c0b2fda24a29a107732fda0bfbe8969e48394": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "skincare_routine",
+        "label": "Skincare routine",
+        "reasoning": "Buying face wash, moisturizer, cotton pads together",
+        "score": 0.85
+      },
+      {
+        "id": "self_care_night",
+        "label": "Self-care night",
+        "reasoning": "Evening pampering items suggest personal care night",
+        "score": 0.78
+      },
+      {
+        "id": "date_night",
+        "label": "Date night in",
+        "reasoning": "Fresh skin prep often before a date at home",
+        "score": 0.45
+      },
+      {
+        "id": "health",
+        "label": "Eating better",
+        "reasoning": "Skin health linked to overall wellness routine",
+        "score": 0.35
+      }
+    ]
+  },
+  "5ab68172278cbd3f9e6c7cf182bf82a76014da9cee9ce6620fbe894e1606883d": {
+    "situation_label": "Skincare routine essentials",
+    "needs": [
+      {
+        "role": "Cleansing",
+        "need": "face wash",
+        "quantity_reasoning": "One product covers daily facial cleansing",
+        "expected_tiles": [
+          "Skin & Face"
+        ]
+      },
+      {
+        "role": "Moisturising",
+        "need": "face cream",
+        "quantity_reasoning": "One moisturizer suffices for daily skin hydration",
+        "expected_tiles": [
+          "Skin & Face"
+        ]
+      },
+      {
+        "role": "Sun protection",
+        "need": "sunscreen",
+        "quantity_reasoning": "One sunscreen protects skin during routine use",
+        "expected_tiles": [
+          "Skin & Face"
+        ]
+      },
+      {
+        "role": "Toning",
+        "need": "toner",
+        "quantity_reasoning": "One toner balances skin after cleansing",
+        "expected_tiles": [
+          "Skin & Face"
+        ]
+      },
+      {
+        "role": "Bath",
+        "need": "body wash",
+        "quantity_reasoning": "One body wash handles daily shower cleansing",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Hair care",
+        "need": "shampoo",
+        "quantity_reasoning": "One shampoo maintains hair hygiene alongside skin routine",
+        "expected_tiles": [
+          "Hair"
+        ]
+      },
+      {
+        "role": "Makeup basics",
+        "need": "lipstick",
+        "quantity_reasoning": "One lipstick provides basic makeup colour",
+        "expected_tiles": [
+          "Beauty & Cosmetics"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "4be8567151c90250dd340907e1946f811d306ac186dcbcc2243bef5b87e35e60": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "house_party",
+        "label": "House party",
+        "reasoning": "Snacks and napkins suggest hosting guests at home",
+        "score": 0.85
+      },
+      {
+        "id": "movie_night",
+        "label": "Movie night in",
+        "reasoning": "Chips, soda, chocolate for a cozy film session",
+        "score": 0.78
+      },
+      {
+        "id": "game_night",
+        "label": "Game night in",
+        "reasoning": "Easy finger foods for board or video game gathering",
+        "score": 0.72
+      },
+      {
+        "id": "concert_night",
+        "label": "Concert tonight",
+        "reasoning": "Pre‑concert munchies and napkins for a night out",
+        "score": 0.65
+      }
+    ]
+  },
+  "c4ed90595916fea80e4329e38a8892bad1be3c22a85ddb55c876667f2e736830": {
+    "situation_label": "House party essentials",
+    "needs": [
+      {
+        "role": "Beverages",
+        "need": "soft drink",
+        "quantity_reasoning": "One pack keeps most guests refreshed throughout the party",
         "expected_tiles": [
           "Drinks & Juices"
         ]
       },
       {
-        "role": "Study Supplies",
-        "need": "pen",
-        "quantity_reasoning": "One pen ensures you can write notes without running out",
+        "role": "Beverages",
+        "need": "mineral water",
+        "quantity_reasoning": "Enough bottles to hydrate a crowd between drinks and food",
         "expected_tiles": [
-          "Stationery & Games"
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "chips",
+        "quantity_reasoning": "One large bag satisfies salty cravings for many guests",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "biscuits",
+        "quantity_reasoning": "A pack offers a sweet bite that pairs well with drinks",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      },
+      {
+        "role": "Desserts",
+        "need": "sweets",
+        "quantity_reasoning": "One box provides enough pieces for a sweet finish for the group",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Desserts",
+        "need": "ice cream",
+        "quantity_reasoning": "One tub serves as a cool treat for multiple guests",
+        "expected_tiles": [
+          "Ice Creams & More"
+        ]
+      },
+      {
+        "role": "Supplies",
+        "need": "napkin",
+        "quantity_reasoning": "Enough paper napkins to keep hands clean during snacking",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      }
+    ],
+    "unavailable": [
+      "alcoholic beverages"
+    ]
+  },
+  "b3dce9205242b7d4fec42eb1f3d71838d11ecf0ff654071e19131b15f897283e": {
+    "confidence": 0.78,
+    "candidates": [
+      {
+        "id": "hair_care",
+        "label": "Hair routine",
+        "reasoning": "Buying shampoo, conditioner, oil, and towel together",
+        "score": 0.78
+      },
+      {
+        "id": "self_care_night",
+        "label": "Self-care night",
+        "reasoning": "Hair products plus fresh towel suggest pampering evening",
+        "score": 0.65
+      },
+      {
+        "id": "deep_clean",
+        "label": "Deep cleaning day",
+        "reasoning": "New towel indicates thorough bathroom cleaning",
+        "score": 0.55
+      },
+      {
+        "id": "moving_in",
+        "label": "Moving in",
+        "reasoning": "Essential bathroom items for a new residence",
+        "score": 0.45
+      }
+    ]
+  },
+  "6732d6dd48bf082974d8b19fa1b9b63743233d089c913e2e86529fb349cc0589": {
+    "situation_label": "Hair care routine",
+    "needs": [
+      {
+        "role": "Hair",
+        "need": "shampoo",
+        "quantity_reasoning": "One bottle lasts several washes for regular hair cleaning",
+        "expected_tiles": [
+          "Hair"
+        ]
+      },
+      {
+        "role": "Hair",
+        "need": "conditioner",
+        "quantity_reasoning": "Needed after each shampoo to keep hair smooth",
+        "expected_tiles": [
+          "Hair"
+        ]
+      },
+      {
+        "role": "Hair",
+        "need": "hair oil",
+        "quantity_reasoning": "A few applications keep hair nourished between washes",
+        "expected_tiles": [
+          "Hair"
+        ]
+      },
+      {
+        "role": "Hair",
+        "need": "hair mask",
+        "quantity_reasoning": "Weekly deep treatment for stronger hair",
+        "expected_tiles": [
+          "Hair"
+        ]
+      },
+      {
+        "role": "Bath & Body",
+        "need": "body wash",
+        "quantity_reasoning": "Cleanses skin daily, one bottle lasts many showers",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Skin & Face",
+        "need": "face wash",
+        "quantity_reasoning": "Removes oil and dirt each day, one bottle lasts several weeks",
+        "expected_tiles": [
+          "Skin & Face"
+        ]
+      },
+      {
+        "role": "Skin & Face",
+        "need": "moisturizer",
+        "quantity_reasoning": "Keeps skin hydrated after washing, a small amount lasts long",
+        "expected_tiles": [
+          "Skin & Face"
         ]
       }
     ],
     "unavailable": []
+  },
+  "7008bd95f6e4b7735eef2d3f46d984327164ccf283b4590ca8c90c8cf6d69966": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "new_pet",
+        "label": "New cat home",
+        "reasoning": "First cat supplies for new feline companion.",
+        "score": 0.85
+      },
+      {
+        "id": "deep_clean",
+        "label": "Deep cleaning day",
+        "reasoning": "Floor cleaner and bags for thorough house cleaning.",
+        "score": 0.75
+      },
+      {
+        "id": "moving_in",
+        "label": "Moving in",
+        "reasoning": "Cleaning items for fresh apartment setup.",
+        "score": 0.6
+      },
+      {
+        "id": "new_flatmate",
+        "label": "New flatmate",
+        "reasoning": "Supplies for shared household after roommate moves in.",
+        "score": 0.45
+      }
+    ]
+  },
+  "f4ad9eef53aba19f81f5f246c6f5bc5b857f43c5d89516737d26f5b818acafad": {
+    "situation_label": "New cat home essentials",
+    "needs": [
+      {
+        "role": "Feeding",
+        "need": "cat food",
+        "quantity_reasoning": "One pack supplies several meals for the first few days",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      },
+      {
+        "role": "Feeding",
+        "need": "pet bowl",
+        "quantity_reasoning": "One bowl is enough for daily feeding and water",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      },
+      {
+        "role": "Litter",
+        "need": "cat litter",
+        "quantity_reasoning": "One bag lasts a few weeks of waste absorption",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      },
+      {
+        "role": "Litter",
+        "need": "litter tray",
+        "quantity_reasoning": "One tray holds litter and can be cleaned regularly",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      },
+      {
+        "role": "Play & Grooming",
+        "need": "cat toy",
+        "quantity_reasoning": "One toy keeps the cat entertained and active",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      },
+      {
+        "role": "Play & Grooming",
+        "need": "cat brush",
+        "quantity_reasoning": "One brush maintains coat health and reduces shedding",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      },
+      {
+        "role": "Travel",
+        "need": "pet carrier",
+        "quantity_reasoning": "One carrier is sufficient for vet visits and short trips",
+        "expected_tiles": [
+          "Pet Store"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "123db18beec2f45036bc2a53d669a4bdba28ba58fb6e2a8fc8ee6d8a3eadde6d": {
+    "confidence": 0.92,
+    "candidates": [
+      {
+        "id": "baking_day",
+        "label": "Baking day",
+        "reasoning": "Flour, butter, cocoa, mould indicate cake baking.",
+        "score": 0.92
+      },
+      {
+        "id": "birthday",
+        "label": "Someone's birthday",
+        "reasoning": "Cake supplies often bought for birthday celebrations.",
+        "score": 0.78
+      },
+      {
+        "id": "hosting",
+        "label": "Guests coming",
+        "reasoning": "Baking suggests preparing treats for incoming guests.",
+        "score": 0.65
+      },
+      {
+        "id": "cooking_project",
+        "label": "Cooking something",
+        "reasoning": "Ingredients point to a special cooking/baking project.",
+        "score": 0.55
+      }
+    ]
+  },
+  "f06073507ec192e12220ef52145622d1573418813b7f8ac8bad25546921873b2": {
+    "situation_label": "Baking day",
+    "needs": [
+      {
+        "role": "Ingredients",
+        "need": "baking mix",
+        "quantity_reasoning": "One pack covers the recipe requirements",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      },
+      {
+        "role": "Ingredients",
+        "need": "refined oil",
+        "quantity_reasoning": "Enough to grease the pan and for the batter",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      },
+      {
+        "role": "Ingredients",
+        "need": "butter",
+        "quantity_reasoning": "Needed for creaming and flavor, one unit suffices",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Ingredients",
+        "need": "egg",
+        "quantity_reasoning": "One egg is typical for a standard bake",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Ingredients",
+        "need": "vanilla essence",
+        "quantity_reasoning": "A small amount adds flavor, one bottle is enough",
+        "expected_tiles": [
+          "Sauces & Spreads"
+        ]
+      },
+      {
+        "role": "Tools",
+        "need": "baking tray",
+        "quantity_reasoning": "One tray fits most standard cakes and pastries",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      },
+      {
+        "role": "Tools",
+        "need": "mixing bowl",
+        "quantity_reasoning": "One bowl is sufficient to combine all ingredients",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "78c7c124ecd226b0e9beb6630a474bd72a271ace11db1fddc7aec3bdebc8ab6d": {
+    "confidence": 0.78,
+    "candidates": [
+      {
+        "id": "moving_in",
+        "label": "Moving in",
+        "reasoning": "Bought new kadai and basics for fresh kitchen setup",
+        "score": 0.78
+      },
+      {
+        "id": "cooking_project",
+        "label": "Cooking something",
+        "reasoning": "Fresh veggies and cookware suggest a new recipe",
+        "score": 0.65
+      },
+      {
+        "id": "hosting",
+        "label": "Guests coming",
+        "reasoning": "Vegetables and dishwash gel for serving visitors",
+        "score": 0.55
+      },
+      {
+        "id": "deep_clean",
+        "label": "Deep cleaning day",
+        "reasoning": "Dishwash gel indicates thorough kitchen cleaning",
+        "score": 0.4
+      }
+    ]
+  },
+  "966061a7aab50ca4f2792fd5c0728670c48abcccf7d39a17fd65ca6fb3d305e8": {
+    "situation_label": "Moving into a New Home",
+    "needs": [
+      {
+        "role": "Sleep",
+        "need": "bedsheet",
+        "quantity_reasoning": "One bedsheet covers the primary bed",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Sleep",
+        "need": "pillow",
+        "quantity_reasoning": "One pillow is sufficient for sleeping comfort",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Bathroom",
+        "need": "towel",
+        "quantity_reasoning": "Enough towels to rotate while one dries",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "dustbin",
+        "quantity_reasoning": "One dustbin handles household waste collection",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "detergent powder",
+        "quantity_reasoning": "One pack covers most laundry cycles",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      },
+      {
+        "role": "Kitchen",
+        "need": "dishwash gel",
+        "quantity_reasoning": "One bottle suffices for daily dish cleaning",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "mop",
+        "quantity_reasoning": "One mop handles floor cleaning tasks",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "a975b585ea6e724d2e867535be868d59f39c192f30309192c59ed41c9dc36da4": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "festival_gifting",
+        "label": "Gifting",
+        "reasoning": "Dry fruit and chocolate packs suggest festival gifts",
+        "score": 0.85
+      },
+      {
+        "id": "hosting",
+        "label": "Guests coming",
+        "reasoning": "Gift packs and wrapping paper for serving guests",
+        "score": 0.73
+      },
+      {
+        "id": "moving_in",
+        "label": "Moving in",
+        "reasoning": "Food wrapping paper useful for new kitchen setup",
+        "score": 0.58
+      },
+      {
+        "id": "birthday",
+        "label": "Someone's birthday",
+        "reasoning": "Gift packs often bought for birthday celebrations",
+        "score": 0.45
+      }
+    ]
+  },
+  "ffeed278340d92563c4d8f860fade02283339b308712f00e590c5e0d3c70068c": {
+    "situation_label": "Festival Gifting",
+    "needs": [
+      {
+        "role": "Food Gifts",
+        "need": "gift chocolate",
+        "quantity_reasoning": "One item makes a sweet treat for a friend",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Food Gifts",
+        "need": "dry fruit mix",
+        "quantity_reasoning": "Enough to pack in a small box for sharing",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Personal Care Gifts",
+        "need": "perfume",
+        "quantity_reasoning": "One bottle serves as a personal fragrance present",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Tech Gifts",
+        "need": "earphones",
+        "quantity_reasoning": "One pair provides a handy audio accessory gift",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      },
+      {
+        "role": "Kids Gifts",
+        "need": "soft toy",
+        "quantity_reasoning": "One plush toy is a common present for children",
+        "expected_tiles": [
+          "Toy Store"
+        ]
+      },
+      {
+        "role": "Reading Gifts",
+        "need": "book",
+        "quantity_reasoning": "One book makes a thoughtful gift for any age",
+        "expected_tiles": [
+          "Book Store"
+        ]
+      },
+      {
+        "role": "Gift Cards",
+        "need": "gift voucher",
+        "quantity_reasoning": "One voucher lets the recipient choose what they like",
+        "expected_tiles": [
+          "E-Gifts Store"
+        ]
+      }
+    ],
+    "unavailable": [
+      "Baby Care",
+      "Pharma Store"
+    ]
+  },
+  "fcd704e58c97a2647c3e90aa5788388db57f0364e85cae439f9409f0aae37adf": {
+    "confidence": 0.78,
+    "candidates": [
+      {
+        "id": "sick_at_home",
+        "label": "Someone unwell",
+        "reasoning": "ORS and tissues suggest illness at home",
+        "score": 0.78
+      },
+      {
+        "id": "hangover_recovery",
+        "label": "Hangover recovery",
+        "reasoning": "ORS, soup, honey aid post‑party recovery",
+        "score": 0.65
+      },
+      {
+        "id": "health",
+        "label": "Eating better",
+        "reasoning": "Honey and soup chosen for healthier meals",
+        "score": 0.55
+      },
+      {
+        "id": "self_care_night",
+        "label": "Self-care night",
+        "reasoning": "Tissues and soothing honey for personal care",
+        "score": 0.45
+      }
+    ]
+  },
+  "be544c554922d715d73b27de5090bda98a2fb4c841148ad7dbf1c0963d41254e": {
+    "situation_label": "Caring for a sick person at home",
+    "needs": [
+      {
+        "role": "Hydration",
+        "need": "ORS",
+        "quantity_reasoning": "One pack supplies enough rehydration for a day of recovery",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Food",
+        "need": "khichdi",
+        "quantity_reasoning": "One serving provides a gentle, easy‑to‑digest meal",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Beverage",
+        "need": "ginger tea",
+        "quantity_reasoning": "One box covers several soothing cups throughout the day",
+        "expected_tiles": [
+          "Tea, Coffee & Milk Drinks"
+        ]
+      },
+      {
+        "role": "Sweetener",
+        "need": "honey",
+        "quantity_reasoning": "One jar offers enough natural sweetness for multiple doses",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Hygiene",
+        "need": "tissue",
+        "quantity_reasoning": "One pack provides enough sheets for daily nasal care",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Health Monitoring",
+        "need": "thermometer",
+        "quantity_reasoning": "One device is sufficient to check temperature repeatedly",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Snack",
+        "need": "marie biscuit",
+        "quantity_reasoning": "One pack offers light biscuits for gentle snacking",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "9e2ff634364c0e8ad75bb465c8238aa00f047ee189323adab4f4f55448601405": {
+    "situation_label": "Moving into a new home",
+    "needs": [
+      {
+        "role": "Sleep",
+        "need": "bedsheet",
+        "quantity_reasoning": "One bedsheet covers the primary sleeping surface",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Sleep",
+        "need": "pillow",
+        "quantity_reasoning": "One pillow provides adequate head support for nightly rest",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Bathroom",
+        "need": "towel",
+        "quantity_reasoning": "Enough towels to rotate while one dries after use",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "bucket",
+        "quantity_reasoning": "One bucket covers most household cleaning tasks",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "mop",
+        "quantity_reasoning": "One mop is sufficient for routine floor cleaning",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "detergent powder",
+        "quantity_reasoning": "One detergent powder supply handles regular laundry cycles",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "dishwash gel",
+        "quantity_reasoning": "One dishwash gel bottle meets daily dish cleaning needs",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "2ffdffa7809bb5411e075aa2dcbd30076acb328f35ca3b1ebd33960a0876c9dd": {
+    "confidence": 0.92,
+    "candidates": [
+      {
+        "id": "fitness_restart",
+        "label": "Back to gym",
+        "reasoning": "Protein sampler and water bottle suggest workout routine",
+        "score": 0.92
+      },
+      {
+        "id": "health",
+        "label": "Eating better",
+        "reasoning": "Almonds and whey indicate focus on nutrition",
+        "score": 0.85
+      },
+      {
+        "id": "home_office",
+        "label": "Home office setup",
+        "reasoning": "Motivational bottle hints at desk hydration habit",
+        "score": 0.6
+      },
+      {
+        "id": "self_care_night",
+        "label": "Self-care night",
+        "reasoning": "Healthy snacks and bottle for personal wellness routine",
+        "score": 0.45
+      }
+    ]
+  },
+  "0a94159a95cd684d171cceee5846bf8fdafd75fe0c41924bbf7007458350ca2d": {
+    "situation_label": "Gym Restart Essentials",
+    "needs": [
+      {
+        "role": "Nutrition",
+        "need": "whey protein",
+        "quantity_reasoning": "One container provides enough servings for daily post‑workout shakes",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "roasted chana",
+        "quantity_reasoning": "A small pack supplies a quick protein‑rich snack between workouts",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "mixed nuts",
+        "quantity_reasoning": "A handful covers healthy fats and protein for recovery",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Recovery",
+        "need": "Greek yogurt",
+        "quantity_reasoning": "One cup offers protein and probiotics for muscle repair",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Hydration",
+        "need": "sports drink",
+        "quantity_reasoning": "One bottle replenishes electrolytes lost during training",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Snack",
+        "need": "protein bar",
+        "quantity_reasoning": "One bar serves as a convenient post‑workout energy boost",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      },
+      {
+        "role": "Nutrition",
+        "need": "oats",
+        "quantity_reasoning": "A serving provides complex carbs for sustained energy",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "90263ce4989cb20085466d714758f1646eb7de6233bcd457feb9b08027d664a9": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "home_office",
+        "label": "Home office setup",
+        "reasoning": "Power strip, lamp, notebook, coffee for work setup",
+        "score": 0.85
+      },
+      {
+        "id": "deadline_night",
+        "label": "Deadline all-nighter",
+        "reasoning": "Need lighting, power, notes, caffeine for all‑night work",
+        "score": 0.78
+      },
+      {
+        "id": "new_flatmate",
+        "label": "New flatmate",
+        "reasoning": "Setting up shared space with electronics and stationery",
+        "score": 0.6
+      },
+      {
+        "id": "hosting",
+        "label": "Guests coming",
+        "reasoning": "Extra lamp, power strip, coffee for visitors",
+        "score": 0.55
+      }
+    ]
+  },
+  "339f00a59beb849a4e3e079feaf33627eb5e5e382e1adad2a946e792d7d39e9a": {
+    "situation_label": "Home office setup",
+    "needs": [
+      {
+        "role": "Lighting",
+        "need": "desk lamp",
+        "quantity_reasoning": "One provides sufficient illumination for a work desk",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      },
+      {
+        "role": "Writing",
+        "need": "notebook",
+        "quantity_reasoning": "One covers daily note‑taking and planning",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      },
+      {
+        "role": "Writing",
+        "need": "ballpoint pen",
+        "quantity_reasoning": "One is enough for regular writing tasks",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      },
+      {
+        "role": "Notes",
+        "need": "sticky note",
+        "quantity_reasoning": "Enough for quick reminders and to‑do lists",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      },
+      {
+        "role": "Cable Management",
+        "need": "cable tie",
+        "quantity_reasoning": "One set can secure most cords on a desk",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Waste",
+        "need": "dustbin",
+        "quantity_reasoning": "One handles waste generated during work hours",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Mouse Support",
+        "need": "mouse pad",
+        "quantity_reasoning": "One improves mouse movement and comfort",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      }
+    ],
+    "unavailable": [
+      "desk",
+      "office chair",
+      "monitor stand",
+      "ergonomic chair"
+    ]
   }
 }

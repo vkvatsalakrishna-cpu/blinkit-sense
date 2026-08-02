@@ -67,6 +67,7 @@ SENSITIVE_GUIDANCE = {
 }
 MAX_COMPOSED_ITEMS = 4
 MIN_COMPOSED_ITEMS = 2
+MAX_SUGGESTION_OPTIONS = 20
 ROUTINE_OWNED_THRESHOLD = 1
 
 FEE_DELIVERY = 30
@@ -684,6 +685,27 @@ def _catalog_option(item: dict) -> dict[str, Any]:
     }
 
 
+def _trim_options_for_client(
+    options: list[dict[str, Any]],
+    selected_sku: str,
+) -> tuple[list[dict[str, Any]], int]:
+    """Return a bounded options window so option_index always fits the payload."""
+    if not options:
+        return [], 0
+
+    idx = next(
+        (i for i, opt in enumerate(options) if opt["resolved_sku"] == selected_sku),
+        (len(options) - 1) // 2,
+    )
+
+    if len(options) <= MAX_SUGGESTION_OPTIONS:
+        return options, idx
+
+    end = min(len(options), idx + MAX_SUGGESTION_OPTIONS)
+    start = end - MAX_SUGGESTION_OPTIONS
+    return options[start:end], idx - start
+
+
 def _qualified_candidates(
     content_words: list[str],
     available: list[dict],
@@ -984,7 +1006,7 @@ def resolve_needs(
         content_words = _tokenize_need(need.get("need", ""))
         score = len(assigned["matched_words"])
         options = assigned.get("options") or []
-        option_index = (len(options) - 1) // 2 if options else 0
+        options, option_index = _trim_options_for_client(options, item["id"])
         resolved.append(
             {
                 "role": need.get("role", ""),

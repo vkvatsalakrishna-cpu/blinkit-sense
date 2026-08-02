@@ -5,6 +5,7 @@ import { CategoryBrowseModal } from "./CategoryBrowseModal";
 import { ProductImage } from "./ProductImage";
 import {
   canAdvanceOption,
+  hasMultipleOptions,
   suggestionRowKey,
 } from "@/lib/suggestions";
 import type { CategoryBrowseFilter, Product, SelectedSuggestion } from "@/lib/types";
@@ -136,6 +137,8 @@ export function SuggestionsPanel({
       <ul className="space-y-3">
         {visible.map((s) => {
           const rowKey = suggestionRowKey(s.item);
+          const canAdvance = canAdvanceOption(s);
+          const multipleOptions = hasMultipleOptions(s);
           const product = s.product ?? {
             id: s.item.resolved_sku,
             name: s.item.resolved_name,
@@ -227,8 +230,21 @@ export function SuggestionsPanel({
               <button
                 type="button"
                 onClick={() => onAdvanceRow(rowKey)}
-                disabled={!canAdvanceOption(s)}
-                className="self-start text-lg leading-none text-gray-300 hover:text-gray-600 disabled:cursor-default disabled:opacity-30"
+                disabled={!canAdvance}
+                title={
+                  !multipleOptions
+                    ? "No other options for this item"
+                    : canAdvance
+                      ? "Show another option for this item"
+                      : "Last option for this item"
+                }
+                className={`self-start text-lg leading-none disabled:cursor-not-allowed ${
+                  canAdvance
+                    ? "text-gray-300 hover:text-gray-600"
+                    : multipleOptions
+                      ? "text-gray-200 opacity-40"
+                      : "text-gray-200/60 line-through decoration-gray-300/80"
+                }`}
                 aria-label="Show another option for this item"
               >
                 ×

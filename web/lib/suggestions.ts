@@ -4,6 +4,14 @@ export function suggestionRowKey(item: SuggestionItem): string {
   return `${item.role}|${item.need}`;
 }
 
+export function optionCount(s: SelectedSuggestion): number {
+  return s.item.options?.length ?? 0;
+}
+
+export function hasMultipleOptions(s: SelectedSuggestion): boolean {
+  return optionCount(s) > 1;
+}
+
 export function canAdvanceOption(s: SelectedSuggestion): boolean {
   const opts = s.item.options ?? [];
   return s.optionIndex < opts.length - 1;
@@ -44,7 +52,10 @@ export function applySuggestionOption(
 }
 
 export function initialOptionIndex(item: SuggestionItem): number {
-  if (item.option_index != null) return item.option_index;
   const count = item.options?.length ?? 0;
-  return count > 0 ? Math.floor((count - 1) / 2) : 0;
+  if (count === 0) return 0;
+  if (item.option_index != null) {
+    return Math.min(Math.max(0, item.option_index), count - 1);
+  }
+  return Math.floor((count - 1) / 2);
 }
