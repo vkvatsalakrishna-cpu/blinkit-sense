@@ -1,0 +1,410 @@
+{
+  "scraped_at": "2026-08-02T10:52:25.296971+00:00",
+  "location": {
+    "name": "Sarjapur",
+    "lat": 12.912118,
+    "lon": 77.644554,
+    "pincode": "560102"
+  },
+  "source": "data/category_urls.batch_tmp.json",
+  "skipped_categories": [],
+  "skipped_subcategories": [],
+  "collections": [
+    {
+      "category": "Feminine Hygiene",
+      "subcategory": "Sanitary Pads",
+      "url": "https://blinkit.com/dc/feminine-hygiene/sanitary-pads/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDA%3D&collection_group_id=12237",
+      "product_count": 188,
+      "pages_fetched": 16,
+      "file": "00_sanitary-pads.json",
+      "status": "ok"
+    },
+    {
+      "category": "Feminine Hygiene",
+      "subcategory": "Tampons & Menstrual Cups",
+      "url": "https://blinkit.com/dc/feminine-hygiene/tampons-menstrual-cups/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDA%3D&collection_group_id=11677&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Tampons+%26+Menstrual+Cups&collection_name=Feminine+Hygiene",
+      "product_count": 30,
+      "pages_fetched": 5,
+      "file": "01_tampons-menstrual-cups.json",
+      "status": "ok"
+    },
+    {
+      "category": "Feminine Hygiene",
+      "subcategory": "Period Panty",
+      "url": "https://blinkit.com/dc/feminine-hygiene/period-panty/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDA%3D&collection_group_id=12238&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Period+Panty&collection_name=Feminine+Hygiene",
+      "product_count": 69,
+      "pages_fetched": 8,
+      "file": "02_period-panty.json",
+      "status": "ok"
+    },
+    {
+      "category": "Feminine Hygiene",
+      "subcategory": "Period Pain Relief",
+      "url": "https://blinkit.com/dc/feminine-hygiene/period-pain-relief/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDA%3D&collection_group_id=11680&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Period+Pain+Relief&collection_name=Feminine+Hygiene",
+      "product_count": 7,
+      "pages_fetched": 2,
+      "file": "03_period-pain-relief.json",
+      "status": "ok"
+    },
+    {
+      "category": "Feminine Hygiene",
+      "subcategory": "Intimate Wash & Wipes",
+      "url": "https://blinkit.com/dc/feminine-hygiene/intimate-wash-wipes/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDA%3D&collection_group_id=11678&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Intimate+Wash+%26+Wipes&collection_name=Feminine+Hygiene",
+      "product_count": 66,
+      "pages_fetched": 8,
+      "file": "04_intimate-wash-wipes.json",
+      "status": "ok"
+    },
+    {
+      "category": "Feminine Hygiene",
+      "subcategory": "Hair Removal",
+      "url": "https://blinkit.com/dc/feminine-hygiene/hair-removal/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDA%3D&collection_group_id=12239&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Hair+Removal&collection_name=Feminine+Hygiene",
+      "product_count": 74,
+      "pages_fetched": 8,
+      "file": "05_hair-removal.json",
+      "status": "ok"
+    },
+    {
+      "category": "Feminine Hygiene",
+      "subcategory": "Mom Care",
+      "url": "https://blinkit.com/dc/feminine-hygiene/mom-care/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDA%3D&collection_group_id=11679&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Mom+Care&collection_name=Feminine+Hygiene",
+      "product_count": 35,
+      "pages_fetched": 5,
+      "file": "06_mom-care.json",
+      "status": "ok"
+    },
+    {
+      "category": "Baby Care",
+      "subcategory": "Diaper Wipes",
+      "url": "https://blinkit.com/dc/baby-care/diaper-wipes/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzk%3D&collection_group_id=46757",
+      "product_count": 182,
+      "pages_fetched": 15,
+      "file": "07_diaper-wipes.json",
+      "status": "ok"
+    },
+    {
+      "category": "Baby Care",
+      "subcategory": "Baby Food",
+      "url": "https://blinkit.com/dc/baby-care/baby-food/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzk%3D&collection_group_id=20667&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Baby+Food&collection_name=Baby+Care",
+      "product_count": 125,
+      "pages_fetched": 11,
+      "file": "08_baby-food.json",
+      "status": "ok"
+    },
+    {
+      "category": "Baby Care",
+      "subcategory": "Baby Shampoo & Soaps",
+      "url": "https://blinkit.com/dc/baby-care/baby-shampoo-soaps/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzk%3D&collection_group_id=11683&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Baby+Shampoo+%26+Soaps&collection_name=Baby+Care",
+      "product_count": 104,
+      "pages_fetched": 10,
+      "file": "09_baby-shampoo-soaps.json",
+      "status": "ok"
+    },
+    {
+      "category": "Baby Care",
+      "subcategory": "Skin & Hair Care",
+      "url": "https://blinkit.com/dc/baby-care/skin-hair-care/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzk%3D&collection_group_id=11682&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Skin+%26+Hair+Care&collection_name=Baby+Care",
+      "product_count": 166,
+      "pages_fetched": 14,
+      "file": "10_skin-hair-care.json",
+      "status": "ok"
+    },
+    {
+      "category": "Baby Care",
+      "subcategory": "Feeding Essentials",
+      "url": "https://blinkit.com/dc/baby-care/feeding-essentials/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzk%3D&collection_group_id=11686&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Feeding+Essentials&collection_name=Baby+Care",
+      "product_count": 171,
+      "pages_fetched": 15,
+      "file": "11_feeding-essentials.json",
+      "status": "ok"
+    },
+    {
+      "category": "Baby Care",
+      "subcategory": "Clothes & Accessories",
+      "url": "https://blinkit.com/dc/baby-care/clothes-accessories/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzk%3D&collection_group_id=46758&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Clothes+%26+Accessories&collection_name=Baby+Care",
+      "product_count": 185,
+      "pages_fetched": 15,
+      "file": "12_clothes-accessories.json",
+      "status": "ok"
+    },
+    {
+      "category": "Baby Care",
+      "subcategory": "Health &  Hygiene",
+      "url": "https://blinkit.com/dc/baby-care/health-hygiene/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzk%3D&collection_group_id=11687&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Health+%26++Hygiene&collection_name=Baby+Care",
+      "product_count": 187,
+      "pages_fetched": 16,
+      "file": "13_health--hygiene.json",
+      "status": "ok"
+    },
+    {
+      "category": "Baby Care",
+      "subcategory": "Baby Oral Care",
+      "url": "https://blinkit.com/dc/baby-care/baby-oral-care/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzk%3D&collection_group_id=11688&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Baby+Oral+Care&collection_name=Baby+Care",
+      "product_count": 71,
+      "pages_fetched": 8,
+      "file": "14_baby-oral-care.json",
+      "status": "ok"
+    },
+    {
+      "category": "Baby Care",
+      "subcategory": "Baby Toys & Gifts",
+      "url": "https://blinkit.com/dc/baby-care/baby-toys-gifts/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzk%3D&collection_group_id=11689&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Baby+Toys+%26+Gifts&collection_name=Baby+Care",
+      "product_count": 183,
+      "pages_fetched": 15,
+      "file": "15_baby-toys-gifts.json",
+      "status": "ok"
+    },
+    {
+      "category": "Baby Care",
+      "subcategory": "Baby Gear",
+      "url": "https://blinkit.com/dc/baby-care/baby-gear/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzk%3D&collection_group_id=628097&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Baby+Gear&collection_name=Baby+Care",
+      "product_count": 24,
+      "pages_fetched": 4,
+      "file": "16_baby-gear.json",
+      "status": "ok"
+    },
+    {
+      "category": "Baby Care",
+      "subcategory": "Mom Care Needs",
+      "url": "https://blinkit.com/dc/baby-care/mom-care-needs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzk%3D&collection_group_id=814811&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Mom+Care+Needs&collection_name=Baby+Care",
+      "product_count": 35,
+      "pages_fetched": 5,
+      "file": "17_mom-care-needs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Health & Pharma",
+      "subcategory": "Fever Pain Relief",
+      "url": "https://blinkit.com/dc/health-pharma/fever-pain-relief/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzI%3D&collection_group_id=532514",
+      "product_count": 202,
+      "pages_fetched": 16,
+      "file": "18_fever-pain-relief.json",
+      "status": "ok"
+    },
+    {
+      "category": "Health & Pharma",
+      "subcategory": "Cough, Cold & Flu",
+      "url": "https://blinkit.com/dc/health-pharma/cough-cold-flu/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzI%3D&collection_group_id=556584&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Cough%2C+Cold+%26+Flu&collection_name=Health+%26+Pharma",
+      "product_count": 201,
+      "pages_fetched": 16,
+      "file": "19_cough,-cold-flu.json",
+      "status": "ok"
+    },
+    {
+      "category": "Health & Pharma",
+      "subcategory": "Masks & Sanitizers",
+      "url": "https://blinkit.com/dc/health-pharma/masks-sanitizers/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzI%3D&collection_group_id=11698&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Masks+%26+Sanitizers&collection_name=Health+%26+Pharma",
+      "product_count": 53,
+      "pages_fetched": 7,
+      "file": "20_masks-sanitizers.json",
+      "status": "ok"
+    },
+    {
+      "category": "Health & Pharma",
+      "subcategory": "Stomach & Digestive Care",
+      "url": "https://blinkit.com/dc/health-pharma/stomach-digestive-care/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzI%3D&collection_group_id=531928&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Stomach+%26+Digestive+Care&collection_name=Health+%26+Pharma",
+      "product_count": 194,
+      "pages_fetched": 16,
+      "file": "21_stomach-digestive-care.json",
+      "status": "ok"
+    },
+    {
+      "category": "Health & Pharma",
+      "subcategory": "Protein Supplements",
+      "url": "https://blinkit.com/dc/health-pharma/protein-supplements/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzI%3D&collection_group_id=11695&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Protein+Supplements&collection_name=Health+%26+Pharma",
+      "product_count": 191,
+      "pages_fetched": 16,
+      "file": "22_protein-supplements.json",
+      "status": "ok"
+    },
+    {
+      "category": "Health & Pharma",
+      "subcategory": "Vitamins & Supplements",
+      "url": "https://blinkit.com/dc/health-pharma/vitamins-supplements/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzI%3D&collection_group_id=11694&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Vitamins+%26+Supplements&collection_name=Health+%26+Pharma",
+      "product_count": 200,
+      "pages_fetched": 16,
+      "file": "23_vitamins-supplements.json",
+      "status": "ok"
+    },
+    {
+      "category": "Health & Pharma",
+      "subcategory": "Bandaid & Wound Care",
+      "url": "https://blinkit.com/dc/health-pharma/bandaid-wound-care/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzI%3D&collection_group_id=534549&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Bandaid+%26+Wound+Care&collection_name=Health+%26+Pharma",
+      "product_count": 196,
+      "pages_fetched": 16,
+      "file": "24_bandaid-wound-care.json",
+      "status": "ok"
+    },
+    {
+      "category": "Health & Pharma",
+      "subcategory": "Oral Care",
+      "url": "https://blinkit.com/dc/health-pharma/oral-care/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzI%3D&collection_group_id=556595&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Oral+Care&collection_name=Health+%26+Pharma",
+      "product_count": 24,
+      "pages_fetched": 5,
+      "file": "25_oral-care.json",
+      "status": "ok"
+    },
+    {
+      "category": "Health & Pharma",
+      "subcategory": "Health & Wellness E-Cards",
+      "url": "https://blinkit.com/dc/health-pharma/health-wellness-e-cards/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMzI%3D&collection_group_id=128505&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Health+%26+Wellness+E-Cards&collection_name=Health+%26+Pharma",
+      "product_count": 25,
+      "pages_fetched": 5,
+      "file": "26_health-wellness-e-cards.json",
+      "status": "ok"
+    },
+    {
+      "category": "Atta, Rice & Dal",
+      "subcategory": "Atta",
+      "url": "https://blinkit.com/dc/atta-rice-dal/atta/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjk%3D&collection_group_id=16426",
+      "product_count": 80,
+      "pages_fetched": 8,
+      "file": "27_atta.json",
+      "status": "ok"
+    },
+    {
+      "category": "Atta, Rice & Dal",
+      "subcategory": "Rice",
+      "url": "https://blinkit.com/dc/atta-rice-dal/rice/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjk%3D&collection_group_id=41521&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Rice&collection_name=Atta%2C+Rice+%26+Dal",
+      "product_count": 163,
+      "pages_fetched": 11,
+      "file": "28_rice.json",
+      "status": "ok"
+    },
+    {
+      "category": "Atta, Rice & Dal",
+      "subcategory": "Dal",
+      "url": "https://blinkit.com/dc/atta-rice-dal/dal/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjk%3D&collection_group_id=16423&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Dal&collection_name=Atta%2C+Rice+%26+Dal",
+      "product_count": 163,
+      "pages_fetched": 11,
+      "file": "29_dal.json",
+      "status": "ok"
+    },
+    {
+      "category": "Atta, Rice & Dal",
+      "subcategory": "Besan, Sooji & Maida",
+      "url": "https://blinkit.com/dc/atta-rice-dal/besan-sooji-maida/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjk%3D&collection_group_id=16430&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Besan%2C+Sooji+%26+Maida&collection_name=Atta%2C+Rice+%26+Dal",
+      "product_count": 94,
+      "pages_fetched": 8,
+      "file": "30_besan,-sooji-maida.json",
+      "status": "ok"
+    },
+    {
+      "category": "Atta, Rice & Dal",
+      "subcategory": "Rajma, Chhole & Others",
+      "url": "https://blinkit.com/dc/atta-rice-dal/rajma-chhole-others/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjk%3D&collection_group_id=16425&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Rajma%2C+Chhole+%26+Others&collection_name=Atta%2C+Rice+%26+Dal",
+      "product_count": 163,
+      "pages_fetched": 11,
+      "file": "31_rajma,-chhole-others.json",
+      "status": "ok"
+    },
+    {
+      "category": "Atta, Rice & Dal",
+      "subcategory": "Millet & Other Flours",
+      "url": "https://blinkit.com/dc/atta-rice-dal/millet-other-flours/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjk%3D&collection_group_id=874060&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Millet+%26+Other+Flours&collection_name=Atta%2C+Rice+%26+Dal",
+      "product_count": 161,
+      "pages_fetched": 11,
+      "file": "32_millet-other-flours.json",
+      "status": "ok"
+    },
+    {
+      "category": "Atta, Rice & Dal",
+      "subcategory": "Organic",
+      "url": "https://blinkit.com/dc/atta-rice-dal/organic/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjk%3D&collection_group_id=16427&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Organic&collection_name=Atta%2C+Rice+%26+Dal",
+      "product_count": 154,
+      "pages_fetched": 11,
+      "file": "33_organic.json",
+      "status": "ok"
+    },
+    {
+      "category": "Atta, Rice & Dal",
+      "subcategory": "Poha, Daliya & Other Grains",
+      "url": "https://blinkit.com/dc/atta-rice-dal/poha-daliya-other-grains/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjk%3D&collection_group_id=31475&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Poha%2C+Daliya+%26+Other+Grains&collection_name=Atta%2C+Rice+%26+Dal",
+      "product_count": 163,
+      "pages_fetched": 11,
+      "file": "34_poha,-daliya-other-grains.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chicken, Meat & Fish",
+      "subcategory": "Chicken",
+      "url": "https://blinkit.com/dc/chicken-meat-fish/chicken/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTI%3D&collection_group_id=11537",
+      "product_count": 94,
+      "pages_fetched": 8,
+      "file": "35_chicken.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chicken, Meat & Fish",
+      "subcategory": "Fresh Meat",
+      "url": "https://blinkit.com/dc/chicken-meat-fish/fresh-meat/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTI%3D&collection_group_id=24161&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Fresh+Meat&collection_name=Chicken%2C+Meat+%26+Fish",
+      "product_count": 65,
+      "pages_fetched": 7,
+      "file": "36_fresh-meat.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chicken, Meat & Fish",
+      "subcategory": "Fish & Seafood",
+      "url": "https://blinkit.com/dc/chicken-meat-fish/fish-seafood/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTI%3D&collection_group_id=11540&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Fish+%26+Seafood&collection_name=Chicken%2C+Meat+%26+Fish",
+      "product_count": 75,
+      "pages_fetched": 7,
+      "file": "37_fish-seafood.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chicken, Meat & Fish",
+      "subcategory": "Mutton",
+      "url": "https://blinkit.com/dc/chicken-meat-fish/mutton/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTI%3D&collection_group_id=11543&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Mutton&collection_name=Chicken%2C+Meat+%26+Fish",
+      "product_count": 12,
+      "pages_fetched": 2,
+      "file": "38_mutton.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chicken, Meat & Fish",
+      "subcategory": "Frozen Non-Veg Snacks",
+      "url": "https://blinkit.com/dc/chicken-meat-fish/frozen-non-veg-snacks/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTI%3D&collection_group_id=497533&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Frozen+Non-Veg+Snacks&collection_name=Chicken%2C+Meat+%26+Fish",
+      "product_count": 71,
+      "pages_fetched": 8,
+      "file": "39_frozen-non-veg-snacks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chicken, Meat & Fish",
+      "subcategory": "Non Veg Spices",
+      "url": "https://blinkit.com/dc/chicken-meat-fish/non-veg-spices/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTI%3D&collection_group_id=880650&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Non+Veg+Spices&collection_name=Chicken%2C+Meat+%26+Fish",
+      "product_count": 84,
+      "pages_fetched": 8,
+      "file": "40_non-veg-spices.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chicken, Meat & Fish",
+      "subcategory": "Sausage, Salami & Ham",
+      "url": "https://blinkit.com/dc/chicken-meat-fish/sausage-salami-ham/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTI%3D&collection_group_id=11538&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Sausage%2C+Salami+%26+Ham&collection_name=Chicken%2C+Meat+%26+Fish",
+      "product_count": 73,
+      "pages_fetched": 8,
+      "file": "41_sausage,-salami-ham.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chicken, Meat & Fish",
+      "subcategory": "Plant Based Meat",
+      "url": "https://blinkit.com/dc/chicken-meat-fish/plant-based-meat/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTI%3D&collection_group_id=11542&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Plant+Based+Meat&collection_name=Chicken%2C+Meat+%26+Fish",
+      "product_count": 10,
+      "pages_fetched": 2,
+      "file": "42_plant-based-meat.json",
+      "status": "ok"
+    },
+    {
+      "category": "Spiritual Needs",
+      "subcategory": "Namaz Essentials",
+      "url": "https://blinkit.com/cn/namaz-essentials/cid/1379/2966",
+      "product_count": 25,
+      "pages_fetched": 5,
+      "file": "43_namaz-essentials.json",
+      "status": "ok"
+    }
+  ]
+}

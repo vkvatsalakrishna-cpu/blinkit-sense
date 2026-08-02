@@ -1,0 +1,434 @@
+[
+  {
+    "preset": "scenario_1",
+    "household_id": "h1",
+    "confidence": 0.85,
+    "situation": "Deadline all-nighter",
+    "situation_id": "deadline_night",
+    "situation_reasoning": "Studying late, needs notes, pen, energy, quick meals.",
+    "planner_label": "Deadline all-nighter",
+    "suggestions": [
+      {
+        "name": "Nescafe Sunrise Instant Coffee Powder - Rich Aroma, Coffee Chicory Mix",
+        "category": "Tea, Coffee & Milk Drinks",
+        "sku": "sku_23550",
+        "need": "coffee for late-night focus"
+      },
+      {
+        "name": "Maggi Spicy Garlic Instant Noodles",
+        "category": "Instant Food",
+        "sku": "sku_24312",
+        "need": "quick late-night snack"
+      },
+      {
+        "name": "The Whole Truth Almond Choco Fudge Energy Bar",
+        "category": "Sweets & Chocolates",
+        "sku": "sku_10392",
+        "need": "energy bar for sustained focus"
+      },
+      {
+        "name": "Troovy Healthy High Protein Ragi Chips",
+        "category": "Chips & Namkeen",
+        "sku": "sku_21254",
+        "need": "savory snack while studying"
+      }
+    ],
+    "gaps": 0
+  },
+  {
+    "preset": "scenario_2",
+    "household_id": "h2",
+    "confidence": 0.85,
+    "situation": "Skincare routine",
+    "situation_id": "skincare_routine",
+    "situation_reasoning": "Buying face wash, moisturizer, cotton pads, towel.",
+    "planner_label": "Skincare routine",
+    "suggestions": [
+      {
+        "name": "Rustic Art Neem Basil Organic Concentrate Face Wash",
+        "category": "Skin & Face",
+        "sku": "sku_15158",
+        "need": "gentle face wash"
+      },
+      {
+        "name": "Mamaearth Chia Oil-Free Face Moisturizer",
+        "category": "Skin & Face",
+        "sku": "sku_15174",
+        "need": "lightweight moisturizer"
+      },
+      {
+        "name": "Aroma Magic Sunblock Sunscreen Lotion (SPF 30 PA++)",
+        "category": "Skin & Face",
+        "sku": "sku_15201",
+        "need": "daily sunscreen"
+      },
+      {
+        "name": "The Face Shop Rice Ceramide Moisturizing Toner",
+        "category": "Skin & Face",
+        "sku": "sku_15234",
+        "need": "hydrating toner"
+      }
+    ],
+    "gaps": 0
+  },
+  {
+    "preset": "scenario_3",
+    "household_id": "h3",
+    "confidence": 0.85,
+    "situation": "Movie night in",
+    "situation_id": "movie_night",
+    "situation_reasoning": "Snacks and napkins for a home movie session",
+    "planner_label": "Movie night in",
+    "suggestions": [
+      {
+        "name": "Nescafe Ready to Drink Cold Coffee (Intense Cafe, Cappucino)",
+        "category": "Drinks & Juices",
+        "sku": "sku_23047",
+        "need": "cold drink"
+      },
+      {
+        "name": "The Theatre Project Butter Popcorn",
+        "category": "Chips & Namkeen",
+        "sku": "sku_21897",
+        "need": "popcorn"
+      },
+      {
+        "name": "Cornitos Korean Chilli Nachos Chips",
+        "category": "Chips & Namkeen",
+        "sku": "sku_21697",
+        "need": "nachos"
+      },
+      {
+        "name": "Cadbury Dairy Milk Silk Fruit & Nut Milk Chocolate Bar",
+        "category": "Sweets & Chocolates",
+        "sku": "sku_10282",
+        "need": "chocolate"
+      }
+    ],
+    "gaps": 0
+  },
+  {
+    "preset": "scenario_4",
+    "household_id": "h4",
+    "confidence": 0.7,
+    "situation": "Hair routine",
+    "situation_id": "hair_care",
+    "situation_reasoning": "Hair products",
+    "planner_label": "Hair Care Routine",
+    "suggestions": [
+      {
+        "name": "Arata Colour Protect Hair Conditioner",
+        "category": "Hair",
+        "sku": "sku_13960",
+        "need": "hair conditioner"
+      },
+      {
+        "name": "Pears Soft And Fresh Body Wash",
+        "category": "Bath & Body",
+        "sku": "sku_6390",
+        "need": "body wash"
+      },
+      {
+        "name": "Happy Squirrel Rosemary Essential Oil for Hair Growth",
+        "category": "Hair",
+        "sku": "sku_14379",
+        "need": "hair oil"
+      },
+      {
+        "name": "Rustic Art Neem Basil Organic Concentrate Face Wash",
+        "category": "Skin & Face",
+        "sku": "sku_15008",
+        "need": "face wash"
+      }
+    ],
+    "gaps": 1
+  },
+  {
+    "preset": "scenario_5",
+    "household_id": "h1",
+    "confidence": 0.8,
+    "situation": "New cat home",
+    "situation_id": "new_pet",
+    "situation_reasoning": "Cat litter",
+    "planner_label": "New cat home",
+    "suggestions": [
+      {
+        "name": "HUFT Anti Tick & Flea Pet Powder",
+        "category": "Pet Store",
+        "sku": "sku_3177",
+        "need": "flea and tick powder"
+      },
+      {
+        "name": "NutriMeow Chicken & Tuna Adult Dry Cat Food",
+        "category": "Pet Store",
+        "sku": "sku_2946",
+        "need": "cat food"
+      },
+      {
+        "name": "Emily pets Bentonite Cat Litter",
+        "category": "Pet Store",
+        "sku": "sku_2961",
+        "need": "cat litter"
+      },
+      {
+        "name": "Super Pet Cat Litter Tray with Scoop",
+        "category": "Pet Store",
+        "sku": "sku_2889",
+        "need": "litter tray"
+      }
+    ],
+    "gaps": 2
+  },
+  {
+    "preset": "scenario_6",
+    "household_id": "h2",
+    "confidence": 0.8,
+    "situation": "Baking day",
+    "situation_id": "baking_day",
+    "situation_reasoning": "Baking items",
+    "planner_label": "Baking day essentials",
+    "suggestions": [
+      {
+        "name": "Foodfrillz High Fiber Millet Cake Mix (Vanilla)",
+        "category": "Bakery & Biscuits",
+        "sku": "sku_21004",
+        "need": "cake mix"
+      },
+      {
+        "name": "Freedom Refined Sunflower Oil (Suryakanthi Enne)",
+        "category": "Oil, Ghee & Masala",
+        "sku": "sku_7943",
+        "need": "refined oil"
+      },
+      {
+        "name": "The Select Aisle Vanilla Flavour Essence",
+        "category": "Bakery & Biscuits",
+        "sku": "sku_20915",
+        "need": "vanilla essence"
+      },
+      {
+        "name": "ReeQ Plastic Measuring Cups & Spoons Set (Plastic)",
+        "category": "Kitchenware & Appliances",
+        "sku": "sku_3835",
+        "need": "measuring cups"
+      }
+    ],
+    "gaps": 1
+  },
+  {
+    "preset": "scenario_7",
+    "household_id": "h3",
+    "confidence": 0.42,
+    "situation": "House party",
+    "situation_id": "house_party",
+    "situation_reasoning": "Fresh veggies",
+    "planner_label": "House Party",
+    "suggestions": [
+      {
+        "name": "7UP Lemon Soda Soft Drink",
+        "category": "Drinks & Juices",
+        "sku": "sku_22340",
+        "need": "soft drink"
+      },
+      {
+        "name": "SaveMore Lemon Dishwash Gel",
+        "category": "Cleaners & Repellents",
+        "sku": "sku_2224",
+        "need": "dishwash gel"
+      },
+      {
+        "name": "Troovy Healthy High Protein Ragi Chips",
+        "category": "Chips & Namkeen",
+        "sku": "sku_21128",
+        "need": "chips"
+      },
+      {
+        "name": "Let's Try Chocolate Cake Rusk",
+        "category": "Bakery & Biscuits",
+        "sku": "sku_20622",
+        "need": "cake"
+      }
+    ],
+    "gaps": 0
+  },
+  {
+    "preset": "scenario_8",
+    "household_id": "h4",
+    "confidence": 0.8,
+    "situation": "Gifting",
+    "situation_id": "festival_gifting",
+    "situation_reasoning": "Festive items",
+    "planner_label": "Gifting",
+    "suggestions": [
+      {
+        "name": "Theobroma Valentines Choco Almond Chocolate Gift Pack",
+        "category": "Sweets & Chocolates",
+        "sku": "sku_10688",
+        "need": "gift chocolate"
+      },
+      {
+        "name": "True Elements Panchmeva (Dry Fruit Mishrana)",
+        "category": "Dry Fruits & Cereals",
+        "sku": "sku_18440",
+        "need": "dry fruits"
+      },
+      {
+        "name": "Babique Penguin Plushie Stuffed Soft Toy",
+        "category": "Toy Store",
+        "sku": "sku_13762",
+        "need": "soft toy"
+      },
+      {
+        "name": "Bla Bli Blu Perfume Gift Set for Her",
+        "category": "Bath & Body",
+        "sku": "sku_6900",
+        "need": "perfume"
+      }
+    ],
+    "gaps": 0
+  },
+  {
+    "preset": "scenario_9",
+    "household_id": "h1",
+    "confidence": 0.6,
+    "situation": "Someone unwell",
+    "situation_id": "sick_at_home",
+    "situation_reasoning": "ORS in cart",
+    "planner_label": "Someone unwell",
+    "suggestions": [
+      {
+        "name": "Blue Tea Chamomile Flower Herbal Infusion",
+        "category": "Tea, Coffee & Milk Drinks",
+        "sku": "sku_24090",
+        "need": "herbal tea"
+      },
+      {
+        "name": "Liquid IV Hydration Multiplier Electrolyte Drink Mix - Lemon Lime",
+        "category": "Drinks & Juices",
+        "sku": "sku_22685",
+        "need": "electrolyte drink"
+      },
+      {
+        "name": "Parle Fab Jam-In Biscuit",
+        "category": "Bakery & Biscuits",
+        "sku": "sku_20493",
+        "need": "plain biscuits"
+      },
+      {
+        "name": "Nourish Organics Honey Crunch Muesli",
+        "category": "Dry Fruits & Cereals",
+        "sku": "sku_17837",
+        "need": "honey"
+      }
+    ],
+    "gaps": 0
+  },
+  {
+    "preset": "scenario_10",
+    "household_id": "h2",
+    "confidence": 0.7,
+    "situation": "Moving in",
+    "situation_id": "moving_in",
+    "situation_reasoning": "New home",
+    "planner_label": "Moving in",
+    "suggestions": [
+      {
+        "name": "SaveMore Lemon Dishwash Gel",
+        "category": "Cleaners & Repellents",
+        "sku": "sku_2224",
+        "need": "dishwash gel"
+      },
+      {
+        "name": "Drape My Home Noir Grid Elastic Microfiber Fitted Bedsheet (210 TC, Greyish Blue)",
+        "category": "Home & Lifestyle",
+        "sku": "sku_11573",
+        "need": "bedsheet"
+      },
+      {
+        "name": "Welspun Microfiber Double Bedsheet With 2 Pillow Covers (Green)",
+        "category": "Home & Lifestyle",
+        "sku": "sku_11610",
+        "need": "pillow"
+      },
+      {
+        "name": "HotGown Cotton Bath Towel (29.5\" x 59.1\", Blue)",
+        "category": "Home & Lifestyle",
+        "sku": "sku_11568",
+        "need": "towel"
+      }
+    ],
+    "gaps": 0
+  },
+  {
+    "preset": "scenario_11",
+    "household_id": "h3",
+    "confidence": 0.7,
+    "situation": "Back to gym",
+    "situation_id": "fitness_restart",
+    "situation_reasoning": "Protein pack",
+    "planner_label": "Back to gym",
+    "suggestions": [
+      {
+        "name": "Healthbest Chocolate Protein Milk Powder",
+        "category": "Tea, Coffee & Milk Drinks",
+        "sku": "sku_24013",
+        "need": "protein powder"
+      },
+      {
+        "name": "Liquid IV Hydration Multiplier Electrolyte Drink Mix - Lemon Lime",
+        "category": "Drinks & Juices",
+        "sku": "sku_22685",
+        "need": "electrolyte drink"
+      },
+      {
+        "name": "Jute Cottage Warli Print Water Bottle Bottle Carrier Bag",
+        "category": "Kitchenware & Appliances",
+        "sku": "sku_4340",
+        "need": "water bottle"
+      },
+      {
+        "name": "Pebble Qore 2 Fitness Tracker (Cosmic Black)",
+        "category": "Electronics",
+        "sku": "sku_19523",
+        "need": "fitness tracker"
+      }
+    ],
+    "gaps": 2
+  },
+  {
+    "preset": "scenario_12",
+    "household_id": "h4",
+    "confidence": 0.6,
+    "situation": "Home office setup",
+    "situation_id": "home_office",
+    "situation_reasoning": "Office items",
+    "planner_label": "Home office setup",
+    "suggestions": [
+      {
+        "name": "5 W USB LED Light Reading Desk Lamp (White) - HashWOW",
+        "category": "Home & Lifestyle",
+        "sku": "sku_11912",
+        "need": "desk lamp"
+      },
+      {
+        "name": "SPS 13 Pocket Expanding File Folder (Black)",
+        "category": "Stationery & Games",
+        "sku": "sku_5937",
+        "need": "file folder"
+      },
+      {
+        "name": "GOBOULT Mustang Ampvault V10 10000 mAh Power Bank",
+        "category": "Electronics",
+        "sku": "sku_19182",
+        "need": "power bank"
+      },
+      {
+        "name": "Lauret Blanc Notebook (Pink)",
+        "category": "Stationery & Games",
+        "sku": "sku_3425",
+        "need": "notebook"
+      }
+    ],
+    "gaps": 2
+  }
+]

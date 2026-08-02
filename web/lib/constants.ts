@@ -48,7 +48,7 @@ export const SCENARIO_PRESETS: ScenarioPreset[] = [
     id: "scenario_2",
     label: "Scenario 2",
     householdId: "h2",
-    skuIds: ["sku_7488", "sku_15192", "sku_17135"],
+    skuIds: ["sku_7488", "sku_15192", "sku_17135", "sku_11541"],
   },
   {
     id: "scenario_3",
@@ -60,7 +60,7 @@ export const SCENARIO_PRESETS: ScenarioPreset[] = [
     id: "scenario_4",
     label: "Scenario 4",
     householdId: "h4",
-    skuIds: ["sku_13951", "sku_13980", "sku_14202", "sku_11521"],
+    skuIds: ["sku_13951", "sku_13980", "sku_14202", "sku_18548"],
   },
   {
     id: "scenario_5",
@@ -72,7 +72,7 @@ export const SCENARIO_PRESETS: ScenarioPreset[] = [
     id: "scenario_6",
     label: "Scenario 6",
     householdId: "h2",
-    skuIds: ["sku_20901", "sku_9712", "sku_20905", "sku_3889"],
+    skuIds: ["sku_20901", "sku_9712", "sku_20910", "sku_3889", "sku_4719"],
   },
   {
     id: "scenario_7",
@@ -96,13 +96,13 @@ export const SCENARIO_PRESETS: ScenarioPreset[] = [
     id: "scenario_10",
     label: "Scenario 10",
     householdId: "h2",
-    skuIds: ["sku_11702", "sku_12100", "sku_2087", "sku_8488"],
+    skuIds: ["sku_11702", "sku_12100", "sku_2087", "sku_28965"],
   },
   {
     id: "scenario_11",
     label: "Scenario 11",
     householdId: "h3",
-    skuIds: ["sku_24002", "sku_17330", "sku_1324"],
+    skuIds: ["sku_24002", "sku_17330", "sku_1324", "sku_22546"],
   },
   {
     id: "scenario_12",
