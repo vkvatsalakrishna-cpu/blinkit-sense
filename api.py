@@ -196,6 +196,10 @@ def catalog(
     q: str | None = Query(default=None),
     location: str | None = Query(default=None),
     sku_id: str | None = Query(default=None),
+    min_price: int | None = Query(default=None, ge=0),
+    max_price: int | None = Query(default=None, ge=0),
+    sort: str | None = Query(default=None),
+    limit: int = Query(default=50, ge=1, le=100),
 ) -> list[dict[str, Any]]:
     items = load_catalog()
     if sku_id:
@@ -204,10 +208,21 @@ def catalog(
         items = [item for item in items if item.get("category") == category]
     if location:
         items = [item for item in items if location in item.get("available_in", [])]
+    if min_price is not None:
+        items = [item for item in items if int(item.get("price", 0)) >= min_price]
+    if max_price is not None:
+        items = [item for item in items if int(item.get("price", 0)) <= max_price]
     if q:
         needle = q.casefold()
         items = [item for item in items if needle in item.get("name", "").casefold()]
-    return items[:50]
+    if sort == "popularity_rank":
+        items.sort(
+            key=lambda item: (
+                item.get("popularity_rank") is None,
+                item.get("popularity_rank") if item.get("popularity_rank") is not None else 0,
+            )
+        )
+    return items[:limit]
 
 
 @app.post("/situations")

@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { CategoryBrowseModal } from "./CategoryBrowseModal";
 import { ProductImage } from "./ProductImage";
 import {
   canAdvanceOption,
   suggestionRowKey,
 } from "@/lib/suggestions";
-import type { Product, SelectedSuggestion } from "@/lib/types";
+import type { CategoryBrowseFilter, Product, SelectedSuggestion } from "@/lib/types";
 
 interface SuggestionsPanelProps {
   situationLabel: string;
@@ -25,6 +25,53 @@ interface SuggestionsPanelProps {
   hasReserve?: boolean;
 }
 
+const FILTER_PILLS: {
+  filter: CategoryBrowseFilter;
+  label: string;
+  icon: ReactNode;
+}[] = [
+  {
+    filter: "budget",
+    label: "Budget",
+    icon: (
+      <span className="text-[11px] font-semibold leading-none" aria-hidden>
+        ₹
+      </span>
+    ),
+  },
+  {
+    filter: "premium",
+    label: "Premium",
+    icon: (
+      <svg className="h-3 w-3 shrink-0" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+        <path d="M8 0.5L9.2 5.4L14 6.5L9.2 7.6L8 12.5L6.8 7.6L2 6.5L6.8 5.4L8 0.5Z" />
+        <path
+          d="M13 2.5L13.6 4.6L15.5 5.2L13.6 5.8L13 7.9L12.4 5.8L10.5 5.2L12.4 4.6L13 2.5Z"
+          opacity="0.85"
+        />
+      </svg>
+    ),
+  },
+  {
+    filter: "popular",
+    label: "Trending",
+    icon: (
+      <svg className="h-3 w-3 shrink-0" viewBox="0 0 12 12" fill="none" aria-hidden>
+        <path
+          d="M2.5 9.5L9.5 2.5M9.5 2.5H5.5M9.5 2.5V6.5"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+];
+
+const filterPillClassName =
+  "inline-flex items-center gap-1 rounded-full border border-[#0C831F]/25 bg-white px-2.5 py-1 text-xs font-medium text-blinkit-green transition-colors hover:border-blinkit-green hover:bg-blinkit-green/[0.08]";
+
 export function SuggestionsPanel({
   situationLabel,
   suggestions,
@@ -40,7 +87,10 @@ export function SuggestionsPanel({
   newCategoryTiles,
   hasReserve = false,
 }: SuggestionsPanelProps) {
-  const [browseCategory, setBrowseCategory] = useState<string | null>(null);
+  const [browse, setBrowse] = useState<{
+    category: string;
+    filter: CategoryBrowseFilter;
+  } | null>(null);
   const visible = suggestions.filter((s) => !s.dismissed);
   const selected = visible.filter((s) => s.checked);
   const addTotal = selected.reduce(
@@ -132,17 +182,25 @@ export function SuggestionsPanel({
                     {s.item.quantity_reasoning}
                   </p>
                 ) : null}
-                <p className="mt-0.5 text-xs text-gray-500">
+                <div className="mt-2 flex flex-wrap items-center gap-1.5">
+                  {FILTER_PILLS.map(({ filter, label, icon }) => (
+                    <button
+                      key={filter}
+                      type="button"
+                      onClick={() =>
+                        setBrowse({ category: s.item.category, filter })
+                      }
+                      className={filterPillClassName}
+                    >
+                      {icon}
+                      {label}
+                    </button>
+                  ))}
+                </div>
+                <p className="mt-1.5 text-xs text-gray-500">
                   {product.brand}
                   {product.unit ? ` · ${product.unit}` : ""}
                 </p>
-                <button
-                  type="button"
-                  onClick={() => setBrowseCategory(s.item.category)}
-                  className="mt-1 text-xs font-medium text-blinkit-green hover:underline"
-                >
-                  More from this category
-                </button>
                 <div className="mt-2 flex items-center justify-between">
                   <div className="flex items-center rounded-lg border border-gray-200">
                     <button
@@ -216,11 +274,12 @@ export function SuggestionsPanel({
         </p>
       ))}
 
-      {browseCategory && (
+      {browse && (
         <CategoryBrowseModal
-          category={browseCategory}
+          category={browse.category}
+          filter={browse.filter}
           catalogLocation={catalogLocation}
-          onClose={() => setBrowseCategory(null)}
+          onClose={() => setBrowse(null)}
           onAdd={onAddProductToCart}
         />
       )}

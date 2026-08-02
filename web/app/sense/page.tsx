@@ -6,7 +6,6 @@ import { Header } from "@/components/Header";
 import { OrderConfirmation } from "@/components/OrderConfirmation";
 import { ScenarioSelector } from "@/components/ScenarioSelector";
 import {
-  BUDGET_CEILING,
   SenseIntro,
   SituationPanel,
   type SituationPanelInitialState,
@@ -244,7 +243,6 @@ export default function SensePage() {
     situationId: string,
     label: string,
     promptContext?: string,
-    budget?: { min_price?: number; max_price?: number },
   ) => {
     if (!household) return;
     setFlowError(null);
@@ -258,8 +256,6 @@ export default function SensePage() {
         location,
         situation_label: situationId === "custom" ? label : undefined,
         prompt_context: promptContext,
-        min_price: budget?.min_price,
-        max_price: budget?.max_price,
       });
 
       const productMap = await Promise.all(
@@ -292,18 +288,16 @@ export default function SensePage() {
 
   const handleSituationSubmit = (payload: SituationSubmitPayload) => {
     setSavedSituationSubmit(payload);
-    const { selection, min_price, max_price } = payload;
-    const budget = { min_price, max_price };
+    const { selection } = payload;
     if (selection.kind === "custom") {
       runNeeds(
         "custom",
         selection.text,
         `The customer described their situation as: ${selection.text}`,
-        budget,
       );
       return;
     }
-    runNeeds(selection.candidate.id, selection.candidate.label, undefined, budget);
+    runNeeds(selection.candidate.id, selection.candidate.label);
   };
 
   const handleBackToSituations = () => {
@@ -458,8 +452,6 @@ export default function SensePage() {
         savedSituationSubmit.selection.kind === "custom"
           ? savedSituationSubmit.selection.text
           : "",
-      budgetMin: savedSituationSubmit.min_price ?? 0,
-      budgetMax: savedSituationSubmit.max_price ?? BUDGET_CEILING,
     };
   }, [savedSituationSubmit]);
 

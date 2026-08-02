@@ -3,50 +3,17 @@
 import { useState } from "react";
 import type { SituationCandidate } from "@/lib/types";
 
-export const BUDGET_CEILING = 5000;
-
-export function budgetFilterPayload(
-  min: number,
-  max: number,
-): { min_price?: number; max_price?: number } {
-  const payload: { min_price?: number; max_price?: number } = {};
-  if (min > 0) payload.min_price = min;
-  if (max < BUDGET_CEILING) payload.max_price = max;
-  return payload;
-}
-
-type BudgetChipId = "any" | "under300" | "mid" | "over1000";
-
-const BUDGET_CHIPS: { id: BudgetChipId; label: string; min: number; max: number }[] = [
-  { id: "any", label: "Any", min: 0, max: BUDGET_CEILING },
-  { id: "under300", label: "Under ₹300", min: 0, max: 300 },
-  { id: "mid", label: "₹300–1,000", min: 300, max: 1000 },
-  { id: "over1000", label: "₹1,000+", min: 1000, max: BUDGET_CEILING },
-];
-
-function budgetChipFromMinMax(min: number, max: number): BudgetChipId {
-  if (min === 0 && max >= BUDGET_CEILING) return "any";
-  if (min === 0 && max === 300) return "under300";
-  if (min === 300 && max === 1000) return "mid";
-  if (min === 1000 && max >= BUDGET_CEILING) return "over1000";
-  return "any";
-}
-
 export type SituationSelection =
   | { kind: "candidate"; candidate: SituationCandidate }
   | { kind: "custom"; text: string };
 
 export type SituationSubmitPayload = {
   selection: SituationSelection;
-  min_price?: number;
-  max_price?: number;
 };
 
 export type SituationPanelInitialState = {
   selection: SituationSelection;
   customText: string;
-  budgetMin: number;
-  budgetMax: number;
 };
 
 interface SituationPanelProps {
@@ -128,12 +95,6 @@ export function SituationPanel({
   const [customText, setCustomText] = useState(
     () => initialState?.customText ?? "",
   );
-  const [budgetChip, setBudgetChip] = useState<BudgetChipId>(() =>
-    budgetChipFromMinMax(
-      initialState?.budgetMin ?? 0,
-      initialState?.budgetMax ?? BUDGET_CEILING,
-    ),
-  );
 
   const isSelected = (candidate: SituationCandidate) =>
     selection.kind === "candidate" && selection.candidate.id === candidate.id;
@@ -143,15 +104,12 @@ export function SituationPanel({
     (selection.kind === "custom" && customText.trim().length > 0);
 
   const handleSubmit = () => {
-    const chip = BUDGET_CHIPS.find((c) => c.id === budgetChip)!;
-    const budget = budgetFilterPayload(chip.min, chip.max);
     if (selection.kind === "custom") {
       onSubmit({
         selection: { kind: "custom", text: customText.trim() },
-        ...budget,
       });
     } else {
-      onSubmit({ selection, ...budget });
+      onSubmit({ selection });
     }
   };
 
@@ -217,30 +175,6 @@ export function SituationPanel({
               : "border-gray-200"
           }`}
         />
-      </div>
-
-      <div className="space-y-2">
-        <p className="text-xs font-medium text-gray-600">Budget</p>
-        <div className="flex flex-wrap gap-2">
-          {BUDGET_CHIPS.map((chip) => {
-            const selected = budgetChip === chip.id;
-            return (
-              <button
-                key={chip.id}
-                type="button"
-                disabled={loading}
-                onClick={() => setBudgetChip(chip.id)}
-                className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors disabled:opacity-50 ${
-                  selected
-                    ? "border-blinkit-green bg-blinkit-green/10 text-blinkit-green"
-                    : "border-blinkit-green/30 bg-white text-gray-600"
-                }`}
-              >
-                {chip.label}
-              </button>
-            );
-          })}
-        </div>
       </div>
 
       <button

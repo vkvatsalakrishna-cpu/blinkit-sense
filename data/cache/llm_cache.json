@@ -397,5 +397,207 @@
       }
     ],
     "unavailable": []
+  },
+  "19cf471bce03bd2b3ce696d72bf668d8c288384b36586d89c57cb957fe10d8bf": {
+    "situation_label": "Birthday Celebration",
+    "needs": [
+      {
+        "role": "Food",
+        "need": "cake",
+        "quantity_reasoning": "One cake typically serves the birthday crowd",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      },
+      {
+        "role": "Gifts",
+        "need": "gift chocolate",
+        "quantity_reasoning": "A single premium chocolate works as a small present",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Gifts",
+        "need": "dry fruits",
+        "quantity_reasoning": "Enough dry fruits to pack a modest gift box",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Gifts",
+        "need": "perfume",
+        "quantity_reasoning": "One bottle serves as a personal birthday gift",
+        "expected_tiles": [
+          "Beauty & Cosmetics"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "chips",
+        "quantity_reasoning": "A single pack satisfies casual snacking for guests",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Beverages",
+        "need": "soft drink",
+        "quantity_reasoning": "One bottle can be shared among several guests",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Party",
+        "need": "soft toy",
+        "quantity_reasoning": "A small toy makes a cute party favor",
+        "expected_tiles": [
+          "Toy Store"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "4700328ca403fc5791c261e09b26264eaab3ff7fc95c8be3139edb7c1a566516": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "festival_gifting",
+        "label": "Gifting",
+        "reasoning": "Gift set suggests present for someone",
+        "score": 0.85
+      },
+      {
+        "id": "self_care_night",
+        "label": "Self-care night",
+        "reasoning": "Heating pad and tea for personal relaxation",
+        "score": 0.78
+      },
+      {
+        "id": "sick_at_home",
+        "label": "Someone unwell",
+        "reasoning": "Heating pad indicates comfort for illness",
+        "score": 0.65
+      },
+      {
+        "id": "care_package",
+        "label": "Care package",
+        "reasoning": "Mix of comfort items for a loved one",
+        "score": 0.55
+      }
+    ]
+  },
+  "9734b30d742f94e86077cc03657a6853ee7de5090d5aa7cb473cd8a1277f14e1": {
+    "situation_label": "Caring for a Sick Person",
+    "needs": [
+      {
+        "role": "Nutrition",
+        "need": "instant soup",
+        "quantity_reasoning": "One pack provides enough servings for several meals while recovering",
+        "expected_tiles": [
+          "Instant Food"
+        ]
+      },
+      {
+        "role": "Hydration",
+        "need": "ginger tea",
+        "quantity_reasoning": "One pack supplies warm fluid to soothe and hydrate",
+        "expected_tiles": [
+          "Tea, Coffee & Milk Drinks"
+        ]
+      },
+      {
+        "role": "Nutrition",
+        "need": "lassi",
+        "quantity_reasoning": "One bottle offers probiotic drink for easy digestion",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Comfort Food",
+        "need": "cream biscuit",
+        "quantity_reasoning": "One pack gives light snack that’s easy to chew",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      },
+      {
+        "role": "Nutrition",
+        "need": "honey",
+        "quantity_reasoning": "One jar can be used to sweeten drinks and soothe throat",
+        "expected_tiles": [
+          "Sauces & Spreads"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "detergent powder",
+        "quantity_reasoning": "One pack handles dish cleaning for the whole recovery period",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "2326cf76cd34ddcf0b93063d8f8dd879323f852723a777d55ae4400e1a9e270e": {
+    "situation_label": "All‑night study or work deadline",
+    "needs": [
+      {
+        "role": "Caffeine",
+        "need": "instant coffee",
+        "quantity_reasoning": "One pack provides enough caffeine for the night",
+        "expected_tiles": [
+          "Tea, Coffee & Milk Drinks"
+        ]
+      },
+      {
+        "role": "Meal",
+        "need": "instant noodles",
+        "quantity_reasoning": "One serving satisfies a quick meal between study sessions",
+        "expected_tiles": [
+          "Instant Food"
+        ]
+      },
+      {
+        "role": "Snack",
+        "need": "chips",
+        "quantity_reasoning": "A single bag curbs hunger during short breaks",
+        "expected_tiles": [
+          "Chips & Namkeen"
+        ]
+      },
+      {
+        "role": "Sweet",
+        "need": "chocolate",
+        "quantity_reasoning": "A piece gives a sweet energy lift",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Energy",
+        "need": "energy bar",
+        "quantity_reasoning": "One bar supplies sustained energy without a break",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Writing",
+        "need": "pen",
+        "quantity_reasoning": "One pen is sufficient for note‑taking throughout the night",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      }
+    ],
+    "unavailable": [
+      "Health & Pharma",
+      "Baby Care"
+    ]
   }
 }

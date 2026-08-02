@@ -63,12 +63,29 @@ export async function fetchHouseholds(): Promise<Household[]> {
 export async function fetchCatalogByCategory(
   category: string,
   location: string,
-  limit = 24,
+  options: {
+    limit?: number;
+    min_price?: number;
+    max_price?: number;
+    sort?: "popularity_rank";
+  } = {},
 ): Promise<Product[]> {
-  const items = await apiFetch<Product[]>(
-    `/catalog?category=${encodeURIComponent(category)}&location=${encodeURIComponent(location)}`,
-  );
-  return items.slice(0, limit);
+  const params = new URLSearchParams({
+    category,
+    location,
+  });
+  const limit = options.limit ?? 24;
+  params.set("limit", String(limit));
+  if (options.min_price != null) {
+    params.set("min_price", String(options.min_price));
+  }
+  if (options.max_price != null) {
+    params.set("max_price", String(options.max_price));
+  }
+  if (options.sort) {
+    params.set("sort", options.sort);
+  }
+  return apiFetch<Product[]>(`/catalog?${params.toString()}`);
 }
 
 export async function fetchCatalogProduct(

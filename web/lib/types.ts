@@ -9,7 +9,10 @@ export interface Product {
   available_in: string[];
   image_url?: string;
   blinkit_product_id?: string;
+  popularity_rank?: number | null;
 }
+
+export type CategoryBrowseFilter = "budget" | "premium" | "popular";
 
 export interface CartLine {
   sku_id: string;

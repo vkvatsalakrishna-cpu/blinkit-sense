@@ -1,12 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ProductImage } from "./ProductImage";
 import { fetchCatalogByCategory, friendlyError } from "@/lib/api";
-import type { Product } from "@/lib/types";
+import type { CategoryBrowseFilter, Product } from "@/lib/types";
+
+const FILTER_LABELS: Record<CategoryBrowseFilter, string> = {
+  budget: "Budget",
+  premium: "Premium",
+  popular: "Trending",
+};
 
 interface CategoryBrowseModalProps {
   category: string;
+  filter: CategoryBrowseFilter;
   catalogLocation: string;
   onClose: () => void;
   onAdd: (product: Product) => void;
@@ -14,6 +21,7 @@ interface CategoryBrowseModalProps {
 
 export function CategoryBrowseModal({
   category,
+  filter,
   catalogLocation,
   onClose,
   onAdd,
@@ -22,12 +30,26 @@ export function CategoryBrowseModal({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const query = useMemo(() => {
+    const base = {
+      limit: 24,
+      sort: "popularity_rank" as const,
+    };
+    if (filter === "budget") {
+      return { ...base, max_price: 249 };
+    }
+    if (filter === "premium") {
+      return { ...base, min_price: 801 };
+    }
+    return base;
+  }, [filter]);
+
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
     setError(null);
 
-    fetchCatalogByCategory(category, catalogLocation, 24)
+    fetchCatalogByCategory(category, catalogLocation, query)
       .then((items) => {
         if (!cancelled) setProducts(items);
       })
@@ -41,7 +63,7 @@ export function CategoryBrowseModal({
     return () => {
       cancelled = true;
     };
-  }, [category, catalogLocation]);
+  }, [category, catalogLocation, query]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -50,6 +72,8 @@ export function CategoryBrowseModal({
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [onClose]);
+
+  const filterLabel = FILTER_LABELS[filter];
 
   return (
     <div
@@ -66,7 +90,7 @@ export function CategoryBrowseModal({
         <div className="flex items-start justify-between gap-3 border-b border-gray-100 px-4 py-3">
           <div>
             <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
-              More from this category
+              {filterLabel}
             </p>
             <h2 id="category-browse-title" className="text-lg font-semibold text-gray-900">
               {category}
