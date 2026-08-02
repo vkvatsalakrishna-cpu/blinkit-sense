@@ -32,6 +32,33 @@ GENERIC_WORDS = frozenset(
     }
 )
 ACCESSORY_HINTS = frozenset({"scooper", "scoop", "tray", "brush", "spray", "refill"})
+# Flavour / colour tokens stripped when comparing cart variants (same brand + product type).
+_VARIANT_FLAVOR_TOKENS = frozenset(
+    {
+        "orange",
+        "apple",
+        "lemon",
+        "lime",
+        "mango",
+        "nimbu",
+        "jeera",
+        "pineapple",
+        "mixed",
+        "fruit",
+        "strawberry",
+        "blueberry",
+        "grape",
+        "peach",
+        "watermelon",
+        "coconut",
+        "vanilla",
+        "masala",
+        "classic",
+        "original",
+        "regular",
+        "paani",
+    }
+)
 GAP_MESSAGE = "We don't stock this — you'll need it elsewhere."
 SENSITIVE_CATEGORIES = frozenset({"Health & Pharma", "Baby Care"})
 SENSITIVE_GUIDANCE = {
@@ -171,8 +198,15 @@ IMPLAUSIBLE_TILES: dict[str, frozenset[str]] = {
     "fitness_restart": _SPECIALTY_STORES | _PERSONAL_SENSITIVE | _JUNK_FOOD | frozenset({"Baby Care"}),
     "sick_at_home": _SPECIALTY_STORES
     | _PERSONAL_SENSITIVE
-    | _JUNK_FOOD
-    | frozenset({"Electronics", "Stationery & Games"}),
+    | frozenset(
+        {
+            "Chips & Namkeen",
+            "Sweets & Chocolates",
+            "Ice Creams & More",
+            "Electronics",
+            "Stationery & Games",
+        }
+    ),
     "new_baby": frozenset(
         {
             "Pet Store",
@@ -774,6 +808,61 @@ def _owned_skus(household: dict) -> dict[str, int]:
     }
 
 
+def _cart_product_core_tokens(item: dict) -> frozenset[str]:
+    brand = (item.get("brand") or "").lower().strip()
+    name = re.sub(r"\([^)]*\)", " ", item.get("name", ""))
+    tokens = set(_tokenize_need(name))
+    if brand and brand != "unknown":
+        tokens -= set(_tokenize_need(brand))
+    tokens -= _VARIANT_FLAVOR_TOKENS
+    tokens -= GENERIC_WORDS
+    return frozenset(tokens)
+
+
+def _cart_variant_match(candidate: dict, cart_item: dict) -> bool:
+    """True when candidate is a flavour/size variant of something already in cart."""
+    brand_a = (candidate.get("brand") or "").lower().strip()
+    brand_b = (cart_item.get("brand") or "").lower().strip()
+    if not brand_a or not brand_b or brand_a == "unknown" or brand_b == "unknown":
+        return False
+    if brand_a != brand_b:
+        return False
+
+    core_a = _cart_product_core_tokens(candidate)
+    core_b = _cart_product_core_tokens(cart_item)
+    if not core_a or not core_b:
+        return False
+    if core_a == core_b:
+        return True
+
+    overlap = len(core_a & core_b)
+    union = len(core_a | core_b)
+    return union > 0 and overlap / union >= 0.75
+
+
+def _is_cart_duplicate(
+    entry: dict,
+    *,
+    by_id: dict[str, dict],
+    cart_skus: set[str],
+    cart_blinkit_ids: set[str],
+    cart_products: list[dict],
+) -> bool:
+    sku_id = entry["resolved_sku"]
+    if sku_id in cart_skus:
+        return True
+
+    product = by_id.get(sku_id)
+    if product is None:
+        return False
+
+    blinkit_id = product.get("blinkit_product_id")
+    if blinkit_id is not None and str(blinkit_id) in cart_blinkit_ids:
+        return True
+
+    return any(_cart_variant_match(product, cart_item) for cart_item in cart_products)
+
+
 def _gap_entry(need: dict, message: str = GAP_MESSAGE) -> dict:
     return {
         "role": need.get("role", ""),
@@ -930,6 +1019,16 @@ def apply_household_filter(
     owned = _owned_skus(household)
     cart_skus = set(household.get("current_cart", []))
     tiles_bought = purchased_tiles(household, catalog)
+    cart_tiles = {
+        by_id[sku]["category"] for sku in cart_skus if sku in by_id
+    }
+    tiles_known = tiles_bought | cart_tiles
+    cart_products = [by_id[sku] for sku in cart_skus if sku in by_id]
+    cart_blinkit_ids = {
+        str(by_id[sku]["blinkit_product_id"])
+        for sku in cart_skus
+        if sku in by_id and by_id[sku].get("blinkit_product_id") is not None
+    }
 
     cart_subtotal = sum(
         by_id[sku]["price"] for sku in household.get("current_cart", []) if sku in by_id
@@ -957,12 +1056,22 @@ def apply_household_filter(
 
         flagged = dict(entry)
         flagged["flag"] = (
-            "new_category" if category not in tiles_bought else "deepening"
+            "new_category" if category not in tiles_known else "deepening"
         )
         items.append(flagged)
 
     items.sort(key=lambda item: item.get("match_score", 0), reverse=True)
-    items = [item for item in items if item["resolved_sku"] not in cart_skus]
+    items = [
+        item
+        for item in items
+        if not _is_cart_duplicate(
+            item,
+            by_id=by_id,
+            cart_skus=cart_skus,
+            cart_blinkit_ids=cart_blinkit_ids,
+            cart_products=cart_products,
+        )
+    ]
 
     if len(items) < MIN_COMPOSED_ITEMS:
         return {

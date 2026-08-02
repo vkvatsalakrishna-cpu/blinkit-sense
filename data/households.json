@@ -7,10 +7,19 @@
       "current_address": "Sarjapur, Bangalore",
       "orders_per_month": 12,
       "order_history": [
-        { "sku": "sku_022", "orders_per_month": 8 },
-        { "sku": "sku_025", "orders_per_month": 6 },
-        { "sku": "sku_023", "orders_per_month": 4 },
-        { "sku": "sku_024", "orders_per_month": 3 }
+        { "sku": "sku_022", "orders_per_month": 10 },
+        { "sku": "sku_025", "orders_per_month": 8 },
+        { "sku": "sku_253", "orders_per_month": 7 },
+        { "sku": "sku_263", "orders_per_month": 6 },
+        { "sku": "sku_023", "orders_per_month": 5 },
+        { "sku": "sku_050", "orders_per_month": 4 },
+        { "sku": "sku_7912", "orders_per_month": 4 },
+        { "sku": "sku_21116", "orders_per_month": 3 },
+        { "sku": "sku_2210", "orders_per_month": 3 },
+        { "sku": "sku_6156", "orders_per_month": 2 },
+        { "sku": "sku_13951", "orders_per_month": 2 },
+        { "sku": "sku_22155", "orders_per_month": 2 },
+        { "sku": "sku_20143", "orders_per_month": 2 }
       ],
       "current_cart": ["sku_021", "sku_022", "sku_023"]
     },
@@ -21,9 +30,10 @@
       "current_address": "Sarjapur, Bangalore",
       "orders_per_month": 8,
       "order_history": [
-        { "sku": "sku_022", "orders_per_month": 8 },
+        { "sku": "sku_022", "orders_per_month": 6 },
         { "sku": "sku_025", "orders_per_month": 5 },
-        { "sku": "sku_023", "orders_per_month": 3 }
+        { "sku": "sku_023", "orders_per_month": 4 },
+        { "sku": "sku_253", "orders_per_month": 2 }
       ],
       "current_cart": ["sku_022", "sku_025"]
     },
@@ -33,7 +43,16 @@
       "known_addresses": ["Sarjapur, Bangalore"],
       "current_address": "Sarjapur, Bangalore",
       "orders_per_month": 2,
-      "order_history": [{ "sku": "sku_022", "orders_per_month": 1 }],
+      "order_history": [
+        { "sku": "sku_022", "orders_per_month": 2 },
+        { "sku": "sku_025", "orders_per_month": 2 },
+        { "sku": "sku_253", "orders_per_month": 1 },
+        { "sku": "sku_023", "orders_per_month": 1 },
+        { "sku": "sku_21116", "orders_per_month": 1 },
+        { "sku": "sku_20143", "orders_per_month": 1 },
+        { "sku": "sku_6156", "orders_per_month": 1 },
+        { "sku": "sku_11305", "orders_per_month": 1 }
+      ],
       "current_cart": ["sku_020"]
     },
     {
@@ -43,10 +62,15 @@
       "current_address": "Sarjapur, Bangalore",
       "orders_per_month": 12,
       "order_history": [
-        { "sku": "sku_022", "orders_per_month": 10 },
-        { "sku": "sku_025", "orders_per_month": 9 },
+        { "sku": "sku_022", "orders_per_month": 12 },
+        { "sku": "sku_025", "orders_per_month": 10 },
         { "sku": "sku_026", "orders_per_month": 8 },
-        { "sku": "sku_024", "orders_per_month": 4 }
+        { "sku": "sku_023", "orders_per_month": 8 },
+        { "sku": "sku_050", "orders_per_month": 6 },
+        { "sku": "sku_052", "orders_per_month": 5 },
+        { "sku": "sku_044", "orders_per_month": 4 },
+        { "sku": "sku_024", "orders_per_month": 6 },
+        { "sku": "sku_263", "orders_per_month": 5 }
       ],
       "current_cart": ["sku_022", "sku_025", "sku_026"]
     },
@@ -57,8 +81,17 @@
       "current_address": "HSR Layout, Bangalore",
       "orders_per_month": 6,
       "order_history": [
-        { "sku": "sku_022", "orders_per_month": 6 },
-        { "sku": "sku_023", "orders_per_month": 4 }
+        { "sku": "sku_022", "orders_per_month": 5 },
+        { "sku": "sku_253", "orders_per_month": 4 },
+        { "sku": "sku_023", "orders_per_month": 3 },
+        { "sku": "sku_7912", "orders_per_month": 3 },
+        { "sku": "sku_21116", "orders_per_month": 3 },
+        { "sku": "sku_20143", "orders_per_month": 2 },
+        { "sku": "sku_22155", "orders_per_month": 2 },
+        { "sku": "sku_6156", "orders_per_month": 2 },
+        { "sku": "sku_13951", "orders_per_month": 1 },
+        { "sku": "sku_11305", "orders_per_month": 1 },
+        { "sku": "sku_3308", "orders_per_month": 1 }
       ],
       "current_cart": ["sku_022"]
     }

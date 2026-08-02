@@ -68,7 +68,7 @@
     {
       "id": "sick_at_home",
       "chip_label": "Someone unwell",
-      "prompt_context": "The customer is caring for someone unwell at home and needs soups, fluids, and easy comfort food."
+      "prompt_context": "The customer is caring for someone unwell at home. Suggest gentle recovery items only: ORS or electrolyte drink, plain soup, khichdi or rice porridge, honey, herbal or ginger tea, tissues, thermometer, and plain biscuits such as Marie or arrowroot. Instant Food is allowed only for plain soups and mild porridge — not spicy noodles, Maggi, or fried instant meals. Explicitly exclude spicy food, fried snacks, chocolate, cream biscuits, and sweet biscuits."
     },
     {
       "id": "new_baby",
