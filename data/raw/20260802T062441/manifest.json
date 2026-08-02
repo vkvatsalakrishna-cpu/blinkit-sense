@@ -1,0 +1,507 @@
+{
+  "scraped_at": "2026-08-02T06:24:41.914633+00:00",
+  "location": {
+    "name": "Sarjapur",
+    "lat": 12.912118,
+    "lon": 77.644554,
+    "pincode": "560102"
+  },
+  "source": "/Users/vatsalakrishna/Desktop/Blinkit_Project/blinkit-sense/data/category_urls.json",
+  "skipped_categories": [
+    "Atta, Rice & Dal",
+    "Baby Care",
+    "Bakery & Biscuits",
+    "Bath & Body",
+    "Chicken, Meat & Fish",
+    "Chips & Namkeen",
+    "Cleaners & Repellents",
+    "Dairy, Bread & Eggs",
+    "Drinks & Juices",
+    "E-Gifts Store",
+    "Feminine Hygiene",
+    "Health & Pharma",
+    "Home & Lifestyle",
+    "Ice Creams & More",
+    "Instant Food",
+    "Kitchenware & Appliances",
+    "Oil, Ghee & Masala",
+    "Pet Store",
+    "Sauces & Spreads",
+    "Sports Store",
+    "Stationery & Games",
+    "Sweets & Chocolates",
+    "Tea, Coffee & Milk Drinks",
+    "Vegetables & Fruits"
+  ],
+  "skipped_subcategories": [],
+  "collections": [
+    {
+      "category": "Toy Store",
+      "subcategory": "Toys & Games",
+      "url": "https://blinkit.com/dc/stationery-games/toys-games/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjU%3D&collection_group_id=12256",
+      "product_count": 198,
+      "pages_fetched": 16,
+      "file": "00_toys-games.json",
+      "status": "ok"
+    },
+    {
+      "category": "Hair",
+      "subcategory": "Shampoo",
+      "url": "https://blinkit.com/dc/hair/shampoo/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDU%3D&collection_group_id=12014",
+      "product_count": 199,
+      "pages_fetched": 16,
+      "file": "01_shampoo.json",
+      "status": "ok"
+    },
+    {
+      "category": "Hair",
+      "subcategory": "Conditioner",
+      "url": "https://blinkit.com/dc/hair/conditioner/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDU%3D&collection_group_id=12015&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Conditioner&collection_name=Hair",
+      "product_count": 165,
+      "pages_fetched": 14,
+      "file": "02_conditioner.json",
+      "status": "ok"
+    },
+    {
+      "category": "Hair",
+      "subcategory": "Hair Colour",
+      "url": "https://blinkit.com/dc/hair/hair-colour/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDU%3D&collection_group_id=135472&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Hair+Colour&collection_name=Hair",
+      "product_count": 190,
+      "pages_fetched": 16,
+      "file": "03_hair-colour.json",
+      "status": "ok"
+    },
+    {
+      "category": "Hair",
+      "subcategory": "Hair Oil & Cream",
+      "url": "https://blinkit.com/dc/hair/hair-oil-cream/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDU%3D&collection_group_id=11659&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Hair+Oil+%26+Cream&collection_name=Hair",
+      "product_count": 197,
+      "pages_fetched": 16,
+      "file": "04_hair-oil-cream.json",
+      "status": "ok"
+    },
+    {
+      "category": "Hair",
+      "subcategory": "Hair Serums",
+      "url": "https://blinkit.com/dc/hair/hair-serums/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDU%3D&collection_group_id=135473&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Hair+Serums&collection_name=Hair",
+      "product_count": 190,
+      "pages_fetched": 16,
+      "file": "05_hair-serums.json",
+      "status": "ok"
+    },
+    {
+      "category": "Hair",
+      "subcategory": "Hair Styling",
+      "url": "https://blinkit.com/dc/hair/hair-styling/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDU%3D&collection_group_id=11661&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Hair+Styling&collection_name=Hair",
+      "product_count": 143,
+      "pages_fetched": 12,
+      "file": "06_hair-styling.json",
+      "status": "ok"
+    },
+    {
+      "category": "Hair",
+      "subcategory": "Appliances",
+      "url": "https://blinkit.com/dc/hair/appliances/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDU%3D&collection_group_id=12018&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Appliances&collection_name=Hair",
+      "product_count": 20,
+      "pages_fetched": 5,
+      "file": "07_appliances.json",
+      "status": "ok"
+    },
+    {
+      "category": "Hair",
+      "subcategory": "Hair Accessories",
+      "url": "https://blinkit.com/dc/hair/hair-accessories/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDU%3D&collection_group_id=11662&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Hair+Accessories&collection_name=Hair",
+      "product_count": 193,
+      "pages_fetched": 16,
+      "file": "08_hair-accessories.json",
+      "status": "ok"
+    },
+    {
+      "category": "Skin & Face",
+      "subcategory": "Sunscreen",
+      "url": "https://blinkit.com/dc/skin-face/sunscreen/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDI%3D&collection_group_id=12020",
+      "product_count": 186,
+      "pages_fetched": 15,
+      "file": "09_sunscreen.json",
+      "status": "ok"
+    },
+    {
+      "category": "Skin & Face",
+      "subcategory": "Face Cleaning",
+      "url": "https://blinkit.com/dc/skin-face/face-cleaning/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDI%3D&collection_group_id=204868&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Face+Cleaning&collection_name=Skin+%26+Face",
+      "product_count": 196,
+      "pages_fetched": 16,
+      "file": "10_face-cleaning.json",
+      "status": "ok"
+    },
+    {
+      "category": "Skin & Face",
+      "subcategory": "Face Oil, Serum & Essence",
+      "url": "https://blinkit.com/dc/skin-face/face-oil-serum-essence/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDI%3D&collection_group_id=206263&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Face+Oil%2C+Serum+%26+Essence&collection_name=Skin+%26+Face",
+      "product_count": 187,
+      "pages_fetched": 15,
+      "file": "11_face-oil,-serum-essence.json",
+      "status": "ok"
+    },
+    {
+      "category": "Skin & Face",
+      "subcategory": "Face Moisturisers",
+      "url": "https://blinkit.com/dc/skin-face/face-moisturisers/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDI%3D&collection_group_id=204873&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Face+Moisturisers&collection_name=Skin+%26+Face",
+      "product_count": 192,
+      "pages_fetched": 16,
+      "file": "12_face-moisturisers.json",
+      "status": "ok"
+    },
+    {
+      "category": "Skin & Face",
+      "subcategory": "Body Lotions & Oils",
+      "url": "https://blinkit.com/dc/skin-face/body-lotions-oils/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDI%3D&collection_group_id=204875&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Body+Lotions+%26+Oils&collection_name=Skin+%26+Face",
+      "product_count": 192,
+      "pages_fetched": 16,
+      "file": "13_body-lotions-oils.json",
+      "status": "ok"
+    },
+    {
+      "category": "Skin & Face",
+      "subcategory": "Lip & Eye Care",
+      "url": "https://blinkit.com/dc/skin-face/lip-eye-care/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDI%3D&collection_group_id=204900&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Lip+%26+Eye+Care&collection_name=Skin+%26+Face",
+      "product_count": 182,
+      "pages_fetched": 16,
+      "file": "14_lip-eye-care.json",
+      "status": "ok"
+    },
+    {
+      "category": "Skin & Face",
+      "subcategory": "Face Masks & Packs",
+      "url": "https://blinkit.com/dc/skin-face/face-masks-packs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDI%3D&collection_group_id=887330&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Face+Masks+%26+Packs&collection_name=Skin+%26+Face",
+      "product_count": 190,
+      "pages_fetched": 16,
+      "file": "15_face-masks-packs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Skin & Face",
+      "subcategory": "Toners & Mists",
+      "url": "https://blinkit.com/dc/skin-face/toners-mists/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDI%3D&collection_group_id=887331&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Toners+%26+Mists&collection_name=Skin+%26+Face",
+      "product_count": 72,
+      "pages_fetched": 7,
+      "file": "16_toners-mists.json",
+      "status": "ok"
+    },
+    {
+      "category": "Skin & Face",
+      "subcategory": "Acne & Blackhead Fixers",
+      "url": "https://blinkit.com/dc/skin-face/acne-blackhead-fixers/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDI%3D&collection_group_id=887332&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Acne+%26+Blackhead+Fixers&collection_name=Skin+%26+Face",
+      "product_count": 64,
+      "pages_fetched": 8,
+      "file": "17_acne-blackhead-fixers.json",
+      "status": "ok"
+    },
+    {
+      "category": "Skin & Face",
+      "subcategory": "Men's Grooming",
+      "url": "https://blinkit.com/dc/skin-face/mens-grooming/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDI%3D&collection_group_id=204902&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Men%27s+Grooming&collection_name=Skin+%26+Face",
+      "product_count": 179,
+      "pages_fetched": 16,
+      "file": "18_men's-grooming.json",
+      "status": "ok"
+    },
+    {
+      "category": "Skin & Face",
+      "subcategory": "Women's Grooming",
+      "url": "https://blinkit.com/dc/skin-face/womens-grooming/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDI%3D&collection_group_id=204891&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Women%27s+Grooming&collection_name=Skin+%26+Face",
+      "product_count": 163,
+      "pages_fetched": 14,
+      "file": "19_women's-grooming.json",
+      "status": "ok"
+    },
+    {
+      "category": "Beauty & Cosmetics",
+      "subcategory": "Lipstick Gloss",
+      "url": "https://blinkit.com/dc/beauty-cosmetics/lipstick-gloss-/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDE%3D&collection_group_id=11672",
+      "product_count": 202,
+      "pages_fetched": 16,
+      "file": "20_lipstick-gloss.json",
+      "status": "ok"
+    },
+    {
+      "category": "Beauty & Cosmetics",
+      "subcategory": "Cleansers & Toners",
+      "url": "https://blinkit.com/dc/beauty-cosmetics/cleansers-toners/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDE%3D&collection_group_id=11671&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Cleansers+%26+Toners&collection_name=Beauty+%26+Cosmetics",
+      "product_count": 50,
+      "pages_fetched": 7,
+      "file": "21_cleansers-toners.json",
+      "status": "ok"
+    },
+    {
+      "category": "Beauty & Cosmetics",
+      "subcategory": "Foundation & Compact",
+      "url": "https://blinkit.com/dc/beauty-cosmetics/foundation-compact/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDE%3D&collection_group_id=11675&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Foundation+%26+Compact&collection_name=Beauty+%26+Cosmetics",
+      "product_count": 119,
+      "pages_fetched": 10,
+      "file": "22_foundation-compact.json",
+      "status": "ok"
+    },
+    {
+      "category": "Beauty & Cosmetics",
+      "subcategory": "Blush & Highlighter",
+      "url": "https://blinkit.com/dc/beauty-cosmetics/blush-highlighter/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDE%3D&collection_group_id=22980&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Blush+%26+Highlighter&collection_name=Beauty+%26+Cosmetics",
+      "product_count": 80,
+      "pages_fetched": 8,
+      "file": "23_blush-highlighter.json",
+      "status": "ok"
+    },
+    {
+      "category": "Beauty & Cosmetics",
+      "subcategory": "Primer & Concealer",
+      "url": "https://blinkit.com/dc/beauty-cosmetics/primer-concealer/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDE%3D&collection_group_id=11676&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Primer+%26+Concealer&collection_name=Beauty+%26+Cosmetics",
+      "product_count": 66,
+      "pages_fetched": 7,
+      "file": "24_primer-concealer.json",
+      "status": "ok"
+    },
+    {
+      "category": "Beauty & Cosmetics",
+      "subcategory": "Kajal & Eyeliners",
+      "url": "https://blinkit.com/dc/beauty-cosmetics/kajal-eyeliners/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDE%3D&collection_group_id=11673&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Kajal+%26+Eyeliners&collection_name=Beauty+%26+Cosmetics",
+      "product_count": 181,
+      "pages_fetched": 16,
+      "file": "25_kajal-eyeliners.json",
+      "status": "ok"
+    },
+    {
+      "category": "Beauty & Cosmetics",
+      "subcategory": "Bindi, Bangles & Others",
+      "url": "https://blinkit.com/dc/beauty-cosmetics/bindi-bangles-others/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDE%3D&collection_group_id=11911&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Bindi%2C+Bangles+%26+Others&collection_name=Beauty+%26+Cosmetics",
+      "product_count": 111,
+      "pages_fetched": 10,
+      "file": "26_bindi,-bangles-others.json",
+      "status": "ok"
+    },
+    {
+      "category": "Beauty & Cosmetics",
+      "subcategory": "Nail Paints & Accessories",
+      "url": "https://blinkit.com/dc/beauty-cosmetics/nail-paints-accessories/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDE%3D&collection_group_id=11674&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Nail+Paints+%26+Accessories&collection_name=Beauty+%26+Cosmetics",
+      "product_count": 196,
+      "pages_fetched": 16,
+      "file": "27_nail-paints-accessories.json",
+      "status": "ok"
+    },
+    {
+      "category": "Beauty & Cosmetics",
+      "subcategory": "Beauty Accessories",
+      "url": "https://blinkit.com/dc/beauty-cosmetics/beauty-accessories/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDE%3D&collection_group_id=13642&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Beauty+Accessories&collection_name=Beauty+%26+Cosmetics",
+      "product_count": 200,
+      "pages_fetched": 16,
+      "file": "28_beauty-accessories.json",
+      "status": "ok"
+    },
+    {
+      "category": "Beauty & Cosmetics",
+      "subcategory": "Beauty E-Card",
+      "url": "https://blinkit.com/dc/beauty-cosmetics/beauty-e-card/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDE%3D&collection_group_id=128500&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Beauty+E-Card&collection_name=Beauty+%26+Cosmetics",
+      "product_count": 5,
+      "pages_fetched": 2,
+      "file": "29_beauty-e-card.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dry Fruits & Cereals",
+      "subcategory": "Dry Fruits",
+      "url": "https://blinkit.com/dc/dry-fruits-cereals/dry-fruits/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTM%3D&collection_group_id=11599&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Dry+Fruits&collection_name=Dry+Fruits+%26+Cereals",
+      "product_count": 191,
+      "pages_fetched": 16,
+      "file": "30_dry-fruits.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dry Fruits & Cereals",
+      "subcategory": "Dry Fruits Snacks",
+      "url": "https://blinkit.com/dc/dry-fruits-cereals/dry-fruits-snacks/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTM%3D&collection_group_id=11600&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Dry+Fruits+Snacks&collection_name=Dry+Fruits+%26+Cereals",
+      "product_count": 190,
+      "pages_fetched": 16,
+      "file": "31_dry-fruits-snacks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dry Fruits & Cereals",
+      "subcategory": "Corn Flakes & Kids Cereals",
+      "url": "https://blinkit.com/dc/dry-fruits-cereals/corn-flakes-kids-cereals/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTM%3D&collection_group_id=11601&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Corn+Flakes+%26+Kids+Cereals&collection_name=Dry+Fruits+%26+Cereals",
+      "product_count": 65,
+      "pages_fetched": 7,
+      "file": "32_corn-flakes-kids-cereals.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dry Fruits & Cereals",
+      "subcategory": "Muesli & Granola",
+      "url": "https://blinkit.com/dc/dry-fruits-cereals/muesli-granola/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTM%3D&collection_group_id=11602&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Muesli+%26+Granola&collection_name=Dry+Fruits+%26+Cereals",
+      "product_count": 118,
+      "pages_fetched": 10,
+      "file": "33_muesli-granola.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dry Fruits & Cereals",
+      "subcategory": "Oats & Daliya",
+      "url": "https://blinkit.com/dc/dry-fruits-cereals/oats-daliya/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTM%3D&collection_group_id=11603&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Oats+%26+Daliya&collection_name=Dry+Fruits+%26+Cereals",
+      "product_count": 146,
+      "pages_fetched": 13,
+      "file": "34_oats-daliya.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dry Fruits & Cereals",
+      "subcategory": "Dates",
+      "url": "https://blinkit.com/dc/dry-fruits-cereals/dates/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTM%3D&collection_group_id=892781&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Dates&collection_name=Dry+Fruits+%26+Cereals",
+      "product_count": 157,
+      "pages_fetched": 13,
+      "file": "35_dates.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dry Fruits & Cereals",
+      "subcategory": "Seeds",
+      "url": "https://blinkit.com/dc/dry-fruits-cereals/seeds/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTM%3D&collection_group_id=892782&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Seeds&collection_name=Dry+Fruits+%26+Cereals",
+      "product_count": 188,
+      "pages_fetched": 16,
+      "file": "36_seeds.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dry Fruits & Cereals",
+      "subcategory": "Vermicelli & Poha",
+      "url": "https://blinkit.com/dc/dry-fruits-cereals/vermicelli-poha/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTM%3D&collection_group_id=11606&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Vermicelli+%26+Poha&collection_name=Dry+Fruits+%26+Cereals",
+      "product_count": 63,
+      "pages_fetched": 7,
+      "file": "37_vermicelli-poha.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dry Fruits & Cereals",
+      "subcategory": "Organic & Premium",
+      "url": "https://blinkit.com/dc/dry-fruits-cereals/organic-premium/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTM%3D&collection_group_id=11605&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Organic+%26+Premium&collection_name=Dry+Fruits+%26+Cereals",
+      "product_count": 190,
+      "pages_fetched": 16,
+      "file": "38_organic-premium.json",
+      "status": "ok"
+    },
+    {
+      "category": "Dry Fruits & Cereals",
+      "subcategory": "Dry Fruit Gift Packs",
+      "url": "https://blinkit.com/dc/dry-fruits-cereals/dry-fruit-gift-packs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTM%3D&collection_group_id=12734&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Dry+Fruit+Gift+Packs&collection_name=Dry+Fruits+%26+Cereals",
+      "product_count": 50,
+      "pages_fetched": 7,
+      "file": "39_dry-fruit-gift-packs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Electronics",
+      "subcategory": "Trimmers Hair Appliances",
+      "url": "https://blinkit.com/dc/electronics/trimmers-hair-appliances/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjY%3D&collection_group_id=11728",
+      "product_count": 182,
+      "pages_fetched": 15,
+      "file": "40_trimmers-hair-appliances.json",
+      "status": "ok"
+    },
+    {
+      "category": "Electronics",
+      "subcategory": "Earphones & Headsets",
+      "url": "https://blinkit.com/dc/electronics/earphones-headsets/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjY%3D&collection_group_id=17702&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=true&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Earphones+%26+Headsets&collection_name=Electronics",
+      "product_count": 203,
+      "pages_fetched": 16,
+      "file": "41_earphones-headsets.json",
+      "status": "ok"
+    },
+    {
+      "category": "Electronics",
+      "subcategory": "Speakers",
+      "url": "https://blinkit.com/dc/electronics/speakers/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjY%3D&collection_group_id=12249&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=true&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Speakers&collection_name=Electronics",
+      "product_count": 136,
+      "pages_fetched": 12,
+      "file": "42_speakers.json",
+      "status": "ok"
+    },
+    {
+      "category": "Electronics",
+      "subcategory": "Mobile & Computer",
+      "url": "https://blinkit.com/dc/electronics/mobile-computer/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjY%3D&collection_group_id=11723&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=true&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Mobile+%26+Computer&collection_name=Electronics",
+      "product_count": 194,
+      "pages_fetched": 16,
+      "file": "43_mobile-computer.json",
+      "status": "ok"
+    },
+    {
+      "category": "Electronics",
+      "subcategory": "Decorative Lights",
+      "url": "https://blinkit.com/dc/electronics/decorative-lights/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjY%3D&collection_group_id=11724&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=true&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Decorative+Lights&collection_name=Electronics",
+      "product_count": 197,
+      "pages_fetched": 16,
+      "file": "44_decorative-lights.json",
+      "status": "ok"
+    },
+    {
+      "category": "Electronics",
+      "subcategory": "Chargers & Cables",
+      "url": "https://blinkit.com/dc/electronics/chargers-cables/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjY%3D&collection_group_id=98396&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=true&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Chargers+%26+Cables&collection_name=Electronics",
+      "product_count": 194,
+      "pages_fetched": 16,
+      "file": "45_chargers-cables.json",
+      "status": "ok"
+    },
+    {
+      "category": "Electronics",
+      "subcategory": "Smart Watches",
+      "url": "https://blinkit.com/dc/electronics/smart-watches/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjY%3D&collection_group_id=12250&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=true&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Smart+Watches&collection_name=Electronics",
+      "product_count": 157,
+      "pages_fetched": 13,
+      "file": "46_smart-watches.json",
+      "status": "ok"
+    },
+    {
+      "category": "Electronics",
+      "subcategory": "Kitchen Appliances",
+      "url": "https://blinkit.com/dc/electronics/kitchen-appliances/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjY%3D&collection_group_id=628148&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=true&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Kitchen+Appliances&collection_name=Electronics",
+      "product_count": 193,
+      "pages_fetched": 16,
+      "file": "47_kitchen-appliances.json",
+      "status": "ok"
+    },
+    {
+      "category": "Electronics",
+      "subcategory": "Laptop & Mobile Phones",
+      "url": "https://blinkit.com/dc/electronics/laptop-mobile-phones/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjY%3D&collection_group_id=349680&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=true&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Laptop+%26+Mobile+Phones&collection_name=Electronics",
+      "product_count": 36,
+      "pages_fetched": 5,
+      "file": "48_laptop-mobile-phones.json",
+      "status": "ok"
+    },
+    {
+      "category": "Electronics",
+      "subcategory": "Batteries",
+      "url": "https://blinkit.com/dc/electronics/batteries/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjY%3D&collection_group_id=12248&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=true&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Batteries&collection_name=Electronics",
+      "product_count": 65,
+      "pages_fetched": 7,
+      "file": "49_batteries.json",
+      "status": "ok"
+    },
+    {
+      "category": "Electronics",
+      "subcategory": "Extension Cables & Accessories",
+      "url": "https://blinkit.com/dc/electronics/extension-cables-accessories/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjY%3D&collection_group_id=11726&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=true&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Extension+Cables+%26+Accessories&collection_name=Electronics",
+      "product_count": 180,
+      "pages_fetched": 16,
+      "file": "50_extension-cables-accessories.json",
+      "status": "ok"
+    },
+    {
+      "category": "Electronics",
+      "subcategory": "Home Appliances",
+      "url": "https://blinkit.com/dc/electronics/home-appliances/?collection_uuid=OTg3NjU0MzIxMjM0NTMzMjY%3D&collection_group_id=11727&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=true&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Home+Appliances&collection_name=Electronics",
+      "product_count": 209,
+      "pages_fetched": 16,
+      "file": "51_home-appliances.json",
+      "status": "ok"
+    }
+  ]
+}

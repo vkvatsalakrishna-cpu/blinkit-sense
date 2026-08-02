@@ -1,0 +1,107 @@
+[1/52] Toy Store / Toys & Games
+  → 198 products (16 pages)
+[2/52] Hair / Shampoo
+  → 199 products (16 pages)
+[3/52] Hair / Conditioner
+  → 165 products (14 pages)
+[4/52] Hair / Hair Colour
+  → 190 products (16 pages)
+[5/52] Hair / Hair Oil & Cream
+  → 197 products (16 pages)
+[6/52] Hair / Hair Serums
+  → 190 products (16 pages)
+[7/52] Hair / Hair Styling
+  → 143 products (12 pages)
+[8/52] Hair / Appliances
+  → 20 products (5 pages)
+[9/52] Hair / Hair Accessories
+  → 193 products (16 pages)
+[10/52] Skin & Face / Sunscreen
+  → 186 products (15 pages)
+[11/52] Skin & Face / Face Cleaning
+  → 196 products (16 pages)
+[12/52] Skin & Face / Face Oil, Serum & Essence
+  → 187 products (15 pages)
+[13/52] Skin & Face / Face Moisturisers
+  → 192 products (16 pages)
+[14/52] Skin & Face / Body Lotions & Oils
+  → 192 products (16 pages)
+[15/52] Skin & Face / Lip & Eye Care
+  → 182 products (16 pages)
+[16/52] Skin & Face / Face Masks & Packs
+  → 190 products (16 pages)
+[17/52] Skin & Face / Toners & Mists
+  → 72 products (7 pages)
+[18/52] Skin & Face / Acne & Blackhead Fixers
+  → 64 products (8 pages)
+[19/52] Skin & Face / Men's Grooming
+  → 179 products (16 pages)
+[20/52] Skin & Face / Women's Grooming
+  → 163 products (14 pages)
+[21/52] Beauty & Cosmetics / Lipstick Gloss
+  → 202 products (16 pages)
+[22/52] Beauty & Cosmetics / Cleansers & Toners
+  → 50 products (7 pages)
+[23/52] Beauty & Cosmetics / Foundation & Compact
+  → 119 products (10 pages)
+[24/52] Beauty & Cosmetics / Blush & Highlighter
+  → 80 products (8 pages)
+[25/52] Beauty & Cosmetics / Primer & Concealer
+  → 66 products (7 pages)
+[26/52] Beauty & Cosmetics / Kajal & Eyeliners
+  → 181 products (16 pages)
+[27/52] Beauty & Cosmetics / Bindi, Bangles & Others
+  → 111 products (10 pages)
+[28/52] Beauty & Cosmetics / Nail Paints & Accessories
+  → 196 products (16 pages)
+[29/52] Beauty & Cosmetics / Beauty Accessories
+  → 200 products (16 pages)
+[30/52] Beauty & Cosmetics / Beauty E-Card
+  → 5 products (2 pages)
+[31/52] Dry Fruits & Cereals / Dry Fruits
+  → 191 products (16 pages)
+[32/52] Dry Fruits & Cereals / Dry Fruits Snacks
+  → 190 products (16 pages)
+[33/52] Dry Fruits & Cereals / Corn Flakes & Kids Cereals
+  → 65 products (7 pages)
+[34/52] Dry Fruits & Cereals / Muesli & Granola
+  → 118 products (10 pages)
+[35/52] Dry Fruits & Cereals / Oats & Daliya
+  → 146 products (13 pages)
+[36/52] Dry Fruits & Cereals / Dates
+  → 157 products (13 pages)
+[37/52] Dry Fruits & Cereals / Seeds
+  → 188 products (16 pages)
+[38/52] Dry Fruits & Cereals / Vermicelli & Poha
+  → 63 products (7 pages)
+[39/52] Dry Fruits & Cereals / Organic & Premium
+  → 190 products (16 pages)
+[40/52] Dry Fruits & Cereals / Dry Fruit Gift Packs
+  → 50 products (7 pages)
+[41/52] Electronics / Trimmers Hair Appliances
+  → 182 products (15 pages)
+[42/52] Electronics / Earphones & Headsets
+  → 203 products (16 pages)
+[43/52] Electronics / Speakers
+  → 136 products (12 pages)
+[44/52] Electronics / Mobile & Computer
+  → 194 products (16 pages)
+[45/52] Electronics / Decorative Lights
+  → 197 products (16 pages)
+[46/52] Electronics / Chargers & Cables
+  → 194 products (16 pages)
+[47/52] Electronics / Smart Watches
+  → 157 products (13 pages)
+[48/52] Electronics / Kitchen Appliances
+  → 193 products (16 pages)
+[49/52] Electronics / Laptop & Mobile Phones
+  → 36 products (5 pages)
+[50/52] Electronics / Batteries
+  → 65 products (7 pages)
+[51/52] Electronics / Extension Cables & Accessories
+  → 180 products (16 pages)
+[52/52] Electronics / Home Appliances
+  → 209 products (16 pages)
+Wrote batch output to /Users/vatsalakrishna/Desktop/Blinkit_Project/blinkit-sense/data/raw/20260802T062441
+Scraping 52 subcategories; skipping 24 categories
+DONE /Users/vatsalakrishna/Desktop/Blinkit_Project/blinkit-sense/data/raw/20260802T062441
