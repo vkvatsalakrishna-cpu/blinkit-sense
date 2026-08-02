@@ -1,0 +1,579 @@
+{
+  "scraped_at": "2026-08-02T06:55:21.761054+00:00",
+  "location": {
+    "name": "Sarjapur",
+    "lat": 12.912118,
+    "lon": 77.644554,
+    "pincode": "560102"
+  },
+  "source": "/Users/vatsalakrishna/Desktop/Blinkit_Project/blinkit-sense/data/category_urls.json",
+  "skipped_categories": [
+    "Atta, Rice & Dal",
+    "Baby Care",
+    "Bath & Body",
+    "Beauty & Cosmetics",
+    "Chicken, Meat & Fish",
+    "Cleaners & Repellents",
+    "Dairy, Bread & Eggs",
+    "Dry Fruits & Cereals",
+    "E-Gifts Store",
+    "Electronics",
+    "Feminine Hygiene",
+    "Hair",
+    "Health & Pharma",
+    "Home & Lifestyle",
+    "Ice Creams & More",
+    "Kitchenware & Appliances",
+    "Oil, Ghee & Masala",
+    "Pet Store",
+    "Skin & Face",
+    "Sports Store",
+    "Stationery & Games",
+    "Sweets & Chocolates",
+    "Toy Store",
+    "Vegetables & Fruits"
+  ],
+  "skipped_subcategories": [],
+  "collections": [
+    {
+      "category": "Bakery & Biscuits",
+      "subcategory": "Cookies",
+      "url": "https://blinkit.com/dc/bakery-biscuits/cookies/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTQ%3D&collection_group_id=11527",
+      "product_count": 193,
+      "pages_fetched": 16,
+      "file": "00_cookies.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bakery & Biscuits",
+      "subcategory": "Healthy & Digestive",
+      "url": "https://blinkit.com/dc/bakery-biscuits/healthy-digestive/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTQ%3D&collection_group_id=11530&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Healthy+%26+Digestive&collection_name=Bakery+%26+Biscuits",
+      "product_count": 71,
+      "pages_fetched": 8,
+      "file": "01_healthy-digestive.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bakery & Biscuits",
+      "subcategory": "Cream Biscuits",
+      "url": "https://blinkit.com/dc/bakery-biscuits/cream-biscuits/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTQ%3D&collection_group_id=11528&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Cream+Biscuits&collection_name=Bakery+%26+Biscuits",
+      "product_count": 135,
+      "pages_fetched": 12,
+      "file": "02_cream-biscuits.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bakery & Biscuits",
+      "subcategory": "Sweet & Salty",
+      "url": "https://blinkit.com/dc/bakery-biscuits/sweet-salty/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTQ%3D&collection_group_id=11531&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Sweet+%26+Salty&collection_name=Bakery+%26+Biscuits",
+      "product_count": 72,
+      "pages_fetched": 8,
+      "file": "03_sweet-salty.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bakery & Biscuits",
+      "subcategory": "Glucose & Marie",
+      "url": "https://blinkit.com/dc/bakery-biscuits/glucose-marie/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTQ%3D&collection_group_id=12726&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Glucose+%26+Marie&collection_name=Bakery+%26+Biscuits",
+      "product_count": 25,
+      "pages_fetched": 5,
+      "file": "04_glucose-marie.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bakery & Biscuits",
+      "subcategory": "Rusks & Wafers",
+      "url": "https://blinkit.com/dc/bakery-biscuits/rusks-wafers/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTQ%3D&collection_group_id=12732&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Rusks+%26+Wafers&collection_name=Bakery+%26+Biscuits",
+      "product_count": 168,
+      "pages_fetched": 14,
+      "file": "05_rusks-wafers.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bakery & Biscuits",
+      "subcategory": "Cakes & Rolls",
+      "url": "https://blinkit.com/dc/bakery-biscuits/cakes-rolls/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTQ%3D&collection_group_id=11529&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Cakes+%26+Rolls&collection_name=Bakery+%26+Biscuits",
+      "product_count": 189,
+      "pages_fetched": 16,
+      "file": "06_cakes-rolls.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bakery & Biscuits",
+      "subcategory": "Baking Ingredients",
+      "url": "https://blinkit.com/dc/bakery-biscuits/baking-ingredients/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTQ%3D&collection_group_id=11532&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Baking+Ingredients&collection_name=Bakery+%26+Biscuits",
+      "product_count": 133,
+      "pages_fetched": 12,
+      "file": "07_baking-ingredients.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bakery & Biscuits",
+      "subcategory": "Gourmet Bakery",
+      "url": "https://blinkit.com/dc/bakery-biscuits/gourmet-bakery/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTQ%3D&collection_group_id=11534&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Gourmet+Bakery&collection_name=Bakery+%26+Biscuits",
+      "product_count": 156,
+      "pages_fetched": 13,
+      "file": "08_gourmet-bakery.json",
+      "status": "ok"
+    },
+    {
+      "category": "Bakery & Biscuits",
+      "subcategory": "Biscuit Gift Pack",
+      "url": "https://blinkit.com/dc/bakery-biscuits/biscuit-gift-pack/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTQ%3D&collection_group_id=18679&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Biscuit+Gift+Pack&collection_name=Bakery+%26+Biscuits",
+      "product_count": 35,
+      "pages_fetched": 5,
+      "file": "09_biscuit-gift-pack.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chips & Namkeen",
+      "subcategory": "Chips Wafers",
+      "url": "https://blinkit.com/dc/chips-namkeen/chips-wafers/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjg%3D&collection_group_id=11402",
+      "product_count": 193,
+      "pages_fetched": 16,
+      "file": "10_chips-wafers.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chips & Namkeen",
+      "subcategory": "Namkeen Snacks",
+      "url": "https://blinkit.com/dc/chips-namkeen/namkeen-snacks/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjg%3D&collection_group_id=11404&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Namkeen+Snacks&collection_name=Chips+%26+Namkeen",
+      "product_count": 202,
+      "pages_fetched": 16,
+      "file": "11_namkeen-snacks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chips & Namkeen",
+      "subcategory": "Bhujia & Mixtures",
+      "url": "https://blinkit.com/dc/chips-namkeen/bhujia-mixtures/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjg%3D&collection_group_id=11405&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Bhujia+%26+Mixtures&collection_name=Chips+%26+Namkeen",
+      "product_count": 207,
+      "pages_fetched": 16,
+      "file": "12_bhujia-mixtures.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chips & Namkeen",
+      "subcategory": "Nachos",
+      "url": "https://blinkit.com/dc/chips-namkeen/nachos/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjg%3D&collection_group_id=11407&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Nachos&collection_name=Chips+%26+Namkeen",
+      "product_count": 59,
+      "pages_fetched": 7,
+      "file": "13_nachos.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chips & Namkeen",
+      "subcategory": "Healthy Snacks",
+      "url": "https://blinkit.com/dc/chips-namkeen/healthy-snacks/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjg%3D&collection_group_id=11403&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Healthy+Snacks&collection_name=Chips+%26+Namkeen",
+      "product_count": 196,
+      "pages_fetched": 16,
+      "file": "14_healthy-snacks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chips & Namkeen",
+      "subcategory": "Popcorn",
+      "url": "https://blinkit.com/dc/chips-namkeen/popcorn/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjg%3D&collection_group_id=11406&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Popcorn&collection_name=Chips+%26+Namkeen",
+      "product_count": 73,
+      "pages_fetched": 8,
+      "file": "15_popcorn.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chips & Namkeen",
+      "subcategory": "Papad & Fryums",
+      "url": "https://blinkit.com/dc/chips-namkeen/papad-fryums/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjg%3D&collection_group_id=11408&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Papad+%26+Fryums&collection_name=Chips+%26+Namkeen",
+      "product_count": 71,
+      "pages_fetched": 7,
+      "file": "16_papad-fryums.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chips & Namkeen",
+      "subcategory": "Gift Packs",
+      "url": "https://blinkit.com/dc/chips-namkeen/gift-packs/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjg%3D&collection_group_id=11409&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Gift+Packs&collection_name=Chips+%26+Namkeen",
+      "product_count": 59,
+      "pages_fetched": 5,
+      "file": "17_gift-packs.json",
+      "status": "ok"
+    },
+    {
+      "category": "Chips & Namkeen",
+      "subcategory": "Premium",
+      "url": "https://blinkit.com/dc/chips-namkeen/premium/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNjg%3D&collection_group_id=11410&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Premium&collection_name=Chips+%26+Namkeen",
+      "product_count": 177,
+      "pages_fetched": 15,
+      "file": "18_premium.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Soft Drinks",
+      "url": "https://blinkit.com/dc/drinks-juices/soft-drinks/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=11607",
+      "product_count": 196,
+      "pages_fetched": 16,
+      "file": "19_soft-drinks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Fruit Juices",
+      "url": "https://blinkit.com/dc/drinks-juices/fruit-juices/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=673755&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Fruit+Juices&collection_name=Drinks+%26+Juices",
+      "product_count": 186,
+      "pages_fetched": 16,
+      "file": "20_fruit-juices.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Zero Sugar Drinks",
+      "url": "https://blinkit.com/dc/drinks-juices/zero-sugar-drinks/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=885907&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Zero+Sugar+Drinks&collection_name=Drinks+%26+Juices",
+      "product_count": 158,
+      "pages_fetched": 14,
+      "file": "21_zero-sugar-drinks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Energy Drinks",
+      "url": "https://blinkit.com/dc/drinks-juices/energy-drinks/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=14471&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Energy+Drinks&collection_name=Drinks+%26+Juices",
+      "product_count": 188,
+      "pages_fetched": 16,
+      "file": "22_energy-drinks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Hydration Drinks",
+      "url": "https://blinkit.com/dc/drinks-juices/hydration-drinks/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=304488&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Hydration+Drinks&collection_name=Drinks+%26+Juices",
+      "product_count": 122,
+      "pages_fetched": 11,
+      "file": "23_hydration-drinks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Soda & Mixers",
+      "url": "https://blinkit.com/dc/drinks-juices/soda-mixers/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=11613&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Soda+%26+Mixers&collection_name=Drinks+%26+Juices",
+      "product_count": 195,
+      "pages_fetched": 16,
+      "file": "24_soda-mixers.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Water & Ice Cubes",
+      "url": "https://blinkit.com/dc/drinks-juices/water-ice-cubes/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=11615&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Water+%26+Ice+Cubes&collection_name=Drinks+%26+Juices",
+      "product_count": 69,
+      "pages_fetched": 8,
+      "file": "25_water-ice-cubes.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Mango Drinks",
+      "url": "https://blinkit.com/dc/drinks-juices/mango-drinks/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=18673&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Mango+Drinks&collection_name=Drinks+%26+Juices",
+      "product_count": 33,
+      "pages_fetched": 5,
+      "file": "26_mango-drinks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Soy Milk & More",
+      "url": "https://blinkit.com/dc/drinks-juices/soy-milk-more/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=17133&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Soy+Milk+%26+More&collection_name=Drinks+%26+Juices",
+      "product_count": 67,
+      "pages_fetched": 8,
+      "file": "27_soy-milk-more.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Cold Coffee & Ice Tea",
+      "url": "https://blinkit.com/dc/drinks-juices/cold-coffee-ice-tea/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=18675&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Cold+Coffee+%26+Ice+Tea&collection_name=Drinks+%26+Juices",
+      "product_count": 161,
+      "pages_fetched": 14,
+      "file": "28_cold-coffee-ice-tea.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Coconut Water",
+      "url": "https://blinkit.com/dc/drinks-juices/coconut-water/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=11616&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Coconut+Water&collection_name=Drinks+%26+Juices",
+      "product_count": 47,
+      "pages_fetched": 6,
+      "file": "29_coconut-water.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Concentrates & Syrups",
+      "url": "https://blinkit.com/dc/drinks-juices/concentrates-syrups/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=11609&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Concentrates+%26+Syrups&collection_name=Drinks+%26+Juices",
+      "product_count": 171,
+      "pages_fetched": 14,
+      "file": "30_concentrates-syrups.json",
+      "status": "ok"
+    },
+    {
+      "category": "Drinks & Juices",
+      "subcategory": "Premium",
+      "url": "https://blinkit.com/dc/drinks-juices/premium/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTE%3D&collection_group_id=11750&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Premium&collection_name=Drinks+%26+Juices",
+      "product_count": 83,
+      "pages_fetched": 8,
+      "file": "31_premium.json",
+      "status": "ok"
+    },
+    {
+      "category": "Tea, Coffee & Milk Drinks",
+      "subcategory": "Tea",
+      "url": "https://blinkit.com/dc/tea-coffee-milk-drinks/tea/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTA%3D&collection_group_id=11617",
+      "product_count": 187,
+      "pages_fetched": 15,
+      "file": "32_tea.json",
+      "status": "ok"
+    },
+    {
+      "category": "Tea, Coffee & Milk Drinks",
+      "subcategory": "Coffee",
+      "url": "https://blinkit.com/dc/tea-coffee-milk-drinks/coffee/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTA%3D&collection_group_id=11618&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Coffee&collection_name=Tea%2C+Coffee+%26+Milk+Drinks",
+      "product_count": 198,
+      "pages_fetched": 16,
+      "file": "33_coffee.json",
+      "status": "ok"
+    },
+    {
+      "category": "Tea, Coffee & Milk Drinks",
+      "subcategory": "Hot Chocolate",
+      "url": "https://blinkit.com/dc/tea-coffee-milk-drinks/hot-chocolate/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTA%3D&collection_group_id=18677&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Hot+Chocolate&collection_name=Tea%2C+Coffee+%26+Milk+Drinks",
+      "product_count": 33,
+      "pages_fetched": 5,
+      "file": "34_hot-chocolate.json",
+      "status": "ok"
+    },
+    {
+      "category": "Tea, Coffee & Milk Drinks",
+      "subcategory": "Green Tea",
+      "url": "https://blinkit.com/dc/tea-coffee-milk-drinks/green-tea/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTA%3D&collection_group_id=11619&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Green+Tea&collection_name=Tea%2C+Coffee+%26+Milk+Drinks",
+      "product_count": 149,
+      "pages_fetched": 13,
+      "file": "35_green-tea.json",
+      "status": "ok"
+    },
+    {
+      "category": "Tea, Coffee & Milk Drinks",
+      "subcategory": "Milk Drinks",
+      "url": "https://blinkit.com/dc/tea-coffee-milk-drinks/milk-drinks/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTA%3D&collection_group_id=11622&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Milk+Drinks&collection_name=Tea%2C+Coffee+%26+Milk+Drinks",
+      "product_count": 117,
+      "pages_fetched": 10,
+      "file": "36_milk-drinks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Tea, Coffee & Milk Drinks",
+      "subcategory": "Cold Coffee & Ice Tea",
+      "url": "https://blinkit.com/dc/tea-coffee-milk-drinks/cold-coffee-ice-tea/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTA%3D&collection_group_id=11620&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Cold+Coffee+%26+Ice+Tea&collection_name=Tea%2C+Coffee+%26+Milk+Drinks",
+      "product_count": 161,
+      "pages_fetched": 14,
+      "file": "37_cold-coffee-ice-tea.json",
+      "status": "ok"
+    },
+    {
+      "category": "Tea, Coffee & Milk Drinks",
+      "subcategory": "Bags & Premixes",
+      "url": "https://blinkit.com/dc/tea-coffee-milk-drinks/bags-premixes/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTA%3D&collection_group_id=11621&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Bags+%26+Premixes&collection_name=Tea%2C+Coffee+%26+Milk+Drinks",
+      "product_count": 61,
+      "pages_fetched": 8,
+      "file": "38_bags-premixes.json",
+      "status": "ok"
+    },
+    {
+      "category": "Tea, Coffee & Milk Drinks",
+      "subcategory": "Premium",
+      "url": "https://blinkit.com/dc/tea-coffee-milk-drinks/premium/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTA%3D&collection_group_id=11623&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Premium&collection_name=Tea%2C+Coffee+%26+Milk+Drinks",
+      "product_count": 79,
+      "pages_fetched": 8,
+      "file": "39_premium.json",
+      "status": "ok"
+    },
+    {
+      "category": "Tea, Coffee & Milk Drinks",
+      "subcategory": "Herbal Infusion",
+      "url": "https://blinkit.com/dc/tea-coffee-milk-drinks/herbal-infusion/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNTA%3D&collection_group_id=899305&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Herbal+Infusion&collection_name=Tea%2C+Coffee+%26+Milk+Drinks",
+      "product_count": 64,
+      "pages_fetched": 7,
+      "file": "40_herbal-infusion.json",
+      "status": "ok"
+    },
+    {
+      "category": "Instant Food",
+      "subcategory": "Noodles",
+      "url": "https://blinkit.com/dc/instant-food/noodles/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDk%3D&collection_group_id=11624",
+      "product_count": 190,
+      "pages_fetched": 16,
+      "file": "41_noodles.json",
+      "status": "ok"
+    },
+    {
+      "category": "Instant Food",
+      "subcategory": "Frozen Veg Snacks",
+      "url": "https://blinkit.com/dc/instant-food/frozen-veg-snacks/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDk%3D&collection_group_id=11629&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Frozen+Veg+Snacks&collection_name=Instant+Food",
+      "product_count": 180,
+      "pages_fetched": 15,
+      "file": "42_frozen-veg-snacks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Instant Food",
+      "subcategory": "Pasta",
+      "url": "https://blinkit.com/dc/instant-food/pasta/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDk%3D&collection_group_id=11626&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Pasta&collection_name=Instant+Food",
+      "product_count": 150,
+      "pages_fetched": 12,
+      "file": "43_pasta.json",
+      "status": "ok"
+    },
+    {
+      "category": "Instant Food",
+      "subcategory": "Frozen Non-Veg Snacks",
+      "url": "https://blinkit.com/dc/instant-food/frozen-non-veg-snacks/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDk%3D&collection_group_id=11625&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Frozen+Non-Veg+Snacks&collection_name=Instant+Food",
+      "product_count": 71,
+      "pages_fetched": 8,
+      "file": "44_frozen-non-veg-snacks.json",
+      "status": "ok"
+    },
+    {
+      "category": "Instant Food",
+      "subcategory": "Soup",
+      "url": "https://blinkit.com/dc/instant-food/soup/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDk%3D&collection_group_id=11628&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Soup&collection_name=Instant+Food",
+      "product_count": 31,
+      "pages_fetched": 5,
+      "file": "45_soup.json",
+      "status": "ok"
+    },
+    {
+      "category": "Instant Food",
+      "subcategory": "Ready to Eat",
+      "url": "https://blinkit.com/dc/instant-food/ready-to-eat/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDk%3D&collection_group_id=11627&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Ready+to+Eat&collection_name=Instant+Food",
+      "product_count": 202,
+      "pages_fetched": 16,
+      "file": "46_ready-to-eat.json",
+      "status": "ok"
+    },
+    {
+      "category": "Instant Food",
+      "subcategory": "Idli & Dosa Batter",
+      "url": "https://blinkit.com/dc/instant-food/idli-dosa-batter/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDk%3D&collection_group_id=11630&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Idli+%26+Dosa+Batter&collection_name=Instant+Food",
+      "product_count": 55,
+      "pages_fetched": 6,
+      "file": "47_idli-dosa-batter.json",
+      "status": "ok"
+    },
+    {
+      "category": "Instant Food",
+      "subcategory": "Dessert & Cake Mixes",
+      "url": "https://blinkit.com/dc/instant-food/dessert-cake-mixes/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDk%3D&collection_group_id=11631&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Dessert+%26+Cake+Mixes&collection_name=Instant+Food",
+      "product_count": 94,
+      "pages_fetched": 9,
+      "file": "48_dessert-cake-mixes.json",
+      "status": "ok"
+    },
+    {
+      "category": "Instant Food",
+      "subcategory": "Organic & Premium",
+      "url": "https://blinkit.com/dc/instant-food/organic-premium/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDk%3D&collection_group_id=11632&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Organic+%26+Premium&collection_name=Instant+Food",
+      "product_count": 126,
+      "pages_fetched": 12,
+      "file": "49_organic-premium.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sauces & Spreads",
+      "subcategory": "Tomato Ketchup",
+      "url": "https://blinkit.com/dc/sauces-spreads/tomato-ketchup/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDg%3D&collection_group_id=11643",
+      "product_count": 54,
+      "pages_fetched": 6,
+      "file": "50_tomato-ketchup.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sauces & Spreads",
+      "subcategory": "Mayonnaise",
+      "url": "https://blinkit.com/dc/sauces-spreads/mayonnaise/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDg%3D&collection_group_id=11641&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Mayonnaise&collection_name=Sauces+%26+Spreads",
+      "product_count": 46,
+      "pages_fetched": 6,
+      "file": "51_mayonnaise.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sauces & Spreads",
+      "subcategory": "Jam & Spreads",
+      "url": "https://blinkit.com/dc/sauces-spreads/jam-spreads/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDg%3D&collection_group_id=11636&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Jam+%26+Spreads&collection_name=Sauces+%26+Spreads",
+      "product_count": 168,
+      "pages_fetched": 14,
+      "file": "52_jam-spreads.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sauces & Spreads",
+      "subcategory": "Chutney & Pickle",
+      "url": "https://blinkit.com/dc/sauces-spreads/chutney-pickle-/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDg%3D&collection_group_id=11638&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Chutney+%26+Pickle+&collection_name=Sauces+%26+Spreads",
+      "product_count": 196,
+      "pages_fetched": 15,
+      "file": "53_chutney-pickle.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sauces & Spreads",
+      "subcategory": "Peanut Butter",
+      "url": "https://blinkit.com/dc/sauces-spreads/peanut-butter/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDg%3D&collection_group_id=11639&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Peanut+Butter&collection_name=Sauces+%26+Spreads",
+      "product_count": 71,
+      "pages_fetched": 8,
+      "file": "54_peanut-butter.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sauces & Spreads",
+      "subcategory": "Asian Sauces",
+      "url": "https://blinkit.com/dc/sauces-spreads/asian-sauces/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDg%3D&collection_group_id=11634&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Asian+Sauces&collection_name=Sauces+%26+Spreads",
+      "product_count": 137,
+      "pages_fetched": 12,
+      "file": "55_asian-sauces.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sauces & Spreads",
+      "subcategory": "Chyawanprash & Honey",
+      "url": "https://blinkit.com/dc/sauces-spreads/chyawanprash-honey/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDg%3D&collection_group_id=11640&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Chyawanprash+%26+Honey&collection_name=Sauces+%26+Spreads",
+      "product_count": 124,
+      "pages_fetched": 11,
+      "file": "56_chyawanprash-honey.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sauces & Spreads",
+      "subcategory": "Dips & Salad Dressings",
+      "url": "https://blinkit.com/dc/sauces-spreads/dips-salad-dressings/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDg%3D&collection_group_id=326530&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Dips+%26+Salad+Dressings&collection_name=Sauces+%26+Spreads",
+      "product_count": 113,
+      "pages_fetched": 10,
+      "file": "57_dips-salad-dressings.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sauces & Spreads",
+      "subcategory": "Cooking Sauces",
+      "url": "https://blinkit.com/dc/sauces-spreads/cooking-sauces/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDg%3D&collection_group_id=11633&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Cooking+Sauces&collection_name=Sauces+%26+Spreads",
+      "product_count": 185,
+      "pages_fetched": 16,
+      "file": "58_cooking-sauces.json",
+      "status": "ok"
+    },
+    {
+      "category": "Sauces & Spreads",
+      "subcategory": "Premium",
+      "url": "https://blinkit.com/dc/sauces-spreads/premium/?collection_uuid=OTg3NjU0MzIxMjM0NTMzNDg%3D&collection_group_id=11635&sort=bestsellers&enable_auto_suggestions=false&should_disable_rails=false&hide_filters=false&show_filters=true&oos_visibility=true&exclude_combos=false&disable_previous_buy_boosting=false&should_disable_listing=false&should_personalise=false&critical_entities_visibility=false&collection_group_name=Premium&collection_name=Sauces+%26+Spreads",
+      "product_count": 119,
+      "pages_fetched": 10,
+      "file": "59_premium.json",
+      "status": "ok"
+    }
+  ]
+}

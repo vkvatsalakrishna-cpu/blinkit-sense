@@ -1,0 +1,123 @@
+[1/60] Bakery & Biscuits / Cookies
+  → 193 products (16 pages)
+[2/60] Bakery & Biscuits / Healthy & Digestive
+  → 71 products (8 pages)
+[3/60] Bakery & Biscuits / Cream Biscuits
+  → 135 products (12 pages)
+[4/60] Bakery & Biscuits / Sweet & Salty
+  → 72 products (8 pages)
+[5/60] Bakery & Biscuits / Glucose & Marie
+  → 25 products (5 pages)
+[6/60] Bakery & Biscuits / Rusks & Wafers
+  → 168 products (14 pages)
+[7/60] Bakery & Biscuits / Cakes & Rolls
+  → 189 products (16 pages)
+[8/60] Bakery & Biscuits / Baking Ingredients
+  → 133 products (12 pages)
+[9/60] Bakery & Biscuits / Gourmet Bakery
+  → 156 products (13 pages)
+[10/60] Bakery & Biscuits / Biscuit Gift Pack
+  → 35 products (5 pages)
+[11/60] Chips & Namkeen / Chips Wafers
+  → 193 products (16 pages)
+[12/60] Chips & Namkeen / Namkeen Snacks
+  → 202 products (16 pages)
+[13/60] Chips & Namkeen / Bhujia & Mixtures
+  → 207 products (16 pages)
+[14/60] Chips & Namkeen / Nachos
+  → 59 products (7 pages)
+[15/60] Chips & Namkeen / Healthy Snacks
+  → 196 products (16 pages)
+[16/60] Chips & Namkeen / Popcorn
+  → 73 products (8 pages)
+[17/60] Chips & Namkeen / Papad & Fryums
+  → 71 products (7 pages)
+[18/60] Chips & Namkeen / Gift Packs
+  → 59 products (5 pages)
+[19/60] Chips & Namkeen / Premium
+  → 177 products (15 pages)
+[20/60] Drinks & Juices / Soft Drinks
+  → 196 products (16 pages)
+[21/60] Drinks & Juices / Fruit Juices
+  → 186 products (16 pages)
+[22/60] Drinks & Juices / Zero Sugar Drinks
+  → 158 products (14 pages)
+[23/60] Drinks & Juices / Energy Drinks
+  → 188 products (16 pages)
+[24/60] Drinks & Juices / Hydration Drinks
+  → 122 products (11 pages)
+[25/60] Drinks & Juices / Soda & Mixers
+  → 195 products (16 pages)
+[26/60] Drinks & Juices / Water & Ice Cubes
+  → 69 products (8 pages)
+[27/60] Drinks & Juices / Mango Drinks
+  → 33 products (5 pages)
+[28/60] Drinks & Juices / Soy Milk & More
+  → 67 products (8 pages)
+[29/60] Drinks & Juices / Cold Coffee & Ice Tea
+  → 161 products (14 pages)
+[30/60] Drinks & Juices / Coconut Water
+  → 47 products (6 pages)
+[31/60] Drinks & Juices / Concentrates & Syrups
+  → 171 products (14 pages)
+[32/60] Drinks & Juices / Premium
+  → 83 products (8 pages)
+[33/60] Tea, Coffee & Milk Drinks / Tea
+  → 187 products (15 pages)
+[34/60] Tea, Coffee & Milk Drinks / Coffee
+  → 198 products (16 pages)
+[35/60] Tea, Coffee & Milk Drinks / Hot Chocolate
+  → 33 products (5 pages)
+[36/60] Tea, Coffee & Milk Drinks / Green Tea
+  → 149 products (13 pages)
+[37/60] Tea, Coffee & Milk Drinks / Milk Drinks
+  → 117 products (10 pages)
+[38/60] Tea, Coffee & Milk Drinks / Cold Coffee & Ice Tea
+  → 161 products (14 pages)
+[39/60] Tea, Coffee & Milk Drinks / Bags & Premixes
+  → 61 products (8 pages)
+[40/60] Tea, Coffee & Milk Drinks / Premium
+  → 79 products (8 pages)
+[41/60] Tea, Coffee & Milk Drinks / Herbal Infusion
+  → 64 products (7 pages)
+[42/60] Instant Food / Noodles
+  → 190 products (16 pages)
+[43/60] Instant Food / Frozen Veg Snacks
+  → 180 products (15 pages)
+[44/60] Instant Food / Pasta
+  → 150 products (12 pages)
+[45/60] Instant Food / Frozen Non-Veg Snacks
+  → 71 products (8 pages)
+[46/60] Instant Food / Soup
+  → 31 products (5 pages)
+[47/60] Instant Food / Ready to Eat
+  → 202 products (16 pages)
+[48/60] Instant Food / Idli & Dosa Batter
+  → 55 products (6 pages)
+[49/60] Instant Food / Dessert & Cake Mixes
+  → 94 products (9 pages)
+[50/60] Instant Food / Organic & Premium
+  → 126 products (12 pages)
+[51/60] Sauces & Spreads / Tomato Ketchup
+  → 54 products (6 pages)
+[52/60] Sauces & Spreads / Mayonnaise
+  → 46 products (6 pages)
+[53/60] Sauces & Spreads / Jam & Spreads
+  → 168 products (14 pages)
+[54/60] Sauces & Spreads / Chutney & Pickle
+  → 196 products (15 pages)
+[55/60] Sauces & Spreads / Peanut Butter
+  → 71 products (8 pages)
+[56/60] Sauces & Spreads / Asian Sauces
+  → 137 products (12 pages)
+[57/60] Sauces & Spreads / Chyawanprash & Honey
+  → 124 products (11 pages)
+[58/60] Sauces & Spreads / Dips & Salad Dressings
+  → 113 products (10 pages)
+[59/60] Sauces & Spreads / Cooking Sauces
+  → 185 products (16 pages)
+[60/60] Sauces & Spreads / Premium
+  → 119 products (10 pages)
+Wrote batch output to /Users/vatsalakrishna/Desktop/Blinkit_Project/blinkit-sense/data/raw/20260802T065521
+Scraping 60 subcategories; skipping 24 categories
+DONE /Users/vatsalakrishna/Desktop/Blinkit_Project/blinkit-sense/data/raw/20260802T065521
