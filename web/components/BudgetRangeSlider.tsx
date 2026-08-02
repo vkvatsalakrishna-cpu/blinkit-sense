@@ -52,7 +52,7 @@ export function BudgetRangeSlider({ min, max, onChange }: BudgetRangeSliderProps
   const maxPercent = (max / BUDGET_CEILING) * 100;
 
   return (
-    <div className="space-y-2 border-t border-amber-200/60 pt-3">
+    <div className="space-y-2 border-t border-gray-200 pt-3">
       <div className="flex items-baseline justify-between gap-2">
         <label className="text-xs font-medium text-gray-600">
           Budget per item (optional)

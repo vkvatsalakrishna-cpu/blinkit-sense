@@ -13,6 +13,7 @@ interface SuggestionsPanelProps {
   situationLabel: string;
   suggestions: SelectedSuggestion[];
   catalogLocation: string;
+  onBack: () => void;
   onToggle: (rowKey: string) => void;
   onQtyChange: (rowKey: string, qty: number) => void;
   onAdvanceRow: (rowKey: string) => void;
@@ -21,12 +22,14 @@ interface SuggestionsPanelProps {
   onAddProductToCart: (product: Product) => void;
   sensitiveGuidance: string[];
   newCategoryTiles: string[];
+  hasReserve?: boolean;
 }
 
 export function SuggestionsPanel({
   situationLabel,
   suggestions,
   catalogLocation,
+  onBack,
   onToggle,
   onQtyChange,
   onAdvanceRow,
@@ -35,6 +38,7 @@ export function SuggestionsPanel({
   onAddProductToCart,
   sensitiveGuidance,
   newCategoryTiles,
+  hasReserve = false,
 }: SuggestionsPanelProps) {
   const [browseCategory, setBrowseCategory] = useState<string | null>(null);
   const visible = suggestions.filter((s) => !s.dismissed);
@@ -45,9 +49,23 @@ export function SuggestionsPanel({
   );
   const anyCanAdvance = visible.some(canAdvanceOption);
 
+  const backLink = (
+    <button
+      type="button"
+      onClick={onBack}
+      className="text-sm font-medium text-blinkit-green hover:underline"
+    >
+      ← Back
+    </button>
+  );
+
   if (visible.length === 0) {
     return (
-      <section className="rounded-xl border border-amber-200 bg-blinkit-cream p-4">
+      <section className="space-y-3">
+        {backLink}
+        <p className="font-caveat text-[20px] italic leading-tight text-blinkit-green">
+          Suggested for you
+        </p>
         <p className="text-sm text-gray-700">
           Nothing to add for this one — you&apos;re set.
         </p>
@@ -56,11 +74,14 @@ export function SuggestionsPanel({
   }
 
   return (
-    <section className="rounded-xl border border-amber-200 bg-blinkit-cream p-4 shadow-sm">
-      <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-amber-800">
-        Suggested for you
-      </p>
-      <h3 className="mb-4 text-lg font-semibold text-gray-900">{situationLabel}</h3>
+    <section className="space-y-4">
+      {backLink}
+      <div>
+        <p className="font-caveat text-[20px] italic leading-tight text-blinkit-green">
+          Suggested for you
+        </p>
+        <h3 className="mt-1 text-lg font-semibold text-gray-900">{situationLabel}</h3>
+      </div>
 
       <ul className="space-y-3">
         {visible.map((s) => {
@@ -81,8 +102,9 @@ export function SuggestionsPanel({
           return (
             <li
               key={rowKey}
-              className="flex gap-3 rounded-lg border border-gray-200 bg-white p-3"
+              className="group overflow-hidden rounded-2xl border-l-[3px] border-l-blinkit-green bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
             >
+              <div className="flex gap-3 p-3">
               <input
                 type="checkbox"
                 checked={s.checked}
@@ -97,7 +119,7 @@ export function SuggestionsPanel({
                     {s.item.category} · {s.item.role}
                   </p>
                   {isNewCategory && (
-                    <span className="rounded-full bg-blinkit-green/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-blinkit-green">
+                    <span className="rounded-full bg-blinkit-green/[0.08] px-2 py-0.5 text-[10px] font-medium text-blinkit-green">
                       New for you
                     </span>
                   )}
@@ -105,7 +127,12 @@ export function SuggestionsPanel({
                 <p className="line-clamp-2 text-sm font-medium text-gray-900">
                   {s.item.resolved_name}
                 </p>
-                <p className="text-xs text-gray-500">
+                {s.item.quantity_reasoning ? (
+                  <p className="mt-0.5 text-xs italic text-gray-500">
+                    {s.item.quantity_reasoning}
+                  </p>
+                ) : null}
+                <p className="mt-0.5 text-xs text-gray-500">
                   {product.brand}
                   {product.unit ? ` · ${product.unit}` : ""}
                 </p>
@@ -148,12 +175,13 @@ export function SuggestionsPanel({
               >
                 ×
               </button>
+              </div>
             </li>
           );
         })}
       </ul>
 
-      {anyCanAdvance ? (
+      {anyCanAdvance || hasReserve ? (
         <button
           type="button"
           onClick={onShowOtherOptions}

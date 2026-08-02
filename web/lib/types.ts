@@ -64,6 +64,7 @@ export interface SuggestionItem {
 export interface NeedsResponse {
   situation_label: string;
   items: SuggestionItem[];
+  reserve?: SuggestionItem[];
   gaps: unknown[];
   sensitive_guidance: string[];
   unavailable?: string[];

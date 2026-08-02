@@ -16,6 +16,9 @@ const config: Config = {
           cream: "#f7f4eb",
         },
       },
+      fontFamily: {
+        caveat: ["var(--font-caveat)", "cursive"],
+      },
     },
   },
   plugins: [],

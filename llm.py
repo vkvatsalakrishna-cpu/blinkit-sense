@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 from openai import OpenAI, RateLimitError
 
 from engine import IMPLAUSIBLE_TILES
-from phases.phase_2_data.loader import all_tiles
+from phases.phase_2_data.loader import all_tiles, load_scenarios
 
 load_dotenv()
 
@@ -29,7 +29,17 @@ GROQ_BASE_URL = "https://api.groq.com/openai/v1"
 VALID_PLANNER_TILES = all_tiles()
 _VALID_TILES_SET = frozenset(VALID_PLANNER_TILES)
 
-SITUATION_READER_SYSTEM = """You are a checkout-time situation inference engine for an Indian quick-commerce grocery app.
+
+def _scenario_by_id() -> dict[str, dict]:
+    return {scenario["id"]: scenario for scenario in load_scenarios()}
+
+
+def _situation_reader_system() -> str:
+    scenario_lines = "\n".join(
+        f"- id: {scenario['id']} | label: {scenario['chip_label']}"
+        for scenario in load_scenarios()
+    )
+    return f"""You are a checkout-time situation inference engine for an Indian quick-commerce grocery app.
 
 You receive a JSON payload with:
 - cart_items: product names with Blinkit tile categories
@@ -38,22 +48,27 @@ You receive a JSON payload with:
 - today: today's date (ISO)
 
 Infer up to four plausible life situations that could explain this cart. Return JSON only matching this schema:
-{
+{{
   "confidence": <float 0.0-1.0, must equal candidates[0].score>,
   "candidates": [
-    {
-      "id": "<scenario id, align with known ids where possible: festival_gifting, hosting, moving_in, new_pet, health, stocking, cooking_project>",
-      "label": "<customer-facing chip text, max 4 words>",
+    {{
+      "id": "<scenario id copied exactly from the valid list below>",
+      "label": "<chip label copied exactly from the valid list below>",
       "reasoning": "<roughly 10 words or fewer>",
       "score": <float 0.0-1.0>
-    }
+    }}
   ]
-}
+}}
+
+Valid scenarios — you MUST pick only from this list (exact id and label, no inventions):
+{scenario_lines}
 
 Rules:
 - Exactly 4 candidates, ordered by descending score.
+- Each candidate id and label MUST match one row above exactly. Never invent ids or labels (e.g. no "stocking", "travel packing", "General Stocking", or other names not in the list).
+- All four candidate ids must be distinct.
+- If nothing fits well, choose the four closest real scenarios from the list above rather than making up new ones.
 - Each candidate must include a score between 0.0 and 1.0; confidence equals the top candidate's score.
-- Candidate labels must be 4 words or fewer.
 - reasoning: one short clause, roughly 10 words maximum — the UI truncates longer text.
 - Calibrate scores: high confidence for strong situational items (cat food, bedsheet, dry fruits near festivals); low confidence (below 0.4) for staple-only carts (milk, bread, eggs).
 - Unfamiliar delivery location and festival proximity raise confidence.
@@ -209,11 +224,11 @@ def _extract_json(text: str) -> str | None:
     return stripped
 
 
-def _word_count(label: str) -> int:
-    return len(label.split())
-
-
-def _parse_situation_response(raw: str) -> dict | None:
+def _parse_situation_response(
+    raw: str, scenario_by_id: dict[str, dict] | None = None
+) -> dict | None:
+    scenario_by_id = scenario_by_id or _scenario_by_id()
+    valid_ids = frozenset(scenario_by_id)
     extracted = _extract_json(raw)
     if extracted is None:
         logger.warning("Situation reader: failed to extract JSON")
@@ -235,6 +250,7 @@ def _parse_situation_response(raw: str) -> dict | None:
         return None
 
     parsed_candidates: list[dict] = []
+    seen_ids: set[str] = set()
     for candidate in candidates:
         if not isinstance(candidate, dict):
             return None
@@ -249,13 +265,26 @@ def _parse_situation_response(raw: str) -> dict | None:
             or score is None
         ):
             return None
-        if _word_count(label.strip()) > 4:
-            logger.warning("Situation reader: label exceeds 4 words: %r", label)
+        cand_id = cand_id.strip()
+        if cand_id not in valid_ids:
+            logger.warning("Situation reader: unknown scenario id: %r", cand_id)
             return None
+        if cand_id in seen_ids:
+            logger.warning("Situation reader: duplicate scenario id: %r", cand_id)
+            return None
+        seen_ids.add(cand_id)
+        canonical_label = scenario_by_id[cand_id]["chip_label"]
+        if label.strip() != canonical_label:
+            logger.warning(
+                "Situation reader: relabeling %r from %r to %r",
+                cand_id,
+                label.strip(),
+                canonical_label,
+            )
         parsed_candidates.append(
             {
-                "id": cand_id.strip(),
-                "label": label.strip(),
+                "id": cand_id,
+                "label": canonical_label,
                 "reasoning": reasoning.strip(),
                 "score": score,
             }
@@ -441,7 +470,7 @@ def read_situation(
         "location_unfamiliar": location_unfamiliar,
         "today": today,
     }
-    raw = _chat(SITUATION_READER_SYSTEM, payload)
+    raw = _chat(_situation_reader_system(), payload)
     if raw is None:
         return None
     result = _parse_situation_response(raw)

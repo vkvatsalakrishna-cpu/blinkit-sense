@@ -38,7 +38,8 @@ SENSITIVE_GUIDANCE = {
     "Health & Pharma": "Health & Pharma items need separate browsing — not auto-added.",
     "Baby Care": "Baby Care items need separate browsing — not auto-added.",
 }
-MAX_COMPOSED_ITEMS = 6
+MAX_COMPOSED_ITEMS = 4
+MIN_COMPOSED_ITEMS = 2
 ROUTINE_OWNED_THRESHOLD = 1
 
 FEE_DELIVERY = 30
@@ -960,16 +961,28 @@ def apply_household_filter(
         items.append(flagged)
 
     items.sort(key=lambda item: item.get("match_score", 0), reverse=True)
-    if len(items) > MAX_COMPOSED_ITEMS:
-        items = items[:MAX_COMPOSED_ITEMS]
-
     items = [item for item in items if item["resolved_sku"] not in cart_skus]
 
-    suggested_total = sum(item["price"] for item in items)
+    if len(items) < MIN_COMPOSED_ITEMS:
+        return {
+            "items": [],
+            "reserve": [],
+            "gaps": gaps,
+            "sensitive_guidance": sensitive_guidance,
+            "cart_subtotal": cart_subtotal,
+            "suggested_total": 0,
+            "fee": fee_breakdown(cart_subtotal),
+        }
+
+    displayed = items[:MAX_COMPOSED_ITEMS]
+    reserve = items[MAX_COMPOSED_ITEMS:]
+
+    suggested_total = sum(item["price"] for item in displayed)
     combined_subtotal = cart_subtotal + suggested_total
 
     return {
-        "items": items,
+        "items": displayed,
+        "reserve": reserve,
         "gaps": gaps,
         "sensitive_guidance": sensitive_guidance,
         "cart_subtotal": cart_subtotal,

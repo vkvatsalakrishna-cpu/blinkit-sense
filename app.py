@@ -312,7 +312,7 @@ def _render_composed(household: dict, composed: dict, cart_subtotal: int) -> Non
     household_id = household["id"]
     items = composed["items"]
 
-    if len(items) < 3:
+    if len(items) < 2:
         st.markdown(
             '<p class="strip-heading">Nothing to add for this one — you\'re set.</p>',
             unsafe_allow_html=True,

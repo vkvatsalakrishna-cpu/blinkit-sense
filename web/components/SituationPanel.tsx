@@ -18,29 +18,95 @@ export type SituationSubmitPayload = {
   max_price?: number;
 };
 
+export type SituationPanelInitialState = {
+  selection: SituationSelection;
+  customText: string;
+  budgetMin: number;
+  budgetMax: number;
+};
+
 interface SituationPanelProps {
   candidates: SituationCandidate[];
   loading: boolean;
+  initialState?: SituationPanelInitialState;
   onSubmit: (payload: SituationSubmitPayload) => void;
   onStockingUp: () => void;
   onDismiss: () => void;
 }
 
+function SparkleIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      aria-hidden
+    >
+      <path d="M8 0.5L9.2 5.4L14 6.5L9.2 7.6L8 12.5L6.8 7.6L2 6.5L6.8 5.4L8 0.5Z" />
+      <path
+        d="M13 2.5L13.6 4.6L15.5 5.2L13.6 5.8L13 7.9L12.4 5.8L10.5 5.2L12.4 4.6L13 2.5Z"
+        opacity="0.85"
+      />
+    </svg>
+  );
+}
+
+export function SenseIntro() {
+  return (
+    <div>
+      <p className="font-caveat text-[20px] italic leading-tight text-blinkit-green">
+        Tell us the occasion
+      </p>
+      <p className="mt-1 text-sm text-gray-500">
+        We&apos;ll work out what else you need
+      </p>
+    </div>
+  );
+}
+
+function resolveInitialSelection(
+  candidates: SituationCandidate[],
+  initialState?: SituationPanelInitialState,
+): SituationSelection {
+  if (!initialState) {
+    return candidates.length > 0
+      ? { kind: "candidate", candidate: candidates[0] }
+      : { kind: "custom", text: "" };
+  }
+  if (initialState.selection.kind === "custom") {
+    return initialState.selection;
+  }
+  const match = candidates.find(
+    (c) => c.id === initialState.selection.candidate.id,
+  );
+  if (match) {
+    return { kind: "candidate", candidate: match };
+  }
+  return candidates.length > 0
+    ? { kind: "candidate", candidate: candidates[0] }
+    : initialState.selection;
+}
+
 export function SituationPanel({
   candidates,
   loading,
+  initialState,
   onSubmit,
   onStockingUp,
   onDismiss,
 }: SituationPanelProps) {
   const [selection, setSelection] = useState<SituationSelection>(() =>
-    candidates.length > 0
-      ? { kind: "candidate", candidate: candidates[0] }
-      : { kind: "custom", text: "" },
+    resolveInitialSelection(candidates, initialState),
   );
-  const [customText, setCustomText] = useState("");
-  const [budgetMin, setBudgetMin] = useState(0);
-  const [budgetMax, setBudgetMax] = useState(BUDGET_CEILING);
+  const [customText, setCustomText] = useState(
+    () => initialState?.customText ?? "",
+  );
+  const [budgetMin, setBudgetMin] = useState(
+    () => initialState?.budgetMin ?? 0,
+  );
+  const [budgetMax, setBudgetMax] = useState(
+    () => initialState?.budgetMax ?? BUDGET_CEILING,
+  );
 
   const isSelected = (candidate: SituationCandidate) =>
     selection.kind === "candidate" && selection.candidate.id === candidate.id;
@@ -62,28 +128,43 @@ export function SituationPanel({
   };
 
   return (
-    <div className="space-y-4">
-      <div className="space-y-2">
-        <p className="text-xs font-medium text-gray-500">Pick what fits best</p>
-        {candidates.map((candidate) => (
-          <button
-            key={candidate.id + candidate.label}
-            type="button"
-            disabled={loading}
-            onClick={() => setSelection({ kind: "candidate", candidate })}
-            className={`block w-full rounded-lg border px-3 py-2.5 text-left text-sm transition-colors disabled:opacity-50 ${
-              isSelected(candidate)
-                ? "border-blinkit-green bg-blinkit-green/5 ring-1 ring-blinkit-green"
-                : "border-gray-200 bg-white hover:border-blinkit-green/50"
-            }`}
-          >
-            <span className="font-medium text-gray-900">{candidate.label}</span>
-            <span className="mt-0.5 block text-xs text-gray-500">{candidate.reasoning}</span>
-          </button>
-        ))}
+    <div className="space-y-5">
+      <SenseIntro />
+
+      <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-1 md:mx-0 md:flex-wrap md:overflow-visible md:px-0">
+        {candidates.map((candidate) => {
+          const selected = isSelected(candidate);
+          return (
+            <div
+              key={candidate.id + candidate.label}
+              className="w-[11.5rem] shrink-0 md:w-auto md:max-w-[13rem]"
+            >
+              <button
+                type="button"
+                disabled={loading}
+                onClick={() => setSelection({ kind: "candidate", candidate })}
+                className={`group flex w-full items-center gap-1.5 rounded-full px-3.5 py-2 text-left text-sm font-medium transition-colors disabled:opacity-50 ${
+                  selected
+                    ? "border border-blinkit-green bg-blinkit-green/10 text-gray-900"
+                    : "border border-transparent bg-white text-gray-900 [background-clip:padding-box,border-box] [background-origin:border-box] [background-image:linear-gradient(white,white),linear-gradient(to_right,rgba(12,131,31,0.45),rgba(190,242,100,0.75))]"
+                }`}
+              >
+                <SparkleIcon
+                  className={`h-3.5 w-3.5 shrink-0 ${
+                    selected ? "text-blinkit-green" : "text-blinkit-green"
+                  }`}
+                />
+                <span className="leading-snug">{candidate.label}</span>
+              </button>
+              <p className="mt-1.5 px-1 text-xs leading-snug text-gray-500">
+                {candidate.reasoning}
+              </p>
+            </div>
+          );
+        })}
       </div>
 
-      <div className="space-y-2 border-t border-amber-200/60 pt-3">
+      <div className="space-y-2">
         <label className="block text-xs font-medium text-gray-600">
           Or describe your situation
         </label>

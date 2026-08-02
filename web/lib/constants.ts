@@ -84,7 +84,7 @@ export const SCENARIO_PRESETS: ScenarioPreset[] = [
     id: "scenario_9",
     label: "Scenario 9",
     householdId: "h1",
-    skuIds: ["sku_22758", "sku_25952", "sku_12427", "sku_24066"],
+    skuIds: ["sku_22842", "sku_12427", "sku_25820", "sku_25952"],
   },
   {
     id: "scenario_10",

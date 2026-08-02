@@ -6,10 +6,15 @@ import { Header } from "@/components/Header";
 import { OrderConfirmation } from "@/components/OrderConfirmation";
 import { ScenarioSelector } from "@/components/ScenarioSelector";
 import {
+  SenseIntro,
   SituationPanel,
+  type SituationPanelInitialState,
   type SituationSubmitPayload,
 } from "@/components/SituationPanel";
 import { SuggestionsPanel } from "@/components/SuggestionsPanel";
+import {
+  BUDGET_CEILING,
+} from "@/components/BudgetRangeSlider";
 import {
   fetchHouseholds,
   fetchProductDetails,
@@ -39,6 +44,7 @@ import type {
   ScenarioPreset,
   SelectedSuggestion,
   SituationsResponse,
+  SuggestionItem,
 } from "@/lib/types";
 
 function todayIso(): string {
@@ -77,8 +83,12 @@ export default function SensePage() {
   const [flowError, setFlowError] = useState<string | null>(null);
   const [situations, setSituations] = useState<SituationsResponse | null>(null);
   const [suggestions, setSuggestions] = useState<SelectedSuggestion[]>([]);
+  const [reserve, setReserve] = useState<SuggestionItem[]>([]);
+  const [reserveRotateIndex, setReserveRotateIndex] = useState(0);
   const [situationLabel, setSituationLabel] = useState("");
   const [sensitiveGuidance, setSensitiveGuidance] = useState<string[]>([]);
+  const [savedSituationSubmit, setSavedSituationSubmit] =
+    useState<SituationSubmitPayload | null>(null);
 
   const household = useMemo(
     () => households.find((h) => h.id === householdId) ?? null,
@@ -112,6 +122,8 @@ export default function SensePage() {
 
   const clearSensePanels = useCallback(() => {
     setSuggestions([]);
+    setReserve([]);
+    setReserveRotateIndex(0);
     setSituationLabel("");
     setSensitiveGuidance([]);
   }, []);
@@ -120,6 +132,7 @@ export default function SensePage() {
     setPhase("cart");
     setFlowError(null);
     setSituations(null);
+    setSavedSituationSubmit(null);
     clearSensePanels();
   }, [clearSensePanels]);
 
@@ -223,6 +236,7 @@ export default function SensePage() {
 
       setSituations(result);
       clearSensePanels();
+      setSavedSituationSubmit(null);
       setPhase("situations");
     } catch (err) {
       setFlowError(friendlyError(err));
@@ -269,6 +283,8 @@ export default function SensePage() {
           optionIndex: initialOptionIndex(item),
         })),
       );
+      setReserve(result.reserve ?? []);
+      setReserveRotateIndex(0);
       setSituationLabel(result.situation_label);
       setSensitiveGuidance(result.sensitive_guidance ?? []);
       setPhase("suggestions");
@@ -278,7 +294,9 @@ export default function SensePage() {
     }
   };
 
-  const handleSituationSubmit = ({ selection, min_price, max_price }: SituationSubmitPayload) => {
+  const handleSituationSubmit = (payload: SituationSubmitPayload) => {
+    setSavedSituationSubmit(payload);
+    const { selection, min_price, max_price } = payload;
     const budget = { min_price, max_price };
     if (selection.kind === "custom") {
       runNeeds(
@@ -292,8 +310,14 @@ export default function SensePage() {
     runNeeds(selection.candidate.id, selection.candidate.label, undefined, budget);
   };
 
+  const handleBackToSituations = () => {
+    setFlowError(null);
+    setPhase("situations");
+  };
+
   const handleStockingUp = () => {
     setSituations(null);
+    setSavedSituationSubmit(null);
     clearSensePanels();
     setFlowError(null);
     setPhase("dismissed");
@@ -301,6 +325,7 @@ export default function SensePage() {
 
   const handleDismissSense = () => {
     setSituations(null);
+    setSavedSituationSubmit(null);
     clearSensePanels();
     setFlowError(null);
     setPhase("dismissed");
@@ -356,23 +381,58 @@ export default function SensePage() {
   );
 
   const handleShowOtherOptions = useCallback(() => {
-    setSuggestions((prev) => {
-      const advanced: { rowKey: string; skuId: string }[] = [];
-      const next = prev.map((s) => {
-        if (!canAdvanceOption(s)) return s;
-        const updated = applySuggestionOption(s, s.optionIndex + 1);
-        advanced.push({
-          rowKey: suggestionRowKey(s.item),
-          skuId: updated.item.resolved_sku,
+    const visible = suggestions.filter((s) => !s.dismissed);
+    if (visible.some(canAdvanceOption)) {
+      setSuggestions((prev) => {
+        const advanced: { rowKey: string; skuId: string }[] = [];
+        const next = prev.map((s) => {
+          if (!canAdvanceOption(s)) return s;
+          const updated = applySuggestionOption(s, s.optionIndex + 1);
+          advanced.push({
+            rowKey: suggestionRowKey(s.item),
+            skuId: updated.item.resolved_sku,
+          });
+          return updated;
         });
-        return updated;
+        for (const { rowKey, skuId } of advanced) {
+          refreshSuggestionProduct(rowKey, skuId);
+        }
+        return next;
       });
-      for (const { rowKey, skuId } of advanced) {
-        refreshSuggestionProduct(rowKey, skuId);
-      }
-      return next;
+      return;
+    }
+
+    if (reserve.length === 0) return;
+
+    const [incoming, ...rest] = reserve;
+    const visibleRows = suggestions
+      .map((s, index) => ({ s, index }))
+      .filter(({ s }) => !s.dismissed);
+    if (visibleRows.length === 0) return;
+
+    const slot = reserveRotateIndex % visibleRows.length;
+    const { index: replaceIndex, s: outgoing } = visibleRows[slot];
+
+    void fetchProductDetails(incoming.resolved_sku).then((product) => {
+      setSuggestions((prev) =>
+        prev.map((s, i) =>
+          i === replaceIndex
+            ? {
+                item: incoming,
+                product,
+                qty: 1,
+                checked: true,
+                dismissed: false,
+                optionIndex: initialOptionIndex(incoming),
+              }
+            : s,
+        ),
+      );
     });
-  }, [refreshSuggestionProduct]);
+
+    setReserve([...rest, outgoing.item]);
+    setReserveRotateIndex((i) => i + 1);
+  }, [suggestions, reserve, reserveRotateIndex, refreshSuggestionProduct]);
 
   const catalogLocation = useMemo(
     () => catalogLocationFromAddress(location),
@@ -392,6 +452,21 @@ export default function SensePage() {
     });
     return Array.from(tiles).sort();
   }, [suggestions]);
+
+  const situationPanelInitialState = useMemo(():
+    | SituationPanelInitialState
+    | undefined => {
+    if (!savedSituationSubmit) return undefined;
+    return {
+      selection: savedSituationSubmit.selection,
+      customText:
+        savedSituationSubmit.selection.kind === "custom"
+          ? savedSituationSubmit.selection.text
+          : "",
+      budgetMin: savedSituationSubmit.min_price ?? 0,
+      budgetMax: savedSituationSubmit.max_price ?? BUDGET_CEILING,
+    };
+  }, [savedSituationSubmit]);
 
   if (initError) {
     return (
@@ -433,24 +508,15 @@ export default function SensePage() {
               onShuffle={handleShuffle}
             />
 
-            <section className="rounded-xl border border-amber-200 bg-blinkit-cream p-4 shadow-sm">
-              <div className="mb-3">
-                <p className="text-xs font-semibold uppercase tracking-wide text-amber-800">
-                  Blinkit Sense
-                </p>
-                <p className="mt-1 text-sm text-gray-600">
-                  Optional — tell us your situation and we&apos;ll suggest items you
-                  might need.
-                </p>
-              </div>
-
+            <section className="space-y-5">
               {(phase === "cart" || phase === "dismissed") && (
-                <div className="space-y-2">
+                <div className="space-y-4">
+                  <SenseIntro />
                   <button
                     type="button"
                     disabled={cart.length === 0}
                     onClick={handleGetSuggestions}
-                    className="w-full rounded-lg border border-amber-300 bg-white py-2.5 text-sm font-semibold text-amber-900 hover:bg-amber-50 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="w-full rounded-lg border border-blinkit-green bg-white py-2.5 text-sm font-semibold text-blinkit-green hover:bg-blinkit-green/5 disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Get suggestions
                   </button>
@@ -473,6 +539,7 @@ export default function SensePage() {
                 <SituationPanel
                   candidates={situations.candidates}
                   loading={false}
+                  initialState={situationPanelInitialState}
                   onSubmit={handleSituationSubmit}
                   onStockingUp={handleStockingUp}
                   onDismiss={handleDismissSense}
@@ -491,6 +558,7 @@ export default function SensePage() {
                   situationLabel={situationLabel}
                   suggestions={suggestions}
                   catalogLocation={catalogLocation}
+                  onBack={handleBackToSituations}
                   onToggle={(rowKey) =>
                     setSuggestions((prev) =>
                       prev.map((s) =>
@@ -511,6 +579,7 @@ export default function SensePage() {
                   }
                   onAdvanceRow={handleAdvanceRow}
                   onShowOtherOptions={handleShowOtherOptions}
+                  hasReserve={reserve.length > 0}
                   onAddAll={handleAddAllSuggestions}
                   onAddProductToCart={handleAddProductToCart}
                   sensitiveGuidance={sensitiveGuidance}
