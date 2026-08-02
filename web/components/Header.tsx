@@ -1,22 +1,18 @@
 "use client";
 
-import type { Household } from "@/lib/types";
+import { DELIVERY_LOCATIONS } from "@/lib/constants";
 
 interface HeaderProps {
   location: string;
   cartCount: number;
-  households: Household[];
-  selectedHouseholdId: string;
-  onHouseholdChange: (id: string) => void;
+  onLocationChange: (address: string) => void;
   locationUnfamiliar: boolean;
 }
 
 export function Header({
   location,
   cartCount,
-  households,
-  selectedHouseholdId,
-  onHouseholdChange,
+  onLocationChange,
   locationUnfamiliar,
 }: HeaderProps) {
   return (
@@ -45,14 +41,14 @@ export function Header({
 
         <div className="flex shrink-0 items-center gap-2">
           <select
-            value={selectedHouseholdId}
-            onChange={(e) => onHouseholdChange(e.target.value)}
+            value={location}
+            onChange={(e) => onLocationChange(e.target.value)}
             className="max-w-[9.5rem] truncate rounded-md border border-gray-200 bg-gray-50 px-2 py-1 text-xs text-gray-700"
             aria-label="Delivery address"
           >
-            {households.map((h) => (
-              <option key={h.id} value={h.id}>
-                {h.current_address}
+            {DELIVERY_LOCATIONS.map((addr) => (
+              <option key={addr} value={addr}>
+                {addr}
               </option>
             ))}
           </select>

@@ -11,23 +11,58 @@ body {
   @apply bg-gray-50 text-gray-900 antialiased;
 }
 
+@layer components {
+  .btn-checkout {
+    @apply w-full rounded-xl py-3 text-sm font-semibold text-white transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+    background: linear-gradient(to bottom, #0c831f, #0a6e19);
+    box-shadow: 0 4px 14px rgba(12, 131, 31, 0.22);
+  }
+
+  .btn-checkout:hover:not(:disabled) {
+    @apply -translate-y-0.5;
+    box-shadow: 0 6px 20px rgba(12, 131, 31, 0.32);
+  }
+
+  .btn-outline {
+    @apply w-full rounded-xl bg-white py-3 text-sm font-semibold text-blinkit-green transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+    border: 1.5px solid #0c831f;
+  }
+
+  .btn-outline:hover:not(:disabled) {
+    @apply bg-blinkit-green/[0.06];
+  }
+}
+
+.budget-range-input::-webkit-slider-runnable-track {
+  height: 6px;
+  background: transparent;
+}
+
+.budget-range-input::-moz-range-track {
+  height: 6px;
+  background: transparent;
+}
+
 .budget-range-input::-webkit-slider-thumb {
   pointer-events: auto;
   appearance: none;
-  height: 1rem;
-  width: 1rem;
+  height: 16px;
+  width: 16px;
+  margin-top: -5px;
   border-radius: 9999px;
   border: 2px solid var(--blinkit-green);
   background: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
   cursor: pointer;
 }
 
 .budget-range-input::-moz-range-thumb {
   pointer-events: auto;
-  height: 1rem;
-  width: 1rem;
+  height: 16px;
+  width: 16px;
   border-radius: 9999px;
   border: 2px solid var(--blinkit-green);
   background: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
   cursor: pointer;
 }

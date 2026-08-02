@@ -185,7 +185,7 @@ export function SuggestionsPanel({
         <button
           type="button"
           onClick={onShowOtherOptions}
-          className="mt-4 w-full rounded-lg border border-gray-200 bg-white py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+          className="mt-4 text-sm font-medium text-blinkit-green hover:underline"
         >
           Show other options
         </button>

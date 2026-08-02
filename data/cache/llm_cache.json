@@ -277,5 +277,34 @@
       }
     ],
     "unavailable": []
+  },
+  "11f0a47649b653eb6636e5f3ef6c0aaa11b9198bdd16a9ea4739112f57234226": {
+    "confidence": 0.85,
+    "candidates": [
+      {
+        "id": "cooking_project",
+        "label": "Cooking something",
+        "reasoning": "Flour, butter, cake mould indicate baking a cake",
+        "score": 0.85
+      },
+      {
+        "id": "birthday",
+        "label": "Someone's birthday",
+        "reasoning": "Cake supplies suggest birthday celebration",
+        "score": 0.78
+      },
+      {
+        "id": "moving_in",
+        "label": "Moving in",
+        "reasoning": "Unfamiliar address, new kitchenware purchase",
+        "score": 0.65
+      },
+      {
+        "id": "hosting",
+        "label": "Guests coming",
+        "reasoning": "Baked goods and treats for incoming guests",
+        "score": 0.55
+      }
+    ]
   }
 }

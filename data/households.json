@@ -18,7 +18,7 @@
       "id": "h2",
       "name": "New home mover",
       "known_addresses": ["Sarjapur, Bangalore"],
-      "current_address": "New home, Bangalore",
+      "current_address": "Sarjapur, Bangalore",
       "orders_per_month": 8,
       "order_history": [
         { "sku": "sku_022", "orders_per_month": 8 },

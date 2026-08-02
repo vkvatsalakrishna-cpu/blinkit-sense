@@ -3,6 +3,12 @@ import type { ScenarioPreset } from "./types";
 export const API_BASE =
   process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
+/** Delivery addresses shown in the header — one option per catalog area */
+export const DELIVERY_LOCATIONS = [
+  "Sarjapur, Bangalore",
+  "HSR Layout, Bangalore",
+] as const;
+
 export const FEE_DELIVERY = 30;
 export const FEE_HANDLING = 12;
 export const FEE_SMALL_CART = 20;

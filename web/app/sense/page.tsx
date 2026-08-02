@@ -33,6 +33,7 @@ import {
 import {
   catalogLocationFromAddress,
   confidenceThreshold,
+  DELIVERY_LOCATIONS,
   feeBreakdown,
   SCENARIO_PRESETS,
 } from "@/lib/constants";
@@ -72,7 +73,7 @@ function suggestionToProduct(s: SelectedSuggestion): Product {
 export default function SensePage() {
   const [households, setHouseholds] = useState<Household[]>([]);
   const [householdId, setHouseholdId] = useState("h1");
-  const [location, setLocation] = useState("Sarjapur, Bangalore");
+  const [location, setLocation] = useState<string>(DELIVERY_LOCATIONS[0]);
   const [cart, setCart] = useState<CartLine[]>([]);
   const [placedOrder, setPlacedOrder] = useState<CartLine[]>([]);
   const [activePresetId, setActivePresetId] = useState<string | null>(null);
@@ -115,8 +116,6 @@ export default function SensePage() {
     fetchHouseholds()
       .then((list) => {
         setHouseholds(list);
-        const h1 = list.find((h) => h.id === "h1");
-        if (h1) setLocation(h1.current_address);
       })
       .catch((err) => setInitError(friendlyError(err)));
   }, []);
@@ -146,8 +145,7 @@ export default function SensePage() {
       setActivePresetId(preset.id);
       setHouseholdId(preset.householdId);
 
-      const hh = households.find((h) => h.id === preset.householdId);
-      const loc = hh?.current_address ?? location;
+      const loc = location || DELIVERY_LOCATIONS[0];
 
       try {
         const products = await fetchProductsBySkuIds(
@@ -167,7 +165,6 @@ export default function SensePage() {
           return;
         }
 
-        setLocation(loc);
         setCart(lines);
       } catch (err) {
         setFlowError(friendlyError(err));
@@ -184,10 +181,8 @@ export default function SensePage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [households.length]);
 
-  const handleHouseholdChange = (id: string) => {
-    setHouseholdId(id);
-    const hh = households.find((h) => h.id === id);
-    if (hh) setLocation(hh.current_address);
+  const handleLocationChange = (address: string) => {
+    setLocation(address);
     resetSenseFlow();
   };
 
@@ -485,9 +480,7 @@ export default function SensePage() {
       <Header
         location={location}
         cartCount={phase === "order_confirmed" ? placedOrder.reduce((s, l) => s + l.qty, 0) : cartCount}
-        households={households}
-        selectedHouseholdId={householdId}
-        onHouseholdChange={handleHouseholdChange}
+        onLocationChange={handleLocationChange}
         locationUnfamiliar={household ? isLocationUnfamiliar(household, location) : false}
       />
 
@@ -518,7 +511,7 @@ export default function SensePage() {
                     type="button"
                     disabled={cart.length === 0}
                     onClick={handleGetSuggestions}
-                    className="w-full rounded-lg border border-blinkit-green bg-white py-2.5 text-sm font-semibold text-blinkit-green hover:bg-blinkit-green/5 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="btn-outline disabled:cursor-not-allowed"
                   >
                     Get suggestions
                   </button>
@@ -600,7 +593,7 @@ export default function SensePage() {
               type="button"
               disabled={cart.length === 0}
               onClick={handleCheckout}
-              className="w-full rounded-lg bg-blinkit-green py-4 text-base font-bold text-white shadow-md hover:bg-blinkit-green-dark disabled:opacity-50"
+              className="btn-checkout"
             >
               Checkout · ₹{checkoutTotal}
             </button>

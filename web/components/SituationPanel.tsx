@@ -204,7 +204,7 @@ export function SituationPanel({
         type="button"
         disabled={loading || !canSubmit}
         onClick={handleSubmit}
-        className="w-full rounded-lg border border-blinkit-green bg-white py-2.5 text-sm font-semibold text-blinkit-green hover:bg-blinkit-green/5 disabled:opacity-50"
+        className="btn-outline"
       >
         Submit
       </button>
@@ -214,7 +214,7 @@ export function SituationPanel({
           type="button"
           disabled={loading}
           onClick={onStockingUp}
-          className="flex-1 rounded-lg border border-gray-200 bg-white py-2 text-sm text-gray-700 hover:bg-gray-50 disabled:opacity-50"
+          className="btn-outline flex-1 !w-auto disabled:opacity-50"
         >
           Just stocking up
         </button>
@@ -222,7 +222,7 @@ export function SituationPanel({
           type="button"
           disabled={loading}
           onClick={onDismiss}
-          className="flex-1 rounded-lg border border-gray-200 bg-white py-2 text-sm text-gray-500 hover:bg-gray-50 disabled:opacity-50"
+          className="flex-1 text-sm text-gray-500 transition-colors hover:text-gray-700 hover:underline disabled:opacity-50"
         >
           Dismiss
         </button>

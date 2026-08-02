@@ -52,18 +52,22 @@ export function BudgetRangeSlider({ min, max, onChange }: BudgetRangeSliderProps
   const maxPercent = (max / BUDGET_CEILING) * 100;
 
   return (
-    <div className="space-y-2 border-t border-gray-200 pt-3">
+    <div className="max-w-sm space-y-1 border-t border-gray-200 pt-3">
       <div className="flex items-baseline justify-between gap-2">
-        <label className="text-xs font-medium text-gray-600">
-          Budget per item (optional)
-        </label>
-        <span className="text-xs font-medium text-gray-800">{rangeLabel}</span>
+        <label className="text-xs font-medium text-gray-600">Budget per item</label>
+        <span
+          className={`text-xs font-medium ${
+            isFiltered ? "text-blinkit-green" : "text-gray-500"
+          }`}
+        >
+          {rangeLabel}
+        </span>
       </div>
 
-      <div className="relative mx-1 h-7">
+      <div className="relative h-7">
         <div className="absolute top-1/2 h-1.5 w-full -translate-y-1/2 rounded-full bg-gray-200" />
         <div
-          className="absolute top-1/2 h-1.5 -translate-y-1/2 rounded-full bg-blinkit-green/70"
+          className="absolute top-1/2 h-1.5 -translate-y-1/2 rounded-full bg-blinkit-green"
           style={{
             left: `${minPercent}%`,
             width: `${Math.max(0, maxPercent - minPercent)}%`,
@@ -91,9 +95,9 @@ export function BudgetRangeSlider({ min, max, onChange }: BudgetRangeSliderProps
         />
       </div>
 
-      <div className="flex justify-between text-[10px] text-gray-400">
-        <span>₹0</span>
-        <span>₹5,000+</span>
+      <div className="relative h-3 text-xs text-gray-400">
+        <span className="absolute left-0 top-0">₹0</span>
+        <span className="absolute right-0 top-0">₹5,000+</span>
       </div>
     </div>
   );
