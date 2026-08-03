@@ -147,18 +147,35 @@ def _clear_composed(household_id: str) -> None:
         st.session_state.item_selection.pop(key, None)
 
 
+def _cart_items_for_household(household: dict) -> tuple[list[dict], list[str]]:
+    by_id = catalog_by_id()
+    items: list[dict] = []
+    sku_ids: list[str] = []
+    for sku in household.get("current_cart", []):
+        product = by_id.get(sku)
+        if product is None:
+            continue
+        items.append({"name": product["name"], "category": product["category"]})
+        sku_ids.append(sku)
+    return items, sorted(sku_ids)
+
+
 def _run_confirmation(
     household: dict,
     scenario: dict,
 ) -> dict | None:
     tiles = all_tiles()
     location = address_to_catalog_location(household["current_address"])
+    cart_items, cart_skus = _cart_items_for_household(household)
     with st.spinner("Planning what this situation needs..."):
         needs_result = plan_needs(
             situation_id=scenario["id"],
             situation_label=scenario["chip_label"],
             prompt_context=scenario["prompt_context"],
             tile_categories=tiles,
+            household_id=household["id"],
+            cart_items=cart_items,
+            cart_skus=cart_skus,
         )
     if needs_result is None:
         return None

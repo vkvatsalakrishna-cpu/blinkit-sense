@@ -95,6 +95,8 @@ def run_preset(preset: dict) -> dict:
         prompt_context=scenario["prompt_context"],
         tile_categories=all_tiles(),
         household_id=household["id"],
+        cart_items=cart_payload,
+        cart_skus=cart_skus,
     )
     if needs_result is None:
         return {

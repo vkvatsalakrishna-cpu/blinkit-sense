@@ -260,6 +260,7 @@ def needs(body: NeedsRequest) -> dict[str, Any]:
     scenario = _resolve_scenario(body)
     ctx = _household_with_request_context(household, body.cart, body.location)
     catalog_location = address_to_catalog_location(body.location)
+    cart_items, cart_skus = _cart_items(body.cart)
 
     try:
         needs_result = plan_needs(
@@ -268,6 +269,8 @@ def needs(body: NeedsRequest) -> dict[str, Any]:
             prompt_context=scenario["prompt_context"],
             tile_categories=all_tiles(),
             household_id=body.household_id,
+            cart_items=cart_items,
+            cart_skus=cart_skus,
         )
     except RateLimitError:
         raise _llm_rate_limited() from None

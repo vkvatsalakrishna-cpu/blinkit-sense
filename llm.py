@@ -97,6 +97,8 @@ def _need_planner_system(valid_tiles: list[str]) -> str:
 You receive a JSON payload with:
 - situation_id, situation_label, prompt_context: the confirmed situation
 - tile_categories: Blinkit tile categories relevant to this situation (for domain awareness, not product retrieval)
+- cart_items (optional): products already in the cart — each with name and category
+- cart_categories (optional): distinct Blinkit tile categories already represented in the cart
 
 Return JSON only matching this schema:
 {{
@@ -126,6 +128,8 @@ Rules:
 - Use world knowledge: moving in → bedsheet, pillow, towel, bucket, mug, mop, detergent powder, dustbin, dishwash gel; new cat → cat food, cat litter, litter tray, pet bowl, scoop.
 - Gifting situations (situation_id festival_gifting, or when prompt_context describes buying gifts): name the gift-appropriate PRODUCT, not a stacked gift-form phrase. Use at most one qualifier when it disambiguates — never pile presentation words. Wrong: "bath and body hamper", "electronics gift set", "beauty cosmetics set", "chocolate gift box". Right: "gift chocolate", "dry fruits", "perfume", "earphones", "soft toy". Presentation (hamper, set, box, kit) is the retailer's job — the need must be findable as words on a product label in the catalogue. Prefer products people actually give (sweets, dry fruits, perfume, jewellery, gadgets, toys, books, candles, plants) over invented gift packaging names.
 - For gifting, spread needs across categories — not only food. Draw across sweets and chocolates, dry fruits, perfume and bath products, beauty and cosmetics, jewellery, electronics, home décor, toys and books, stationery, e-gift vouchers, plants and flowers. The catalogue supports Bath & Body, E-Gifts Store, Sweets & Chocolates, Home & Lifestyle, Jewellery Store, Electronics, Toy Store, Book Store, and more.
+- When cart_categories is provided: do NOT plan needs that merely duplicate categories already well covered in the cart (e.g. another chip when the cart has chips, another face wash when the cart has face wash). Prefer complementary products from OTHER allowed categories that complete the situation. At most one need may target a cart category if something essential is still missing.
+- Spread expected_tiles across needs — avoid assigning the same tile to more than half of all needs when alternatives exist in tile_categories.
 - Needs must be generic nouns — never brand names or specific SKUs.
 - Do not suggest Health & Pharma or Baby Care products for auto-composition — note them in unavailable or omit.
 - Return raw JSON only. Do not wrap the response in markdown code fences. Do not use ```json or ``` blocks. No prose before or after the JSON."""
@@ -500,12 +504,16 @@ def plan_needs(
     tile_categories: list[str],
     household_id: str | None = None,
     free_text: str | None = None,
+    cart_items: list[dict] | None = None,
+    cart_skus: list[str] | None = None,
 ) -> dict | None:
     """Call 2 — decompose a confirmed situation into role-grouped abstract needs."""
+    resolved_skus = _resolve_cart_sku_ids(cart_items or [], cart_skus)
     key = _make_cache_key(
         "plan_needs",
         household_id=household_id,
         situation_id=situation_id,
+        cart_skus=resolved_skus or None,
         free_text=free_text,
     )
     if CACHE_ENABLED:
@@ -516,12 +524,17 @@ def plan_needs(
         print(f"cache miss: {key}")
 
     allowed = _allowed_tiles(situation_id, tile_categories)
-    payload = {
+    payload: dict[str, Any] = {
         "situation_id": situation_id,
         "situation_label": situation_label,
         "prompt_context": prompt_context,
         "tile_categories": allowed,
     }
+    if cart_items:
+        payload["cart_items"] = cart_items
+        payload["cart_categories"] = sorted(
+            {item["category"] for item in cart_items if item.get("category")}
+        )
     system = _need_planner_system(allowed)
     raw = _chat(system, payload)
     if raw is None:

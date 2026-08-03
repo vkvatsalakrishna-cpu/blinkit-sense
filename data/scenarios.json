@@ -43,12 +43,12 @@
     {
       "id": "house_party",
       "chip_label": "House party",
-      "prompt_context": "The customer is throwing a house party and needs drinks, snacks, and supplies for a crowd at home."
+      "prompt_context": "The customer is throwing a house party and needs drinks, snacks, and supplies for a crowd at home. The cart may already include some party food — suggest complementary items from categories not yet in the cart (e.g. ice cream, disposable plates, tea or coffee, home comfort) rather than more of the same snacks and drinks."
     },
     {
       "id": "movie_night",
       "chip_label": "Movie night in",
-      "prompt_context": "The customer is planning a cozy movie night at home and wants snacks, drinks, and comfort food."
+      "prompt_context": "The customer is planning a cozy movie night at home and wants snacks, drinks, and comfort food. The cart may already include chips, drinks, or sweets — suggest complementary items from other categories (e.g. popcorn if not present, ice cream, instant food, tea or coffee, blankets or cushions) rather than duplicate snack and drink types."
     },
     {
       "id": "birthday",
@@ -123,7 +123,7 @@
     {
       "id": "game_night",
       "chip_label": "Game night in",
-      "prompt_context": "The customer is hosting a board-game or gaming night and needs games or supplies, shareable snacks, drinks, and quick finger food."
+      "prompt_context": "The customer is hosting a board-game or gaming night and needs games or supplies, shareable snacks, drinks, and quick finger food. The cart may already cover snacks and drinks — suggest complementary items from categories not in the cart (e.g. instant food, ice cream, disposable plates or cups, card games, tea or coffee) rather than more chips and soft drinks."
     },
     {
       "id": "baking_day",

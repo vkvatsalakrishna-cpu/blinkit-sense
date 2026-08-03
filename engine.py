@@ -67,6 +67,7 @@ SENSITIVE_GUIDANCE = {
 }
 MAX_COMPOSED_ITEMS = 4
 MIN_COMPOSED_ITEMS = 2
+MAX_DEEPENING_DISPLAY = 2
 MAX_SUGGESTION_OPTIONS = 20
 ROUTINE_OWNED_THRESHOLD = 1
 
@@ -333,30 +334,7 @@ IMPLAUSIBLE_TILES: dict[str, frozenset[str]] = {
     "game_night": _SPECIALTY_STORES
     | _PERSONAL_SENSITIVE
     | _RAW_COOKING_STAPLES
-    | frozenset(
-        {
-            "Baby Care",
-            "Bath & Body",
-            "Beauty & Cosmetics",
-            "Hair",
-            "Skin & Face",
-            "Cleaners & Repellents",
-            "Home & Lifestyle",
-            "Kitchenware & Appliances",
-            "Electronics",
-            "Dairy, Bread & Eggs",
-            "Bakery & Biscuits",
-            "Dry Fruits & Cereals",
-            "Chicken, Meat & Fish",
-            "Oil, Ghee & Masala",
-            "Sauces & Spreads",
-            "Tea, Coffee & Milk Drinks",
-            "Vegetables & Fruits",
-            "Atta, Rice & Dal",
-            "Sweets & Chocolates",
-            "Ice Creams & More",
-        }
-    ),
+    | frozenset({"Baby Care"}),
     "baking_day": _SPECIALTY_STORES
     | _PERSONAL_SENSITIVE
     | frozenset(
@@ -1030,6 +1008,59 @@ def resolve_needs(
     return resolved
 
 
+def _compose_display_items(items: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Pick displayed suggestions, prioritizing new_category over deepening."""
+
+    def _score(item: dict) -> float:
+        return item.get("match_score", 0)
+
+    new_items = sorted(
+        (item for item in items if item.get("flag") == "new_category"),
+        key=_score,
+        reverse=True,
+    )
+    deep_items = sorted(
+        (item for item in items if item.get("flag") == "deepening"),
+        key=_score,
+        reverse=True,
+    )
+
+    if not new_items:
+        displayed = deep_items[:MAX_COMPOSED_ITEMS]
+        displayed_skus = {item.get("resolved_sku") for item in displayed}
+        reserve = [item for item in items if item.get("resolved_sku") not in displayed_skus]
+        return displayed, reserve
+
+    displayed: list[dict] = []
+    for item in new_items:
+        if len(displayed) >= MAX_COMPOSED_ITEMS:
+            break
+        displayed.append(item)
+
+    deepening_added = 0
+    for item in deep_items:
+        if len(displayed) >= MAX_COMPOSED_ITEMS:
+            break
+        if deepening_added >= MAX_DEEPENING_DISPLAY:
+            break
+        displayed.append(item)
+        deepening_added += 1
+
+    if len(displayed) < MIN_COMPOSED_ITEMS:
+        displayed_skus = {item.get("resolved_sku") for item in displayed}
+        for item in deep_items:
+            if len(displayed) >= MIN_COMPOSED_ITEMS:
+                break
+            if item.get("resolved_sku") in displayed_skus:
+                continue
+            displayed.append(item)
+            displayed_skus.add(item.get("resolved_sku"))
+
+    displayed_skus = {item.get("resolved_sku") for item in displayed}
+    reserve = [item for item in items if item.get("resolved_sku") not in displayed_skus]
+    return displayed, reserve
+
+
 def apply_household_filter(
     resolved: list[dict],
     household: dict,
@@ -1082,7 +1113,6 @@ def apply_household_filter(
         )
         items.append(flagged)
 
-    items.sort(key=lambda item: item.get("match_score", 0), reverse=True)
     items = [
         item
         for item in items
@@ -1106,8 +1136,7 @@ def apply_household_filter(
             "fee": fee_breakdown(cart_subtotal),
         }
 
-    displayed = items[:MAX_COMPOSED_ITEMS]
-    reserve = items[MAX_COMPOSED_ITEMS:]
+    displayed, reserve = _compose_display_items(items)
 
     suggested_total = sum(item["price"] for item in displayed)
     combined_subtotal = cart_subtotal + suggested_total
