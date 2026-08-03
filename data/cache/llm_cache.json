@@ -3058,5 +3058,820 @@
       "protein powder",
       "multivitamin tablets"
     ]
+  },
+  "d950fcdf16a4f463a2fcc342250a3492f2e7f4e61d4bdef4451216d07b4abf09": {
+    "situation_label": "Self-care night",
+    "needs": [
+      {
+        "role": "Bath",
+        "need": "bath bomb",
+        "quantity_reasoning": "One bath bomb creates a relaxing soak for the evening",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Skin",
+        "need": "clay mask",
+        "quantity_reasoning": "One clay mask is sufficient for a single facial treatment",
+        "expected_tiles": [
+          "Skin & Face"
+        ]
+      },
+      {
+        "role": "Hair",
+        "need": "hair oil",
+        "quantity_reasoning": "One hair oil covers the pamper routine and adds shine",
+        "expected_tiles": [
+          "Hair"
+        ]
+      },
+      {
+        "role": "Dessert",
+        "need": "dark chocolate",
+        "quantity_reasoning": "One dark chocolate satisfies the sweet craving for the night",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Drink",
+        "need": "herbal tea",
+        "quantity_reasoning": "One herbal tea provides a calming warm drink",
+        "expected_tiles": [
+          "Tea, Coffee & Milk Drinks"
+        ]
+      },
+      {
+        "role": "Treat",
+        "need": "kulfi",
+        "quantity_reasoning": "One kulfi offers a cool indulgent treat after the bath",
+        "expected_tiles": [
+          "Ice Creams & More"
+        ]
+      },
+      {
+        "role": "Snack",
+        "need": "cookies",
+        "quantity_reasoning": "One pack of cookies pairs well with the tea and sweets",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "2468634564bbdab755df3c7df34c4806b5e74820716aaa4813bd200dad6068ad": {
+    "situation_label": "Home office setup",
+    "needs": [
+      {
+        "role": "Workstation Lighting",
+        "need": "desk lamp",
+        "quantity_reasoning": "Provides focused illumination for reading and typing",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      },
+      {
+        "role": "Power Management",
+        "need": "power strip",
+        "quantity_reasoning": "Allows multiple devices to be plugged in and protects against power surges",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      },
+      {
+        "role": "Device Support",
+        "need": "laptop stand",
+        "quantity_reasoning": "Elevates laptop for ergonomic viewing and better airflow",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Writing",
+        "need": "ballpoint pen",
+        "quantity_reasoning": "Essential for note taking and signing documents",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      },
+      {
+        "role": "Note Taking",
+        "need": "notebook",
+        "quantity_reasoning": "Captures ideas and meeting minutes",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      },
+      {
+        "role": "Desk Organization",
+        "need": "desk organizer",
+        "quantity_reasoning": "Keeps stationery and accessories tidy and within reach",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Cable Management",
+        "need": "cable clips",
+        "quantity_reasoning": "Prevents cords from tangling and maintains a clean workspace",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "cb43c12b9f10a0093965ba1280b14239cb87dfd407be54b2aab1f874781c6c82": {
+    "situation_label": "Moving into New Home",
+    "needs": [
+      {
+        "role": "Sleep",
+        "need": "pillow",
+        "quantity_reasoning": "One pillow provides basic head support for a new bed",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Bathroom",
+        "need": "towel",
+        "quantity_reasoning": "One towel is enough to dry after a shower and can be rotated",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Kitchenware",
+        "need": "mug",
+        "quantity_reasoning": "One mug covers daily coffee or tea drinking needs",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      },
+      {
+        "role": "Cooking",
+        "need": "refined oil",
+        "quantity_reasoning": "One bottle of oil is sufficient for everyday cooking",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      },
+      {
+        "role": "Beverages",
+        "need": "tea",
+        "quantity_reasoning": "One pack of tea meets daily beverage requirement",
+        "expected_tiles": [
+          "Tea, Coffee & Milk Drinks"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "dishwash gel",
+        "quantity_reasoning": "One bottle of dishwash gel handles regular dish cleaning",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      },
+      {
+        "role": "Electrical",
+        "need": "light bulb",
+        "quantity_reasoning": "One bulb lights a primary room in the new home",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "9686f045d0d5534fe4d55c04c43ee1952aa428166259e4883e77a494e0e92fe3": {
+    "situation_label": "New flatmate",
+    "needs": [
+      {
+        "role": "Pantry",
+        "need": "refined oil",
+        "quantity_reasoning": "One bottle covers daily cooking needs for shared meals",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      },
+      {
+        "role": "Pantry",
+        "need": "dal",
+        "quantity_reasoning": "One pack provides a staple protein source for regular meals",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Pantry",
+        "need": "vegetables",
+        "quantity_reasoning": "Enough to last a week of varied dishes for two people",
+        "expected_tiles": [
+          "Vegetables & Fruits"
+        ]
+      },
+      {
+        "role": "Pantry",
+        "need": "eggs",
+        "quantity_reasoning": "One dozen supplies protein for breakfasts and cooking",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Cooking",
+        "need": "chopping board",
+        "quantity_reasoning": "One board fits most chopping tasks in a shared kitchen",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      },
+      {
+        "role": "Dining",
+        "need": "mug",
+        "quantity_reasoning": "One mug serves individual drink servings for each flatmate",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      },
+      {
+        "role": "Pantry",
+        "need": "turmeric powder",
+        "quantity_reasoning": "One pack provides essential spice for many Indian dishes",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "a78946ba2e0f10dd797e2772820600ae32ab3a7a9f5f2f3bcd3619d819d7112a": {
+    "situation_label": "Deep cleaning day",
+    "needs": [
+      {
+        "role": "Cleaning",
+        "need": "cleaning glove",
+        "quantity_reasoning": "One pair protects hands for all cleaning tasks",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "trash bag",
+        "quantity_reasoning": "Enough bags to collect all waste generated during the deep clean",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "floor mop",
+        "quantity_reasoning": "One mop covers the entire floor area efficiently",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "scrub brush",
+        "quantity_reasoning": "One brush handles stubborn stains across surfaces",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "277d4c3ebefb266cf5b8cdb67b55873e02112695e891b6cfe550ea3a5396926c": {
+    "situation_label": "Home office setup",
+    "needs": [
+      {
+        "role": "Lighting",
+        "need": "desk lamp",
+        "quantity_reasoning": "One lamp provides adequate illumination for a work desk.",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      },
+      {
+        "role": "Computing",
+        "need": "wireless mouse",
+        "quantity_reasoning": "One mouse offers smooth navigation without cables.",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      },
+      {
+        "role": "Connectivity",
+        "need": "USB hub",
+        "quantity_reasoning": "One hub expands ports for multiple peripherals.",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      },
+      {
+        "role": "Writing",
+        "need": "notebook",
+        "quantity_reasoning": "One notebook covers daily note‑taking and planning.",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      },
+      {
+        "role": "Writing",
+        "need": "pen",
+        "quantity_reasoning": "One pen ensures you can write without running out.",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      },
+      {
+        "role": "Organization",
+        "need": "desk organizer",
+        "quantity_reasoning": "One organizer keeps stationery and accessories tidy on the desk.",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Cable Management",
+        "need": "cable organizer",
+        "quantity_reasoning": "One organizer manages cords to avoid clutter.",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "f07b8b38965d2ff4fa8abed862bbc03ba2a965db59458d14eeccd510b7b5a8dc": {
+    "situation_label": "Back to gym",
+    "needs": [
+      {
+        "role": "Protein",
+        "need": "Greek yogurt",
+        "quantity_reasoning": "Provides protein and probiotics for post‑workout recovery",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Carb",
+        "need": "Oats",
+        "quantity_reasoning": "Sustains energy and aids muscle glycogen replenishment",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Fruit",
+        "need": "Banana",
+        "quantity_reasoning": "Quick source of natural sugars and potassium after training",
+        "expected_tiles": [
+          "Vegetables & Fruits"
+        ]
+      },
+      {
+        "role": "Snack",
+        "need": "Energy bar",
+        "quantity_reasoning": "Convenient portable snack to refuel between sessions",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      },
+      {
+        "role": "Lean protein",
+        "need": "Chicken breast",
+        "quantity_reasoning": "Lean meat supplies high‑quality protein for muscle repair",
+        "expected_tiles": [
+          "Chicken, Meat & Fish"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "5e3e20249bad74da288db5fb27057212e55ab0e593218873755dee4ba6bb1f3b": {
+    "situation_label": "Eating better",
+    "needs": [
+      {
+        "role": "Nutrition",
+        "need": "spinach",
+        "quantity_reasoning": "One bunch provides leafy greens for daily meals",
+        "expected_tiles": [
+          "Vegetables & Fruits"
+        ]
+      },
+      {
+        "role": "Nutrition",
+        "need": "apple",
+        "quantity_reasoning": "One apple offers a fruit serving for vitamins",
+        "expected_tiles": [
+          "Vegetables & Fruits"
+        ]
+      },
+      {
+        "role": "Cooking",
+        "need": "brown rice",
+        "quantity_reasoning": "One pack covers staple carbs for several meals",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Cooking",
+        "need": "olive oil",
+        "quantity_reasoning": "One bottle is enough for daily cooking needs",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      },
+      {
+        "role": "Protein",
+        "need": "chicken breast",
+        "quantity_reasoning": "One portion supplies lean protein for meals",
+        "expected_tiles": [
+          "Chicken, Meat & Fish"
+        ]
+      },
+      {
+        "role": "Dairy",
+        "need": "low fat milk",
+        "quantity_reasoning": "One litre meets daily dairy consumption",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Fitness",
+        "need": "sneaker",
+        "quantity_reasoning": "One pair supports regular exercise routines",
+        "expected_tiles": [
+          "Sports Store"
+        ]
+      }
+    ],
+    "unavailable": [
+      "multivitamin",
+      "protein supplement"
+    ]
+  },
+  "7d55d2d5bd8ac41f0fa72624cf32285e6188fd0e69ab6cabda247b74430afee9": {
+    "situation_label": "Home office setup",
+    "needs": [
+      {
+        "role": "Electronics",
+        "need": "laptop stand",
+        "quantity_reasoning": "One laptop stand provides ergonomic height for a desk",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      },
+      {
+        "role": "Electronics",
+        "need": "wireless mouse",
+        "quantity_reasoning": "One wireless mouse offers convenient navigation without cables",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      },
+      {
+        "role": "Electronics",
+        "need": "power strip",
+        "quantity_reasoning": "One power strip supplies multiple outlets for devices",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      },
+      {
+        "role": "Stationery",
+        "need": "notebook",
+        "quantity_reasoning": "One notebook is enough for daily note taking",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      },
+      {
+        "role": "Stationery",
+        "need": "pen",
+        "quantity_reasoning": "One pen covers regular writing tasks",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      },
+      {
+        "role": "Home & Lifestyle",
+        "need": "desk lamp",
+        "quantity_reasoning": "One desk lamp provides adequate lighting for work",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Home & Lifestyle",
+        "need": "desk organizer",
+        "quantity_reasoning": "One desk organizer keeps stationery and accessories tidy",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "7efbf740635e2733524a12d0716132bf256bc29ec6c5cd24a3a7ef017d3535a1": {
+    "situation_label": "Self-care night",
+    "needs": [
+      {
+        "role": "Bath",
+        "need": "bath bomb",
+        "quantity_reasoning": "One bath bomb provides a full relaxing soak for the evening",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Skin",
+        "need": "sheet mask",
+        "quantity_reasoning": "One sheet mask pack offers enough applications for a pamper session",
+        "expected_tiles": [
+          "Skin & Face"
+        ]
+      },
+      {
+        "role": "Beauty",
+        "need": "lip balm",
+        "quantity_reasoning": "One lip balm keeps lips moisturized through the night",
+        "expected_tiles": [
+          "Beauty & Cosmetics"
+        ]
+      },
+      {
+        "role": "Sweets",
+        "need": "dark chocolate",
+        "quantity_reasoning": "One dark chocolate satisfies the sweet craving during self‑care",
+        "expected_tiles": [
+          "Sweets & Chocolates"
+        ]
+      },
+      {
+        "role": "Drink",
+        "need": "herbal tea",
+        "quantity_reasoning": "One herbal tea creates a calming hot drink to unwind",
+        "expected_tiles": [
+          "Tea, Coffee & Milk Drinks"
+        ]
+      },
+      {
+        "role": "Bakery",
+        "need": "cookie",
+        "quantity_reasoning": "One cookie gives a quick bite alongside the tea",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      },
+      {
+        "role": "Dessert",
+        "need": "ice cream",
+        "quantity_reasoning": "One ice cream serves as an indulgent dessert to end the night",
+        "expected_tiles": [
+          "Ice Creams & More"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "c8c7ef39735d05898f5384321dcbefdd9266ff53de35a35caae49a3da4c18a44": {
+    "situation_label": "Home office setup",
+    "needs": [
+      {
+        "role": "Workstation",
+        "need": "wireless mouse",
+        "quantity_reasoning": "One mouse enables comfortable navigation while working",
+        "expected_tiles": [
+          "Electronics"
+        ]
+      },
+      {
+        "role": "Organization",
+        "need": "desk organizer",
+        "quantity_reasoning": "One organizer holds pens, clips and small accessories neatly",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Cable Management",
+        "need": "cable clip",
+        "quantity_reasoning": "Enough clips keep cords tidy and prevent tangles",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Comfort",
+        "need": "chair cushion",
+        "quantity_reasoning": "One cushion adds comfort for long sitting periods",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Writing",
+        "need": "ballpoint pen",
+        "quantity_reasoning": "One pen is essential for quick notes and corrections",
+        "expected_tiles": [
+          "Stationery & Games"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "1aeb4d0a45454377670cac37d157a9447e02ab5c1050ceb3bf610d24734f8243": {
+    "situation_label": "New flatmate",
+    "needs": [
+      {
+        "role": "Kitchen",
+        "need": "wheat flour",
+        "quantity_reasoning": "One bag covers daily cooking for a couple",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Kitchen",
+        "need": "basmati rice",
+        "quantity_reasoning": "Enough to prepare regular meals for the household",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Kitchen",
+        "need": "refined oil",
+        "quantity_reasoning": "Essential for everyday cooking tasks",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      },
+      {
+        "role": "Kitchen",
+        "need": "turmeric powder",
+        "quantity_reasoning": "Core spice used in most Indian dishes",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      },
+      {
+        "role": "Kitchen",
+        "need": "milk",
+        "quantity_reasoning": "Daily beverage and cooking ingredient",
+        "expected_tiles": [
+          "Dairy, Bread & Eggs"
+        ]
+      },
+      {
+        "role": "Bathroom",
+        "need": "towel",
+        "quantity_reasoning": "Enough to rotate while one dries",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "detergent powder",
+        "quantity_reasoning": "One pack covers regular laundry cycles",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "3c2c675dcaeaeeabbb0cc0d105a722a673569d2b73bad40e2e52bdbed9445922": {
+    "situation_label": "Moving in",
+    "needs": [
+      {
+        "role": "Bedroom",
+        "need": "bedsheet",
+        "quantity_reasoning": "One bedsheet covers the primary sleeping surface",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Bedroom",
+        "need": "pillow",
+        "quantity_reasoning": "One pillow provides head support for sleep",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Bathroom",
+        "need": "towel",
+        "quantity_reasoning": "One towel is enough to rotate while one dries",
+        "expected_tiles": [
+          "Bath & Body"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "bucket",
+        "quantity_reasoning": "One bucket covers most household cleaning tasks",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      },
+      {
+        "role": "Cleaning",
+        "need": "detergent powder",
+        "quantity_reasoning": "One detergent powder handles laundry loads for a new household",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      },
+      {
+        "role": "Kitchen",
+        "need": "kettle",
+        "quantity_reasoning": "One kettle provides hot water for tea, coffee and quick meals",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      },
+      {
+        "role": "Kitchen",
+        "need": "dish wash gel",
+        "quantity_reasoning": "One dish wash gel keeps dishes clean after cooking",
+        "expected_tiles": [
+          "Cleaners & Repellents"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "cdfb6aaf86081c9133cc06b44274b4456f7e3b24df635fcb59fc57f6340e192d": {
+    "situation_label": "House party",
+    "needs": [
+      {
+        "role": "Dining",
+        "need": "disposable plate",
+        "quantity_reasoning": "One plate per guest ensures everyone has a surface for food.",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Dining",
+        "need": "plastic cup",
+        "quantity_reasoning": "Cups cover drinks for each attendee without needing glassware.",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      },
+      {
+        "role": "Snacks",
+        "need": "salsa dip",
+        "quantity_reasoning": "A dip complements chips and other finger foods for the crowd.",
+        "expected_tiles": [
+          "Sauces & Spreads"
+        ]
+      },
+      {
+        "role": "Dessert",
+        "need": "ice cream",
+        "quantity_reasoning": "Ice cream offers a sweet, cooling treat after heavy party foods.",
+        "expected_tiles": [
+          "Ice Creams & More"
+        ]
+      },
+      {
+        "role": "Drinks",
+        "need": "soft drink",
+        "quantity_reasoning": "Soft drinks provide non‑alcoholic refreshment for all guests.",
+        "expected_tiles": [
+          "Drinks & Juices"
+        ]
+      },
+      {
+        "role": "Dining",
+        "need": "napkin",
+        "quantity_reasoning": "Napkins keep hands clean while eating finger foods.",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      },
+      {
+        "role": "Ambience",
+        "need": "candle",
+        "quantity_reasoning": "Candles create a warm atmosphere for a relaxed party vibe.",
+        "expected_tiles": [
+          "Home & Lifestyle"
+        ]
+      }
+    ],
+    "unavailable": []
   }
 }
