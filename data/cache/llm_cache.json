@@ -2955,5 +2955,108 @@
       }
     ],
     "unavailable": []
+  },
+  "44c24dead8bb956c0a7c65a557104c63806760202bd5adb871aac181c9f102be": {
+    "situation_label": "Someone unwell",
+    "needs": [
+      {
+        "role": "Food",
+        "need": "marie biscuit",
+        "quantity_reasoning": "One pack provides enough plain biscuits for gentle snacking throughout the day",
+        "expected_tiles": [
+          "Bakery & Biscuits"
+        ]
+      },
+      {
+        "role": "Food",
+        "need": "plain rice",
+        "quantity_reasoning": "Sufficient to prepare a mild rice porridge or khichdi for easy digestion",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Beverage",
+        "need": "ginger tea",
+        "quantity_reasoning": "One supply covers warm, soothing drinks to aid recovery multiple times a day",
+        "expected_tiles": [
+          "Tea, Coffee & Milk Drinks"
+        ]
+      },
+      {
+        "role": "Health Monitoring",
+        "need": "digital thermometer",
+        "quantity_reasoning": "One thermometer allows regular temperature checks without needing multiple devices",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      },
+      {
+        "role": "Food",
+        "need": "khichdi mix",
+        "quantity_reasoning": "One mix is enough to prepare a gentle, easily digestible khichdi for the patient",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      }
+    ],
+    "unavailable": []
+  },
+  "6ab5984cbcac7ad06e0a0233339d9ad48f3a99a26c29ca792f9aa88c124e64a1": {
+    "situation_label": "Healthy eating",
+    "needs": [
+      {
+        "role": "Nutrition",
+        "need": "spinach",
+        "quantity_reasoning": "Fresh greens provide essential vitamins daily",
+        "expected_tiles": [
+          "Vegetables & Fruits"
+        ]
+      },
+      {
+        "role": "Carbohydrate",
+        "need": "brown rice",
+        "quantity_reasoning": "Whole grain rice offers sustained energy",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Healthy fats",
+        "need": "olive oil",
+        "quantity_reasoning": "One bottle supplies cooking and salad needs",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      },
+      {
+        "role": "Protein",
+        "need": "almonds",
+        "quantity_reasoning": "A handful gives plant protein and healthy fats",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Fitness gear",
+        "need": "yoga mat",
+        "quantity_reasoning": "One mat supports regular home workouts",
+        "expected_tiles": [
+          "Sports Store"
+        ]
+      },
+      {
+        "role": "Hydration",
+        "need": "water bottle",
+        "quantity_reasoning": "Reusable bottle encourages daily water intake",
+        "expected_tiles": [
+          "Kitchenware & Appliances"
+        ]
+      }
+    ],
+    "unavailable": [
+      "protein powder",
+      "multivitamin tablets"
+    ]
   }
 }
