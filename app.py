@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Blinkit Sense — checkout-time household intelligence (Streamlit UI)."""
+"""Blinkit Sense — Phase 8 Streamlit UI (checkout-time household intelligence)."""
 
 from __future__ import annotations
 
@@ -10,7 +10,13 @@ from pathlib import Path
 
 import streamlit as st
 
-from engine import apply_household_filter, fee_breakdown, resolve_needs
+from engine import (
+    FEE_SMALL_CART,
+    GAP_MESSAGE,
+    apply_household_filter,
+    fee_breakdown,
+    resolve_needs,
+)
 from llm import is_unambiguous, plan_needs, read_situation
 from phases.phase_2_data.loader import (
     address_to_catalog_location,
@@ -47,10 +53,10 @@ STRIP_CSS = """
     margin-bottom: 0.75rem;
 }
 .role-heading {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: #111111;
-    margin-top: 1.1rem;
+    margin-top: 1.15rem;
     margin-bottom: 0.35rem;
     letter-spacing: -0.01em;
 }
@@ -66,10 +72,16 @@ STRIP_CSS = """
     margin-bottom: 0.5rem;
 }
 .new-category-line {
-    font-size: 1.08rem;
+    font-size: 1.12rem;
     font-weight: 700;
     color: #0d5c3d;
-    margin: 1rem 0 0.5rem 0;
+    margin: 1.1rem 0 0.5rem 0;
+    line-height: 1.4;
+}
+.gap-line {
+    font-size: 0.92rem;
+    color: #7c2d12;
+    margin: 0.45rem 0;
 }
 .meta-line {
     font-size: 0.9rem;
@@ -90,6 +102,7 @@ def _init_session() -> None:
     st.session_state.setdefault("composed_by_household", {})
     st.session_state.setdefault("item_selection", {})
     st.session_state.setdefault("show_chip_picker", {})
+    st.session_state.setdefault("cart_skus_by_household", {})
 
 
 def _households_by_id() -> dict[str, dict]:
@@ -100,10 +113,23 @@ def _scenarios_by_id() -> dict[str, dict]:
     return {scenario["id"]: scenario for scenario in load_scenarios()}
 
 
+def _effective_cart_skus(household: dict) -> list[str]:
+    household_id = household["id"]
+    if household_id not in st.session_state.cart_skus_by_household:
+        st.session_state.cart_skus_by_household[household_id] = list(
+            household.get("current_cart", [])
+        )
+    return st.session_state.cart_skus_by_household[household_id]
+
+
+def _household_with_cart(household: dict) -> dict:
+    return {**household, "current_cart": _effective_cart_skus(household)}
+
+
 def _cart_lines(household: dict) -> list[dict]:
     by_id = catalog_by_id()
     lines = []
-    for sku in household.get("current_cart", []):
+    for sku in _effective_cart_skus(household):
         product = by_id.get(sku)
         if product is None:
             continue
@@ -122,6 +148,19 @@ def _cart_subtotal(household: dict) -> int:
     return sum(line["price"] for line in _cart_lines(household))
 
 
+def _cart_items_for_household(household: dict) -> tuple[list[dict], list[str]]:
+    by_id = catalog_by_id()
+    items: list[dict] = []
+    sku_ids: list[str] = []
+    for sku in _effective_cart_skus(household):
+        product = by_id.get(sku)
+        if product is None:
+            continue
+        items.append({"name": product["name"], "category": product["category"]})
+        sku_ids.append(sku)
+    return items, sorted(sku_ids)
+
+
 def _catalog_fetched_at() -> str:
     catalog = load_catalog()
     if not catalog:
@@ -136,35 +175,39 @@ def _scenario_for_candidate(candidate: dict) -> dict:
     return {
         "id": candidate["id"],
         "chip_label": candidate["label"],
-        "prompt_context": f"The customer confirmed: {candidate['label']}. {candidate.get('reasoning', '')}",
+        "prompt_context": (
+            f"The customer confirmed: {candidate['label']}. "
+            f"{candidate.get('reasoning', '')}"
+        ),
+    }
+
+
+def _stocking_scenario() -> dict:
+    scenarios = _scenarios_by_id()
+    if "stocking" in scenarios:
+        return scenarios["stocking"]
+    return {
+        "id": "stocking",
+        "chip_label": "Just stocking up",
+        "prompt_context": (
+            "The customer is doing a routine restock with no special occasion. "
+            "Suggest a mix of household staples they may be running low on, plus "
+            "one or two adjacent products that complement what's already in the cart "
+            "but come from a category they haven't bought from."
+        ),
     }
 
 
 def _clear_composed(household_id: str) -> None:
     st.session_state.composed_by_household.pop(household_id, None)
-    keys_to_drop = [key for key in st.session_state.item_selection if key.startswith(f"{household_id}:")]
-    for key in keys_to_drop:
-        st.session_state.item_selection.pop(key, None)
+    prefix = f"{household_id}:"
+    for key in list(st.session_state.item_selection):
+        if key.startswith(prefix):
+            st.session_state.item_selection.pop(key, None)
 
 
-def _cart_items_for_household(household: dict) -> tuple[list[dict], list[str]]:
-    by_id = catalog_by_id()
-    items: list[dict] = []
-    sku_ids: list[str] = []
-    for sku in household.get("current_cart", []):
-        product = by_id.get(sku)
-        if product is None:
-            continue
-        items.append({"name": product["name"], "category": product["category"]})
-        sku_ids.append(sku)
-    return items, sorted(sku_ids)
-
-
-def _run_confirmation(
-    household: dict,
-    scenario: dict,
-) -> dict | None:
-    tiles = all_tiles()
+def _run_confirmation(household: dict, scenario: dict) -> dict | None:
+    ctx = _household_with_cart(household)
     location = address_to_catalog_location(household["current_address"])
     cart_items, cart_skus = _cart_items_for_household(household)
     with st.spinner("Planning what this situation needs..."):
@@ -172,7 +215,7 @@ def _run_confirmation(
             situation_id=scenario["id"],
             situation_label=scenario["chip_label"],
             prompt_context=scenario["prompt_context"],
-            tile_categories=tiles,
+            tile_categories=all_tiles(),
             household_id=household["id"],
             cart_items=cart_items,
             cart_skus=cart_skus,
@@ -185,7 +228,7 @@ def _run_confirmation(
         location,
         situation_id=scenario["id"],
     )
-    filtered = apply_household_filter(resolved, household)
+    filtered = apply_household_filter(resolved, ctx)
     filtered["situation_label"] = needs_result.get(
         "situation_label", scenario["chip_label"]
     )
@@ -193,25 +236,35 @@ def _run_confirmation(
     return filtered
 
 
-def _ensure_situation(household: dict, cart_lines: list[dict]) -> dict | None:
+def _ensure_situation(household: dict) -> dict | None:
     household_id = household["id"]
     if household_id in st.session_state.dismissed_households:
         return None
     if household_id in st.session_state.situation_by_household:
         return st.session_state.situation_by_household[household_id]
 
-    cart_payload = [
-        {"name": line["name"], "category": line["category"]} for line in cart_lines
-    ]
+    cart_items, cart_skus = _cart_items_for_household(household)
+    if not cart_items:
+        return None
+
     with st.spinner("Reading your cart..."):
         result = read_situation(
-            cart_items=cart_payload,
+            cart_items=cart_items,
             delivery_location=household["current_address"],
             location_unfamiliar=is_location_unfamiliar(household),
             today=date.today().isoformat(),
+            household_id=household_id,
+            cart_skus=cart_skus,
         )
     st.session_state.situation_by_household[household_id] = result
     return result
+
+
+def _add_skus_to_cart(household_id: str, sku_ids: list[str]) -> None:
+    cart = st.session_state.cart_skus_by_household.setdefault(household_id, [])
+    for sku in sku_ids:
+        if sku not in cart:
+            cart.append(sku)
 
 
 def _render_cart(household: dict) -> int:
@@ -236,19 +289,22 @@ def _render_cart(household: dict) -> int:
     return subtotal
 
 
-def _render_chip_row(
-    household: dict,
-    situation: dict,
-    show_picker: bool,
-) -> None:
+def _confirm_scenario(household: dict, scenario: dict) -> None:
+    composed = _run_confirmation(household, scenario)
+    if composed is None:
+        st.error("Could not plan needs for this situation.")
+    else:
+        st.session_state.composed_by_household[household["id"]] = composed
+        st.session_state.show_chip_picker[household["id"]] = False
+    st.rerun()
+
+
+def _render_chip_row(household: dict, situation: dict) -> None:
     top = situation["candidates"][0]
     st.markdown(
         f'<p class="strip-heading">We noticed: {top["reasoning"]}</p>',
         unsafe_allow_html=True,
     )
-
-    if not show_picker and household["id"] in st.session_state.composed_by_household:
-        return
 
     cols = st.columns(4)
     for index, candidate in enumerate(situation["candidates"]):
@@ -258,14 +314,7 @@ def _render_chip_row(
                 key=f"chip_{household['id']}_{index}",
                 use_container_width=True,
             ):
-                scenario = _scenario_for_candidate(candidate)
-                composed = _run_confirmation(household, scenario)
-                if composed is None:
-                    st.error("Could not plan needs for this situation.")
-                else:
-                    st.session_state.composed_by_household[household["id"]] = composed
-                    st.session_state.show_chip_picker[household["id"]] = False
-                st.rerun()
+                _confirm_scenario(household, _scenario_for_candidate(candidate))
 
     tell_us = st.text_input(
         "Tell us",
@@ -274,26 +323,22 @@ def _render_chip_row(
     )
     action_cols = st.columns(3)
     with action_cols[0]:
-        if st.button("Submit", key=f"tell_us_submit_{household['id']}"):
+        if st.button("Submit situation", key=f"tell_us_submit_{household['id']}"):
             text = tell_us.strip()
-            if text:
-                scenario = {
-                    "id": "custom",
-                    "chip_label": text,
-                    "prompt_context": f"The customer described their situation as: {text}",
-                }
-                composed = _run_confirmation(household, scenario)
-                if composed is None:
-                    st.error("Could not plan needs for this situation.")
-                else:
-                    st.session_state.composed_by_household[household["id"]] = composed
-                    st.session_state.show_chip_picker[household["id"]] = False
-                st.rerun()
+            if not text:
+                st.warning("Enter a short description first.")
+            else:
+                _confirm_scenario(
+                    household,
+                    {
+                        "id": "custom",
+                        "chip_label": text,
+                        "prompt_context": f"The customer described their situation as: {text}",
+                    },
+                )
     with action_cols[1]:
         if st.button("Just stocking up", key=f"stocking_{household['id']}"):
-            st.session_state.dismissed_households.add(household["id"])
-            _clear_composed(household["id"])
-            st.rerun()
+            _confirm_scenario(household, _stocking_scenario())
     with action_cols[2]:
         if st.button("Dismiss", key=f"dismiss_{household['id']}"):
             st.session_state.dismissed_households.add(household["id"])
@@ -307,22 +352,16 @@ def _render_unambiguous_confirm(household: dict, situation: dict) -> None:
         f'<p class="strip-heading">{top["label"]}: {top["reasoning"]}</p>',
         unsafe_allow_html=True,
     )
-    if household["id"] not in st.session_state.composed_by_household:
-        if st.button(
-            f"Add suggestions for \"{top['label']}\"",
-            key=f"unamb_confirm_{household['id']}",
-            type="primary",
-        ):
-            scenario = _scenario_for_candidate(top)
-            composed = _run_confirmation(household, scenario)
-            if composed is None:
-                st.error("Could not plan needs for this situation.")
-            else:
-                st.session_state.composed_by_household[household["id"]] = composed
-            st.rerun()
-        if st.button("Dismiss", key=f"unamb_dismiss_{household['id']}"):
-            st.session_state.dismissed_households.add(household["id"])
-            st.rerun()
+    if st.button(
+        f'Add suggestions for "{top["label"]}"',
+        key=f"unamb_confirm_{household['id']}",
+        type="primary",
+    ):
+        _confirm_scenario(household, _scenario_for_candidate(top))
+    if st.button("Dismiss", key=f"unamb_dismiss_{household['id']}"):
+        st.session_state.dismissed_households.add(household["id"])
+        _clear_composed(household["id"])
+        st.rerun()
 
 
 def _render_composed(household: dict, composed: dict, cart_subtotal: int) -> None:
@@ -334,6 +373,14 @@ def _render_composed(household: dict, composed: dict, cart_subtotal: int) -> Non
             '<p class="strip-heading">Nothing to add for this one — you\'re set.</p>',
             unsafe_allow_html=True,
         )
+        if composed.get("gaps"):
+            for gap in composed["gaps"]:
+                need = gap.get("need", "Item")
+                message = gap.get("gap_message", GAP_MESSAGE)
+                st.markdown(
+                    f'<p class="gap-line">{need}: {message}</p>',
+                    unsafe_allow_html=True,
+                )
         return
 
     st.markdown(
@@ -341,69 +388,94 @@ def _render_composed(household: dict, composed: dict, cart_subtotal: int) -> Non
         unsafe_allow_html=True,
     )
 
-    needs_by_sku = {
+    needs_by_text = {
         need.get("need"): need
         for need in composed.get("needs_result", {}).get("needs", [])
     }
 
     by_role: dict[str, list[dict]] = {}
     for item in items:
-        by_role.setdefault(item["role"], []).append(item)
+        by_role.setdefault(item.get("role", "Other"), []).append(item)
 
     by_id = catalog_by_id()
-
     for role, role_items in by_role.items():
         st.markdown(f'<p class="role-heading">{role}</p>', unsafe_allow_html=True)
         for item in role_items:
-            need_meta = needs_by_sku.get(item["need"], item)
-            qty = need_meta.get("quantity_reasoning", item.get("quantity_reasoning", ""))
+            need_meta = needs_by_text.get(item.get("need"), item)
+            qty = need_meta.get(
+                "quantity_reasoning", item.get("quantity_reasoning", "")
+            )
             unit = by_id.get(item["resolved_sku"], {}).get("unit", "")
             unit_suffix = f" · {unit}" if unit else ""
             st.markdown(
-                f'<p class="need-line">{item["need"]} · {item["resolved_name"]}{unit_suffix} · ₹{item["price"]}</p>',
+                f'<p class="need-line">{item["need"]} · {item["resolved_name"]}'
+                f"{unit_suffix} · ₹{item['price']}</p>",
                 unsafe_allow_html=True,
             )
             if qty:
                 st.markdown(f'<p class="qty-line">{qty}</p>', unsafe_allow_html=True)
 
     st.markdown("---")
+    selected: list[dict] = []
     for item in items:
         sel_key = f"{household_id}:{item['resolved_sku']}"
         default = st.session_state.item_selection.get(sel_key, True)
         unit = by_id.get(item["resolved_sku"], {}).get("unit", "")
         unit_suffix = f" · {unit}" if unit else ""
-        st.session_state.item_selection[sel_key] = st.checkbox(
+        checked = st.checkbox(
             f"{item['resolved_name']}{unit_suffix} · ₹{item['price']}",
             value=default,
-            key=sel_key,
+            key=f"toggle_{sel_key}",
         )
+        st.session_state.item_selection[sel_key] = checked
+        if checked:
+            selected.append(item)
 
-    selected = [
-        item
-        for item in items
-        if st.session_state.item_selection.get(f"{household_id}:{item['resolved_sku']}", True)
-    ]
     selected_total = sum(item["price"] for item in selected)
-    st.button(
+    if st.button(
         f"Add all {len(selected)} · ₹{selected_total}",
         key=f"add_all_{household_id}",
         type="primary",
-    )
+        disabled=len(selected) == 0,
+    ):
+        _add_skus_to_cart(household_id, [item["resolved_sku"] for item in selected])
+        st.session_state.dismissed_households.add(household_id)
+        _clear_composed(household_id)
+        st.rerun()
 
-    new_tiles = sorted({item["category"] for item in items if item.get("flag") == "new_category"})
+    new_tiles = sorted(
+        {item["category"] for item in items if item.get("flag") == "new_category"}
+    )
     if new_tiles:
-        tile_text = ", ".join(new_tiles)
         st.markdown(
-            f'<p class="new-category-line">New for your household: {tile_text}</p>',
+            f'<p class="new-category-line">New for your household: {", ".join(new_tiles)}</p>',
             unsafe_allow_html=True,
         )
+
+    gaps = composed.get("gaps") or []
+    for gap in gaps:
+        need = gap.get("need", "Item")
+        message = gap.get("gap_message", GAP_MESSAGE)
+        st.markdown(
+            f'<p class="gap-line">{need}: {message}</p>',
+            unsafe_allow_html=True,
+        )
+
+    unavailable = composed.get("needs_result", {}).get("unavailable") or []
+    for note in unavailable:
+        st.markdown(f'<p class="gap-line">{note}</p>', unsafe_allow_html=True)
+
+    if composed.get("sensitive_guidance"):
+        for line in composed["sensitive_guidance"]:
+            st.markdown(f'<p class="meta-line">{line}</p>', unsafe_allow_html=True)
 
     combined = cart_subtotal + selected_total
     threshold_fee = fee_breakdown(combined)
     gap = threshold_fee["gap_to_threshold"]
     if gap:
         st.markdown(
-            f'<p class="meta-line">Add ₹{gap} more to waive the ₹{threshold_fee["small_cart"] or 20} small-cart charge.</p>',
+            f'<p class="meta-line">Add ₹{gap} more to waive the ₹{FEE_SMALL_CART} '
+            f"small-cart charge.</p>",
             unsafe_allow_html=True,
         )
     else:
@@ -411,10 +483,6 @@ def _render_composed(household: dict, composed: dict, cart_subtotal: int) -> Non
             '<p class="meta-line">Your cart clears the ₹99 small-cart threshold.</p>',
             unsafe_allow_html=True,
         )
-
-    if composed.get("sensitive_guidance"):
-        for line in composed["sensitive_guidance"]:
-            st.markdown(f'<p class="meta-line">{line}</p>', unsafe_allow_html=True)
 
     action_cols = st.columns(2)
     with action_cols[0]:
@@ -431,8 +499,10 @@ def _render_composed(household: dict, composed: dict, cart_subtotal: int) -> Non
 
 def _render_strip(household: dict, cart_subtotal: int) -> None:
     household_id = household["id"]
-    cart_lines = _cart_lines(household)
-    situation = _ensure_situation(household, cart_lines)
+    if household_id in st.session_state.dismissed_households:
+        return
+
+    situation = _ensure_situation(household)
     if not situation:
         return
 
@@ -443,12 +513,15 @@ def _render_strip(household: dict, cart_subtotal: int) -> None:
     st.markdown('<div class="strip-panel">', unsafe_allow_html=True)
 
     if household_id in st.session_state.composed_by_household:
-        _render_composed(household, st.session_state.composed_by_household[household_id], cart_subtotal)
+        _render_composed(
+            household,
+            st.session_state.composed_by_household[household_id],
+            cart_subtotal,
+        )
     elif is_unambiguous(situation):
         _render_unambiguous_confirm(household, situation)
     else:
-        show_picker = st.session_state.show_chip_picker.get(household_id, True)
-        _render_chip_row(household, situation, show_picker)
+        _render_chip_row(household, situation)
 
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -468,6 +541,7 @@ def _render_sidebar() -> None:
             st.sidebar.success("Catalogue refreshed.")
             st.session_state.situation_by_household.clear()
             st.session_state.composed_by_household.clear()
+            st.session_state.cart_skus_by_household.clear()
         else:
             st.sidebar.error("Catalogue refresh failed.")
             if result.stderr:
@@ -487,13 +561,9 @@ def main() -> None:
     labels = [f"{household['name']} ({household['id']})" for household in households]
     ids = [household["id"] for household in households]
 
-    previous_id = st.session_state.get("active_household_id")
     selected_label = st.selectbox("Household", labels, key="household_select")
     selected_id = ids[labels.index(selected_label)]
     household = _households_by_id()[selected_id]
-
-    if previous_id != selected_id:
-        st.session_state.active_household_id = selected_id
 
     unfamiliar = is_location_unfamiliar(household)
     location_text = household["current_address"]
@@ -506,8 +576,10 @@ def main() -> None:
     else:
         st.markdown(f"Delivery to **{location_text}**")
 
-    cart_subtotal = _render_cart(household)
-    _render_strip(household, cart_subtotal)
+    left_col, _right_col = st.columns([2, 3])
+    with left_col:
+        cart_subtotal = _render_cart(household)
+        _render_strip(household, cart_subtotal)
 
 
 if __name__ == "__main__":

@@ -3873,5 +3873,129 @@
       }
     ],
     "unavailable": []
+  },
+  "f344ca4d0f9da5c71c35c2524773447519de6ba9d6472898bdfc6d5750b23e80": {
+    "confidence": 0.78,
+    "candidates": [
+      {
+        "id": "health",
+        "label": "Eating better",
+        "reasoning": "Dry fruits and milk suggest healthier diet focus",
+        "score": 0.78
+      },
+      {
+        "id": "cooking_project",
+        "label": "Cooking something",
+        "reasoning": "Atta and dry fruits indicate planned cooking or baking",
+        "score": 0.65
+      },
+      {
+        "id": "fitness_restart",
+        "label": "Back to gym",
+        "reasoning": "Protein‑rich snacks point to post‑workout nutrition",
+        "score": 0.55
+      },
+      {
+        "id": "deep_clean",
+        "label": "Deep cleaning day",
+        "reasoning": "Stocking staples for extended home‑stay during cleaning",
+        "score": 0.35
+      }
+    ]
+  },
+  "eaf94d1c229e2e42d72032533da42764bea51e9492fdb486ba7e20aaaf3467dd": {
+    "confidence": 0.35,
+    "candidates": [
+      {
+        "id": "moving_in",
+        "label": "Moving in",
+        "reasoning": "Unfamiliar address suggests new home setup",
+        "score": 0.35
+      },
+      {
+        "id": "health",
+        "label": "Eating better",
+        "reasoning": "Milk bought for healthier diet",
+        "score": 0.33
+      },
+      {
+        "id": "new_flatmate",
+        "label": "New flatmate",
+        "reasoning": "Sharing basics with a new roommate",
+        "score": 0.3
+      },
+      {
+        "id": "kids_home",
+        "label": "Kids at home",
+        "reasoning": "Milk often needed for children",
+        "score": 0.28
+      }
+    ]
+  },
+  "499a654d049ed665d65e047886bf794b9b4936b7c8585369e9dc9bfaed9c2abc": {
+    "situation_label": "Healthy eating",
+    "needs": [
+      {
+        "role": "Vegetables",
+        "need": "spinach",
+        "quantity_reasoning": "One bunch provides enough greens for daily meals",
+        "expected_tiles": [
+          "Vegetables & Fruits"
+        ]
+      },
+      {
+        "role": "Grains",
+        "need": "whole wheat atta",
+        "quantity_reasoning": "One bag covers staple breads and rotis for the week",
+        "expected_tiles": [
+          "Atta, Rice & Dal"
+        ]
+      },
+      {
+        "role": "Cooking oil",
+        "need": "sunflower oil",
+        "quantity_reasoning": "One bottle suffices for regular low‑fat cooking",
+        "expected_tiles": [
+          "Oil, Ghee & Masala"
+        ]
+      },
+      {
+        "role": "Snacks & Nutrition",
+        "need": "dry fruits mix",
+        "quantity_reasoning": "A small pack serves as a healthy snack throughout the day",
+        "expected_tiles": [
+          "Dry Fruits & Cereals"
+        ]
+      },
+      {
+        "role": "Protein",
+        "need": "chicken breast",
+        "quantity_reasoning": "One portion meets daily lean protein requirement",
+        "expected_tiles": [
+          "Chicken, Meat & Fish"
+        ]
+      },
+      {
+        "role": "Beverage",
+        "need": "green tea",
+        "quantity_reasoning": "One box provides multiple cups of antioxidant‑rich tea",
+        "expected_tiles": [
+          "Tea, Coffee & Milk Drinks"
+        ]
+      },
+      {
+        "role": "Fitness",
+        "need": "yoga mat",
+        "quantity_reasoning": "One mat enables regular home workouts and stretching",
+        "expected_tiles": [
+          "Sports Store"
+        ]
+      }
+    ],
+    "unavailable": [
+      "supplements",
+      "vitamins",
+      "protein powder"
+    ]
   }
 }
